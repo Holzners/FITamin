@@ -15,6 +15,12 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"HorstNeu"] = @"Köhler";
+    
+    [testObject saveInBackground];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
