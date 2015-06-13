@@ -14,6 +14,8 @@
 		84191B4B1B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B451B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework */; };
 		84191B4C1B2C48E1006C0C86 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B461B2C48E1006C0C86 /* ParseUI.framework */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
+		8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */; };
+		8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */; };
 		84CD91A91B2C301800B1AAD5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91A81B2C301700B1AAD5 /* AudioToolbox.framework */; };
 		84CD91AC1B2C302C00B1AAD5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91AA1B2C302C00B1AAD5 /* CFNetwork.framework */; };
 		84CD91AD1B2C302C00B1AAD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91AB1B2C302C00B1AAD5 /* CoreGraphics.framework */; };
@@ -27,7 +29,7 @@
 		84CD91BD1B2C30FC00B1AAD5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91BC1B2C30FC00B1AAD5 /* libsqlite3.dylib */; };
 		D4DA7B3E1B28815D00440996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B3D1B28815D00440996 /* main.m */; };
 		D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B401B28815D00440996 /* AppDelegate.m */; };
-		D4DA7B441B28815D00440996 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B431B28815D00440996 /* ViewController.m */; };
+		D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B431B28815D00440996 /* StartmenuVC.m */; };
 		D4DA7B471B28815D00440996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4DA7B451B28815D00440996 /* Main.storyboard */; };
 		D4DA7B491B28815D00440996 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DA7B481B28815D00440996 /* Images.xcassets */; };
 		D4DA7B4C1B28815D00440996 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */; };
@@ -53,6 +55,10 @@
 		84191B461B2C48E1006C0C86 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeModusVC.h; sourceTree = "<group>"; };
 		84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeModusVC.m; sourceTree = "<group>"; };
+		849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErnaehrungVC.h; sourceTree = "<group>"; };
+		8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErnaehrungVC.m; sourceTree = "<group>"; };
+		8496899B1B2C4A9B0000CAE2 /* FinishedScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedScreenVC.h; sourceTree = "<group>"; };
+		8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedScreenVC.m; sourceTree = "<group>"; };
 		84CD91A81B2C301700B1AAD5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		84CD91AA1B2C302C00B1AAD5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		84CD91AB1B2C302C00B1AAD5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,8 +75,8 @@
 		D4DA7B3D1B28815D00440996 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4DA7B3F1B28815D00440996 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4DA7B401B28815D00440996 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D4DA7B421B28815D00440996 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D4DA7B431B28815D00440996 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D4DA7B421B28815D00440996 /* StartmenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartmenuVC.h; sourceTree = "<group>"; };
+		D4DA7B431B28815D00440996 /* StartmenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartmenuVC.m; sourceTree = "<group>"; };
 		D4DA7B461B28815D00440996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4DA7B481B28815D00440996 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D4DA7B4B1B28815D00440996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -154,10 +160,14 @@
 				84191B461B2C48E1006C0C86 /* ParseUI.framework */,
 				D4DA7B3F1B28815D00440996 /* AppDelegate.h */,
 				D4DA7B401B28815D00440996 /* AppDelegate.m */,
-				D4DA7B421B28815D00440996 /* ViewController.h */,
-				D4DA7B431B28815D00440996 /* ViewController.m */,
+				D4DA7B421B28815D00440996 /* StartmenuVC.h */,
+				D4DA7B431B28815D00440996 /* StartmenuVC.m */,
 				84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */,
 				84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */,
+				849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */,
+				8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */,
+				8496899B1B2C4A9B0000CAE2 /* FinishedScreenVC.h */,
+				8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */,
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
 				D4DA7B481B28815D00440996 /* Images.xcassets */,
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
@@ -292,7 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4DA7B441B28815D00440996 /* ViewController.m in Sources */,
+				8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */,
+				D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */,
+				8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
 				D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */,
 				D4DA7B3E1B28815D00440996 /* main.m in Sources */,

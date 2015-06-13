@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--StartmenuVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="StartmenuVC" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -38,6 +38,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipN-Ak-QD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="989" y="-154"/>
+        </scene>
+        <!--Finished ScreenVC-->
+        <scene sceneID="cMR-2d-mA0">
+            <objects>
+                <viewController id="A8A-cx-hkj" customClass="FinishedScreenVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EX5-UF-hZC"/>
+                        <viewControllerLayoutGuide type="bottom" id="JBH-mA-Sdj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YG6-la-pef">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YIW-WY-GaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="-156"/>
+        </scene>
+        <!--ErnaehrungVC-->
+        <scene sceneID="ial-Ps-MIk">
+            <objects>
+                <viewController title="ErnaehrungVC" id="6RS-UE-gOb" customClass="ErnaehrungVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DTo-m0-DXY"/>
+                        <viewControllerLayoutGuide type="bottom" id="FXX-1K-yam"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qRk-An-Rux">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cuv-q2-AxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="544"/>
         </scene>
     </scenes>
 </document>

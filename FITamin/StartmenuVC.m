@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  StartmenuVC.m
 //  FITamin
 //
 //  Created by Holzner on 10.06.15.
 //  Copyright (c) 2015 iOS-Praktikum. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "StartmenuVC.h"
 
-@interface ViewController ()
+@interface StartmenuVC ()
 
 @end
 
-@implementation ViewController
+@implementation StartmenuVC
 
 - (void)viewDidLoad {
     
