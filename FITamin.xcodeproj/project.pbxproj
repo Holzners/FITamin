@@ -16,6 +16,13 @@
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
 		8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */; };
 		8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */; };
+		849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */; };
+		849689A61B2C4BC10000CAE2 /* RezepteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A31B2C4BC10000CAE2 /* RezepteVC.m */; };
+		849689A71B2C4BC10000CAE2 /* SavedWorkoutsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */; };
+		849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A91B2C4BFE0000CAE2 /* StandortVC.m */; };
+		849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */; };
+		849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */; };
+		849689B31B2C4C4C0000CAE2 /* ZutatenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689B21B2C4C4C0000CAE2 /* ZutatenVC.m */; };
 		84CD91A91B2C301800B1AAD5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91A81B2C301700B1AAD5 /* AudioToolbox.framework */; };
 		84CD91AC1B2C302C00B1AAD5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91AA1B2C302C00B1AAD5 /* CFNetwork.framework */; };
 		84CD91AD1B2C302C00B1AAD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91AB1B2C302C00B1AAD5 /* CoreGraphics.framework */; };
@@ -59,6 +66,20 @@
 		8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErnaehrungVC.m; sourceTree = "<group>"; };
 		8496899B1B2C4A9B0000CAE2 /* FinishedScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedScreenVC.h; sourceTree = "<group>"; };
 		8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedScreenVC.m; sourceTree = "<group>"; };
+		8496899F1B2C4B9A0000CAE2 /* MuskelgruppeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuskelgruppeVC.h; sourceTree = "<group>"; };
+		849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuskelgruppeVC.m; sourceTree = "<group>"; };
+		849689A21B2C4BC10000CAE2 /* RezepteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RezepteVC.h; sourceTree = "<group>"; };
+		849689A31B2C4BC10000CAE2 /* RezepteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RezepteVC.m; sourceTree = "<group>"; };
+		849689A41B2C4BC10000CAE2 /* SavedWorkoutsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedWorkoutsVC.h; sourceTree = "<group>"; };
+		849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedWorkoutsVC.m; sourceTree = "<group>"; };
+		849689A81B2C4BFE0000CAE2 /* StandortVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandortVC.h; sourceTree = "<group>"; };
+		849689A91B2C4BFE0000CAE2 /* StandortVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandortVC.m; sourceTree = "<group>"; };
+		849689AB1B2C4C160000CAE2 /* UebungAnleitungVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UebungAnleitungVC.h; sourceTree = "<group>"; };
+		849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UebungAnleitungVC.m; sourceTree = "<group>"; };
+		849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UebungRouteVC.h; sourceTree = "<group>"; };
+		849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UebungRouteVC.m; sourceTree = "<group>"; };
+		849689B11B2C4C4C0000CAE2 /* ZutatenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZutatenVC.h; sourceTree = "<group>"; };
+		849689B21B2C4C4C0000CAE2 /* ZutatenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZutatenVC.m; sourceTree = "<group>"; };
 		84CD91A81B2C301700B1AAD5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		84CD91AA1B2C302C00B1AAD5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		84CD91AB1B2C302C00B1AAD5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -168,6 +189,20 @@
 				8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */,
 				8496899B1B2C4A9B0000CAE2 /* FinishedScreenVC.h */,
 				8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */,
+				8496899F1B2C4B9A0000CAE2 /* MuskelgruppeVC.h */,
+				849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */,
+				849689A21B2C4BC10000CAE2 /* RezepteVC.h */,
+				849689A31B2C4BC10000CAE2 /* RezepteVC.m */,
+				849689A41B2C4BC10000CAE2 /* SavedWorkoutsVC.h */,
+				849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */,
+				849689A81B2C4BFE0000CAE2 /* StandortVC.h */,
+				849689A91B2C4BFE0000CAE2 /* StandortVC.m */,
+				849689B11B2C4C4C0000CAE2 /* ZutatenVC.h */,
+				849689B21B2C4C4C0000CAE2 /* ZutatenVC.m */,
+				849689AB1B2C4C160000CAE2 /* UebungAnleitungVC.h */,
+				849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */,
+				849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */,
+				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
 				D4DA7B481B28815D00440996 /* Images.xcassets */,
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
@@ -302,11 +337,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849689B31B2C4C4C0000CAE2 /* ZutatenVC.m in Sources */,
+				849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */,
 				8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */,
+				849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */,
+				849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */,
 				D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */,
+				849689A71B2C4BC10000CAE2 /* SavedWorkoutsVC.m in Sources */,
 				8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */,
+				849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
 				D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */,
+				849689A61B2C4BC10000CAE2 /* RezepteVC.m in Sources */,
 				D4DA7B3E1B28815D00440996 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
