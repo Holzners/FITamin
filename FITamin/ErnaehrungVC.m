@@ -8,6 +8,11 @@
 
 #import "ErnaehrungVC.h"
 
+//Importieren des Headers der View
+#import "ErnaehrungView.h"
+
+
 @implementation ErnaehrungVC
+
 
 @end

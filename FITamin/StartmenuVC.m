@@ -8,6 +8,9 @@
 
 #import "StartmenuVC.h"
 
+//Implementieren
+#import "StartmenuView.h"
+
 @interface StartmenuVC ()
 
 @end
@@ -22,12 +25,30 @@
     [testObject saveInBackground];
     
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //damit Tab Bar die View nicht überlappt
+    self.tabBarController.tabBar.translucent = NO;
+}
+
+/*Programmatisches Erzeugen der View
+- (void) loadView{
+    CGRect frame = [[UIScreen mainScreen] bounds];
+    StartmenuView *startmenuView = [[StartmenuView alloc] initWithFrame: frame];
+    self.view = startmenuView;
+}
+
+//Benennung der Tabs
+-(instancetype)init{
+    self = [super init];
+    if (self){
+        self.tabBarItem.title = @"Hier";
+    }
+    return self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+*/
 @end

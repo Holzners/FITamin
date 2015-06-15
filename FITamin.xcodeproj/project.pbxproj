@@ -14,6 +14,10 @@
 		84191B4B1B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B451B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework */; };
 		84191B4C1B2C48E1006C0C86 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B461B2C48E1006C0C86 /* ParseUI.framework */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
+		84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A381B2EE92E0062E0D6 /* StartmenuView.m */; };
+		84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */; };
+		84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */; };
+		84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */; };
 		8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */; };
 		8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */; };
 		849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */; };
@@ -62,6 +66,14 @@
 		84191B461B2C48E1006C0C86 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeModusVC.h; sourceTree = "<group>"; };
 		84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeModusVC.m; sourceTree = "<group>"; };
+		84567A371B2EE92E0062E0D6 /* StartmenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartmenuView.h; sourceTree = "<group>"; };
+		84567A381B2EE92E0062E0D6 /* StartmenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartmenuView.m; sourceTree = "<group>"; };
+		84567A3A1B2EEBBD0062E0D6 /* ErnaehrungView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErnaehrungView.h; sourceTree = "<group>"; };
+		84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErnaehrungView.m; sourceTree = "<group>"; };
+		84567A401B2EFEB10062E0D6 /* NeuWorkoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuWorkoutView.h; sourceTree = "<group>"; };
+		84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuWorkoutView.m; sourceTree = "<group>"; };
+		84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuWorkoutVC.h; sourceTree = "<group>"; };
+		84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuWorkoutVC.m; sourceTree = "<group>"; };
 		849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErnaehrungVC.h; sourceTree = "<group>"; };
 		8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErnaehrungVC.m; sourceTree = "<group>"; };
 		8496899B1B2C4A9B0000CAE2 /* FinishedScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedScreenVC.h; sourceTree = "<group>"; };
@@ -183,6 +195,10 @@
 				D4DA7B401B28815D00440996 /* AppDelegate.m */,
 				D4DA7B421B28815D00440996 /* StartmenuVC.h */,
 				D4DA7B431B28815D00440996 /* StartmenuVC.m */,
+				84567A3A1B2EEBBD0062E0D6 /* ErnaehrungView.h */,
+				84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */,
+				84567A371B2EE92E0062E0D6 /* StartmenuView.h */,
+				84567A381B2EE92E0062E0D6 /* StartmenuView.m */,
 				84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */,
 				84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */,
 				849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */,
@@ -204,6 +220,10 @@
 				849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */,
 				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
+				84567A401B2EFEB10062E0D6 /* NeuWorkoutView.h */,
+				84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */,
+				84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */,
+				84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */,
 				D4DA7B481B28815D00440996 /* Images.xcassets */,
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
 				D4DA7B3B1B28815D00440996 /* Supporting Files */,
@@ -340,13 +360,17 @@
 				849689B31B2C4C4C0000CAE2 /* ZutatenVC.m in Sources */,
 				849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */,
 				8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */,
+				84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */,
 				849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */,
 				849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */,
 				D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */,
+				84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */,
 				849689A71B2C4BC10000CAE2 /* SavedWorkoutsVC.m in Sources */,
 				8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */,
+				84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */,
 				849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
+				84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */,
 				D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */,
 				849689A61B2C4BC10000CAE2 /* RezepteVC.m in Sources */,
 				D4DA7B3E1B28815D00440996 /* main.m in Sources */,
