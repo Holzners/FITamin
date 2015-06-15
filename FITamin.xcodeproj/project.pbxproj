@@ -38,6 +38,7 @@
 		84CD91B91B2C30AB00B1AAD5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91B71B2C30AB00B1AAD5 /* SystemConfiguration.framework */; };
 		84CD91BB1B2C30D100B1AAD5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91BA1B2C30D100B1AAD5 /* libz.dylib */; };
 		84CD91BD1B2C30FC00B1AAD5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91BC1B2C30FC00B1AAD5 /* libsqlite3.dylib */; };
+		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
 		D4DA7B3E1B28815D00440996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B3D1B28815D00440996 /* main.m */; };
 		D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B401B28815D00440996 /* AppDelegate.m */; };
 		D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B431B28815D00440996 /* StartmenuVC.m */; };
@@ -103,6 +104,7 @@
 		84CD91B71B2C30AB00B1AAD5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		84CD91BA1B2C30D100B1AAD5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		84CD91BC1B2C30FC00B1AAD5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D4DA7B381B28815D00440996 /* FITamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FITamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DA7B3C1B28815D00440996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4DA7B3D1B28815D00440996 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -123,6 +125,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */,
+				84CD91AF1B2C305A00B1AAD5 /* CoreLocation.framework in Frameworks */,
 				84CD91BD1B2C30FC00B1AAD5 /* libsqlite3.dylib in Frameworks */,
 				84CD91BB1B2C30D100B1AAD5 /* libz.dylib in Frameworks */,
 				84CD91B81B2C30AB00B1AAD5 /* StoreKit.framework in Frameworks */,
@@ -134,7 +138,6 @@
 				84CD91B11B2C307700B1AAD5 /* MobileCoreServices.framework in Frameworks */,
 				84191B4A1B2C48E1006C0C86 /* ParseFacebookUtils.framework in Frameworks */,
 				84191B481B2C48E1006C0C86 /* Parse.framework in Frameworks */,
-				84CD91AF1B2C305A00B1AAD5 /* CoreLocation.framework in Frameworks */,
 				84CD91AD1B2C302C00B1AAD5 /* CoreGraphics.framework in Frameworks */,
 				84191B471B2C48E1006C0C86 /* Bolts.framework in Frameworks */,
 				84CD91AC1B2C302C00B1AAD5 /* CFNetwork.framework in Frameworks */,
@@ -156,6 +159,7 @@
 		D4DA7B2F1B28815D00440996 = {
 			isa = PBXGroup;
 			children = (
+				D45A6F231B2F0EDE0016A3BE /* MapKit.framework */,
 				84CD91BC1B2C30FC00B1AAD5 /* libsqlite3.dylib */,
 				84CD91BA1B2C30D100B1AAD5 /* libz.dylib */,
 				84CD91B61B2C30AB00B1AAD5 /* StoreKit.framework */,
