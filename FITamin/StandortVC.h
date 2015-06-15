@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface StandortVC : UIViewController
+
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+
+@property (strong, nonatomic) MKMapItem *destination;
+
+- (IBAction) getCurrentLocation:(id)sender;
+
+- (CLLocationDistance) calculateDistanceToLocation:(CLLocation*)otherLocation;
+
+- (void) calculateRouteFromCurrentToDestination:(CLLocation * ) destinationLocation;
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay;
+
+-(void)showRoute:(MKDirectionsResponse *)response;
 
 @end
