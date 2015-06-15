@@ -173,6 +173,24 @@
             </objects>
             <point key="canvasLocation" x="-193" y="-408"/>
         </scene>
+        <!--ErnährungTabBar-->
+        <scene sceneID="ddi-Ic-n2u">
+            <objects>
+                <tabBarController title="ErnährungTabBar" id="gts-wo-8Of" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="w2G-dI-GAc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6RS-UE-gOb" kind="relationship" relationship="viewControllers" id="0hg-5d-FIP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pDZ-7q-ZpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="491" y="-548"/>
+        </scene>
         <!--NeuWorkoutVC-->
         <scene sceneID="777-5b-77h">
             <objects>
@@ -349,4 +367,7 @@
             <point key="canvasLocation" x="-931" y="886"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0hg-5d-FIP"/>
+    </inferredMetricsTieBreakers>
 </document>
