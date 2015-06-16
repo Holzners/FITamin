@@ -18,6 +18,7 @@
 		84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */; };
 		84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */; };
 		84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */; };
+		845BDB611B3013B000F6C7B3 /* LogInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 845BDB601B3013B000F6C7B3 /* LogInVC.m */; };
 		8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */; };
 		8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */; };
 		849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */; };
@@ -75,6 +76,8 @@
 		84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuWorkoutView.m; sourceTree = "<group>"; };
 		84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuWorkoutVC.h; sourceTree = "<group>"; };
 		84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuWorkoutVC.m; sourceTree = "<group>"; };
+		845BDB601B3013B000F6C7B3 /* LogInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInVC.m; sourceTree = "<group>"; };
+		845BDB621B3013ED00F6C7B3 /* LogInVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInVC.h; sourceTree = "<group>"; };
 		849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErnaehrungVC.h; sourceTree = "<group>"; };
 		8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErnaehrungVC.m; sourceTree = "<group>"; };
 		8496899B1B2C4A9B0000CAE2 /* FinishedScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedScreenVC.h; sourceTree = "<group>"; };
@@ -200,9 +203,11 @@
 				D4DA7B421B28815D00440996 /* StartmenuVC.h */,
 				D4DA7B431B28815D00440996 /* StartmenuVC.m */,
 				84567A3A1B2EEBBD0062E0D6 /* ErnaehrungView.h */,
+				845BDB621B3013ED00F6C7B3 /* LogInVC.h */,
 				84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */,
 				84567A371B2EE92E0062E0D6 /* StartmenuView.h */,
 				84567A381B2EE92E0062E0D6 /* StartmenuView.m */,
+				845BDB601B3013B000F6C7B3 /* LogInVC.m */,
 				84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */,
 				84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */,
 				849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */,
@@ -363,6 +368,7 @@
 			files = (
 				849689B31B2C4C4C0000CAE2 /* ZutatenVC.m in Sources */,
 				849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */,
+				845BDB611B3013B000F6C7B3 /* LogInVC.m in Sources */,
 				8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */,
 				84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */,
 				849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */,
