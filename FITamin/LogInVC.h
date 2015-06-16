@@ -9,9 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import <ParseUI/PFLogInViewController.h>
+#import <ParseUI/PFSignUpViewController.h>
+#import "StartmenuVC.h"
 
+// Implement both delegates
+@interface LogInVC :UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
-@interface LogInVC : PFLogInViewController
+-(BOOL) logInViewController:(PFLogInViewController * __nonnull)logInController shouldBeginLogInWithUsername:(NSString * __nonnull)username password:(NSString * __nonnull)password;
+-(void) logInViewController:(PFLogInViewController * __nonnull)logInController didFailToLogInWithError:(nullable NSError *)error;
+-(void) logInViewController:(PFLogInViewController * __nonnull)logInController didLogInUser:(PFUser * __nonnull)user;
+-(void) logInViewControllerDidCancelLogIn:(PFLogInViewController * __nonnull)logInController;
 
 
 @end

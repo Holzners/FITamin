@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"HorstNeu"] = @"Köhler";
+    testObject[@"IchHabeMichEingeloggt"] = @"LogIN";
     
     [testObject saveInBackground];
     
