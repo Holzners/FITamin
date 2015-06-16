@@ -6,8 +6,12 @@
 //  Copyright (c) 2015 iOS-Praktikum. All rights reserved.
 //
 
-#ifndef FITamin_LogInVC_h
-#define FITamin_LogInVC_h
+#import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import <ParseUI/PFLogInViewController.h>
 
 
-#endif
+@interface LogInVC : PFLogInViewController
+
+
+@end

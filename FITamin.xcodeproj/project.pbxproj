@@ -19,6 +19,8 @@
 		84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */; };
 		84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */; };
 		845BDB611B3013B000F6C7B3 /* LogInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 845BDB601B3013B000F6C7B3 /* LogInVC.m */; };
+		845BDB641B30165800F6C7B3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845BDB631B30165800F6C7B3 /* Social.framework */; };
+		845BDB661B30166100F6C7B3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845BDB651B30166100F6C7B3 /* Accounts.framework */; };
 		8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */; };
 		8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */; };
 		849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */; };
@@ -78,6 +80,8 @@
 		84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuWorkoutVC.m; sourceTree = "<group>"; };
 		845BDB601B3013B000F6C7B3 /* LogInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInVC.m; sourceTree = "<group>"; };
 		845BDB621B3013ED00F6C7B3 /* LogInVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInVC.h; sourceTree = "<group>"; };
+		845BDB631B30165800F6C7B3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		845BDB651B30166100F6C7B3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErnaehrungVC.h; sourceTree = "<group>"; };
 		8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErnaehrungVC.m; sourceTree = "<group>"; };
 		8496899B1B2C4A9B0000CAE2 /* FinishedScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedScreenVC.h; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845BDB661B30166100F6C7B3 /* Accounts.framework in Frameworks */,
+				845BDB641B30165800F6C7B3 /* Social.framework in Frameworks */,
 				D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */,
 				84CD91AF1B2C305A00B1AAD5 /* CoreLocation.framework in Frameworks */,
 				84CD91BD1B2C30FC00B1AAD5 /* libsqlite3.dylib in Frameworks */,
@@ -162,6 +168,8 @@
 		D4DA7B2F1B28815D00440996 = {
 			isa = PBXGroup;
 			children = (
+				845BDB651B30166100F6C7B3 /* Accounts.framework */,
+				845BDB631B30165800F6C7B3 /* Social.framework */,
 				D45A6F231B2F0EDE0016A3BE /* MapKit.framework */,
 				84CD91BC1B2C30FC00B1AAD5 /* libsqlite3.dylib */,
 				84CD91BA1B2C30D100B1AAD5 /* libz.dylib */,
