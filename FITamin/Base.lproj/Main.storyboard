@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Fq-bX-CD2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Fq-bX-CD2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--StartmenuVC-->
@@ -16,17 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-QQ-6TE">
-                                <rect key="frame" x="278" y="516" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Startscreen4" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-fV-OrM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="a2N-QQ-6TE" secondAttribute="centerY" id="NfO-dJ-UYm"/>
-                            <constraint firstAttribute="centerX" secondItem="a2N-QQ-6TE" secondAttribute="centerX" id="RHh-gi-D4G"/>
+                            <constraint firstItem="aEA-fV-OrM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9JI-x4-1dJ"/>
+                            <constraint firstAttribute="trailing" secondItem="aEA-fV-OrM" secondAttribute="trailing" id="NZ1-Gu-CgA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aEA-fV-OrM" secondAttribute="bottom" id="iTc-wr-3XR"/>
+                            <constraint firstItem="aEA-fV-OrM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qsy-sz-Qk8"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Start" id="eGf-HD-JSe"/>
@@ -196,56 +195,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2f-XS-NH1">
-                                <rect key="frame" x="152" y="90" width="298" height="141"/>
-                                <string key="text">Tipps für eine gute Fitness-Ernährung! 
-Hier erfährst du </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW2-fa-KRE">
-                                <rect key="frame" x="186" y="310" width="230" height="30"/>
-                                <state key="normal" title="Rezepte speziell für dein Workout">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ErnährungTeil2" translatesAutoresizingMaskIntoConstraints="NO" id="f2a-gl-DVA">
+                                <rect key="frame" x="0.0" y="0.0" width="608" height="565"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9r-Xg-BY2">
+                                <rect key="frame" x="228" y="215" width="206" height="70"/>
+                                <state key="normal" backgroundImage="FitnessRezepte1Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjl-4s-MbB">
-                                <rect key="frame" x="278" y="218" width="108" height="30"/>
-                                <state key="normal" title="Fitness-Zutaten">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euJ-Q6-NPE">
+                                <rect key="frame" x="228" y="307" width="206" height="70"/>
+                                <state key="normal" image="FitnessRezepte2Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="FYb-r5-LbA" kind="modal" modalTransitionStyle="crossDissolve" id="OqR-ge-bEt"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSo-QV-Wpu">
-                                <rect key="frame" x="278" y="366" width="245" height="30"/>
-                                <state key="normal" title="Rezepte speziell für Muskelgruppen">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssq-yJ-zNg">
+                                <rect key="frame" x="227" y="122" width="206" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="hHU-T6-ZqS"/>
+                                    <constraint firstAttribute="height" constant="70" id="pCu-qL-1hr"/>
+                                </constraints>
+                                <state key="normal" image="FitnessZutatenButton2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="uZu-7K-9cS" kind="modal" modalTransitionStyle="crossDissolve" id="ffK-fB-wV2"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="kjl-4s-MbB" secondAttribute="centerY" constant="50" id="97b-IE-EDK"/>
-                            <constraint firstAttribute="centerY" secondItem="UW2-fa-KRE" secondAttribute="centerY" id="BSf-YX-huT"/>
-                            <constraint firstAttribute="centerY" secondItem="J2f-XS-NH1" secondAttribute="centerY" constant="220" id="Gtz-Fq-zcO"/>
-                            <constraint firstAttribute="centerX" secondItem="UW2-fa-KRE" secondAttribute="centerX" id="KZb-q3-hgg"/>
-                            <constraint firstAttribute="centerX" secondItem="J2f-XS-NH1" secondAttribute="centerX" id="Lav-s4-A9K"/>
-                            <constraint firstAttribute="centerY" secondItem="qSo-QV-Wpu" secondAttribute="centerY" constant="-50" id="Mom-Rd-YIY"/>
-                            <constraint firstAttribute="centerX" secondItem="qSo-QV-Wpu" secondAttribute="centerX" id="eVL-nq-aLF"/>
-                            <constraint firstAttribute="centerX" secondItem="kjl-4s-MbB" secondAttribute="centerX" id="f0w-Lc-32s"/>
+                            <constraint firstAttribute="centerX" secondItem="Ssq-yJ-zNg" secondAttribute="centerX" constant="-30" id="2eu-nI-8jy"/>
+                            <constraint firstAttribute="bottom" secondItem="f2a-gl-DVA" secondAttribute="bottom" id="3XQ-Go-lxD"/>
+                            <constraint firstItem="Ssq-yJ-zNg" firstAttribute="height" secondItem="euJ-Q6-NPE" secondAttribute="height" id="BWY-3O-TZv"/>
+                            <constraint firstAttribute="trailing" secondItem="f2a-gl-DVA" secondAttribute="trailing" id="GAz-cO-ko5"/>
+                            <constraint firstAttribute="centerY" secondItem="euJ-Q6-NPE" secondAttribute="centerY" constant="-42" id="J94-U4-CWm"/>
+                            <constraint firstItem="Ssq-yJ-zNg" firstAttribute="height" secondItem="y9r-Xg-BY2" secondAttribute="height" id="NwM-vA-FzH"/>
+                            <constraint firstAttribute="centerX" secondItem="euJ-Q6-NPE" secondAttribute="centerX" constant="-30" id="TlQ-it-dkH"/>
+                            <constraint firstItem="Ssq-yJ-zNg" firstAttribute="width" secondItem="euJ-Q6-NPE" secondAttribute="width" id="Y9s-bh-SnV"/>
+                            <constraint firstItem="f2a-gl-DVA" firstAttribute="top" secondItem="qRk-An-Rux" secondAttribute="top" id="Z3V-se-EsJ"/>
+                            <constraint firstItem="Ssq-yJ-zNg" firstAttribute="width" secondItem="y9r-Xg-BY2" secondAttribute="width" id="ilq-3U-zeI"/>
+                            <constraint firstAttribute="centerY" secondItem="y9r-Xg-BY2" secondAttribute="centerY" constant="50" id="kGf-Lb-PBt"/>
+                            <constraint firstAttribute="centerX" secondItem="y9r-Xg-BY2" secondAttribute="centerX" constant="-30" id="qcI-Dy-trJ"/>
+                            <constraint firstAttribute="centerY" secondItem="Ssq-yJ-zNg" secondAttribute="centerY" constant="143" id="wUa-aa-EF9"/>
+                            <constraint firstItem="f2a-gl-DVA" firstAttribute="leading" secondItem="qRk-An-Rux" secondAttribute="leading" id="xrS-7x-ct4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ernährung" id="f5M-3W-C1x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cuv-q2-AxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-193" y="-408"/>
+            <point key="canvasLocation" x="-177" y="-386"/>
         </scene>
         <!--NeuWorkoutVC-->
         <scene sceneID="777-5b-77h">
@@ -259,28 +257,30 @@ Hier erfährst du </string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neues Workout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea2-JC-MUb">
-                                <rect key="frame" x="241" y="289" width="118" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUV-7R-a2d">
-                                <rect key="frame" x="277" y="397" width="47" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FaulwarGestern" translatesAutoresizingMaskIntoConstraints="NO" id="7ex-sP-RpG">
+                                <rect key="frame" x="0.0" y="0.0" width="630" height="551"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zI-n9-Z4T">
+                                <rect key="frame" x="175" y="389" width="280" height="85"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="55"/>
+                                <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" title="START">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eNw-a4-aRO" kind="modal" id="YbY-7z-ITb"/>
+                                    <segue destination="eNw-a4-aRO" kind="modal" modalTransitionStyle="crossDissolve" id="M40-LJ-Hqr"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="rUV-7R-a2d" secondAttribute="centerY" constant="-150" id="B82-iN-7tY"/>
-                            <constraint firstAttribute="centerY" secondItem="ea2-JC-MUb" secondAttribute="centerY" id="SVR-yk-wqG"/>
-                            <constraint firstAttribute="centerX" secondItem="rUV-7R-a2d" secondAttribute="centerX" id="lGo-KT-iUy"/>
-                            <constraint firstAttribute="centerX" secondItem="ea2-JC-MUb" secondAttribute="centerX" id="rEi-H9-CWu"/>
+                            <constraint firstItem="7ex-sP-RpG" firstAttribute="leading" secondItem="RNP-Hw-sSd" secondAttribute="leading" id="5pp-wP-han"/>
+                            <constraint firstAttribute="trailing" secondItem="7ex-sP-RpG" secondAttribute="trailing" id="DG0-5Y-pRQ"/>
+                            <constraint firstAttribute="centerY" secondItem="1zI-n9-Z4T" secondAttribute="centerY" constant="-150" id="T1a-o4-1r8"/>
+                            <constraint firstItem="7ex-sP-RpG" firstAttribute="top" secondItem="RNP-Hw-sSd" secondAttribute="top" id="eWb-aK-xlW"/>
+                            <constraint firstAttribute="centerX" secondItem="1zI-n9-Z4T" secondAttribute="centerX" id="mrq-Uq-nfG"/>
+                            <constraint firstItem="0FS-Kb-19I" firstAttribute="top" secondItem="7ex-sP-RpG" secondAttribute="bottom" id="snr-c0-uUk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Neu" id="WAM-c5-7cO"/>
@@ -470,11 +470,18 @@ Hier erfährst du </string>
         </scene>
     </scenes>
     <resources>
+        <image name="ErnährungTeil2" width="1332" height="1965"/>
+        <image name="FaulwarGestern" width="1271" height="1700"/>
+        <image name="FitnessRezepte1Button" width="418" height="144"/>
+        <image name="FitnessRezepte2Button" width="418" height="144"/>
+        <image name="FitnessZutatenButton2" width="418" height="144"/>
         <image name="MuskelgruppenBatman" width="800" height="1470"/>
+        <image name="Startscreen4" width="1339" height="1964"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Uid-12-gkA"/>
         <segue reference="jNb-Cm-Cp1"/>
-        <segue reference="YFu-j7-f8j"/>
+        <segue reference="Uid-12-gkA"/>
+        <segue reference="q8W-Y5-gLL"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
