@@ -7,6 +7,7 @@
 //
 
 #import "UebungRouteVC.h"
+#import "UebungAnleitungVC.h"
 
 @import CoreLocation;
 
@@ -20,6 +21,7 @@
     CLLocation *location_OLYMPIAPARK;
     CLLocation *location_LUITPOLDPARK;
     CLLocation *currentLocation;
+    CLLocation *targetLocation;
 }
 
 
@@ -37,6 +39,7 @@
     //Set Coordinates for Luitpoldpark
     location_LUITPOLDPARK =[[CLLocation alloc] initWithLatitude:48.172892 longitude:11.572442];
     
+    targetLocation = location_ENGLISCHER_GARTEN;
     
     if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [locationManager requestWhenInUseAuthorization];
@@ -108,6 +111,13 @@
         MKCoordinateRegionMakeWithDistance(currentLocation.coordinate,
                                            2000, 2000);
         [_mapView setRegion:region animated:NO];
+        
+        if (targetLocation != nil) {
+            CLLocationDistance distanceToTarget =[self calculateDistanceToLocation:targetLocation];
+            if([NSNumber numberWithDouble:distanceToTarget].doubleValue < 15){
+                [self nextView:self];
+            }
+        }
         
         /*  NSLog([NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude], "Longitude");
          NSLog([NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude], "Latitude");
@@ -204,6 +214,14 @@
     renderer.strokeColor = [UIColor blueColor];
     renderer.lineWidth = 5.0;
     return renderer;
+}
+
+- (IBAction) nextView:(id)sender{
+    [locationManager stopUpdatingLocation];
+    
+    UebungAnleitungVC *next =
+    [[UebungAnleitungVC alloc] init];
+    [self presentViewController:next animated:YES completion:nil];
 }
 
 

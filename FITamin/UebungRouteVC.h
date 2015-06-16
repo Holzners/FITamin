@@ -26,4 +26,6 @@
 
 -(void)showRoute:(MKDirectionsResponse *)response;
 
+-(void)nextView(id)sender;
+
 @end
