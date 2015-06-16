@@ -196,11 +196,13 @@
 }
 
 - (IBAction) nextView:(id)sender{
-    [locationManager stopUpdatingLocation];
+    [locationManager stopUpdatingLocation]; /**
     [self dismissViewControllerAnimated:YES completion:nil];
     
     UebungAnleitungVC *next =[[UebungAnleitungVC alloc] init];
     [self presentViewController:next animated:YES completion:nil];
+                                             */
+    [self performSegueWithIdentifier:@"mapToDescription" sender:sender];
 }
 
 
