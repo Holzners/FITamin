@@ -81,7 +81,7 @@
     
     
     [self presentViewController:startMenu animated:YES completion:NULL];
-    // [self performSegueWithIdentifier:@"loginToMenue" sender:self];
+    // [self performSegueWithIdentifier:@"loginToStartMenue" sender:self];
     }
 
 // Sent to the delegate when the log in attempt fails.
