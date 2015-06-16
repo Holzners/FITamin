@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--StartmenuVC-->
@@ -38,10 +38,14 @@
         <!--Log InVC-->
         <scene sceneID="WOx-6t-vru">
             <objects>
-                <viewController id="ndf-BK-YH0" customClass="LogInVC" sceneMemberID="viewController"/>
+                <viewController id="ndf-BK-YH0" customClass="LogInVC" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="4Fq-bX-CD2" kind="show" identifier="loginToStartMenu" id="UIn-Ch-ANz"/>
+                    </connections>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bL2-KO-qKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1536" y="-95"/>
+            <point key="canvasLocation" x="-1498" y="-76"/>
         </scene>
         <!--Startmenu-->
         <scene sceneID="57p-MJ-mko">
@@ -360,10 +364,13 @@ Hier erfährst du </string>
                             <constraint firstAttribute="trailing" secondItem="40P-uP-91b" secondAttribute="trailing" id="oOt-7O-gqT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="RiL-f8-nGI" kind="show" id="s9F-cT-wL8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btP-jt-SGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1131" y="266"/>
+            <point key="canvasLocation" x="623" y="1146"/>
         </scene>
         <!--UebungRouteVC-->
         <scene sceneID="efV-sf-N3u">
@@ -395,11 +402,12 @@ Hier erfährst du </string>
                     <navigationItem key="navigationItem" id="Kj5-yV-BxY"/>
                     <connections>
                         <outlet property="mapView" destination="Usc-Uf-z5z" id="tpi-mg-e0l"/>
+                        <segue destination="P5q-zc-nxY" kind="show" identifier="mapToDescription" id="NdI-xz-Jj9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDt-JD-ep9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1539" y="612"/>
+            <point key="canvasLocation" x="1161" y="300"/>
         </scene>
         <!--UebungAnleitungVC-->
         <scene sceneID="OdY-Bk-Zwq">
@@ -417,7 +425,7 @@ Hier erfährst du </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYP-OE-cAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1805" y="250"/>
+            <point key="canvasLocation" x="1970" y="266"/>
         </scene>
         <!--SavedWorkoutVC-->
         <scene sceneID="IJ2-rO-ZHV">
@@ -465,7 +473,7 @@ Hier erfährst du </string>
         <image name="MuskelgruppenBatman" width="800" height="1470"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="UIn-Ch-ANz"/>
         <segue reference="CqW-04-wjV"/>
-        <segue reference="Uid-12-gkA"/>
     </inferredMetricsTieBreakers>
 </document>
