@@ -12,9 +12,9 @@
 
 @interface UebungRouteVC : UIViewController
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
-@property (weak, nonatomic) MKMapItem *destination;
+@property (strong, nonatomic) MKMapItem *destination;
 
 - (IBAction) getCurrentLocation:(id)sender;
 

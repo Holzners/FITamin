@@ -50,7 +50,7 @@
     //Draw User Location on map
     _mapView.showsUserLocation = YES;
     
-    _mapView.delegate = self;
+    //_mapView.delegate = self;
     
 }
 
@@ -75,7 +75,7 @@
     //stop existing request (if exists)
     [locationManager stopUpdatingLocation];
     
-    locationManager.delegate = self;
+    //locationManager.delegate = self;
     //set high accuracy cause each m matters ;)
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
@@ -118,28 +118,7 @@
                 [self nextView:self];
             }
         }
-        
-        /*  NSLog([NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude], "Longitude");
-         NSLog([NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude], "Latitude");
-         
-         
-         CLLocationDistance distanceEG = [self calculateDistanceToLocation:location_ENGLISCHER_GARTEN];
-         CLLocationDistance distanceLP = [self calculateDistanceToLocation:location_LUITPOLDPARK];
-         CLLocationDistance distanceOP = [self calculateDistanceToLocation:location_OLYMPIAPARK];
-         
-         //CLLocationDistance ist kein Objective C Objekt um die Entfernungen in einem Dictonairy zu Speichern:
-         NSNumber *numberDistanceEG = [ NSNumber numberWithDouble:distanceEG];
-         NSNumber *numberDistanceOP = [ NSNumber numberWithDouble:distanceLP];
-         NSNumber *numberDistanceLP = [ NSNumber numberWithDouble:distanceOP];
-         
-         NSMutableDictionary *dict = [NSMutableDictionary
-         dictionaryWithObjects:@[numberDistanceEG,numberDistanceLP,numberDistanceOP]
-         forKeys:@[@"Englischer Garten",@"Luitpoldpark",@"Olympiapark"]];
-         
-         [dict enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL* stop) {
-         NSLog(@"%@ => %@", key, value);
-         }];
-         */
+
     } else{
         NSLog(@"current Location = nil!");
     }
@@ -212,15 +191,15 @@
     MKPolylineRenderer *renderer =
     [[MKPolylineRenderer alloc] initWithOverlay:overlay];
     renderer.strokeColor = [UIColor blueColor];
-    renderer.lineWidth = 5.0;
+    renderer.lineWidth = 4.0;
     return renderer;
 }
 
 - (IBAction) nextView:(id)sender{
     [locationManager stopUpdatingLocation];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
-    UebungAnleitungVC *next =
-    [[UebungAnleitungVC alloc] init];
+    UebungAnleitungVC *next =[[UebungAnleitungVC alloc] init];
     [self presentViewController:next animated:YES completion:nil];
 }
 
