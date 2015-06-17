@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Fq-bX-CD2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Fq-bX-CD2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--StartmenuVC-->
@@ -262,7 +262,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zI-n9-Z4T">
                                 <rect key="frame" x="175" y="389" width="280" height="85"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="55"/>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" title="START">
@@ -352,25 +352,143 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MuskelgruppenBatman" translatesAutoresizingMaskIntoConstraints="NO" id="40P-uP-91b">
-                                <rect key="frame" x="111" y="53" width="379" height="493"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MuskelgruppenBatman" translatesAutoresizingMaskIntoConstraints="NO" id="40P-uP-91b">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btQ-ni-coN">
+                                <rect key="frame" x="247" y="204" width="102" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="TsP-Zd-h0K"/>
+                                    <constraint firstAttribute="width" constant="102" id="vTy-EP-iye"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseBauch:" destination="osx-wA-ZOB" eventType="touchUpInside" id="fzW-BD-nOb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbl-o2-we3">
+                                <rect key="frame" x="389" y="115" width="46" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vCF-EV-OOh"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseArms:" destination="osx-wA-ZOB" eventType="touchUpInside" id="e4J-ik-Fno"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owg-zb-RXJ">
+                                <rect key="frame" x="247" y="284" width="102" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="Dev-jH-1wF"/>
+                                    <constraint firstAttribute="width" constant="102" id="SNc-aB-h77"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseBeine:" destination="osx-wA-ZOB" eventType="touchUpInside" id="BE6-TV-aky"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEs-Pr-rKt">
+                                <rect key="frame" x="236" y="130" width="133" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="EJv-G2-qkl"/>
+                                    <constraint firstAttribute="height" constant="50" id="wXD-ht-ruq"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseBrust:" destination="osx-wA-ZOB" eventType="touchUpInside" id="9zJ-Gc-AdK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiJ-4V-3ct">
+                                <rect key="frame" x="174" y="115" width="50" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="abT-mZ-umn"/>
+                                    <constraint firstAttribute="width" constant="50" id="fXM-fy-C8s"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseArms:" destination="osx-wA-ZOB" eventType="touchUpInside" id="Fkw-Yt-yH5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-d5-AJF">
+                                <rect key="frame" x="385" y="530" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C3i-MR-oZa"/>
+                                    <constraint firstAttribute="width" constant="50" id="OlC-I7-nYy"/>
+                                </constraints>
+                                <state key="normal" image="RotateImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnBatman:" destination="osx-wA-ZOB" eventType="touchUpInside" id="e6m-1n-rfM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08C-d9-vuE">
+                                <rect key="frame" x="244" y="331" width="113" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Zb8-vl-c4y"/>
+                                    <constraint firstAttribute="width" constant="113" id="gBc-EQ-c9A"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosePo:" destination="osx-wA-ZOB" eventType="touchUpInside" id="FLK-gt-L4x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="RWJ-d5-AJF" firstAttribute="top" secondItem="Vbl-o2-we3" secondAttribute="bottom" constant="350" id="9KQ-N2-CRX"/>
+                            <constraint firstAttribute="centerX" secondItem="08C-d9-vuE" secondAttribute="centerX" id="E3P-yd-SIZ"/>
+                            <constraint firstItem="FiJ-4V-3ct" firstAttribute="top" secondItem="WKN-c3-Wpq" secondAttribute="bottom" constant="95" id="E79-5C-CDa"/>
                             <constraint firstItem="40P-uP-91b" firstAttribute="top" secondItem="WKN-c3-Wpq" secondAttribute="bottom" id="FPb-aU-scL"/>
+                            <constraint firstAttribute="centerX" secondItem="btQ-ni-coN" secondAttribute="centerX" constant="2" id="H9w-Nh-Qbg"/>
+                            <constraint firstItem="qGv-GW-oA7" firstAttribute="top" secondItem="RWJ-d5-AJF" secondAttribute="bottom" constant="20" id="I2J-WI-bq3"/>
+                            <constraint firstAttribute="centerX" secondItem="FiJ-4V-3ct" secondAttribute="centerX" constant="101" id="Mev-cf-PI9"/>
                             <constraint firstItem="qGv-GW-oA7" firstAttribute="top" secondItem="40P-uP-91b" secondAttribute="bottom" id="S1A-Sc-ifL"/>
+                            <constraint firstItem="owg-zb-RXJ" firstAttribute="top" secondItem="btQ-ni-coN" secondAttribute="bottom" constant="10" id="Xan-qJ-KYc"/>
                             <constraint firstItem="40P-uP-91b" firstAttribute="leading" secondItem="eTN-Lq-Do6" secondAttribute="leading" id="boJ-0q-Gep"/>
+                            <constraint firstItem="btQ-ni-coN" firstAttribute="top" secondItem="WKN-c3-Wpq" secondAttribute="bottom" constant="184" id="c5n-x4-6CJ"/>
+                            <constraint firstAttribute="centerX" secondItem="RWJ-d5-AJF" secondAttribute="centerX" constant="-110" id="cGC-Rp-JVB"/>
+                            <constraint firstAttribute="centerX" secondItem="Vbl-o2-we3" secondAttribute="centerX" constant="-112" id="eK3-j6-gFC"/>
+                            <constraint firstItem="Vbl-o2-we3" firstAttribute="top" secondItem="WKN-c3-Wpq" secondAttribute="bottom" constant="95" id="fGe-qN-ie1"/>
+                            <constraint firstItem="08C-d9-vuE" firstAttribute="top" secondItem="btQ-ni-coN" secondAttribute="bottom" constant="57" id="kUu-R9-cma"/>
+                            <constraint firstAttribute="centerX" secondItem="owg-zb-RXJ" secondAttribute="centerX" constant="2" id="nsD-sR-Yoj"/>
                             <constraint firstAttribute="trailing" secondItem="40P-uP-91b" secondAttribute="trailing" id="oOt-7O-gqT"/>
+                            <constraint firstAttribute="centerX" secondItem="OEs-Pr-rKt" secondAttribute="centerX" constant="-2.5" id="pBp-qE-T5U"/>
+                            <constraint firstItem="OEs-Pr-rKt" firstAttribute="top" secondItem="WKN-c3-Wpq" secondAttribute="bottom" constant="110" id="z1Y-5y-tpS"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9KQ-N2-CRX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="batman" destination="40P-uP-91b" id="FwO-V1-W0b"/>
+                        <outlet property="turnButton" destination="RWJ-d5-AJF" id="rAq-Uo-45r"/>
                         <segue destination="RiL-f8-nGI" kind="show" id="s9F-cT-wL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btP-jt-SGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="1146"/>
+            <point key="canvasLocation" x="622" y="1183"/>
         </scene>
         <!--UebungRouteVC-->
         <scene sceneID="efV-sf-N3u">
@@ -476,6 +594,7 @@
         <image name="FitnessRezepte2Button" width="418" height="144"/>
         <image name="FitnessZutatenButton2" width="418" height="144"/>
         <image name="MuskelgruppenBatman" width="800" height="1470"/>
+        <image name="RotateImage" width="70" height="70"/>
         <image name="Startscreen4" width="1339" height="1964"/>
     </resources>
     <inferredMetricsTieBreakers>
