@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MuskelgruppeVC : UIViewController
+@interface MuskelgruppeVC : UIViewController{
+    
+    __weak IBOutlet UIImageView *batman;
+    __weak IBOutlet UIButton *turnButton;
+
+}
+@property (weak, nonatomic) IBOutlet UIButton *turnButton;
+@property (weak, nonatomic) IBOutlet UIImageView *batman;
+- (IBAction)chooseArms:(id)sender;
 
 @end

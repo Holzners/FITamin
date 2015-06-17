@@ -46,9 +46,9 @@
 		D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B401B28815D00440996 /* AppDelegate.m */; };
 		D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B431B28815D00440996 /* StartmenuVC.m */; };
 		D4DA7B471B28815D00440996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4DA7B451B28815D00440996 /* Main.storyboard */; };
-		D4DA7B491B28815D00440996 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DA7B481B28815D00440996 /* Images.xcassets */; };
 		D4DA7B4C1B28815D00440996 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */; };
 		D4DA7B581B28815D00440996 /* FITaminTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B571B28815D00440996 /* FITaminTests.m */; };
+		F790D0E31B31B5B50092654E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F790D0E21B31B5B50092654E /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,11 +120,11 @@
 		D4DA7B421B28815D00440996 /* StartmenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartmenuVC.h; sourceTree = "<group>"; };
 		D4DA7B431B28815D00440996 /* StartmenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartmenuVC.m; sourceTree = "<group>"; };
 		D4DA7B461B28815D00440996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D4DA7B481B28815D00440996 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D4DA7B4B1B28815D00440996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D4DA7B511B28815D00440996 /* FITaminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FITaminTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DA7B561B28815D00440996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4DA7B571B28815D00440996 /* FITaminTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITaminTests.m; sourceTree = "<group>"; };
+		F790D0E21B31B5B50092654E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,13 +235,13 @@
 				849689AB1B2C4C160000CAE2 /* UebungAnleitungVC.h */,
 				849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */,
 				849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */,
+				F790D0E21B31B5B50092654E /* Images.xcassets */,
 				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
 				84567A401B2EFEB10062E0D6 /* NeuWorkoutView.h */,
 				84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */,
 				84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */,
 				84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */,
-				D4DA7B481B28815D00440996 /* Images.xcassets */,
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
 				D4DA7B3B1B28815D00440996 /* Supporting Files */,
 			);
@@ -354,9 +354,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F790D0E31B31B5B50092654E /* Images.xcassets in Resources */,
 				D4DA7B471B28815D00440996 /* Main.storyboard in Resources */,
 				D4DA7B4C1B28815D00440996 /* LaunchScreen.xib in Resources */,
-				D4DA7B491B28815D00440996 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
