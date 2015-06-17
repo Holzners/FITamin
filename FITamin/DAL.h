@@ -15,11 +15,11 @@
 @end
 
 
-static PFObject *exercisegetExerciseByName(NSString *name);
+PFObject * getExerciseByName(NSString *name);
 
-PFObject *exercise getExerciseByMuscle(PFObject *muscle);
+PFObject * getExerciseByMuscle(PFObject *muscle);
 
-PFObject *location getLocationByExercise(PFObject *exercise);
+PFObject * getLocationByExercise(PFObject *exercise);
 
 
 

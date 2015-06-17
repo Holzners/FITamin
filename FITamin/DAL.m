@@ -12,21 +12,25 @@
 
 @implementation DAL
 
-//
-//PFObject *exercise getExerciseByName(NSString *name){
-//    //hier werden dann Queries ausgeführt die
-//    // anschließend das jeweilige PFObject zurückgebgen
-//}
-//
-//PFObject *exercise getExerciseByMuscle(PFObject *muscle){
-//    //hier werden dann Queries ausgeführt die
-//    // anschließend das jeweilige PFObject zurückgebgen
-//}
-//
-//PFObject *location getLocationByExercise(PFObject *exercise){
-//    //hier werden dann Queries ausgeführt die
-//    // anschließend das jeweilige PFObject zurückgebgen
-//}
+
+PFObject * getExerciseByName(NSString *name){
+    //hier werden dann Queries ausgeführt die
+    // anschließend das jeweilige PFObject zurückgebgen
+    return [PFObject objectWithClassName:@"Exercise"];
+}
+
+PFObject * getExerciseByMuscle(PFObject *muscle){
+    //hier werden dann Queries ausgeführt die
+    // anschließend das jeweilige PFObject zurückgebgen
+    return [PFObject objectWithClassName:@"Exercise"];
+}
+
+PFObject * getLocationByExercise(PFObject *exercise){
+    //hier werden dann Queries ausgeführt die
+    // anschließend das jeweilige PFObject zurückgebgen
+    return [PFObject objectWithClassName:@"Location"];
+}
+
 
 - (void)someClassFunction {
     
