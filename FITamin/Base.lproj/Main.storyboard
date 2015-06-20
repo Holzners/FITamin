@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -145,7 +145,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XKb-5b-6dx"/>
                     <connections>
-                        <outlet property="countryNameLabel" destination="Xb3-Hj-tId" id="6Ca-Yb-M3I"/>
+                        <outlet property="zutatenNameLabel" destination="Xb3-Hj-tId" id="A55-J8-cq5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VP8-7D-4Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,7 +459,7 @@
                                     <action selector="choosePo:" destination="osx-wA-ZOB" eventType="touchUpInside" id="FLK-gt-L4x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ck5-6t-NMz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ck5-6t-NMz">
                                 <rect key="frame" x="516" y="28" width="55" height="30"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -471,6 +471,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ck5-6t-NMz" firstAttribute="leading" secondItem="eTN-Lq-Do6" secondAttribute="leadingMargin" constant="500" id="8X0-fD-2zT"/>
                             <constraint firstItem="RWJ-d5-AJF" firstAttribute="top" secondItem="Vbl-o2-we3" secondAttribute="bottom" constant="350" id="9KQ-N2-CRX"/>
                             <constraint firstAttribute="centerX" secondItem="08C-d9-vuE" secondAttribute="centerX" id="E3P-yd-SIZ"/>
                             <constraint firstItem="FiJ-4V-3ct" firstAttribute="top" secondItem="WKN-c3-Wpq" secondAttribute="bottom" constant="95" id="E79-5C-CDa"/>
@@ -478,8 +479,11 @@
                             <constraint firstAttribute="centerX" secondItem="btQ-ni-coN" secondAttribute="centerX" constant="2" id="H9w-Nh-Qbg"/>
                             <constraint firstItem="qGv-GW-oA7" firstAttribute="top" secondItem="RWJ-d5-AJF" secondAttribute="bottom" constant="20" id="I2J-WI-bq3"/>
                             <constraint firstAttribute="centerX" secondItem="FiJ-4V-3ct" secondAttribute="centerX" constant="101" id="Mev-cf-PI9"/>
+                            <constraint firstItem="qGv-GW-oA7" firstAttribute="top" secondItem="Ck5-6t-NMz" secondAttribute="bottom" constant="493" id="OIp-QI-98A"/>
                             <constraint firstItem="qGv-GW-oA7" firstAttribute="top" secondItem="40P-uP-91b" secondAttribute="bottom" id="S1A-Sc-ifL"/>
+                            <constraint firstItem="Ck5-6t-NMz" firstAttribute="top" secondItem="WKN-c3-Wpq" secondAttribute="bottom" constant="8" id="StY-NT-it5"/>
                             <constraint firstItem="owg-zb-RXJ" firstAttribute="top" secondItem="btQ-ni-coN" secondAttribute="bottom" constant="10" id="Xan-qJ-KYc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ck5-6t-NMz" secondAttribute="trailing" constant="13" id="Y5Y-Fy-vCn"/>
                             <constraint firstItem="40P-uP-91b" firstAttribute="leading" secondItem="eTN-Lq-Do6" secondAttribute="leading" id="boJ-0q-Gep"/>
                             <constraint firstItem="btQ-ni-coN" firstAttribute="top" secondItem="WKN-c3-Wpq" secondAttribute="bottom" constant="184" id="c5n-x4-6CJ"/>
                             <constraint firstAttribute="centerX" secondItem="RWJ-d5-AJF" secondAttribute="centerX" constant="-110" id="cGC-Rp-JVB"/>

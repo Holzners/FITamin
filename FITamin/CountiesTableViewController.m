@@ -14,13 +14,13 @@
 
 @interface CountiesTableViewController () <UISearchDisplayDelegate, UISearchBarDelegate>
 
-@property (nonatomic, strong) NSArray *countriesArray;
+@property (nonatomic, strong) NSArray *zutatenArray;
 @property (nonatomic, strong) NSMutableArray *sectionTitles;
-@property (nonatomic, strong) NSDictionary *countriesDict;
+@property (nonatomic, strong) NSDictionary *zutatenDictionary;
 
-@property (strong, nonatomic) NSArray *searchCountriesArray;
+@property (strong, nonatomic) NSArray *searchZutatenArray;
 @property (strong, nonatomic) NSMutableArray *searchSectionTitles;
-@property (strong, nonatomic) NSDictionary *searchCountriesDict;
+@property (strong, nonatomic) NSDictionary *searchZutatenDict;
 
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) UISearchDisplayController *searchDC;
@@ -72,8 +72,8 @@
 {
     [super viewWillAppear:animated];
     
-    self.countriesArray = [Datahandler loadData];
-    self.countriesDict = [self dictionaryAusArray:self.countriesArray];
+    self.zutatenArray = [Datahandler loadData];
+    self.zutatenDictionary = [self dictionaryAusArray:self.zutatenArray];
     [self.tableView reloadData];
 }
 
@@ -86,8 +86,8 @@
 - (void)filterContentForSearchText: (NSString *) searchText
 {
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@", searchText];
-    self.searchCountriesArray = [self.countriesArray filteredArrayUsingPredicate:resultPredicate];
-    self.searchCountriesDict = [self dictionaryAusArray:self.searchCountriesArray];
+    self.searchZutatenArray = [self.zutatenArray filteredArrayUsingPredicate:resultPredicate];
+    self.searchZutatenDict = [self dictionaryAusArray:self.searchZutatenArray];
 }
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
@@ -111,10 +111,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.tableView) {
-        NSArray *array = [self.countriesDict valueForKey:self.sectionTitles[section]];
+        NSArray *array = [self.zutatenDictionary valueForKey:self.sectionTitles[section]];
         return [array count];
     } else { // (tableView == self.searchDisplayController.searchResultsTableView)
-        NSArray *array = [self.searchCountriesDict valueForKey:self.searchSectionTitles[section]];
+        NSArray *array = [self.searchZutatenDict valueForKey:self.searchSectionTitles[section]];
         return [array count];
     }
 }
@@ -166,12 +166,12 @@
     if (tableView == self.tableView) {
         
         NSString *sectionTitle = self.sectionTitles[indexPath.section];
-        array = (self.countriesDict)[sectionTitle];
+        array = (self.zutatenDictionary)[sectionTitle];
         
     } else {
         
         NSString *sectionTitle = self.searchSectionTitles[indexPath.section];
-        array = (self.searchCountriesDict)[sectionTitle];
+        array = (self.searchZutatenDict)[sectionTitle];
     }
     
     // Zellenhintergrund mit Farbverlauf füllen
@@ -195,7 +195,7 @@
     cell.flagImageView.layer.cornerRadius = 5;
     cell.flagImageView.clipsToBounds = YES;
     
-    cell.countryNameLabel.text = array[indexPath.row];
+    cell.zutatenNameLabel.text = array[indexPath.row];
     cell.flagImageView.image = [UIImage imageNamed:array[indexPath.row]];
     
     return cell;
@@ -353,12 +353,12 @@
         
         if ([self.searchDisplayController isActive]) {
             NSString *sectionTitle = self.searchSectionTitles[indexPath.section];
-            array = (self.searchCountriesDict)[sectionTitle];
-            dvc.countryName = array[indexPath.row];
+            array = (self.searchZutatenDict)[sectionTitle];
+            dvc.zutatenName = array[indexPath.row];
         } else{
             NSString *sectionTitle = self.sectionTitles[indexPath.section];
-            array = (self.countriesDict)[sectionTitle];
-            dvc.countryName = array[indexPath.row];
+            array = (self.zutatenDictionary)[sectionTitle];
+            dvc.zutatenName = array[indexPath.row];
         }
     }
 }

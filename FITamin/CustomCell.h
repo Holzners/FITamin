@@ -10,6 +10,6 @@
 
 @interface CustomCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *flagImageView;
-@property (weak, nonatomic) IBOutlet UILabel *countryNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *zutatenNameLabel;
 
 @end
