@@ -8,7 +8,7 @@
 
 #import "CountiesTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "CustomCellTableViewCell.h"
+#import "CustomCell.h"
 #import "DetailsViewController.h"
 #import "Datahandler.h"
 
