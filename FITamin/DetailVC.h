@@ -1,14 +1,13 @@
 //
-//  ZutatenVC.h
+//  DetailVC.h
 //  FITamin
 //
-//  Created by admin on 13.06.15.
+//  Created by admin on 17.06.15.
 //  Copyright (c) 2015 iOS-Praktikum. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ZutatenVC : UIViewController
-
+@interface DetailVC : UIViewController
 
 @end

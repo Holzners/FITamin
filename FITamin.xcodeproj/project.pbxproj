@@ -14,6 +14,12 @@
 		84191B4B1B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B451B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework */; };
 		84191B4C1B2C48E1006C0C86 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B461B2C48E1006C0C86 /* ParseUI.framework */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
+		844AF5881B31E00300353B6B /* FitnessZutatenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AF5871B31E00300353B6B /* FitnessZutatenVC.m */; };
+		844AF58B1B31E0C300353B6B /* ZutatenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AF58A1B31E0C300353B6B /* ZutatenTableViewController.m */; };
+		844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF58C1B31E29600353B6B /* zutatenListe.plist */; };
+		844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */; };
+		844AF5A21B31FE0400353B6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 844AF5A11B31FE0400353B6B /* InfoPlist.strings */; };
+		844AF5B71B3206AE00353B6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF5B61B3206AE00353B6B /* Info.plist */; };
 		84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A381B2EE92E0062E0D6 /* StartmenuView.m */; };
 		84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */; };
 		84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */; };
@@ -21,6 +27,34 @@
 		845BDB611B3013B000F6C7B3 /* LogInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 845BDB601B3013B000F6C7B3 /* LogInVC.m */; };
 		845BDB641B30165800F6C7B3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845BDB631B30165800F6C7B3 /* Social.framework */; };
 		845BDB661B30166100F6C7B3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845BDB651B30166100F6C7B3 /* Accounts.framework */; };
+		847BFB511B32B04400EB04ED /* Datahandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 847BFB501B32B04400EB04ED /* Datahandler.m */; };
+		847BFB551B32B11000EB04ED /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB541B32B11000EB04ED /* CustomCell.xib */; };
+		847BFB581B32B13D00EB04ED /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847BFB571B32B13D00EB04ED /* CustomCell.m */; };
+		847BFB5B1B32B14E00EB04ED /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847BFB5A1B32B14E00EB04ED /* DetailsViewController.m */; };
+		847BFB5E1B32B16500EB04ED /* CountiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847BFB5D1B32B16500EB04ED /* CountiesTableViewController.m */; };
+		847BFB941B32BC6300EB04ED /* Ungarn.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB931B32BC6300EB04ED /* Ungarn.png */; };
+		847BFBA11B32BC7300EB04ED /* Ukraine.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB951B32BC7300EB04ED /* Ukraine.png */; };
+		847BFBA21B32BC7300EB04ED /* Türkei.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB961B32BC7300EB04ED /* Türkei.png */; };
+		847BFBA31B32BC7300EB04ED /* Schweiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB971B32BC7300EB04ED /* Schweiz.png */; };
+		847BFBA41B32BC7300EB04ED /* Schweden.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB981B32BC7300EB04ED /* Schweden.png */; };
+		847BFBA51B32BC7300EB04ED /* Spanien.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB991B32BC7300EB04ED /* Spanien.png */; };
+		847BFBA61B32BC7300EB04ED /* Rumänien.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9A1B32BC7300EB04ED /* Rumänien.png */; };
+		847BFBA71B32BC7300EB04ED /* Portugal.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9B1B32BC7300EB04ED /* Portugal.png */; };
+		847BFBA81B32BC7300EB04ED /* Polen.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9C1B32BC7300EB04ED /* Polen.png */; };
+		847BFBA91B32BC7300EB04ED /* Norwegen.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9D1B32BC7300EB04ED /* Norwegen.png */; };
+		847BFBAA1B32BC7300EB04ED /* Holland.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9E1B32BC7300EB04ED /* Holland.png */; };
+		847BFBAB1B32BC7300EB04ED /* Liechtenstein.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9F1B32BC7300EB04ED /* Liechtenstein.png */; };
+		847BFBAC1B32BC7300EB04ED /* Italien.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBA01B32BC7300EB04ED /* Italien.png */; };
+		847BFBB21B32BC7E00EB04ED /* Griechenland.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBAD1B32BC7E00EB04ED /* Griechenland.png */; };
+		847BFBB31B32BC7E00EB04ED /* Frankreich.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBAE1B32BC7E00EB04ED /* Frankreich.png */; };
+		847BFBB41B32BC7E00EB04ED /* Finnland.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBAF1B32BC7E00EB04ED /* Finnland.png */; };
+		847BFBB51B32BC7E00EB04ED /* Tschechische Republik.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBB01B32BC7E00EB04ED /* Tschechische Republik.png */; };
+		847BFBB61B32BC7E00EB04ED /* Österreich.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBB11B32BC7E00EB04ED /* Österreich.png */; };
+		847BFBB81B32BCF100EB04ED /* Erdbeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBB71B32BCF100EB04ED /* Erdbeere.png */; };
+		847BFBBE1B32E24B00EB04ED /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBBD1B32E24B00EB04ED /* data.plist */; };
+		848C56A21B31962400B407C5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C569F1B31962400B407C5 /* Default.png */; };
+		848C56A31B31962400B407C5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C56A01B31962400B407C5 /* Default@2x.png */; };
+		848C56A41B31962400B407C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C56A11B31962400B407C5 /* Default-568h@2x.png */; };
 		8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */; };
 		8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */; };
 		849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */; };
@@ -29,10 +63,8 @@
 		849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A91B2C4BFE0000CAE2 /* StandortVC.m */; };
 		849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */; };
 		849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */; };
-		849689B31B2C4C4C0000CAE2 /* ZutatenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689B21B2C4C4C0000CAE2 /* ZutatenVC.m */; };
 		84CD91A91B2C301800B1AAD5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91A81B2C301700B1AAD5 /* AudioToolbox.framework */; };
 		84CD91AC1B2C302C00B1AAD5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91AA1B2C302C00B1AAD5 /* CFNetwork.framework */; };
-		84CD91AD1B2C302C00B1AAD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91AB1B2C302C00B1AAD5 /* CoreGraphics.framework */; };
 		84CD91AF1B2C305A00B1AAD5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91AE1B2C305A00B1AAD5 /* CoreLocation.framework */; };
 		84CD91B11B2C307700B1AAD5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91B01B2C307700B1AAD5 /* MobileCoreServices.framework */; };
 		84CD91B31B2C308800B1AAD5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91B21B2C308800B1AAD5 /* QuartzCore.framework */; };
@@ -70,6 +102,15 @@
 		84191B461B2C48E1006C0C86 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeModusVC.h; sourceTree = "<group>"; };
 		84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeModusVC.m; sourceTree = "<group>"; };
+		844AF5861B31E00300353B6B /* FitnessZutatenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitnessZutatenVC.h; sourceTree = "<group>"; };
+		844AF5871B31E00300353B6B /* FitnessZutatenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitnessZutatenVC.m; sourceTree = "<group>"; };
+		844AF5891B31E0C300353B6B /* ZutatenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZutatenTableViewController.h; sourceTree = "<group>"; };
+		844AF58A1B31E0C300353B6B /* ZutatenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZutatenTableViewController.m; sourceTree = "<group>"; };
+		844AF58C1B31E29600353B6B /* zutatenListe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = zutatenListe.plist; sourceTree = "<group>"; };
+		844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Dynamic Table Views-Info.plist"; sourceTree = "<group>"; };
+		844AF5A11B31FE0400353B6B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		844AF5A31B31FE0800353B6B /* Dynamic Table Views-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dynamic Table Views-Prefix.pch"; sourceTree = "<group>"; };
+		844AF5B61B3206AE00353B6B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84567A371B2EE92E0062E0D6 /* StartmenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartmenuView.h; sourceTree = "<group>"; };
 		84567A381B2EE92E0062E0D6 /* StartmenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartmenuView.m; sourceTree = "<group>"; };
 		84567A3A1B2EEBBD0062E0D6 /* ErnaehrungView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErnaehrungView.h; sourceTree = "<group>"; };
@@ -82,6 +123,38 @@
 		845BDB621B3013ED00F6C7B3 /* LogInVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInVC.h; sourceTree = "<group>"; };
 		845BDB631B30165800F6C7B3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		845BDB651B30166100F6C7B3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		847BFB4F1B32B03F00EB04ED /* Datahandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Datahandler.h; path = "../../../Dynamic Table Views-7/Dynamic Table Views/Datahandler.h"; sourceTree = "<group>"; };
+		847BFB501B32B04400EB04ED /* Datahandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Datahandler.m; path = "../../../Dynamic Table Views-7/Dynamic Table Views/Datahandler.m"; sourceTree = "<group>"; };
+		847BFB541B32B11000EB04ED /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCell.xib; path = "../../../Dynamic Table Views-7/Dynamic Table Views/CustomCell.xib"; sourceTree = "<group>"; };
+		847BFB561B32B13D00EB04ED /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCell.h; path = "../../../Dynamic Table Views-7/Dynamic Table Views/CustomCell.h"; sourceTree = "<group>"; };
+		847BFB571B32B13D00EB04ED /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomCell.m; path = "../../../Dynamic Table Views-7/Dynamic Table Views/CustomCell.m"; sourceTree = "<group>"; };
+		847BFB591B32B14E00EB04ED /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsViewController.h; path = "../../../Dynamic Table Views-7/Dynamic Table Views/DetailsViewController.h"; sourceTree = "<group>"; };
+		847BFB5A1B32B14E00EB04ED /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsViewController.m; path = "../../../Dynamic Table Views-7/Dynamic Table Views/DetailsViewController.m"; sourceTree = "<group>"; };
+		847BFB5C1B32B16500EB04ED /* CountiesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountiesTableViewController.h; path = "../../../Dynamic Table Views-7/Dynamic Table Views/CountiesTableViewController.h"; sourceTree = "<group>"; };
+		847BFB5D1B32B16500EB04ED /* CountiesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountiesTableViewController.m; path = "../../../Dynamic Table Views-7/Dynamic Table Views/CountiesTableViewController.m"; sourceTree = "<group>"; };
+		847BFB931B32BC6300EB04ED /* Ungarn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ungarn.png; sourceTree = SOURCE_ROOT; };
+		847BFB951B32BC7300EB04ED /* Ukraine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ukraine.png; sourceTree = SOURCE_ROOT; };
+		847BFB961B32BC7300EB04ED /* Türkei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Türkei.png"; sourceTree = SOURCE_ROOT; };
+		847BFB971B32BC7300EB04ED /* Schweiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schweiz.png; sourceTree = SOURCE_ROOT; };
+		847BFB981B32BC7300EB04ED /* Schweden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schweden.png; sourceTree = SOURCE_ROOT; };
+		847BFB991B32BC7300EB04ED /* Spanien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spanien.png; sourceTree = SOURCE_ROOT; };
+		847BFB9A1B32BC7300EB04ED /* Rumänien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rumänien.png"; sourceTree = SOURCE_ROOT; };
+		847BFB9B1B32BC7300EB04ED /* Portugal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Portugal.png; sourceTree = SOURCE_ROOT; };
+		847BFB9C1B32BC7300EB04ED /* Polen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Polen.png; sourceTree = SOURCE_ROOT; };
+		847BFB9D1B32BC7300EB04ED /* Norwegen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Norwegen.png; sourceTree = SOURCE_ROOT; };
+		847BFB9E1B32BC7300EB04ED /* Holland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Holland.png; sourceTree = SOURCE_ROOT; };
+		847BFB9F1B32BC7300EB04ED /* Liechtenstein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liechtenstein.png; sourceTree = SOURCE_ROOT; };
+		847BFBA01B32BC7300EB04ED /* Italien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Italien.png; sourceTree = SOURCE_ROOT; };
+		847BFBAD1B32BC7E00EB04ED /* Griechenland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Griechenland.png; sourceTree = SOURCE_ROOT; };
+		847BFBAE1B32BC7E00EB04ED /* Frankreich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frankreich.png; sourceTree = SOURCE_ROOT; };
+		847BFBAF1B32BC7E00EB04ED /* Finnland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Finnland.png; sourceTree = SOURCE_ROOT; };
+		847BFBB01B32BC7E00EB04ED /* Tschechische Republik.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tschechische Republik.png"; sourceTree = SOURCE_ROOT; };
+		847BFBB11B32BC7E00EB04ED /* Österreich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Österreich.png"; sourceTree = SOURCE_ROOT; };
+		847BFBB71B32BCF100EB04ED /* Erdbeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Erdbeere.png; sourceTree = SOURCE_ROOT; };
+		847BFBBD1B32E24B00EB04ED /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = data.plist; path = ../../../../Documents/data.plist; sourceTree = "<group>"; };
+		848C569F1B31962400B407C5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		848C56A01B31962400B407C5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		848C56A11B31962400B407C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErnaehrungVC.h; sourceTree = "<group>"; };
 		8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErnaehrungVC.m; sourceTree = "<group>"; };
 		8496899B1B2C4A9B0000CAE2 /* FinishedScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedScreenVC.h; sourceTree = "<group>"; };
@@ -98,11 +171,8 @@
 		849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UebungAnleitungVC.m; sourceTree = "<group>"; };
 		849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UebungRouteVC.h; sourceTree = "<group>"; };
 		849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UebungRouteVC.m; sourceTree = "<group>"; };
-		849689B11B2C4C4C0000CAE2 /* ZutatenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZutatenVC.h; sourceTree = "<group>"; };
-		849689B21B2C4C4C0000CAE2 /* ZutatenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZutatenVC.m; sourceTree = "<group>"; };
 		84CD91A81B2C301700B1AAD5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		84CD91AA1B2C302C00B1AAD5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		84CD91AB1B2C302C00B1AAD5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		84CD91AE1B2C305A00B1AAD5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		84CD91B01B2C307700B1AAD5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		84CD91B21B2C308800B1AAD5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -113,7 +183,6 @@
 		84CD91BC1B2C30FC00B1AAD5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D4DA7B381B28815D00440996 /* FITamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FITamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4DA7B3C1B28815D00440996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4DA7B3D1B28815D00440996 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4DA7B3F1B28815D00440996 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4DA7B401B28815D00440996 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -147,7 +216,6 @@
 				84CD91B11B2C307700B1AAD5 /* MobileCoreServices.framework in Frameworks */,
 				84191B4A1B2C48E1006C0C86 /* ParseFacebookUtils.framework in Frameworks */,
 				84191B481B2C48E1006C0C86 /* Parse.framework in Frameworks */,
-				84CD91AD1B2C302C00B1AAD5 /* CoreGraphics.framework in Frameworks */,
 				84191B471B2C48E1006C0C86 /* Bolts.framework in Frameworks */,
 				84CD91AC1B2C302C00B1AAD5 /* CFNetwork.framework in Frameworks */,
 				84191B4C1B2C48E1006C0C86 /* ParseUI.framework in Frameworks */,
@@ -165,6 +233,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844AF59B1B31FD8400353B6B /* Nib Files */ = {
+			isa = PBXGroup;
+			children = (
+				847BFB541B32B11000EB04ED /* CustomCell.xib */,
+			);
+			name = "Nib Files";
+			sourceTree = "<group>";
+		};
+		844AF59C1B31FDA700353B6B /* ZutatenImages */ = {
+			isa = PBXGroup;
+			children = (
+				847BFB951B32BC7300EB04ED /* Ukraine.png */,
+				847BFB961B32BC7300EB04ED /* Türkei.png */,
+				847BFB971B32BC7300EB04ED /* Schweiz.png */,
+				847BFB981B32BC7300EB04ED /* Schweden.png */,
+				847BFBB71B32BCF100EB04ED /* Erdbeere.png */,
+				847BFBAD1B32BC7E00EB04ED /* Griechenland.png */,
+				847BFBAE1B32BC7E00EB04ED /* Frankreich.png */,
+				847BFBAF1B32BC7E00EB04ED /* Finnland.png */,
+				847BFBB01B32BC7E00EB04ED /* Tschechische Republik.png */,
+				847BFBB11B32BC7E00EB04ED /* Österreich.png */,
+				847BFB991B32BC7300EB04ED /* Spanien.png */,
+				847BFB9A1B32BC7300EB04ED /* Rumänien.png */,
+				847BFB9B1B32BC7300EB04ED /* Portugal.png */,
+				847BFB9C1B32BC7300EB04ED /* Polen.png */,
+				847BFB9D1B32BC7300EB04ED /* Norwegen.png */,
+				847BFB9E1B32BC7300EB04ED /* Holland.png */,
+				847BFB9F1B32BC7300EB04ED /* Liechtenstein.png */,
+				847BFBA01B32BC7300EB04ED /* Italien.png */,
+				847BFB931B32BC6300EB04ED /* Ungarn.png */,
+			);
+			name = ZutatenImages;
+			sourceTree = "<group>";
+		};
+		844AF5B81B3207FF00353B6B /* FitnessZutaten */ = {
+			isa = PBXGroup;
+			children = (
+				844AF5861B31E00300353B6B /* FitnessZutatenVC.h */,
+				844AF5871B31E00300353B6B /* FitnessZutatenVC.m */,
+				844AF5891B31E0C300353B6B /* ZutatenTableViewController.h */,
+				844AF58A1B31E0C300353B6B /* ZutatenTableViewController.m */,
+				847BFB5C1B32B16500EB04ED /* CountiesTableViewController.h */,
+				847BFB5D1B32B16500EB04ED /* CountiesTableViewController.m */,
+				847BFB591B32B14E00EB04ED /* DetailsViewController.h */,
+				847BFB5A1B32B14E00EB04ED /* DetailsViewController.m */,
+				847BFB561B32B13D00EB04ED /* CustomCell.h */,
+				847BFB571B32B13D00EB04ED /* CustomCell.m */,
+				847BFB4F1B32B03F00EB04ED /* Datahandler.h */,
+				847BFB501B32B04400EB04ED /* Datahandler.m */,
+			);
+			name = FitnessZutaten;
+			sourceTree = "<group>";
+		};
 		D4DA7B2F1B28815D00440996 = {
 			isa = PBXGroup;
 			children = (
@@ -180,7 +301,6 @@
 				84CD91B01B2C307700B1AAD5 /* MobileCoreServices.framework */,
 				84CD91AE1B2C305A00B1AAD5 /* CoreLocation.framework */,
 				84CD91AA1B2C302C00B1AAD5 /* CFNetwork.framework */,
-				84CD91AB1B2C302C00B1AAD5 /* CoreGraphics.framework */,
 				84CD91A81B2C301700B1AAD5 /* AudioToolbox.framework */,
 				D4DA7B3A1B28815D00440996 /* FITamin */,
 				D4DA7B541B28815D00440996 /* FITaminTests */,
@@ -230,8 +350,6 @@
 				849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */,
 				849689A81B2C4BFE0000CAE2 /* StandortVC.h */,
 				849689A91B2C4BFE0000CAE2 /* StandortVC.m */,
-				849689B11B2C4C4C0000CAE2 /* ZutatenVC.h */,
-				849689B21B2C4C4C0000CAE2 /* ZutatenVC.m */,
 				849689AB1B2C4C160000CAE2 /* UebungAnleitungVC.h */,
 				849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */,
 				849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */,
@@ -243,6 +361,9 @@
 				84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */,
 				D4DA7B481B28815D00440996 /* Images.xcassets */,
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
+				844AF5B81B3207FF00353B6B /* FitnessZutaten */,
+				844AF59C1B31FDA700353B6B /* ZutatenImages */,
+				844AF59B1B31FD8400353B6B /* Nib Files */,
 				D4DA7B3B1B28815D00440996 /* Supporting Files */,
 			);
 			path = FITamin;
@@ -251,8 +372,16 @@
 		D4DA7B3B1B28815D00440996 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D4DA7B3C1B28815D00440996 /* Info.plist */,
+				844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */,
+				844AF5B61B3206AE00353B6B /* Info.plist */,
+				844AF5A11B31FE0400353B6B /* InfoPlist.strings */,
+				844AF5A31B31FE0800353B6B /* Dynamic Table Views-Prefix.pch */,
 				D4DA7B3D1B28815D00440996 /* main.m */,
+				847BFBBD1B32E24B00EB04ED /* data.plist */,
+				848C569F1B31962400B407C5 /* Default.png */,
+				848C56A01B31962400B407C5 /* Default@2x.png */,
+				848C56A11B31962400B407C5 /* Default-568h@2x.png */,
+				844AF58C1B31E29600353B6B /* zutatenListe.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -354,8 +483,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847BFB551B32B11000EB04ED /* CustomCell.xib in Resources */,
+				847BFBA11B32BC7300EB04ED /* Ukraine.png in Resources */,
+				844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */,
+				848C56A31B31962400B407C5 /* Default@2x.png in Resources */,
+				847BFBB61B32BC7E00EB04ED /* Österreich.png in Resources */,
+				847BFBA61B32BC7300EB04ED /* Rumänien.png in Resources */,
+				847BFBB51B32BC7E00EB04ED /* Tschechische Republik.png in Resources */,
+				847BFBA71B32BC7300EB04ED /* Portugal.png in Resources */,
+				847BFBB31B32BC7E00EB04ED /* Frankreich.png in Resources */,
+				847BFB941B32BC6300EB04ED /* Ungarn.png in Resources */,
 				D4DA7B471B28815D00440996 /* Main.storyboard in Resources */,
+				847BFBBE1B32E24B00EB04ED /* data.plist in Resources */,
+				848C56A41B31962400B407C5 /* Default-568h@2x.png in Resources */,
+				847BFBAA1B32BC7300EB04ED /* Holland.png in Resources */,
+				847BFBAC1B32BC7300EB04ED /* Italien.png in Resources */,
+				848C56A21B31962400B407C5 /* Default.png in Resources */,
 				D4DA7B4C1B28815D00440996 /* LaunchScreen.xib in Resources */,
+				847BFBA51B32BC7300EB04ED /* Spanien.png in Resources */,
+				844AF5B71B3206AE00353B6B /* Info.plist in Resources */,
+				847BFBA31B32BC7300EB04ED /* Schweiz.png in Resources */,
+				847BFBB81B32BCF100EB04ED /* Erdbeere.png in Resources */,
+				844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */,
+				847BFBA41B32BC7300EB04ED /* Schweden.png in Resources */,
+				844AF5A21B31FE0400353B6B /* InfoPlist.strings in Resources */,
+				847BFBAB1B32BC7300EB04ED /* Liechtenstein.png in Resources */,
+				847BFBB21B32BC7E00EB04ED /* Griechenland.png in Resources */,
+				847BFBA91B32BC7300EB04ED /* Norwegen.png in Resources */,
+				847BFBA81B32BC7300EB04ED /* Polen.png in Resources */,
+				847BFBB41B32BC7E00EB04ED /* Finnland.png in Resources */,
+				847BFBA21B32BC7300EB04ED /* Türkei.png in Resources */,
 				D4DA7B491B28815D00440996 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +531,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849689B31B2C4C4C0000CAE2 /* ZutatenVC.m in Sources */,
+				847BFB5E1B32B16500EB04ED /* CountiesTableViewController.m in Sources */,
+				847BFB511B32B04400EB04ED /* Datahandler.m in Sources */,
+				844AF5881B31E00300353B6B /* FitnessZutatenVC.m in Sources */,
 				849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */,
 				845BDB611B3013B000F6C7B3 /* LogInVC.m in Sources */,
 				8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */,
@@ -384,12 +543,15 @@
 				D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */,
 				84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */,
 				849689A71B2C4BC10000CAE2 /* SavedWorkoutsVC.m in Sources */,
+				847BFB581B32B13D00EB04ED /* CustomCell.m in Sources */,
 				8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */,
+				847BFB5B1B32B14E00EB04ED /* DetailsViewController.m in Sources */,
 				84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */,
 				849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
 				84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */,
 				D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */,
+				844AF58B1B31E0C300353B6B /* ZutatenTableViewController.m in Sources */,
 				849689A61B2C4BC10000CAE2 /* RezepteVC.m in Sources */,
 				D4DA7B3E1B28815D00440996 /* main.m in Sources */,
 			);
@@ -524,6 +686,7 @@
 					"/Users/admin/Downloads/parse-starter-project-1/ParseStarterProject",
 					"/Users/Stephan/Downloads/parse-library-1",
 					"$(PROJECT_DIR)/FITamin",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = FITamin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -540,6 +703,7 @@
 					"/Users/admin/Downloads/parse-starter-project-1/ParseStarterProject",
 					"/Users/Stephan/Downloads/parse-library-1",
 					"$(PROJECT_DIR)/FITamin",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = FITamin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
