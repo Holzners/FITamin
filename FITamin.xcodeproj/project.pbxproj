@@ -46,7 +46,6 @@
 		847BFBB51B32BC7E00EB04ED /* Tschechische Republik.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBB01B32BC7E00EB04ED /* Tschechische Republik.png */; };
 		847BFBB61B32BC7E00EB04ED /* Österreich.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBB11B32BC7E00EB04ED /* Österreich.png */; };
 		847BFBB81B32BCF100EB04ED /* Erdbeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBB71B32BCF100EB04ED /* Erdbeere.png */; };
-		847BFBBE1B32E24B00EB04ED /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBBD1B32E24B00EB04ED /* data.plist */; };
 		848C56A21B31962400B407C5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C569F1B31962400B407C5 /* Default.png */; };
 		848C56A31B31962400B407C5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C56A01B31962400B407C5 /* Default@2x.png */; };
 		848C56A41B31962400B407C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C56A11B31962400B407C5 /* Default-568h@2x.png */; };
@@ -73,6 +72,7 @@
 		84DC36D71B35815800A94CBA /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D61B35815800A94CBA /* DetailsViewController.m */; };
 		84DC36DA1B35819B00A94CBA /* CountiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */; };
 		84DC36E21B35845D00A94CBA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E11B35845D00A94CBA /* CustomCell.xib */; };
+		84DC36E51B35888400A94CBA /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E41B35888400A94CBA /* data.plist */; };
 		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
 		D4DA7B3E1B28815D00440996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B3D1B28815D00440996 /* main.m */; };
 		D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B401B28815D00440996 /* AppDelegate.m */; };
@@ -141,7 +141,6 @@
 		847BFBB01B32BC7E00EB04ED /* Tschechische Republik.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tschechische Republik.png"; sourceTree = SOURCE_ROOT; };
 		847BFBB11B32BC7E00EB04ED /* Österreich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Österreich.png"; sourceTree = SOURCE_ROOT; };
 		847BFBB71B32BCF100EB04ED /* Erdbeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Erdbeere.png; sourceTree = SOURCE_ROOT; };
-		847BFBBD1B32E24B00EB04ED /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = data.plist; path = ../../../../Documents/data.plist; sourceTree = "<group>"; };
 		848C569F1B31962400B407C5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		848C56A01B31962400B407C5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		848C56A11B31962400B407C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -180,6 +179,7 @@
 		84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountiesTableViewController.m; sourceTree = "<group>"; };
 		84DC36E11B35845D00A94CBA /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCell.xib; path = FITamin.xcodeproj/../CustomCell.xib; sourceTree = SOURCE_ROOT; };
 		84DC36E31B35866C00A94CBA /* CountiesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountiesTableViewController.h; sourceTree = "<group>"; };
+		84DC36E41B35888400A94CBA /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D4DA7B381B28815D00440996 /* FITamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FITamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DA7B3D1B28815D00440996 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -376,7 +376,7 @@
 				844AF5A11B31FE0400353B6B /* InfoPlist.strings */,
 				844AF5A31B31FE0800353B6B /* Dynamic Table Views-Prefix.pch */,
 				D4DA7B3D1B28815D00440996 /* main.m */,
-				847BFBBD1B32E24B00EB04ED /* data.plist */,
+				84DC36E41B35888400A94CBA /* data.plist */,
 				848C569F1B31962400B407C5 /* Default.png */,
 				848C56A01B31962400B407C5 /* Default@2x.png */,
 				848C56A11B31962400B407C5 /* Default-568h@2x.png */,
@@ -485,6 +485,7 @@
 				847BFBA11B32BC7300EB04ED /* Ukraine.png in Resources */,
 				844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */,
 				848C56A31B31962400B407C5 /* Default@2x.png in Resources */,
+				84DC36E51B35888400A94CBA /* data.plist in Resources */,
 				847BFBB61B32BC7E00EB04ED /* Österreich.png in Resources */,
 				847BFBA61B32BC7300EB04ED /* Rumänien.png in Resources */,
 				847BFBB51B32BC7E00EB04ED /* Tschechische Republik.png in Resources */,
@@ -492,7 +493,6 @@
 				847BFBB31B32BC7E00EB04ED /* Frankreich.png in Resources */,
 				847BFB941B32BC6300EB04ED /* Ungarn.png in Resources */,
 				D4DA7B471B28815D00440996 /* Main.storyboard in Resources */,
-				847BFBBE1B32E24B00EB04ED /* data.plist in Resources */,
 				848C56A41B31962400B407C5 /* Default-568h@2x.png in Resources */,
 				847BFBAA1B32BC7300EB04ED /* Holland.png in Resources */,
 				847BFBAC1B32BC7300EB04ED /* Italien.png in Resources */,
