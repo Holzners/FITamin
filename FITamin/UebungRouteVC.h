@@ -13,9 +13,12 @@
 @interface UebungRouteVC : UIViewController
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
-
 @property (strong, nonatomic) MKMapItem *destination;
+@property (strong, nonatomic) NSString *destinationString;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *targetLocation;
 
+@property (strong, nonatomic) CLLocation *currentLocation;
 @property (strong, nonatomic) NSString *selectedMuscleGroup;
 
 - (IBAction) getCurrentLocation:(id)sender;
