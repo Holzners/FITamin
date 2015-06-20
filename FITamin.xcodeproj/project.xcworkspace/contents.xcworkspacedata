@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../CustomCell.xib">
+   </FileRef>
+   <FileRef
       location = "self:FITamin.xcodeproj">
    </FileRef>
 </Workspace>
