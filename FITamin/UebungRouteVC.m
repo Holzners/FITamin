@@ -15,42 +15,33 @@
 
 @end
 
-@implementation UebungRouteVC {
-    CLLocationManager *locationManager;
-    CLLocation *location_ENGLISCHER_GARTEN;
-    CLLocation *location_OLYMPIAPARK;
-    CLLocation *location_LUITPOLDPARK;
-    CLLocation *currentLocation;
-    CLLocation *targetLocation;
-}
-
+@implementation UebungRouteVC
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"gewählter Ort: %@", self.destinationString);
+    
     //init Location Manager
-    locationManager = [[CLLocationManager alloc] init];
+    _locationManager = [[CLLocationManager alloc] init];
+
     
-    //set Coordinates for "Englischer Garten"
-    location_ENGLISCHER_GARTEN = [[CLLocation alloc] initWithLatitude:48.149925 longitude:11.586658];
-    //set Coordinates for "Olympiapark
-    location_OLYMPIAPARK =[[CLLocation alloc] initWithLatitude:48.174394 longitude:11.559760];
-    //Set Coordinates for Luitpoldpark
-    location_LUITPOLDPARK =[[CLLocation alloc] initWithLatitude:48.172892 longitude:11.572442];
-    
-    targetLocation = location_ENGLISCHER_GARTEN;
-    
-    if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        [locationManager requestWhenInUseAuthorization];
+    if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [_locationManager requestWhenInUseAuthorization];
     }
-    if ([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
-        [locationManager requestAlwaysAuthorization];
+    if ([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [_locationManager requestAlwaysAuthorization];
     }
+    
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
     //Draw User Location on map
     _mapView.showsUserLocation = YES;
     
-    //_mapView.delegate = self;
+    _mapView.delegate = self;
+    
+    [_locationManager startUpdatingLocation];
     
 }
 
@@ -58,12 +49,13 @@
     
     // zoom on Oettingenstraße 67
     CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 48.150184;
-    zoomLocation.longitude= 11.594540;
+    zoomLocation =_currentLocation.coordinate;
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation,
                                                                        0.5*5000, 0.5*5000);
     [_mapView setRegion:viewRegion animated:YES];
+    
+    [self calculateRouteFromCurrentToDestination:_targetLocation];
     
 }
 
@@ -71,21 +63,6 @@
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)getCurrentLocation:(id)sender{
-    //stop existing request (if exists)
-    [locationManager stopUpdatingLocation];
-    
-    //locationManager.delegate = self;
-    //set high accuracy cause each m matters ;)
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    //start new location update request
-    [locationManager startUpdatingLocation];
-    
-    //Placeholder: show route to Englsicher Garten
-    [self calculateRouteFromCurrentToDestination:location_ENGLISCHER_GARTEN];
-    
-}
 
 //If Location Manager fails to get Location create PopUp
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -102,23 +79,16 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
-    currentLocation = newLocation;
+    _currentLocation = newLocation;
     
-    if (currentLocation != nil) {
+    if (_currentLocation != nil) {
         
-        //zoom in current location
-        MKCoordinateRegion region =
-        MKCoordinateRegionMakeWithDistance(currentLocation.coordinate,
-                                           2000, 2000);
-        [_mapView setRegion:region animated:NO];
-        
-        if (targetLocation != nil) {
-            CLLocationDistance distanceToTarget =[self calculateDistanceToLocation:targetLocation];
+        if (_targetLocation != nil) {
+            CLLocationDistance distanceToTarget =[self calculateDistanceToLocation:_targetLocation];
             if([NSNumber numberWithDouble:distanceToTarget].doubleValue < 15){
                 [self nextView:self];
             }
         }
-
     } else{
         NSLog(@"current Location = nil!");
     }
@@ -126,11 +96,11 @@
 
 //calculates Distance beetween currentLocation and otherLocation
 - (CLLocationDistance) calculateDistanceToLocation:(CLLocation*)otherLocation{
-    if(currentLocation!= nil){
-        return[currentLocation distanceFromLocation:otherLocation];
+    if(_currentLocation!= nil){
+        return[_currentLocation distanceFromLocation:otherLocation];
     }else{
-        [locationManager startUpdatingLocation];
-        return[currentLocation distanceFromLocation:otherLocation];
+        [_locationManager startUpdatingLocation];
+        return[_currentLocation distanceFromLocation:otherLocation];
     }
 }
 
@@ -196,12 +166,7 @@
 }
 
 - (IBAction) nextView:(id)sender{
-    [locationManager stopUpdatingLocation]; /**
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-    UebungAnleitungVC *next =[[UebungAnleitungVC alloc] init];
-    [self presentViewController:next animated:YES completion:nil];
-                                             */
+    [_locationManager stopUpdatingLocation]; 
     [self performSegueWithIdentifier:@"mapToDescription" sender:sender];
 }
 
