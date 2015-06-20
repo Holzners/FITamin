@@ -10,6 +10,6 @@
 
 @interface DetailsViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *countryNameLabel;
-@property (strong, nonatomic) NSString *countryName;
+@property (weak, nonatomic) IBOutlet UILabel *zutatenNameLabel;
+@property (strong, nonatomic) NSString *zutatenName;
 @end

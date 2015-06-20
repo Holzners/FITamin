@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.countryNameLabel.text = self.countryName;
+    self.zutatenNameLabel.text = self.zutatenName;
 }
 
 - (void)didReceiveMemoryWarning

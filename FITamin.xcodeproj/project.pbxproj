@@ -14,8 +14,6 @@
 		84191B4B1B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B451B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework */; };
 		84191B4C1B2C48E1006C0C86 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B461B2C48E1006C0C86 /* ParseUI.framework */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
-		844AF5881B31E00300353B6B /* FitnessZutatenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AF5871B31E00300353B6B /* FitnessZutatenVC.m */; };
-		844AF58B1B31E0C300353B6B /* ZutatenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AF58A1B31E0C300353B6B /* ZutatenTableViewController.m */; };
 		844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF58C1B31E29600353B6B /* zutatenListe.plist */; };
 		844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */; };
 		844AF5A21B31FE0400353B6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 844AF5A11B31FE0400353B6B /* InfoPlist.strings */; };
@@ -102,10 +100,6 @@
 		84191B461B2C48E1006C0C86 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeModusVC.h; sourceTree = "<group>"; };
 		84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeModusVC.m; sourceTree = "<group>"; };
-		844AF5861B31E00300353B6B /* FitnessZutatenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitnessZutatenVC.h; sourceTree = "<group>"; };
-		844AF5871B31E00300353B6B /* FitnessZutatenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitnessZutatenVC.m; sourceTree = "<group>"; };
-		844AF5891B31E0C300353B6B /* ZutatenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZutatenTableViewController.h; sourceTree = "<group>"; };
-		844AF58A1B31E0C300353B6B /* ZutatenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZutatenTableViewController.m; sourceTree = "<group>"; };
 		844AF58C1B31E29600353B6B /* zutatenListe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = zutatenListe.plist; sourceTree = "<group>"; };
 		844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Dynamic Table Views-Info.plist"; sourceTree = "<group>"; };
 		844AF5A11B31FE0400353B6B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -270,10 +264,6 @@
 		844AF5B81B3207FF00353B6B /* FitnessZutaten */ = {
 			isa = PBXGroup;
 			children = (
-				844AF5861B31E00300353B6B /* FitnessZutatenVC.h */,
-				844AF5871B31E00300353B6B /* FitnessZutatenVC.m */,
-				844AF5891B31E0C300353B6B /* ZutatenTableViewController.h */,
-				844AF58A1B31E0C300353B6B /* ZutatenTableViewController.m */,
 				84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */,
 				84DC36E31B35866C00A94CBA /* CountiesTableViewController.h */,
 				84DC36D51B35815800A94CBA /* DetailsViewController.h */,
@@ -531,7 +521,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844AF5881B31E00300353B6B /* FitnessZutatenVC.m in Sources */,
 				84DC36D71B35815800A94CBA /* DetailsViewController.m in Sources */,
 				84DC36D41B3580A000A94CBA /* CustomCell.m in Sources */,
 				849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */,
@@ -550,7 +539,6 @@
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
 				84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */,
 				D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */,
-				844AF58B1B31E0C300353B6B /* ZutatenTableViewController.m in Sources */,
 				849689A61B2C4BC10000CAE2 /* RezepteVC.m in Sources */,
 				84DC36DA1B35819B00A94CBA /* CountiesTableViewController.m in Sources */,
 				D4DA7B3E1B28815D00440996 /* main.m in Sources */,

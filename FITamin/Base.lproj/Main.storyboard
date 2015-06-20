@@ -145,7 +145,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XKb-5b-6dx"/>
                     <connections>
-                        <outlet property="countryNameLabel" destination="Xb3-Hj-tId" id="6Ca-Yb-M3I"/>
+                        <outlet property="zutatenNameLabel" destination="Xb3-Hj-tId" id="A55-J8-cq5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VP8-7D-4Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
