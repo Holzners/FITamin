@@ -31,11 +31,11 @@
                                               otherButtonTitles:nil];
         [alert show];
         [PFUser logOut];
-        StartmenuVC *startMenu = [StartmenuVC new];
+            //StartmenuVC *startMenu = [StartmenuVC new];
         
     
-        [self presentViewController:startMenu animated:YES completion:NULL];
-        
+        //[self presentViewController:startMenu animated:YES completion:NULL];
+        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
     }
     
      // No user logged in
@@ -56,6 +56,7 @@
         
         // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
+        
     }
 }
 
@@ -76,12 +77,12 @@
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:YES completion:NULL];
-    StartmenuVC *startMenu = [StartmenuVC new];
+    //[self dismissViewControllerAnimated:YES completion:NULL];
+    //StartmenuVC *startMenu = [StartmenuVC new];
+    NSLog(@"Login: change View %@",@"ChangeView");
     
-    
-    [self presentViewController:startMenu animated:YES completion:NULL];
-    // [self performSegueWithIdentifier:@"loginToStartMenue" sender:self];
+    //[self presentViewController:startMenu animated:YES completion:NULL];
+    [self performSegueWithIdentifier:@"LoginSegue" sender:self];
     }
 
 // Sent to the delegate when the log in attempt fails.

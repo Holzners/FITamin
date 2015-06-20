@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Fq-bX-CD2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
@@ -40,7 +40,7 @@
             <objects>
                 <viewController id="ndf-BK-YH0" customClass="LogInVC" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginToStartMenue" id="YFu-j7-f8j"/>
+                        <segue destination="4Fq-bX-CD2" kind="show" identifier="LoginSegue" id="hFo-bc-BcD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bL2-KO-qKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipN-Ak-QD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-188" y="932"/>
+            <point key="canvasLocation" x="-218" y="1043"/>
         </scene>
         <!--Finished ScreenVC-->
         <scene sceneID="cMR-2d-mA0">
@@ -328,7 +328,7 @@
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eNw-a4-aRO" kind="modal" modalTransitionStyle="crossDissolve" id="M40-LJ-Hqr"/>
+                                    <segue destination="osx-wA-ZOB" kind="show" id="La3-FQ-I4P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -348,57 +348,6 @@
             </objects>
             <point key="canvasLocation" x="-188" y="266"/>
         </scene>
-        <!--StandortVC-->
-        <scene sceneID="pal-1d-4np">
-            <objects>
-                <viewController title="StandortVC" id="eNw-a4-aRO" customClass="StandortVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TIq-GS-wA6"/>
-                        <viewControllerLayoutGuide type="bottom" id="IfZ-6h-3mo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QWG-uK-Jkc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTx-AV-17s">
-                                <rect key="frame" x="238" y="78" width="87" height="30"/>
-                                <state key="normal" title="Olympiapark">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="osx-wA-ZOB" kind="modal" modalTransitionStyle="crossDissolve" id="CqW-04-wjV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs8-Ua-vAC">
-                                <rect key="frame" x="277" y="253" width="30" height="30"/>
-                                <state key="normal" title="2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="osx-wA-ZOB" kind="modal" modalTransitionStyle="crossDissolve" id="jNb-Cm-Cp1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frV-fy-xPp">
-                                <rect key="frame" x="341" y="202" width="30" height="30"/>
-                                <state key="normal" title="3">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="osx-wA-ZOB" kind="modal" modalTransitionStyle="crossDissolve" id="EV5-xM-HoO"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="PTx-AV-17s" secondAttribute="centerX" id="KuM-L4-wbB"/>
-                            <constraint firstAttribute="centerY" secondItem="PTx-AV-17s" secondAttribute="centerY" id="NnN-Xh-lEu"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QWy-F9-lLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="487" y="282"/>
-        </scene>
         <!--MuskelgruppeVC-->
         <scene sceneID="8oe-LI-nh3">
             <objects>
@@ -411,7 +360,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MuskelgruppenBatman" translatesAutoresizingMaskIntoConstraints="NO" id="40P-uP-91b">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MuskelgruppenBatman" translatesAutoresizingMaskIntoConstraints="NO" id="40P-uP-91b">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btQ-ni-coN">
@@ -483,8 +432,8 @@
                                     <action selector="chooseArms:" destination="osx-wA-ZOB" eventType="touchUpInside" id="Fkw-Yt-yH5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-d5-AJF">
-                                <rect key="frame" x="385" y="530" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-d5-AJF">
+                                <rect key="frame" x="385" y="479" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="C3i-MR-oZa"/>
                                     <constraint firstAttribute="width" constant="50" id="OlC-I7-nYy"/>
@@ -508,6 +457,15 @@
                                 </state>
                                 <connections>
                                     <action selector="choosePo:" destination="osx-wA-ZOB" eventType="touchUpInside" id="FLK-gt-L4x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ck5-6t-NMz">
+                                <rect key="frame" x="516" y="28" width="55" height="30"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3y0-9o-Fmv" kind="show" id="Vj3-uf-Pwa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -541,13 +499,42 @@
                     </view>
                     <connections>
                         <outlet property="batman" destination="40P-uP-91b" id="FwO-V1-W0b"/>
+                        <outlet property="confirmButton" destination="Ck5-6t-NMz" id="HTf-p2-fgO"/>
                         <outlet property="turnButton" destination="RWJ-d5-AJF" id="rAq-Uo-45r"/>
-                        <segue destination="RiL-f8-nGI" kind="show" id="s9F-cT-wL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btP-jt-SGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="1183"/>
+            <point key="canvasLocation" x="435" y="1080"/>
+        </scene>
+        <!--StandortVC-->
+        <scene sceneID="aqD-N7-prS">
+            <objects>
+                <tableViewController id="3y0-9o-Fmv" customClass="StandortVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1I7-2a-vF7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NNP-q1-EDW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NNP-q1-EDW" id="Xeg-pF-yAc">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3y0-9o-Fmv" id="OA0-2I-Uid"/>
+                            <outlet property="delegate" destination="3y0-9o-Fmv" id="f8x-fc-tfB"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="RiL-f8-nGI" kind="show" identifier="standortVCToUebungRoute" id="oWD-MV-vD7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjb-RY-yVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="499" y="253"/>
         </scene>
         <!--UebungRouteVC-->
         <scene sceneID="efV-sf-N3u">
@@ -657,7 +644,6 @@
         <image name="Startscreen4" width="1339" height="1964"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q8W-Y5-gLL"/>
-        <segue reference="CqW-04-wjV"/>
+        <segue reference="hFo-bc-BcD"/>
     </inferredMetricsTieBreakers>
 </document>
