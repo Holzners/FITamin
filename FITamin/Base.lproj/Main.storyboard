@@ -50,7 +50,7 @@
         <!--Startmenu-->
         <scene sceneID="57p-MJ-mko">
             <objects>
-                <tabBarController title="Startmenu" id="4Fq-bX-CD2" customClass="ViewController" sceneMemberID="viewController">
+                <tabBarController title="Startmenu" id="4Fq-bX-CD2" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="vRg-mX-bdT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
