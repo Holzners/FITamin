@@ -47,5 +47,9 @@
 	<array>
 		<string>mywanderingheart.ttf</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow Location Usage?</string>
+	<key>NSLocationAlwasyUsageDescription</key>
+	<string>Allow Location finding?</string>
 </dict>
 </plist>
