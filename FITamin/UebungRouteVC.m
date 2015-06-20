@@ -33,10 +33,15 @@
     if ([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
         [_locationManager requestAlwaysAuthorization];
     }
+    
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
     //Draw User Location on map
     _mapView.showsUserLocation = YES;
     
     _mapView.delegate = self;
+    
+    [_locationManager startUpdatingLocation];
     
 }
 
@@ -50,23 +55,14 @@
                                                                        0.5*5000, 0.5*5000);
     [_mapView setRegion:viewRegion animated:YES];
     
+    [self calculateRouteFromCurrentToDestination:_targetLocation];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)getCurrentLocation:(id)sender{
-    //stop existing request (if exists)
-    [self calculateRouteFromCurrentToDestination:_targetLocation];
-    
-    //set high accuracy cause each m matters ;)
-    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    //start new location update request
-    [_locationManager startUpdatingLocation];
-    
-}
 
 //If Location Manager fails to get Location create PopUp
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error

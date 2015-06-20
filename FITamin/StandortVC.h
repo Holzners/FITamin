@@ -19,6 +19,12 @@
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
+- (void) sortByDistance:(NSMutableArray*)arrayToSort;
+
+- (void) quickSortLeft:(NSInteger)left withRight:(NSInteger)right;
+
+- (NSInteger) quickSortHelper:(NSInteger)left withRight:(NSInteger)right;
+
 - (CLLocationDistance) calculateDistanceToLocation:(CLLocation*)otherLocation;
 
 @end

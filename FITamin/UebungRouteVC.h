@@ -21,8 +21,6 @@
 @property (strong, nonatomic) CLLocation *currentLocation;
 @property (strong, nonatomic) NSString *selectedMuscleGroup;
 
-- (IBAction) getCurrentLocation:(id)sender;
-
 - (CLLocationDistance) calculateDistanceToLocation:(CLLocation*)otherLocation;
 
 - (void) calculateRouteFromCurrentToDestination:(CLLocation * ) destinationLocation;

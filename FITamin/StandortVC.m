@@ -80,6 +80,7 @@
             NSLog(@"Distance: %@", distanceString);
         }
         
+        [self sortByDistance:locationDistances];
         isDataAvailable = true;
         [self.tableView reloadData];
         [_locationManager stopUpdatingLocation];
@@ -110,7 +111,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
     }
-    NSLog(@"Reihe %i" , indexPath.row);
+    
     
     NSMutableDictionary *dict = [locationDistances objectAtIndex:indexPath.row];
     
@@ -159,6 +160,52 @@
     }
 }
 
+-(void) sortByDistance:(NSMutableArray*)arrayToSort{
+    [self quickSort:0 withRight:(locationDistances.count-1)];
+    
+}
+
+- (void) quickSort:(NSInteger)left withRight:(NSInteger)right{
+    if(left < right){
+        NSInteger pivot;
+        pivot = [self quickSortHelper:left withRight:right];
+        [self quickSort:left withRight:(pivot-1)];
+        [self quickSort:(pivot+1) withRight:right];
+    }
+}
+
+-(NSInteger) quickSortHelper:(NSInteger)left withRight:(NSInteger)right{
+    
+    NSInteger i = left;
+    NSInteger j = right-1;
+    NSMutableDictionary *pivot = [locationDistances objectAtIndex:right];
+    
+    while(i < j){
+    
+        for(i = left ; i < right && ([[locationDistances objectAtIndex:i] objectForKey:@"distance"]<= [pivot objectForKey:@"distance"]); i++){
+        
+        }
+        for(j = right-1 ; j > left && ([[locationDistances objectAtIndex:j] objectForKey:@"distance"]>= [pivot objectForKey:@"distance"]); j--){
+        
+        }
+        if(i < j){
+            NSMutableDictionary *tmp = [locationDistances objectAtIndex:i];
+            
+            [locationDistances setObject:[locationDistances objectAtIndex:j] atIndexedSubscript:i];
+            [locationDistances setObject:tmp atIndexedSubscript:j];
+        }
+    }
+    
+    if ([[locationDistances objectAtIndex:i] objectForKey:@"distance"] > [pivot objectForKey:@"distance"]){
+        NSMutableDictionary *tmp = [locationDistances objectAtIndex:i];
+        
+        [locationDistances setObject:[locationDistances objectAtIndex:right] atIndexedSubscript:i];
+        [locationDistances setObject:tmp atIndexedSubscript:right];
+        return i;
+    }
+    
+    return right;
+}
 
 @end
 
