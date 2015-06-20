@@ -22,6 +22,8 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+
+    self.tableView.tableFooterView = [UIView new];
     
     NSLog(@"Gewählte Muskelgruppe: %@" , self.selectedMuscleGroup);
     
@@ -116,14 +118,13 @@
     NSMutableDictionary *dict = [locationDistances objectAtIndex:indexPath.row];
     
     NSString *string = [dict objectForKey:@"name"];
-    NSLog(@"name %@" ,string);
     
     NSNumber *dist = [dict objectForKey:@"distance"];
     
     NSString *stringDistance = [[dist stringValue] stringByAppendingString:@" meters"];
-    NSLog(@"distance %@" ,stringDistance);
+   
     NSString *textString = [[[string stringByAppendingString:@": liegt "] stringByAppendingString:stringDistance] stringByAppendingString:@" entfernt"];
-    NSLog(@"TabelleZeile %@", textString);
+    
     cell.textLabel.text = textString;
     
     return cell;
