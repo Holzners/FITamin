@@ -28,6 +28,7 @@
     
     //damit Tab Bar die View nicht überlappt
     self.tabBarController.tabBar.translucent = NO;
+    
 }
 
 /*Programmatisches Erzeugen der View

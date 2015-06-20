@@ -30,7 +30,7 @@
                             <constraint firstItem="aEA-fV-OrM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qsy-sz-Qk8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Start" id="eGf-HD-JSe"/>
+                    <tabBarItem key="tabBarItem" title="Start" image="IconHerz" id="eGf-HD-JSe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,7 +95,7 @@
                             <constraint firstAttribute="centerY" secondItem="DB9-3L-pTA" secondAttribute="centerY" id="gbu-HJ-Fxg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Modus ändern" id="AnP-gk-pD1"/>
+                    <tabBarItem key="tabBarItem" title="Modus ändern" image="IconModus" id="AnP-gk-pD1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipN-Ak-QD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,7 +299,7 @@
                             <constraint firstItem="f2a-gl-DVA" firstAttribute="leading" secondItem="qRk-An-Rux" secondAttribute="leading" id="xrS-7x-ct4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ernährung" id="f5M-3W-C1x"/>
+                    <tabBarItem key="tabBarItem" title="Ernährung" image="IconKirsche" id="f5M-3W-C1x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cuv-q2-AxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -343,7 +343,7 @@
                             <constraint firstItem="0FS-Kb-19I" firstAttribute="top" secondItem="7ex-sP-RpG" secondAttribute="bottom" id="snr-c0-uUk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Neu" id="WAM-c5-7cO"/>
+                    <tabBarItem key="tabBarItem" title="Neu" image="IconLogo" id="WAM-c5-7cO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hE9-d7-8Fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -631,7 +631,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Saved Workouts" id="I0t-fh-RXv"/>
+                    <tabBarItem key="tabBarItem" title="Saved Workouts" image="IconSaved" id="I0t-fh-RXv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A50-M8-2bp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -644,6 +644,11 @@
         <image name="FitnessRezepte1Button" width="418" height="144"/>
         <image name="FitnessRezepte2Button" width="418" height="144"/>
         <image name="FitnessZutatenButton2" width="418" height="144"/>
+        <image name="IconHerz" width="16" height="15"/>
+        <image name="IconKirsche" width="20" height="22"/>
+        <image name="IconLogo" width="30" height="11"/>
+        <image name="IconModus" width="25" height="24"/>
+        <image name="IconSaved" width="20" height="16"/>
         <image name="MuskelgruppenBatman" width="800" height="1470"/>
         <image name="RotateImage" width="70" height="70"/>
         <image name="Startscreen4" width="1339" height="1964"/>

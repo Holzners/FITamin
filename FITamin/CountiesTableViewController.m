@@ -23,7 +23,7 @@
 @property (strong, nonatomic) NSDictionary *searchZutatenDict;
 
 @property (nonatomic, strong) UISearchBar *searchBar;
-@property (nonatomic, strong) UISearchDisplayController *searchDC;
+@property (nonatomic, strong) UISearchController *searchController;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
 
@@ -50,22 +50,17 @@
     [self.tableView registerNib:nib forCellReuseIdentifier:@"CustomCell"];
     
     // Schnellindex anpassen
-    [self.tableView setSectionIndexColor:[UIColor blueColor]];
+    [self.tableView setSectionIndexColor:[UIColor blackColor]];
     [self.tableView setSectionIndexTrackingBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0]];
     
     // SearchBar erzeugen
     self.searchBar = [[UISearchBar alloc] init];
-    self.searchDC = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
-    self.searchDisplayController.searchResultsDelegate = self;
-    self.searchDisplayController.searchResultsDataSource = self;
-    self.searchDisplayController.delegate = self;
-    
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.searchController.delegate = self;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
     [self.searchBar sizeToFit];
-    
-#if TARGET_IPHONE_SIMULATOR
-    // where are you?
-    NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
-#endif
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -175,28 +170,32 @@
     }
     
     // Zellenhintergrund mit Farbverlauf füllen
-    cell.backgroundColor = [UIColor clearColor];
+   cell.backgroundColor = [UIColor clearColor];
+
+    UIColor *colorOne = [UIColor colorWithRed:(120/255.0) green:(135/255.0) blue:(150/255.0) alpha:1.0];
+    UIColor *colorTwo = [UIColor colorWithRed:(57/255.0)  green:(79/255.0)  blue:(96/255.0)  alpha:1.0];
     
     // Farben für Farbverlauf
-    UIColor *whiteColor = [UIColor whiteColor];
-    UIColor *lightGreyColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0];
-    
+//    UIColor *whiteColor = [UIColor whiteColor];
+//    UIColor *darkGreyColor = [UIColor colorWithRed:255.0/255.0 green:230.0/255.0 blue:255.0/255.0 alpha:1.0];
+//    
     CAGradientLayer *farbverlauf = [CAGradientLayer layer];
     
     farbverlauf.frame = cell.bounds;
-    farbverlauf.colors = @[(id)whiteColor.CGColor, (id)lightGreyColor.CGColor];
+    farbverlauf.colors = @[(id)colorOne.CGColor, (id)colorTwo.CGColor];
     
     UIView *background = [[UIView alloc] initWithFrame:cell.bounds];
     [background.layer insertSublayer:farbverlauf atIndex:0];
     cell.backgroundView = background;
     
-    cell.flagImageView.layer.borderColor = [[UIColor blueColor] CGColor];
-    cell.flagImageView.layer.borderWidth = 1;
-    cell.flagImageView.layer.cornerRadius = 5;
-    cell.flagImageView.clipsToBounds = YES;
+    cell.zutatenImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
+    cell.zutatenImageView.layer.borderWidth = 1;
+    cell.zutatenImageView.layer.cornerRadius = 5;
+    cell.zutatenImageView.clipsToBounds = YES;
     
     cell.zutatenNameLabel.text = array[indexPath.row];
-    cell.flagImageView.image = [UIImage imageNamed:array[indexPath.row]];
+    cell.zutatenImageView.image = [UIImage imageNamed:array[indexPath.row]];
+    cell.zutatenNameLabel.font = [UIFont fontWithName:@"mywanderingheart" size:25];
     
     return cell;
 }
@@ -217,16 +216,13 @@
     CGRect headerFrame = CGRectMake(0, 0, tableView.bounds.size.width, 40);
     UIView *headerView = [[UIView alloc] initWithFrame:headerFrame];
     
-    UIColor *color1 = [UIColor colorWithRed:242.0/255.0 green:246.0/255.0 blue:248.0/255.0 alpha:1.0];
-    UIColor *color2 = [UIColor colorWithRed:216.0/255.0 green:225.0/255.0 blue:231.0/255.0 alpha:1.0];
-    UIColor *color3 = [UIColor colorWithRed:181.0/255.0 green:198.0/255.0 blue:208.0/255.0 alpha:1.0];
-    UIColor *color4 = [UIColor colorWithRed:224.0/255.0 green:239.0/255.0 blue:249.0/255.0 alpha:1.0];
-    
+    UIColor *colorOne = [UIColor colorWithRed:(120/255.0) green:(135/255.0) blue:(150/255.0) alpha:1.0];
+    UIColor *colorTwo = [UIColor colorWithRed:(57/255.0)  green:(79/255.0)  blue:(96/255.0)  alpha:1.0];
     CAGradientLayer *farbverlauf = [CAGradientLayer layer];
     
     farbverlauf.frame = headerView.frame;
     
-    farbverlauf.colors = @[(id)color1.CGColor, (id)color2.CGColor, (id)color3.CGColor, (id)color4.CGColor];
+    farbverlauf.colors = @[(id)colorOne.CGColor, (id)colorTwo.CGColor];
     
     farbverlauf.locations =@[@0.0f, @0.5f, @0.51f, @1.0f];
     
@@ -235,11 +231,11 @@
     // Label
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 40, 40)];
     label.text = [self tableView:tableView titleForHeaderInSection:section];
-    label.font = [UIFont fontWithName:@"Georgia-Bold" size:18];
+    label.font = [UIFont fontWithName:@"mywanderingheart" size:25];
     label.shadowOffset = CGSizeMake(0, 1);
-    label.shadowColor = [UIColor blackColor];
+    label.shadowColor = [UIColor whiteColor];
     label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor blueColor];
+    label.textColor = [UIColor whiteColor];
     
     [headerView addSubview:label];
     
@@ -251,7 +247,7 @@
     // Übergebenes Array alphabetisch sortieren
     NSArray *sortedArray = [array sortedArrayUsingSelector:@selector(compare:)];
     
-    if ([self.searchDisplayController isActive]) {
+    if ([self.searchController isActive]) {
         self.searchSectionTitles = [NSMutableArray new];
     } else {
         self.sectionTitles = [NSMutableArray new];
@@ -266,7 +262,7 @@
         
         NSString *character = [NSString stringWithCharacters:&c length:1];
         
-        if (![self.searchDisplayController isActive]) {
+        if (![self.searchController isActive]) {
             
             if (![self.sectionTitles containsObject:character]) {
                 
@@ -351,7 +347,7 @@
         
         NSArray *array = [NSArray array];
         
-        if ([self.searchDisplayController isActive]) {
+        if ([self.searchController isActive]) {
             NSString *sectionTitle = self.searchSectionTitles[indexPath.section];
             array = (self.searchZutatenDict)[sectionTitle];
             dvc.zutatenName = array[indexPath.row];

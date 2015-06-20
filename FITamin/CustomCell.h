@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *flagImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *zutatenImageView;
 @property (weak, nonatomic) IBOutlet UILabel *zutatenNameLabel;
 
 @end

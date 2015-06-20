@@ -71,6 +71,7 @@
 		84DC36DA1B35819B00A94CBA /* CountiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */; };
 		84DC36E21B35845D00A94CBA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E11B35845D00A94CBA /* CustomCell.xib */; };
 		84DC36E51B35888400A94CBA /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E41B35888400A94CBA /* data.plist */; };
+		84DC36E71B35A88B00A94CBA /* mywanderingheart.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */; };
 		D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F790D0E21B31B5B50092654E /* Images.xcassets */; };
 		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
 		D4DA7B3E1B28815D00440996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B3D1B28815D00440996 /* main.m */; };
@@ -175,6 +176,7 @@
 		84DC36E11B35845D00A94CBA /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCell.xib; path = FITamin.xcodeproj/../CustomCell.xib; sourceTree = SOURCE_ROOT; };
 		84DC36E31B35866C00A94CBA /* CountiesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountiesTableViewController.h; sourceTree = "<group>"; };
 		84DC36E41B35888400A94CBA /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mywanderingheart.ttf; sourceTree = "<group>"; };
 		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D4DA7B381B28815D00440996 /* FITamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FITamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DA7B3D1B28815D00440996 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		D4DA7B3B1B28815D00440996 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */,
 				844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */,
 				844AF5B61B3206AE00353B6B /* Info.plist */,
 				844AF5A11B31FE0400353B6B /* InfoPlist.strings */,
@@ -482,6 +485,7 @@
 				847BFBA61B32BC7300EB04ED /* Rumänien.png in Resources */,
 				847BFBB51B32BC7E00EB04ED /* Tschechische Republik.png in Resources */,
 				847BFBA71B32BC7300EB04ED /* Portugal.png in Resources */,
+				84DC36E71B35A88B00A94CBA /* mywanderingheart.ttf in Resources */,
 				847BFBB31B32BC7E00EB04ED /* Frankreich.png in Resources */,
 				847BFB941B32BC6300EB04ED /* Ungarn.png in Resources */,
 				D4DA7B471B28815D00440996 /* Main.storyboard in Resources */,

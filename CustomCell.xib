@@ -13,25 +13,26 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRA-zp-8lV">
-                        <rect key="frame" x="147" y="32" width="197" height="21"/>
+                        <rect key="frame" x="24" y="32" width="197" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="197" id="hE1-j5-nAN"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                        <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vMb-5A-yyg">
-                        <rect key="frame" x="8" y="11" width="120" height="64"/>
+                        <rect key="frame" x="200" y="8" width="120" height="64"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="75" id="Vk7-yu-Te9"/>
                             <constraint firstAttribute="height" constant="50" id="yXb-EY-2hQ"/>
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
             </tableViewCellContentView>
             <connections>
-                <outlet property="flagImageView" destination="vMb-5A-yyg" id="n8m-HH-g45"/>
+                <outlet property="zutatenImageView" destination="vMb-5A-yyg" id="Wna-uZ-s94"/>
                 <outlet property="zutatenNameLabel" destination="TRA-zp-8lV" id="GRU-un-3Mg"/>
             </connections>
             <point key="canvasLocation" x="374" y="274.5"/>
