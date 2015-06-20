@@ -151,6 +151,11 @@
     
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+        return @"Choose your Location";
+}
+
+
 - (CLLocationDistance) calculateDistanceToLocation:(CLLocation*)otherLocation{
     if(currentLocation!= nil){
         return[currentLocation distanceFromLocation:otherLocation];
