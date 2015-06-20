@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StandortVC : UIViewController
+@interface StandortVC : UITableViewController
+
+@property(weak, nonatomic) NSString *selectedMuscleGroup;
 
 
 @end

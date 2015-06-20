@@ -16,6 +16,8 @@
 }
 @property (weak, nonatomic) IBOutlet UIButton *turnButton;
 @property (weak, nonatomic) IBOutlet UIImageView *batman;
+@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+@property (weak , nonatomic) NSString *selectedMuscleGroup;
 - (IBAction)chooseArms:(id)sender;
 
 @end

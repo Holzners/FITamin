@@ -7,6 +7,7 @@
 //
 
 #import "MuskelgruppeVC.h"
+#import "StandortVC.h"
 
 @implementation MuskelgruppeVC
 
@@ -18,12 +19,15 @@ UIButton *button;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    self.confirmButton.enabled=false;
     
 }
 
 - (IBAction)chooseArms:(id)sender {
     if (front == true){
     batman.image = [UIImage imageNamed: @"MuskelgruppeArm.png"];
+    self.confirmButton.enabled=true;
+    self.selectedMuscleGroup = @"MuskelgruppeArm";
     }
     
 }
@@ -31,18 +35,24 @@ UIButton *button;
 -(IBAction)chooseBauch:(id)sender {
     if(front == true){
     batman.image = [UIImage imageNamed: @"MuskelgruppeBauch.png"];
+    self.confirmButton.enabled=true;
+        self.selectedMuscleGroup = @"MuskelgruppeBauch";
     }
 }
 
 -(IBAction)chooseBeine:(id)sender {
     if (front == true){
     batman.image = [UIImage imageNamed: @"MuskelgruppeBein.png"];
+        self.confirmButton.enabled=true;
+        self.selectedMuscleGroup = @"MuskelgruppeBein";
     }
 }
 
 -(IBAction)chooseBrust:(id)sender {
     if(front == true){
     batman.image = [UIImage imageNamed: @"MuskelgruppeBrust.png"];
+        self.confirmButton.enabled=true;
+        self.selectedMuscleGroup = @"MuskelgruppeBrust";
     }
 }
 - (IBAction)turnBatman:(id)sender {
@@ -64,16 +74,32 @@ UIButton *button;
         batman.image = [UIImage imageNamed: @"MuskelgruppenBatman.png"];
         button.hidden=YES;
         front = true;
+        
     }
 }
 - (void)chooseBack:(UIButton *) button{
     if(front == false){
         batman.image = [UIImage imageNamed: @"MuskelgruppenRuecken.png"];
+        self.confirmButton.enabled=true;
+        self.selectedMuscleGroup = @"MuskelgruppenRuecken.png";
     }
 }
 - (IBAction)choosePo:(id)sender {
     if(front == false){
         batman.image = [UIImage imageNamed: @"MuskelgruppePo.png"];
+        self.confirmButton.enabled=true;
+        
+        self.selectedMuscleGroup = @"MuskelgruppenPo.png";
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if (self.selectedMuscleGroup != nil){
+        StandortVC *dest = [segue destinationViewController];
+        dest.selectedMuscleGroup = self.selectedMuscleGroup;
+      
     }
 }
 @end

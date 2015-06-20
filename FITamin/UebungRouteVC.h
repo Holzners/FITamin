@@ -16,6 +16,8 @@
 
 @property (strong, nonatomic) MKMapItem *destination;
 
+@property (strong, nonatomic) NSString *selectedMuscleGroup;
+
 - (IBAction) getCurrentLocation:(id)sender;
 
 - (CLLocationDistance) calculateDistanceToLocation:(CLLocation*)otherLocation;
