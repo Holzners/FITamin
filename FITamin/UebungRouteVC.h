@@ -14,6 +14,9 @@
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) MKMapItem *destination;
+
+@property (weak , nonatomic) NSMutableArray *exercise;
+
 @property (strong, nonatomic) NSString *destinationString;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *targetLocation;

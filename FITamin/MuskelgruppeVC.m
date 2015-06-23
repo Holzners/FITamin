@@ -7,7 +7,7 @@
 //
 
 #import "MuskelgruppeVC.h"
-#import "StandortVC.h"
+#import "UebungRouteVC.h"
 #import <Parse/Parse.h>
 
 @implementation MuskelgruppeVC
@@ -166,9 +166,9 @@ UIButton *button;
     }
     
     if (self.selectedMuscleGroup != nil){
-        StandortVC *dest = [segue destinationViewController];
-        dest.selectedMuscleGroup = self.selectedMuscleGroup;
-      
+        UebungRouteVC *dest = [segue destinationViewController];
+        dest.exercise = exercises;
+        
     }
     
 }
