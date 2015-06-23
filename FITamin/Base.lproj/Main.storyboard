@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -363,7 +364,7 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" image="StartButton">
-                                    <color key="titleColor" patternImage="33FEBAC2-002A-4D29-8BC7-BA523ABEBA08" colorSpace="pattern"/>
+                                    <color key="titleColor" patternImage="F3A0556D-C6B4-48C0-8F23-8F69D6A4785B" colorSpace="pattern"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -591,20 +592,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Usc-Uf-z5z">
-                                <rect key="frame" x="80" y="241" width="458" height="299"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Usc-Uf-z5z">
+                                <rect key="frame" x="26" y="30" width="548" height="548"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Usc-Uf-z5z" secondAttribute="height" multiplier="1:1" id="i16-Jm-hoB"/>
+                                </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iz-qZ-NgA">
-                                <rect key="frame" x="295" y="124" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="getCurrentLocation:" destination="RiL-f8-nGI" eventType="touchUpInside" id="TgV-nO-hEw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Usc-Uf-z5z" firstAttribute="top" secondItem="HZz-DQ-3Pb" secondAttribute="bottom" constant="10" id="hjS-ck-hFl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Usc-Uf-z5z" secondAttribute="trailing" constant="10" id="jnn-dI-SsE"/>
+                            <constraint firstItem="Usc-Uf-z5z" firstAttribute="leading" secondItem="HYY-Jq-agY" secondAttribute="leadingMargin" constant="10" id="kKI-Uq-47q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kj5-yV-BxY"/>
                     <connections>
@@ -696,7 +696,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="33FEBAC2-002A-4D29-8BC7-BA523ABEBA08" width="256" height="256">
+        <image name="ErnährungTeil" width="1349" height="1964"/>
+        <image name="F3A0556D-C6B4-48C0-8F23-8F69D6A4785B" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -5138,7 +5139,6 @@ BA6JAAQOkQAEDp4ABA6jAAQOpQAEDqcABA6sAAQOtAAEDrcABA68AAQOxAAEDscABA7ZAAQO3AAEDuEA
 AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAAQO4w
 </mutableData>
         </image>
-        <image name="ErnährungTeil" width="1349" height="1964"/>
         <image name="FaulwarGestern" width="1271" height="1700"/>
         <image name="FitnessRezepte1Button" width="418" height="144"/>
         <image name="FitnessRezepte2Button" width="418" height="144"/>
