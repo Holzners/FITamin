@@ -21,7 +21,7 @@
 
 - (void) sortByDistance:(NSMutableArray*)arrayToSort;
 
-- (void) quickSortLeft:(NSInteger)left withRight:(NSInteger)right;
+- (void) quickSort:(NSInteger)left withRight:(NSInteger)right;
 
 - (NSInteger) quickSortHelper:(NSInteger)left withRight:(NSInteger)right;
 

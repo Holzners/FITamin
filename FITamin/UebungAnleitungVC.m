@@ -7,7 +7,21 @@
 //
 
 #import "UebungAnleitungVC.h"
+@import MediaPlayer;
+
+
 
 @implementation UebungAnleitungVC
+@synthesize moviePlayer;
+
+-(void)viewDidLoad {
+
+    NSURL *urlString = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Training" ofType:@"mp4"]];
+    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:urlString];
+    [self.moviePlayer.view setFrame:CGRectMake(0, 0, 320, 320)];
+    [self.moviePlayer play];
+    [self.view addSubview:self.moviePlayer.view];
+    
+}
 
 @end
