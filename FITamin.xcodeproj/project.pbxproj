@@ -14,6 +14,7 @@
 		84191B4B1B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B451B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework */; };
 		84191B4C1B2C48E1006C0C86 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B461B2C48E1006C0C86 /* ParseUI.framework */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
+		844807231B3AEDFF00A44BA2 /* Training.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 844807221B3AD8D700A44BA2 /* Training.mp4 */; };
 		844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF58C1B31E29600353B6B /* zutatenListe.plist */; };
 		844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */; };
 		844AF5A21B31FE0400353B6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 844AF5A11B31FE0400353B6B /* InfoPlist.strings */; };
@@ -101,6 +102,7 @@
 		84191B461B2C48E1006C0C86 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeModusVC.h; sourceTree = "<group>"; };
 		84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeModusVC.m; sourceTree = "<group>"; };
+		844807221B3AD8D700A44BA2 /* Training.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Training.mp4; sourceTree = "<group>"; };
 		844AF58C1B31E29600353B6B /* zutatenListe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = zutatenListe.plist; sourceTree = "<group>"; };
 		844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Dynamic Table Views-Info.plist"; sourceTree = "<group>"; };
 		844AF5A11B31FE0400353B6B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 		D4DA7B3B1B28815D00440996 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				844807221B3AD8D700A44BA2 /* Training.mp4 */,
 				84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */,
 				844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */,
 				844AF5B61B3206AE00353B6B /* Info.plist */,
@@ -476,6 +479,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844807231B3AEDFF00A44BA2 /* Training.mp4 in Resources */,
 				847BFBA11B32BC7300EB04ED /* Ukraine.png in Resources */,
 				844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */,
 				848C56A31B31962400B407C5 /* Default@2x.png in Resources */,
