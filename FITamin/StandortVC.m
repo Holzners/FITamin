@@ -9,7 +9,6 @@
 #import "StandortVC.h"
 #import "UebungRouteVC.h"
 
-
 @implementation StandortVC{
     NSMutableArray *locationPoints;
     NSMutableArray *locationDistances;
@@ -145,7 +144,6 @@
     // Pass the selected object to the new view controller.
     if (self.selectedLocation != nil){
         UebungRouteVC *dest = [segue destinationViewController];
-        dest.destinationString = self.selectedLocation;
         dest.targetLocation = targetLocation;
         dest.currentLocation = currentLocation;
     }

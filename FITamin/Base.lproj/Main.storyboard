@@ -364,7 +364,7 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" image="StartButton">
-                                    <color key="titleColor" patternImage="F3A0556D-C6B4-48C0-8F23-8F69D6A4785B" colorSpace="pattern"/>
+                                    <color key="titleColor" patternImage="EF5FFAA6-48AD-4CDD-B465-F731866D05C4" colorSpace="pattern"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -696,8 +696,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ErnährungTeil" width="1349" height="1964"/>
-        <image name="F3A0556D-C6B4-48C0-8F23-8F69D6A4785B" width="256" height="256">
+        <image name="EF5FFAA6-48AD-4CDD-B465-F731866D05C4" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -5139,6 +5138,7 @@ BA6JAAQOkQAEDp4ABA6jAAQOpQAEDqcABA6sAAQOtAAEDrcABA68AAQOxAAEDscABA7ZAAQO3AAEDuEA
 AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAAQO4w
 </mutableData>
         </image>
+        <image name="ErnährungTeil" width="1349" height="1964"/>
         <image name="FaulwarGestern" width="1271" height="1700"/>
         <image name="FitnessRezepte1Button" width="418" height="144"/>
         <image name="FitnessRezepte2Button" width="418" height="144"/>
