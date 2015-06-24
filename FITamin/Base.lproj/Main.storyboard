@@ -162,38 +162,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-Hj-tId">
-                                <rect key="frame" x="279" y="261" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLV-Ha-nkZ">
-                                <rect key="frame" x="180" y="348" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-rv-YaT">
+                                <rect key="frame" x="180" y="287" width="240" height="226"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="HpE-rM-TgJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="zI3-ix-DHp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fi8-jO-hlz">
+                                <rect key="frame" x="158" y="113" width="284" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="8oq-JD-qNt"/>
+                                    <constraint firstAttribute="width" constant="284" id="qpn-4L-0Um"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Xb3-Hj-tId" secondAttribute="centerY" id="4QX-gR-G5C"/>
-                            <constraint firstItem="bLV-Ha-nkZ" firstAttribute="top" secondItem="Xb3-Hj-tId" secondAttribute="bottom" constant="66" id="B3k-cK-dac"/>
-                            <constraint firstItem="Qtr-xy-zoA" firstAttribute="top" secondItem="bLV-Ha-nkZ" secondAttribute="bottom" constant="75" id="Btd-xN-Eud"/>
-                            <constraint firstAttribute="centerX" secondItem="bLV-Ha-nkZ" secondAttribute="centerX" id="YGg-ci-cDT"/>
-                            <constraint firstAttribute="centerY" secondItem="bLV-Ha-nkZ" secondAttribute="centerY" id="Z8w-60-vnE"/>
-                            <constraint firstAttribute="centerX" secondItem="Xb3-Hj-tId" secondAttribute="centerX" id="ar3-br-Cr4"/>
+                            <constraint firstAttribute="centerY" secondItem="Vcd-rv-YaT" secondAttribute="centerY" constant="-100" id="5iB-W2-1QW"/>
+                            <constraint firstItem="Qtr-xy-zoA" firstAttribute="top" secondItem="Vcd-rv-YaT" secondAttribute="bottom" constant="38" id="9cy-Y3-K8l"/>
+                            <constraint firstAttribute="centerX" secondItem="Vcd-rv-YaT" secondAttribute="centerX" id="DDa-Rw-9Ci"/>
+                            <constraint firstAttribute="centerX" secondItem="fi8-jO-hlz" secondAttribute="centerX" id="Qcg-dj-ujL"/>
+                            <constraint firstAttribute="centerY" secondItem="fi8-jO-hlz" secondAttribute="centerY" constant="82" id="q3J-2i-G5D"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="4QX-gR-G5C"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="XKb-5b-6dx"/>
                     <connections>
-                        <outlet property="zutatImage" destination="bLV-Ha-nkZ" id="Kzx-Lw-Xe8"/>
-                        <outlet property="zutatenNameLabel" destination="Xb3-Hj-tId" id="A55-J8-cq5"/>
+                        <outlet property="zutatenFoto" destination="fi8-jO-hlz" id="xzZ-7n-qNK"/>
+                        <outlet property="zutatenText" destination="Vcd-rv-YaT" id="g8p-7e-1Mb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VP8-7D-4Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -380,7 +377,7 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" image="StartButton">
-                                    <color key="titleColor" patternImage="902006A8-1708-47AE-BCEF-1B0E625BB862" colorSpace="pattern"/>
+                                    <color key="titleColor" patternImage="B996A180-BF44-433B-AB62-76AA4DAA4DB0" colorSpace="pattern"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -712,7 +709,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="902006A8-1708-47AE-BCEF-1B0E625BB862" width="256" height="256">
+        <image name="B996A180-BF44-433B-AB62-76AA4DAA4DB0" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

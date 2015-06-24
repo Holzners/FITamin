@@ -9,10 +9,19 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
+#import "CustomCell.h"
 #import "DetailsViewController.h"
 
+@interface DetailsViewController()
+@end
 
 @implementation DetailsViewController
+
+
+@synthesize zutatenFoto;
+@synthesize zutatenText;
+@synthesize zutat;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,14 +36,23 @@
 {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view.
-    PFObject *z1;
-    z1 = [self getZutat:self.zutatenName];
+    self.title = zutat.zutatDetailName;
+    self.zutatenFoto.image = [UIImage imageNamed:zutat.zutatDetailImage];
     
-    if(z1!=NULL){
-        self.zutatenNameLabel.text = z1[@"title"];
+    self.zutatenText.text = zutat.zutatDetailText;
+    
+    // Do any additional setup after loading the view.
+//    PFObject *z1;
+//    z1 = [self getZutat:self.zutatenName];
+//    
+//    if(z1!=NULL){
+//        self.zutatenNameLabel.text = z1[@"title"];
      //   self.zutatImage = z1[@"image"];
-    }
+//    }
+    
+   // self.zutatImage.image = self.zutatenImage2;
+   // self.countryNameLabel.text = self.countryName;
+    
     
 }
 
@@ -42,6 +60,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidUnload
+{
+    [self setZutatenFoto:nil];
+    [self setZutatenText:nil];
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 

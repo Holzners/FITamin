@@ -33,6 +33,10 @@
 
 @implementation CountiesTableViewController
 
+CustomCell *cell;
+NSArray *zutatenArray;
+NSDictionary *zutDic;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -61,6 +65,137 @@
     self.searchController.delegate = self;
     self.tableView.tableHeaderView = self.searchController.searchBar;
     [self.searchBar sizeToFit];
+    
+#if TARGET_IPHONE_SIMULATOR
+    // where are you?
+    NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
+#endif
+    
+    //Zutaten anlegen
+    
+//    if(cell.selected @"Avocado"){
+//        
+//    }
+    
+    Zutat *zutat1 = [Zutat new];
+    zutat1.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat1.zutatDetailImage = @"Avocado.jpg";
+    zutat1.zutatDetailText = @"Die Avocado enthält viele gesunde Fettsäuren und ist deshalb gut für den Muskelaufbau und die allgemeine Fitness.";
+    
+    Zutat *zutat2 = [Zutat new];
+    zutat2.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat2.zutatDetailImage = @"Erbsen.jpg";
+    zutat2.zutatDetailText = @"Erbsen enthalten weihverzweigte Aminosäuren und Glutamin und sind deshalb wichtig für Muskelaufbau und Verdauung.";
+    
+    Zutat *zutat3 = [Zutat new];
+    zutat3.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat3.zutatDetailImage = @"Brokkoli.jpg";
+    zutat3.zutatDetailText = @"Brokkoli ist ein guter Radikalfänger und entgiftet den Körper auf positive Weise.";
+    
+    Zutat *zutat4 = [Zutat new];
+    zutat4.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat4.zutatDetailImage = @"Kaffee.jpg";
+    zutat4.zutatDetailText = @"Regt die Leistungsfähigkeit an und steigert somit den Kalorienverbrauch.";
+    
+    Zutat *zutat5 = [Zutat new];
+    zutat5.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat5.zutatDetailImage = @"Milch.jpg";
+    zutat5.zutatDetailText = @"Das Vitamin Nicotinamid-Ribosid in der Milch verhindert, dass Fett eingelagert wird. Noch dazu enthält Milch viel Eiweiß.";
+
+    Zutat *zutat6 = [Zutat new];
+    zutat6.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat6.zutatDetailImage = @"Mandeln.jpg";
+    zutat6.zutatDetailText = @"Hallo Mandel";
+    
+    Zutat *zutat7 = [Zutat new];
+    zutat7.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat7.zutatDetailImage = @"Feigen.jpg";
+    zutat7.zutatDetailText = @"Die B-Vitamine und das Kalium in Feigen stärken das Nervensystem und liefern wichtige Ballaststoffe.";
+    
+    Zutat *zutat8 = [Zutat new];
+    zutat8.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat8.zutatDetailImage = @"Walnüsse.jpg";
+    zutat8.zutatDetailText = @"Eine Hand voll Walnüsse am Tag senkt das Risiko an Krebs zu erkranken. Noch dazu ist die Walnuss gut für das Gedächtnis, für die Zufuhr von wichtigen Fettsäuren und wehr Entzündungsreaktionen ab. ";
+    
+    Zutat *zutat9 = [Zutat new];
+    zutat9.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat9.zutatDetailImage = @"Quark.jpg";
+    zutat9.zutatDetailText = @"Verhindert Fetteinlagerung und liefert wichtiges Eiweiß. ";
+    
+    Zutat *zutat10 = [Zutat new];
+    zutat10.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat10.zutatDetailImage = @"Kurkuma.jpg";
+    zutat10.zutatDetailText = @"Kurkuma macht die Zellen widerstandsfähiger. Man fühlt sich fitter und weniger oft krank.";
+    
+    Zutat *zutat11 = [Zutat new];
+    zutat11.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat11.zutatDetailImage = @"Quinoa.jpg";
+    zutat11.zutatDetailText = @"Quinoa enthält mehr Proteine, Zink und Magnesium als Natur-Reis und hat doppelt so viele Balaststoffe.";
+    
+    Zutat *zutat12 = [Zutat new];
+    zutat12.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat12.zutatDetailImage = @"Joghurt.jpg";
+    zutat12.zutatDetailText = @"Enthält sehr viel wichtiges Eiweiß und ist gut für die Darmflora.";
+    
+    Zutat *zutat13 = [Zutat new];
+    zutat13.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat13.zutatDetailImage = @"Himbeeren.jpg";
+    zutat13.zutatDetailText = @"Die Himbeere hilft dir beim Entschlacken im Verdauungstrakt und somit fühlt man sich rundum fit.";
+    
+    Zutat *zutat14 = [Zutat new];
+    zutat14.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat14.zutatDetailImage = @"Ingwer.jpg";
+    zutat14.zutatDetailText = @"Beim Verzehr von Ingwer steigt die Körpertemperatur und es werden somit mehr Kalorien verbrannt.";
+    
+    Zutat *zutat15 = [Zutat new];
+    zutat15.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat15.zutatDetailImage = @"Chili.jpg";
+    zutat15.zutatDetailText = @"Chili erhöht den Kalorienverbrauch um bis zu 25 Prozent und steigert die Fettverbrennung.";
+    
+    Zutat *zutat16 = [Zutat new];
+    zutat16.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat16.zutatDetailImage = @"Blaubeeren.jpg";
+    zutat16.zutatDetailText = @"Die darin enthaltenen Polyphenole können die Entstehung von neuen Fettzellen hemmen. ";
+    
+    Zutat *zutat17 = [Zutat new];
+    zutat17.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat17.zutatDetailImage = @"Haferflocken.jpg";
+    zutat17.zutatDetailText = @"fehlt";
+
+    Zutat *zutat18 = [Zutat new];
+    zutat18.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat18.zutatDetailImage = @"Hülsenfrüchte.jpg";
+    zutat18.zutatDetailText = @"fehlt";
+    
+    Zutat *zutat19 = [Zutat new];
+    zutat19.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat19.zutatDetailImage = @"Hüttenkäse.jpg";
+    zutat19.zutatDetailText = @"Liefert viele Proteine und Eiweiße. Der perfekte Zusatz zum Frühstück.";
+    
+    Zutat *zutat20 = [Zutat new];
+    zutat20.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat20.zutatDetailImage = @"Eier.jpg";
+    zutat20.zutatDetailText = @"Top-Eiweißgehalt von 12,8 Gramm pro 100 Gramm Eiermenge. ";
+    
+    Zutat *zutat21 = [Zutat new];
+    zutat21.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat21.zutatDetailImage = @"Putenfleisch.jpg";
+    zutat21.zutatDetailText = @"Eine sehr gute Protein-Quelle und noch dazu fettarm.";
+    
+    Zutat *zutat22 = [Zutat new];
+    zutat22.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat22.zutatDetailImage = @"Thunfisch.jpg";
+    zutat22.zutatDetailText = @"Enthält wichtige Proteine für den Muskelaufbau.";
+    
+    Zutat *zutat23 = [Zutat new];
+    zutat23.zutatDetailName = cell.zutatenNameLabel.text;
+    zutat23.zutatDetailImage = @"Grüner Tee.jpg";
+    zutat23.zutatDetailText = @"Die hohe Konzentration an Katechinen regt den Stoffwechsel an und fördert somit die Fettverbrennung.";
+    
+    
+    zutatenArray = [NSArray arrayWithObjects:zutat1, zutat2, zutat3, zutat4, zutat5, zutat6, zutat7, zutat8, zutat9, zutat10, zutat11, zutat12, zutat13, zutat14, zutat15, zutat16, zutat17, zutat18, zutat19, zutat20, zutat21, zutat22, zutat23, nil];
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -197,6 +332,7 @@
     cell.zutatenImageView.image = [UIImage imageNamed:array[indexPath.row]];
     cell.zutatenNameLabel.font = [UIFont fontWithName:@"mywanderingheart" size:25];
     
+    NSLog(@"ZutatenCell: %@",cell);
     return cell;
 }
 
@@ -249,8 +385,12 @@
     
     if ([self.searchController isActive]) {
         self.searchSectionTitles = [NSMutableArray new];
+        
+        NSLog(@"ZutatenDic: %@", sortedArray);
     } else {
         self.sectionTitles = [NSMutableArray new];
+        
+        NSLog(@"ZutatenDic2: %@", sortedArray);
     }
     
     // Dictionary, welches zurück gegeben werden soll, initialisieren
@@ -299,7 +439,9 @@
             }
         }
     }
+    NSLog(@"ZutatenDic3: %@", dict);
     return dict;
+    
 }
 
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
@@ -341,6 +483,14 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"detailsSegue"]) {
+//        
+//        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//        DetailsViewController *destVC = segue.destinationViewController;
+//        destVC.zutat = [zutatenArray objectAtIndex:indexPath.row];
+//        
+//        NSLog(@"ZutatenDic4: %@", indexPath);
+//        NSLog(@"ZutatenDic4: %@", cell);
+        
         DetailsViewController *dvc = segue.destinationViewController;
         
         NSIndexPath *indexPath = sender;
@@ -350,11 +500,107 @@
         if ([self.searchController isActive]) {
             NSString *sectionTitle = self.searchSectionTitles[indexPath.section];
             array = (self.searchZutatenDict)[sectionTitle];
-            dvc.zutatenName = array[indexPath.row];
+           // dvc.zutat = [zutatenArray objectAtIndex:indexPath.row];
+           dvc.zutatenName = array[indexPath.row];
         } else{
             NSString *sectionTitle = self.sectionTitles[indexPath.section];
             array = (self.zutatenDictionary)[sectionTitle];
+            //dvc.zutat = [zutatenArray objectAtIndex:indexPath.row];
             dvc.zutatenName = array[indexPath.row];
+            
+            if([dvc.zutatenName isEqual:@"Avocado"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:0];
+            }
+            if([dvc.zutatenName isEqual:@"Erbsen"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:1];
+            }
+            if([dvc.zutatenName isEqual:@"Brokkoli"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:2];
+            }
+            if([dvc.zutatenName isEqual:@"Kaffee"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:3];
+            }
+            if([dvc.zutatenName isEqual:@"Milch"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:4];
+            }
+            if([dvc.zutatenName isEqual:@"Mandeln"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:5];
+            }
+            if([dvc.zutatenName isEqual:@"Feigen"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:6];
+            }
+            if([dvc.zutatenName isEqual:@"Walnüsse"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:7];
+            }
+            if([dvc.zutatenName isEqual:@"Quark"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:8];
+            }
+            if([dvc.zutatenName isEqual:@"Kurkuma"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:9];
+            }
+            if([dvc.zutatenName isEqual:@"Quinoa"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:10];
+            }
+            if([dvc.zutatenName isEqual:@"Joghurt"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:11];
+            }
+            if([dvc.zutatenName isEqual:@"Himbeeren"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:12];
+            }
+            if([dvc.zutatenName isEqual:@"Ingwer"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:13];
+            }
+            if([dvc.zutatenName isEqual:@"Chili"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:14];
+            }
+            if([dvc.zutatenName isEqual:@"Blaubeeren"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:15];
+            }
+            if([dvc.zutatenName isEqual:@"Haferflocken"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:16];
+            }
+            if([dvc.zutatenName isEqual:@"Hülsenfrüchte"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:17];
+            }
+            if([dvc.zutatenName isEqual:@"Hüttenkäse"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:18];
+            }
+            if([dvc.zutatenName isEqual:@"Eier"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:19];
+            }
+            if([dvc.zutatenName isEqual:@"Putenfleisch"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:20];
+            }
+            if([dvc.zutatenName isEqual:@"Thunfisch"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:21];
+            }
+            if([dvc.zutatenName isEqual:@"Grüner Tee"]){
+                NSLog(@"blblblblblblb");
+                dvc.zutat = [zutatenArray objectAtIndex:22];
+            }
+            
         }
     }
 }

@@ -17,7 +17,6 @@
     return [documentsPath stringByAppendingPathComponent:@"data.plist"];
     //mit listArray einen anderen Pfad bauen -> es sucht im falschen Verzeichnis und holt sich somit das falsche File
     
-    
 }
 
 
