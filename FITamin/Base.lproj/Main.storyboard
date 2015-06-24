@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -165,18 +165,34 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-Hj-tId">
                                 <rect key="frame" x="279" y="261" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLV-Ha-nkZ">
+                                <rect key="frame" x="180" y="348" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="HpE-rM-TgJ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Xb3-Hj-tId" secondAttribute="centerY" id="4QX-gR-G5C"/>
+                            <constraint firstItem="bLV-Ha-nkZ" firstAttribute="top" secondItem="Xb3-Hj-tId" secondAttribute="bottom" constant="66" id="B3k-cK-dac"/>
+                            <constraint firstItem="Qtr-xy-zoA" firstAttribute="top" secondItem="bLV-Ha-nkZ" secondAttribute="bottom" constant="75" id="Btd-xN-Eud"/>
+                            <constraint firstAttribute="centerX" secondItem="bLV-Ha-nkZ" secondAttribute="centerX" id="YGg-ci-cDT"/>
+                            <constraint firstAttribute="centerY" secondItem="bLV-Ha-nkZ" secondAttribute="centerY" id="Z8w-60-vnE"/>
                             <constraint firstAttribute="centerX" secondItem="Xb3-Hj-tId" secondAttribute="centerX" id="ar3-br-Cr4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4QX-gR-G5C"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="XKb-5b-6dx"/>
                     <connections>
+                        <outlet property="zutatImage" destination="bLV-Ha-nkZ" id="Kzx-Lw-Xe8"/>
                         <outlet property="zutatenNameLabel" destination="Xb3-Hj-tId" id="A55-J8-cq5"/>
                     </connections>
                 </viewController>
