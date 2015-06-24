@@ -9,6 +9,7 @@
 #import "MuskelgruppeVC.h"
 #import "StandortVC.h"
 #import <Parse/Parse.h>
+#import "UebungRouteVC.h"
 
 @implementation MuskelgruppeVC
 
@@ -162,13 +163,14 @@ UIButton *button;
     
     if(exercises != NULL){
         //later getWorkout
-
+        
     }
     
     if (self.selectedMuscleGroup != nil){
-        StandortVC *dest = [segue destinationViewController];
-        dest.selectedMuscleGroup = self.selectedMuscleGroup;
-      
+        UebungRouteVC *dest = [segue destinationViewController];
+        dest.excersices = [[NSMutableArray alloc] initWithArray:exercises];
+       
+        
     }
     
 }
@@ -190,19 +192,24 @@ UIButton *button;
             //Dann erste Exercise holen, die auf diesen Muskeltyp zeigt
             query = [PFQuery queryWithClassName:@"Exercise"];
             [query whereKey:@"muscles" equalTo:mm1];
-            [query getFirstObjectInBackgroundWithBlock:^(PFObject *e1, NSError *error) {
-                
-                if (!e1) {
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Couldnt Get Exercise" message:@"Exercise Query was not successful" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-                    [alert show];
-                }
-                else {
-                    // The find succeeded.
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exercise Found" message:[NSString stringWithFormat:@"%@/%@", @"Exercise Name:", e1[@"title"]] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-                    [alert show];
-                    [exercises addObject:e1];
-                }
-            }];
+            PFObject *e1 = [query getFirstObject];
+            if(e1 != NULL){
+                [exercises addObject:e1];
+
+            }
+//                            InBackgroundWithBlock:^(PFObject *e1, NSError *error) {
+//                
+//                if (!e1) {
+//                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Couldnt Get Exercise" message:@"Exercise Query was not successful" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+//                    [alert show];
+//                }
+//                else {
+//                    // The find succeeded.
+//                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exercise Found" message:[NSString stringWithFormat:@"%@/%@", @"Exercise Name:", e1[@"title"]] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+//                    [alert show];
+//                    [exercises addObject:e1];
+//                }
+//            }];
         }
     }
     

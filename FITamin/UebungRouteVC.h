@@ -8,18 +8,30 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <Parse/Parse.h>
 #import <CoreLocation/CoreLocation.h>
 
 @interface UebungRouteVC : UIViewController
 
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
 @property (strong, nonatomic) MKMapItem *destination;
-@property (strong, nonatomic) NSString *destinationString;
+
+@property (strong , nonatomic) NSMutableArray *excersices;
+@property (strong , nonatomic) NSMutableArray *selectedLocationsWithDistancesAndExercises;
 @property (strong, nonatomic) CLLocationManager *locationManager;
-@property (strong, nonatomic) CLLocation *targetLocation;
 
 @property (strong, nonatomic) CLLocation *currentLocation;
-@property (strong, nonatomic) NSString *selectedMuscleGroup;
+
+@property (weak, nonatomic) CLLocation *targetLocation;
+
+@property (weak, nonatomic) NSString *selectedMuscleGroup;
+
+- (void) sortByDistance:(NSMutableArray*)arrayToSort;
+
+- (void) quickSort:(NSInteger)left withRight:(NSInteger)right  forArray:(NSMutableArray*)arrayToSort;
+
+- (NSInteger) quickSortHelper:(NSInteger)left withRight:(NSInteger)right forArray:(NSMutableArray*)arrayToSort;
 
 - (CLLocationDistance) calculateDistanceToLocation:(CLLocation*)otherLocation;
 

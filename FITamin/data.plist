@@ -2,25 +2,28 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Erdbeere</string>
-	<string>Italien</string>
-	<string>Rumänien</string>
-	<string>Schweden</string>
-	<string>Schweiz</string>
-	<string>Spanien</string>
-	<string>Dänemark</string>
-	<string>Deutschland</string>
-	<string>Österreich</string>
-	<string>Liechtenstein</string>
-	<string>Tschechische Republik</string>
-	<string>Türkei</string>
-	<string>Ukraine</string>
-	<string>Ungarn</string>
-	<string>Finnland</string>
-	<string>Frankreich</string>
-	<string>Norwegen</string>
-	<string>Griechenland</string>
-	<string>Holland</string>
-	<string>Polen</string>
+	<string>Mandeln</string>
+	<string>Feigen</string>
+	<string>Walnüsse</string>
+	<string>Quark</string>
+	<string>Milch</string>
+	<string>Kurkuma</string>
+	<string>Kaffee</string>
+	<string>Brokkoli</string>
+	<string>Quinoa</string>
+	<string>Joghurt</string>
+	<string>Himbeeren</string>
+	<string>Ingwer</string>
+	<string>Chili</string>
+	<string>Avocado</string>
+	<string>Blaubeeren</string>
+	<string>Haferflocken</string>
+	<string>Erbsen</string>
+	<string>Hülsenfrüchte</string>
+	<string>Hüttenkäse</string>
+	<string>Eier</string>
+	<string>Putenfleisch</string>
+	<string>Thunfisch</string>
+	<string>Grüner Tee</string>
 </array>
 </plist>
