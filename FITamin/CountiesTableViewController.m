@@ -164,7 +164,7 @@ NSDictionary *zutDic;
 
     Zutat *zutat18 = [Zutat new];
     zutat18.zutatDetailName = cell.zutatenNameLabel.text;
-    zutat18.zutatDetailImage = @"Hülsenfrüchte.jpg";
+    zutat18.zutatDetailImage = @"Huelsenfruechte.jpg";
     zutat18.zutatDetailText = @"fehlt";
     
     Zutat *zutat19 = [Zutat new];
@@ -329,10 +329,13 @@ NSDictionary *zutDic;
     cell.zutatenImageView.clipsToBounds = YES;
     
     cell.zutatenNameLabel.text = array[indexPath.row];
-    cell.zutatenImageView.image = [UIImage imageNamed:array[indexPath.row]];
+    NSString *imageString = [array[indexPath.row] stringByReplacingOccurrencesOfString:@"ü" withString:@"ue"];
+    imageString = [imageString stringByReplacingOccurrencesOfString:@"ä" withString:@"ae"];
+    cell.zutatenImageView.image = [UIImage imageNamed:imageString];
     cell.zutatenNameLabel.font = [UIFont fontWithName:@"mywanderingheart" size:25];
     
-    NSLog(@"ZutatenCell: %@",cell);
+    NSLog(@"ZutatenCell: %@",array[indexPath.row]);
+    NSLog(@"ZutatenCell: %@",imageString);
     return cell;
 }
 
