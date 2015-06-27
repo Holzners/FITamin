@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-
+#import <QuartzCore/QuartzCore.h>
 #import "CustomCell.h"
 #import "DetailsViewController.h"
 
@@ -40,7 +40,10 @@
     self.zutatenFoto.image = [UIImage imageNamed:zutat.zutatDetailImage];
     
     self.zutatenText.text = zutat.zutatDetailText;
-    
+    self.zutatenFoto.layer.shadowOffset = CGSizeMake(0, 3);
+    self.zutatenFoto.layer.shadowRadius = 5.0;
+    self.zutatenFoto.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.zutatenFoto.layer.shadowOpacity = 1;
 }
 
 - (void)didReceiveMemoryWarning

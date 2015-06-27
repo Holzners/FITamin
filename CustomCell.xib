@@ -13,7 +13,7 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C6c-D6-dPt" id="hCS-9F-Yr6">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRA-zp-8lV">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRA-zp-8lV">
                         <rect key="frame" x="24" y="32" width="197" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="197" id="hE1-j5-nAN"/>
@@ -22,7 +22,7 @@
                         <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMb-5A-yyg">
+                    <imageView userInteractionEnabled="NO" tag="-1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMb-5A-yyg">
                         <rect key="frame" x="227" y="12" width="75" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="75" id="Vk7-yu-Te9"/>
@@ -32,6 +32,7 @@
                 </subviews>
                 <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
+                    <constraint firstAttribute="centerY" secondItem="TRA-zp-8lV" secondAttribute="centerY" id="1TX-t3-BJe"/>
                     <constraint firstItem="vMb-5A-yyg" firstAttribute="top" secondItem="hCS-9F-Yr6" secondAttribute="topMargin" constant="4" id="7GM-uf-e4X"/>
                     <constraint firstAttribute="trailingMargin" secondItem="vMb-5A-yyg" secondAttribute="trailing" constant="10" id="vKV-fD-OTj"/>
                 </constraints>
