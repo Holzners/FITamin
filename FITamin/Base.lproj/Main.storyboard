@@ -385,7 +385,7 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" image="StartButton">
-                                    <color key="titleColor" patternImage="BC4170DD-4BD4-4C1A-99BD-3C048E5AA98F" colorSpace="pattern"/>
+                                    <color key="titleColor" patternImage="9453B31E-E708-407F-8244-A34FFCF233CD" colorSpace="pattern"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -718,7 +718,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BC4170DD-4BD4-4C1A-99BD-3C048E5AA98F" width="256" height="256">
+        <image name="9453B31E-E708-407F-8244-A34FFCF233CD" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
