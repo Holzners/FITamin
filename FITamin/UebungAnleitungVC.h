@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+
 @import MediaPlayer;
 
 @interface UebungAnleitungVC : UIViewController{
 
     MPMoviePlayerController *moviePlayer;
-    
+    PFObject *currentExercise;
 }
 
 @property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
 
+@property (strong, nonatomic) PFObject  *currentExercise;
 
 
 @end

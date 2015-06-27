@@ -161,14 +161,17 @@ UIButton *button;
     //zuerst Exercises zu spezifizierten Muskelgruppen abfragen
     NSMutableArray *exercises = self.getExercises;
     
+    
     if(exercises != NULL){
         //later getWorkout
         
+        //hier muss jetzt noch geprüft werden
+        // welche Exercises noch geladen werden müssen (Videos)
     }
     
     if (self.selectedMuscleGroup != nil){
         UebungRouteVC *dest = [segue destinationViewController];
-        dest.excersices = [[NSMutableArray alloc] initWithArray:exercises];
+        dest.exercises = [[NSMutableArray alloc] initWithArray:exercises];
        
         
     }
@@ -216,5 +219,20 @@ UIButton *button;
     return exercises;
     
 }
+
+-(void)loadExerciseRessources:(PFObject *)exercise{
+    //hier muss jetzt geprüft werden welche Ressource noch von
+    //Parse geladen müssen
+    //Lade video zur Exericse
+    PFFile *theFile = [exercise objectForKey:@"video"];
+    NSLog(@"%@",theFile.url); // the .url property contains the URL for the file (video or otherwise)..
+    // If you want to download the data:
+    [theFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        // data contains the full file... this block will run when it is downloaded.
+        // use it inside this block.
+    }];
+    
+}
+
 
 @end

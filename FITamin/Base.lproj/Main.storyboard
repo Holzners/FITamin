@@ -784,6 +784,15 @@
                                     <constraint firstAttribute="width" secondItem="Usc-Uf-z5z" secondAttribute="height" multiplier="1:1" id="i16-Jm-hoB"/>
                                 </constraints>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-av-v5s">
+                                <rect key="frame" x="240" y="438" width="121" height="30"/>
+                                <state key="normal" title="TargetReached">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="simulateTargetReached:" destination="RiL-f8-nGI" eventType="touchUpInside" id="xq7-C7-fQJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -800,7 +809,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDt-JD-ep9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="300"/>
+            <point key="canvasLocation" x="1233" y="274"/>
         </scene>
         <!--UebungAnleitungVC-->
         <scene sceneID="OdY-Bk-Zwq">
@@ -813,10 +822,23 @@
                     <view key="view" contentMode="scaleToFill" id="bfO-9j-2sL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvd-Ha-W2e">
+                                <rect key="frame" x="273" y="473" width="55" height="30"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmExercise:" destination="P5q-zc-nxY" eventType="touchUpInside" id="3SM-28-fVM"/>
+                                    <segue destination="xBJ-Xg-6Ar" kind="unwind" unwindAction="unwindToUebungRouteVC:" id="Xp5-jU-dCO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYP-OE-cAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xBJ-Xg-6Ar" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1970" y="266"/>
         </scene>
@@ -5344,6 +5366,7 @@ AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAAQO4w
         </image>
         <image name="Back" width="15" height="20"/>
         <image name="ErnährungsTeilFITamin" width="1332" height="1965"/>
+>>>>>>> 1f0f8e198bf7916f55878f5f8bc679b250b3986a
         <image name="FaulwarGestern" width="1271" height="1700"/>
         <image name="FitnessRezepte1Button" width="418" height="144"/>
         <image name="FitnessRezepte2Button" width="418" height="144"/>
