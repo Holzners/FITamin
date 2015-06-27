@@ -9,7 +9,11 @@
 #import "RecipeTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "RecipeCustomCell.h"
+#import <SDWebImage-ProgressView/UIImageView+ProgressView.h>
 #import "RecipeDetailVC.h"
+#import "AFHTTPSessionManager.h"
+#import "RecipeApiController.h"
+#import "RecipeListModel.h"
 
 @interface RecipeTableViewController () <UISearchDisplayDelegate, UISearchBarDelegate>
 
@@ -38,6 +42,8 @@ NSDictionary *recDic;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
+    
+    
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
@@ -397,6 +403,33 @@ NSDictionary *recDic;
         }
     }
 }
+
+- (void) searchWithValue:(NSString*) param{
+        
+        HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [HUD setMode:MBProgressHUDModeIndeterminate];
+        [HUD setLabelText:@"searching"];
+        [HUD show:YES];
+        
+        [[RecipeApiController instanceShared] searchWithValue:param Page:nil SortBy:SortingByNon withBlock:^(SearchModel *response, NSError *error) {
+            if (error==nil) {
+                if ([response count]!=nil) {
+                    self.searchSummary = response;
+                    [HUD hide:YES];
+                }else{
+                    [HUD setMode:MBProgressHUDModeCustomView];
+                    [HUD setLabelText:@"Searching failed"];
+                    [HUD hide:YES afterDelay:1];
+                }
+            }else{
+                [HUD setMode:MBProgressHUDModeCustomView];
+                [HUD setLabelText:@"Connection error"];
+                [HUD hide:YES afterDelay:1];
+            }
+        }];
+    }
+
+
 
 
 @end
