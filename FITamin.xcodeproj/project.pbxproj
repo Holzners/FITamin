@@ -14,69 +14,30 @@
 		84191B4B1B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B451B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework */; };
 		84191B4C1B2C48E1006C0C86 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B461B2C48E1006C0C86 /* ParseUI.framework */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
-		844807231B3AEDFF00A44BA2 /* Training.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 844807221B3AD8D700A44BA2 /* Training.mp4 */; };
+		8441B9401B3AD1CF008698B4 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8441B93F1B3AD1CF008698B4 /* data.plist */; };
+		8441B9431B3AD4CF008698B4 /* Zutat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8441B9421B3AD4CF008698B4 /* Zutat.m */; };
 		844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF58C1B31E29600353B6B /* zutatenListe.plist */; };
 		844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */; };
 		844AF5A21B31FE0400353B6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 844AF5A11B31FE0400353B6B /* InfoPlist.strings */; };
 		844AF5B71B3206AE00353B6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF5B61B3206AE00353B6B /* Info.plist */; };
-		844BABF61B39D03D00E14D0A /* Brokkoli.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABDD1B39D03D00E14D0A /* Brokkoli.jpg */; };
-		844BABF71B39D03D00E14D0A /* Brokkoli2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABDE1B39D03D00E14D0A /* Brokkoli2.jpg */; };
-		844BABF81B39D03D00E14D0A /* Chili.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABDF1B39D03D00E14D0A /* Chili.jpg */; };
-		844BABF91B39D03D00E14D0A /* Eier.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABE01B39D03D00E14D0A /* Eier.jpg */; };
-		844BABFA1B39D03D00E14D0A /* Erbsen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABE11B39D03D00E14D0A /* Erbsen.jpg */; };
-		844BABFB1B39D03D00E14D0A /* Feige.png in Resources */ = {isa = PBXBuildFile; fileRef = 844BABE21B39D03D00E14D0A /* Feige.png */; };
-		844BABFC1B39D03D00E14D0A /* Ginger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABE31B39D03D00E14D0A /* Ginger.jpg */; };
-		844BABFD1B39D03D00E14D0A /* Grüner Tee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABE41B39D03D00E14D0A /* Grüner Tee.jpg */; };
-		844BABFE1B39D03D00E14D0A /* Grüner Tee2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABE51B39D03D00E14D0A /* Grüner Tee2.jpg */; };
-		844BABFF1B39D03D00E14D0A /* Himbeeren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABE61B39D03D00E14D0A /* Himbeeren.jpg */; };
-		844BAC001B39D03D00E14D0A /* Hüttenkäse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABE71B39D03D00E14D0A /* Hüttenkäse.jpg */; };
-		844BAC011B39D03D00E14D0A /* Hüttenkäse2.png in Resources */ = {isa = PBXBuildFile; fileRef = 844BABE81B39D03D00E14D0A /* Hüttenkäse2.png */; };
-		844BAC021B39D03D00E14D0A /* Joghurt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABE91B39D03D00E14D0A /* Joghurt.jpg */; };
-		844BAC031B39D03D00E14D0A /* Kaffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABEA1B39D03D00E14D0A /* Kaffee.jpg */; };
-		844BAC041B39D03D00E14D0A /* Kurkuma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABEB1B39D03D00E14D0A /* Kurkuma.jpg */; };
-		844BAC051B39D03D00E14D0A /* Mandeln.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABEC1B39D03D00E14D0A /* Mandeln.jpg */; };
-		844BAC061B39D03D00E14D0A /* Mandeln2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABED1B39D03D00E14D0A /* Mandeln2.jpg */; };
-		844BAC071B39D03D00E14D0A /* Milch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABEE1B39D03D00E14D0A /* Milch.jpg */; };
-		844BAC081B39D03D00E14D0A /* Putenfleisch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABEF1B39D03D00E14D0A /* Putenfleisch.jpg */; };
-		844BAC091B39D03D00E14D0A /* Putenfleisch2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABF01B39D03D00E14D0A /* Putenfleisch2.jpg */; };
-		844BAC0A1B39D03D00E14D0A /* Quark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABF11B39D03D00E14D0A /* Quark.jpg */; };
-		844BAC0B1B39D03D00E14D0A /* Quinoa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABF21B39D03D00E14D0A /* Quinoa.jpg */; };
-		844BAC0C1B39D03D00E14D0A /* Thunfisch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABF31B39D03D00E14D0A /* Thunfisch.jpg */; };
-		844BAC0D1B39D03D00E14D0A /* Thunfisch2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABF41B39D03D00E14D0A /* Thunfisch2.jpg */; };
-		844BAC0E1B39D03D00E14D0A /* Walnüsse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844BABF51B39D03D00E14D0A /* Walnüsse.jpg */; };
 		84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A381B2EE92E0062E0D6 /* StartmenuView.m */; };
 		84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */; };
 		84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */; };
 		84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */; };
+		84575BB11B3EBB83006C298D /* RecipeDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84575BB01B3EBB83006C298D /* RecipeDetailVC.m */; };
+		84575BB41B3EBE42006C298D /* RecipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84575BB31B3EBE42006C298D /* RecipeTableViewController.m */; };
+		84575BB71B3EBF65006C298D /* RecipeCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84575BB61B3EBF65006C298D /* RecipeCustomCell.m */; };
+		84575BB91B3EC176006C298D /* RecipeCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84575BB81B3EC176006C298D /* RecipeCustomCell.xib */; };
+		84575BBC1B3EC8D9006C298D /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 84575BBB1B3EC8D9006C298D /* Recipe.m */; };
 		845BDB611B3013B000F6C7B3 /* LogInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 845BDB601B3013B000F6C7B3 /* LogInVC.m */; };
 		845BDB641B30165800F6C7B3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845BDB631B30165800F6C7B3 /* Social.framework */; };
 		845BDB661B30166100F6C7B3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845BDB651B30166100F6C7B3 /* Accounts.framework */; };
-		847BFB941B32BC6300EB04ED /* Ungarn.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB931B32BC6300EB04ED /* Ungarn.png */; };
-		847BFBA11B32BC7300EB04ED /* Ukraine.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB951B32BC7300EB04ED /* Ukraine.png */; };
-		847BFBA21B32BC7300EB04ED /* Türkei.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB961B32BC7300EB04ED /* Türkei.png */; };
-		847BFBA31B32BC7300EB04ED /* Schweiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB971B32BC7300EB04ED /* Schweiz.png */; };
-		847BFBA41B32BC7300EB04ED /* Schweden.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB981B32BC7300EB04ED /* Schweden.png */; };
-		847BFBA51B32BC7300EB04ED /* Spanien.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB991B32BC7300EB04ED /* Spanien.png */; };
-		847BFBA61B32BC7300EB04ED /* Rumänien.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9A1B32BC7300EB04ED /* Rumänien.png */; };
-		847BFBA71B32BC7300EB04ED /* Portugal.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9B1B32BC7300EB04ED /* Portugal.png */; };
-		847BFBA81B32BC7300EB04ED /* Polen.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9C1B32BC7300EB04ED /* Polen.png */; };
-		847BFBA91B32BC7300EB04ED /* Norwegen.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9D1B32BC7300EB04ED /* Norwegen.png */; };
-		847BFBAA1B32BC7300EB04ED /* Holland.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9E1B32BC7300EB04ED /* Holland.png */; };
-		847BFBAB1B32BC7300EB04ED /* Liechtenstein.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFB9F1B32BC7300EB04ED /* Liechtenstein.png */; };
-		847BFBAC1B32BC7300EB04ED /* Italien.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBA01B32BC7300EB04ED /* Italien.png */; };
-		847BFBB21B32BC7E00EB04ED /* Griechenland.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBAD1B32BC7E00EB04ED /* Griechenland.png */; };
-		847BFBB31B32BC7E00EB04ED /* Frankreich.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBAE1B32BC7E00EB04ED /* Frankreich.png */; };
-		847BFBB41B32BC7E00EB04ED /* Finnland.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBAF1B32BC7E00EB04ED /* Finnland.png */; };
-		847BFBB51B32BC7E00EB04ED /* Tschechische Republik.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBB01B32BC7E00EB04ED /* Tschechische Republik.png */; };
-		847BFBB61B32BC7E00EB04ED /* Österreich.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBB11B32BC7E00EB04ED /* Österreich.png */; };
-		847BFBB81B32BCF100EB04ED /* Erdbeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 847BFBB71B32BCF100EB04ED /* Erdbeere.png */; };
 		848C56A21B31962400B407C5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C569F1B31962400B407C5 /* Default.png */; };
 		848C56A31B31962400B407C5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C56A01B31962400B407C5 /* Default@2x.png */; };
 		848C56A41B31962400B407C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C56A11B31962400B407C5 /* Default-568h@2x.png */; };
 		8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */; };
 		8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */; };
 		849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */; };
-		849689A61B2C4BC10000CAE2 /* RezepteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A31B2C4BC10000CAE2 /* RezepteVC.m */; };
 		849689A71B2C4BC10000CAE2 /* SavedWorkoutsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */; };
 		849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A91B2C4BFE0000CAE2 /* StandortVC.m */; };
 		849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */; };
@@ -96,7 +57,6 @@
 		84DC36D71B35815800A94CBA /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D61B35815800A94CBA /* DetailsViewController.m */; };
 		84DC36DA1B35819B00A94CBA /* CountiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */; };
 		84DC36E21B35845D00A94CBA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E11B35845D00A94CBA /* CustomCell.xib */; };
-		84DC36E51B35888400A94CBA /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E41B35888400A94CBA /* data.plist */; };
 		84DC36E71B35A88B00A94CBA /* mywanderingheart.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */; };
 		D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F790D0E21B31B5B50092654E /* Images.xcassets */; };
 		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
@@ -106,6 +66,7 @@
 		D4DA7B471B28815D00440996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4DA7B451B28815D00440996 /* Main.storyboard */; };
 		D4DA7B4C1B28815D00440996 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */; };
 		D4DA7B581B28815D00440996 /* FITaminTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B571B28815D00440996 /* FITaminTests.m */; };
+		F70A68C51B3ED8D40057A016 /* ChooseMode.m in Sources */ = {isa = PBXBuildFile; fileRef = F70A68C41B3ED8D40057A016 /* ChooseMode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,37 +88,14 @@
 		84191B461B2C48E1006C0C86 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeModusVC.h; sourceTree = "<group>"; };
 		84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeModusVC.m; sourceTree = "<group>"; };
-		844807221B3AD8D700A44BA2 /* Training.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Training.mp4; sourceTree = "<group>"; };
+		8441B93F1B3AD1CF008698B4 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		8441B9411B3AD4CF008698B4 /* Zutat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zutat.h; sourceTree = "<group>"; };
+		8441B9421B3AD4CF008698B4 /* Zutat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zutat.m; sourceTree = "<group>"; };
 		844AF58C1B31E29600353B6B /* zutatenListe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = zutatenListe.plist; sourceTree = "<group>"; };
 		844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Dynamic Table Views-Info.plist"; sourceTree = "<group>"; };
 		844AF5A11B31FE0400353B6B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		844AF5A31B31FE0800353B6B /* Dynamic Table Views-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dynamic Table Views-Prefix.pch"; sourceTree = "<group>"; };
 		844AF5B61B3206AE00353B6B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		844BABDD1B39D03D00E14D0A /* Brokkoli.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Brokkoli.jpg; sourceTree = "<group>"; };
-		844BABDE1B39D03D00E14D0A /* Brokkoli2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Brokkoli2.jpg; sourceTree = "<group>"; };
-		844BABDF1B39D03D00E14D0A /* Chili.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chili.jpg; sourceTree = "<group>"; };
-		844BABE01B39D03D00E14D0A /* Eier.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eier.jpg; sourceTree = "<group>"; };
-		844BABE11B39D03D00E14D0A /* Erbsen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Erbsen.jpg; sourceTree = "<group>"; };
-		844BABE21B39D03D00E14D0A /* Feige.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Feige.png; sourceTree = "<group>"; };
-		844BABE31B39D03D00E14D0A /* Ginger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ginger.jpg; sourceTree = "<group>"; };
-		844BABE41B39D03D00E14D0A /* Grüner Tee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Grüner Tee.jpg"; sourceTree = "<group>"; };
-		844BABE51B39D03D00E14D0A /* Grüner Tee2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Grüner Tee2.jpg"; sourceTree = "<group>"; };
-		844BABE61B39D03D00E14D0A /* Himbeeren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Himbeeren.jpg; sourceTree = "<group>"; };
-		844BABE71B39D03D00E14D0A /* Hüttenkäse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Hüttenkäse.jpg"; sourceTree = "<group>"; };
-		844BABE81B39D03D00E14D0A /* Hüttenkäse2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hüttenkäse2.png"; sourceTree = "<group>"; };
-		844BABE91B39D03D00E14D0A /* Joghurt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Joghurt.jpg; sourceTree = "<group>"; };
-		844BABEA1B39D03D00E14D0A /* Kaffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kaffee.jpg; sourceTree = "<group>"; };
-		844BABEB1B39D03D00E14D0A /* Kurkuma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kurkuma.jpg; sourceTree = "<group>"; };
-		844BABEC1B39D03D00E14D0A /* Mandeln.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mandeln.jpg; sourceTree = "<group>"; };
-		844BABED1B39D03D00E14D0A /* Mandeln2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mandeln2.jpg; sourceTree = "<group>"; };
-		844BABEE1B39D03D00E14D0A /* Milch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Milch.jpg; sourceTree = "<group>"; };
-		844BABEF1B39D03D00E14D0A /* Putenfleisch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Putenfleisch.jpg; sourceTree = "<group>"; };
-		844BABF01B39D03D00E14D0A /* Putenfleisch2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Putenfleisch2.jpg; sourceTree = "<group>"; };
-		844BABF11B39D03D00E14D0A /* Quark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Quark.jpg; sourceTree = "<group>"; };
-		844BABF21B39D03D00E14D0A /* Quinoa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Quinoa.jpg; sourceTree = "<group>"; };
-		844BABF31B39D03D00E14D0A /* Thunfisch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thunfisch.jpg; sourceTree = "<group>"; };
-		844BABF41B39D03D00E14D0A /* Thunfisch2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thunfisch2.jpg; sourceTree = "<group>"; };
-		844BABF51B39D03D00E14D0A /* Walnüsse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Walnüsse.jpg"; sourceTree = "<group>"; };
 		84567A371B2EE92E0062E0D6 /* StartmenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartmenuView.h; sourceTree = "<group>"; };
 		84567A381B2EE92E0062E0D6 /* StartmenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartmenuView.m; sourceTree = "<group>"; };
 		84567A3A1B2EEBBD0062E0D6 /* ErnaehrungView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErnaehrungView.h; sourceTree = "<group>"; };
@@ -166,29 +104,19 @@
 		84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuWorkoutView.m; sourceTree = "<group>"; };
 		84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuWorkoutVC.h; sourceTree = "<group>"; };
 		84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuWorkoutVC.m; sourceTree = "<group>"; };
+		84575BAF1B3EBB83006C298D /* RecipeDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailVC.h; sourceTree = "<group>"; };
+		84575BB01B3EBB83006C298D /* RecipeDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailVC.m; sourceTree = "<group>"; };
+		84575BB21B3EBE42006C298D /* RecipeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTableViewController.h; sourceTree = "<group>"; };
+		84575BB31B3EBE42006C298D /* RecipeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTableViewController.m; sourceTree = "<group>"; };
+		84575BB51B3EBF65006C298D /* RecipeCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeCustomCell.h; sourceTree = "<group>"; };
+		84575BB61B3EBF65006C298D /* RecipeCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCustomCell.m; sourceTree = "<group>"; };
+		84575BB81B3EC176006C298D /* RecipeCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeCustomCell.xib; sourceTree = "<group>"; };
+		84575BBA1B3EC8D9006C298D /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		84575BBB1B3EC8D9006C298D /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		845BDB601B3013B000F6C7B3 /* LogInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInVC.m; sourceTree = "<group>"; };
 		845BDB621B3013ED00F6C7B3 /* LogInVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInVC.h; sourceTree = "<group>"; };
 		845BDB631B30165800F6C7B3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		845BDB651B30166100F6C7B3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		847BFB931B32BC6300EB04ED /* Ungarn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ungarn.png; sourceTree = SOURCE_ROOT; };
-		847BFB951B32BC7300EB04ED /* Ukraine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ukraine.png; sourceTree = SOURCE_ROOT; };
-		847BFB961B32BC7300EB04ED /* Türkei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Türkei.png"; sourceTree = SOURCE_ROOT; };
-		847BFB971B32BC7300EB04ED /* Schweiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schweiz.png; sourceTree = SOURCE_ROOT; };
-		847BFB981B32BC7300EB04ED /* Schweden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schweden.png; sourceTree = SOURCE_ROOT; };
-		847BFB991B32BC7300EB04ED /* Spanien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spanien.png; sourceTree = SOURCE_ROOT; };
-		847BFB9A1B32BC7300EB04ED /* Rumänien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rumänien.png"; sourceTree = SOURCE_ROOT; };
-		847BFB9B1B32BC7300EB04ED /* Portugal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Portugal.png; sourceTree = SOURCE_ROOT; };
-		847BFB9C1B32BC7300EB04ED /* Polen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Polen.png; sourceTree = SOURCE_ROOT; };
-		847BFB9D1B32BC7300EB04ED /* Norwegen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Norwegen.png; sourceTree = SOURCE_ROOT; };
-		847BFB9E1B32BC7300EB04ED /* Holland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Holland.png; sourceTree = SOURCE_ROOT; };
-		847BFB9F1B32BC7300EB04ED /* Liechtenstein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liechtenstein.png; sourceTree = SOURCE_ROOT; };
-		847BFBA01B32BC7300EB04ED /* Italien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Italien.png; sourceTree = SOURCE_ROOT; };
-		847BFBAD1B32BC7E00EB04ED /* Griechenland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Griechenland.png; sourceTree = SOURCE_ROOT; };
-		847BFBAE1B32BC7E00EB04ED /* Frankreich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frankreich.png; sourceTree = SOURCE_ROOT; };
-		847BFBAF1B32BC7E00EB04ED /* Finnland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Finnland.png; sourceTree = SOURCE_ROOT; };
-		847BFBB01B32BC7E00EB04ED /* Tschechische Republik.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tschechische Republik.png"; sourceTree = SOURCE_ROOT; };
-		847BFBB11B32BC7E00EB04ED /* Österreich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Österreich.png"; sourceTree = SOURCE_ROOT; };
-		847BFBB71B32BCF100EB04ED /* Erdbeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Erdbeere.png; sourceTree = SOURCE_ROOT; };
 		848C569F1B31962400B407C5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		848C56A01B31962400B407C5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		848C56A11B31962400B407C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -198,8 +126,6 @@
 		8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedScreenVC.m; sourceTree = "<group>"; };
 		8496899F1B2C4B9A0000CAE2 /* MuskelgruppeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuskelgruppeVC.h; sourceTree = "<group>"; };
 		849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuskelgruppeVC.m; sourceTree = "<group>"; };
-		849689A21B2C4BC10000CAE2 /* RezepteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RezepteVC.h; sourceTree = "<group>"; };
-		849689A31B2C4BC10000CAE2 /* RezepteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RezepteVC.m; sourceTree = "<group>"; };
 		849689A41B2C4BC10000CAE2 /* SavedWorkoutsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedWorkoutsVC.h; sourceTree = "<group>"; };
 		849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedWorkoutsVC.m; sourceTree = "<group>"; };
 		849689A81B2C4BFE0000CAE2 /* StandortVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandortVC.h; sourceTree = "<group>"; };
@@ -227,7 +153,6 @@
 		84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountiesTableViewController.m; sourceTree = "<group>"; };
 		84DC36E11B35845D00A94CBA /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCell.xib; path = FITamin.xcodeproj/../CustomCell.xib; sourceTree = SOURCE_ROOT; };
 		84DC36E31B35866C00A94CBA /* CountiesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountiesTableViewController.h; sourceTree = "<group>"; };
-		84DC36E41B35888400A94CBA /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mywanderingheart.ttf; sourceTree = "<group>"; };
 		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D4DA7B381B28815D00440996 /* FITamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FITamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +166,8 @@
 		D4DA7B511B28815D00440996 /* FITaminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FITaminTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DA7B561B28815D00440996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4DA7B571B28815D00440996 /* FITaminTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITaminTests.m; sourceTree = "<group>"; };
+		F70A68C31B3ED8D40057A016 /* ChooseMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseMode.h; sourceTree = "<group>"; };
+		F70A68C41B3ED8D40057A016 /* ChooseMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseMode.m; sourceTree = "<group>"; };
 		F790D0E21B31B5B50092654E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,59 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				84DC36E11B35845D00A94CBA /* CustomCell.xib */,
+				84575BB81B3EC176006C298D /* RecipeCustomCell.xib */,
 			);
 			name = "Nib Files";
-			sourceTree = "<group>";
-		};
-		844AF59C1B31FDA700353B6B /* ZutatenImages */ = {
-			isa = PBXGroup;
-			children = (
-				847BFB951B32BC7300EB04ED /* Ukraine.png */,
-				847BFB961B32BC7300EB04ED /* Türkei.png */,
-				847BFB971B32BC7300EB04ED /* Schweiz.png */,
-				847BFB981B32BC7300EB04ED /* Schweden.png */,
-				847BFBB71B32BCF100EB04ED /* Erdbeere.png */,
-				847BFBAD1B32BC7E00EB04ED /* Griechenland.png */,
-				847BFBAE1B32BC7E00EB04ED /* Frankreich.png */,
-				847BFBAF1B32BC7E00EB04ED /* Finnland.png */,
-				847BFBB01B32BC7E00EB04ED /* Tschechische Republik.png */,
-				844BABDD1B39D03D00E14D0A /* Brokkoli.jpg */,
-				844BABDE1B39D03D00E14D0A /* Brokkoli2.jpg */,
-				844BABDF1B39D03D00E14D0A /* Chili.jpg */,
-				844BABE01B39D03D00E14D0A /* Eier.jpg */,
-				844BABE11B39D03D00E14D0A /* Erbsen.jpg */,
-				844BABE21B39D03D00E14D0A /* Feige.png */,
-				844BABE31B39D03D00E14D0A /* Ginger.jpg */,
-				844BABE41B39D03D00E14D0A /* Grüner Tee.jpg */,
-				844BABE51B39D03D00E14D0A /* Grüner Tee2.jpg */,
-				844BABE61B39D03D00E14D0A /* Himbeeren.jpg */,
-				844BABE71B39D03D00E14D0A /* Hüttenkäse.jpg */,
-				844BABE81B39D03D00E14D0A /* Hüttenkäse2.png */,
-				844BABE91B39D03D00E14D0A /* Joghurt.jpg */,
-				844BABEA1B39D03D00E14D0A /* Kaffee.jpg */,
-				844BABEB1B39D03D00E14D0A /* Kurkuma.jpg */,
-				844BABEC1B39D03D00E14D0A /* Mandeln.jpg */,
-				844BABED1B39D03D00E14D0A /* Mandeln2.jpg */,
-				844BABEE1B39D03D00E14D0A /* Milch.jpg */,
-				844BABEF1B39D03D00E14D0A /* Putenfleisch.jpg */,
-				844BABF01B39D03D00E14D0A /* Putenfleisch2.jpg */,
-				844BABF11B39D03D00E14D0A /* Quark.jpg */,
-				844BABF21B39D03D00E14D0A /* Quinoa.jpg */,
-				844BABF31B39D03D00E14D0A /* Thunfisch.jpg */,
-				844BABF41B39D03D00E14D0A /* Thunfisch2.jpg */,
-				844BABF51B39D03D00E14D0A /* Walnüsse.jpg */,
-				847BFBB11B32BC7E00EB04ED /* Österreich.png */,
-				847BFB991B32BC7300EB04ED /* Spanien.png */,
-				847BFB9A1B32BC7300EB04ED /* Rumänien.png */,
-				847BFB9B1B32BC7300EB04ED /* Portugal.png */,
-				847BFB9C1B32BC7300EB04ED /* Polen.png */,
-				847BFB9D1B32BC7300EB04ED /* Norwegen.png */,
-				847BFB9E1B32BC7300EB04ED /* Holland.png */,
-				847BFB9F1B32BC7300EB04ED /* Liechtenstein.png */,
-				847BFBA01B32BC7300EB04ED /* Italien.png */,
-				847BFB931B32BC6300EB04ED /* Ungarn.png */,
-			);
-			name = ZutatenImages;
 			sourceTree = "<group>";
 		};
 		844AF5B81B3207FF00353B6B /* FitnessZutaten */ = {
@@ -345,6 +222,8 @@
 			children = (
 				84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */,
 				84DC36E31B35866C00A94CBA /* CountiesTableViewController.h */,
+				8441B9411B3AD4CF008698B4 /* Zutat.h */,
+				8441B9421B3AD4CF008698B4 /* Zutat.m */,
 				84DC36D51B35815800A94CBA /* DetailsViewController.h */,
 				84DC36D61B35815800A94CBA /* DetailsViewController.m */,
 				84DC36D21B3580A000A94CBA /* CustomCell.h */,
@@ -353,6 +232,21 @@
 				84DC36D01B35805600A94CBA /* Datahandler.m */,
 			);
 			name = FitnessZutaten;
+			sourceTree = "<group>";
+		};
+		84575BA21B3EBABA006C298D /* FitnessRezepte */ = {
+			isa = PBXGroup;
+			children = (
+				84575BB21B3EBE42006C298D /* RecipeTableViewController.h */,
+				84575BB31B3EBE42006C298D /* RecipeTableViewController.m */,
+				84575BBA1B3EC8D9006C298D /* Recipe.h */,
+				84575BBB1B3EC8D9006C298D /* Recipe.m */,
+				84575BAF1B3EBB83006C298D /* RecipeDetailVC.h */,
+				84575BB01B3EBB83006C298D /* RecipeDetailVC.m */,
+				84575BB51B3EBF65006C298D /* RecipeCustomCell.h */,
+				84575BB61B3EBF65006C298D /* RecipeCustomCell.m */,
+			);
+			name = FitnessRezepte;
 			sourceTree = "<group>";
 		};
 		D4DA7B2F1B28815D00440996 = {
@@ -413,8 +307,6 @@
 				8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */,
 				8496899F1B2C4B9A0000CAE2 /* MuskelgruppeVC.h */,
 				849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */,
-				849689A21B2C4BC10000CAE2 /* RezepteVC.h */,
-				849689A31B2C4BC10000CAE2 /* RezepteVC.m */,
 				849689A41B2C4BC10000CAE2 /* SavedWorkoutsVC.h */,
 				849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */,
 				849689A81B2C4BFE0000CAE2 /* StandortVC.h */,
@@ -425,13 +317,15 @@
 				F790D0E21B31B5B50092654E /* Images.xcassets */,
 				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
+				F70A68C31B3ED8D40057A016 /* ChooseMode.h */,
+				F70A68C41B3ED8D40057A016 /* ChooseMode.m */,
 				84567A401B2EFEB10062E0D6 /* NeuWorkoutView.h */,
 				84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */,
 				84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */,
 				84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */,
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
+				84575BA21B3EBABA006C298D /* FitnessRezepte */,
 				844AF5B81B3207FF00353B6B /* FitnessZutaten */,
-				844AF59C1B31FDA700353B6B /* ZutatenImages */,
 				844AF59B1B31FD8400353B6B /* Nib Files */,
 				D4DA7B3B1B28815D00440996 /* Supporting Files */,
 			);
@@ -441,14 +335,13 @@
 		D4DA7B3B1B28815D00440996 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				844807221B3AD8D700A44BA2 /* Training.mp4 */,
 				84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */,
 				844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */,
 				844AF5B61B3206AE00353B6B /* Info.plist */,
 				844AF5A11B31FE0400353B6B /* InfoPlist.strings */,
 				844AF5A31B31FE0800353B6B /* Dynamic Table Views-Prefix.pch */,
 				D4DA7B3D1B28815D00440996 /* main.m */,
-				84DC36E41B35888400A94CBA /* data.plist */,
+				8441B93F1B3AD1CF008698B4 /* data.plist */,
 				848C569F1B31962400B407C5 /* Default.png */,
 				848C56A01B31962400B407C5 /* Default@2x.png */,
 				848C56A11B31962400B407C5 /* Default-568h@2x.png */,
@@ -554,64 +447,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844807231B3AEDFF00A44BA2 /* Training.mp4 in Resources */,
-				847BFBA11B32BC7300EB04ED /* Ukraine.png in Resources */,
 				844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */,
 				848C56A31B31962400B407C5 /* Default@2x.png in Resources */,
-				84DC36E51B35888400A94CBA /* data.plist in Resources */,
-				847BFBB61B32BC7E00EB04ED /* Österreich.png in Resources */,
 				D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */,
-				847BFBA61B32BC7300EB04ED /* Rumänien.png in Resources */,
-				847BFBB51B32BC7E00EB04ED /* Tschechische Republik.png in Resources */,
-				847BFBA71B32BC7300EB04ED /* Portugal.png in Resources */,
 				84DC36E71B35A88B00A94CBA /* mywanderingheart.ttf in Resources */,
-				847BFBB31B32BC7E00EB04ED /* Frankreich.png in Resources */,
-				847BFB941B32BC6300EB04ED /* Ungarn.png in Resources */,
-				844BABF81B39D03D00E14D0A /* Chili.jpg in Resources */,
-				844BABF61B39D03D00E14D0A /* Brokkoli.jpg in Resources */,
-				844BAC061B39D03D00E14D0A /* Mandeln2.jpg in Resources */,
-				844BAC021B39D03D00E14D0A /* Joghurt.jpg in Resources */,
 				D4DA7B471B28815D00440996 /* Main.storyboard in Resources */,
-				844BAC071B39D03D00E14D0A /* Milch.jpg in Resources */,
-				844BAC041B39D03D00E14D0A /* Kurkuma.jpg in Resources */,
 				848C56A41B31962400B407C5 /* Default-568h@2x.png in Resources */,
-				847BFBAA1B32BC7300EB04ED /* Holland.png in Resources */,
-				847BFBAC1B32BC7300EB04ED /* Italien.png in Resources */,
-				844BAC0B1B39D03D00E14D0A /* Quinoa.jpg in Resources */,
 				848C56A21B31962400B407C5 /* Default.png in Resources */,
-				844BABFC1B39D03D00E14D0A /* Ginger.jpg in Resources */,
 				D4DA7B4C1B28815D00440996 /* LaunchScreen.xib in Resources */,
-				844BABF91B39D03D00E14D0A /* Eier.jpg in Resources */,
-				844BAC0D1B39D03D00E14D0A /* Thunfisch2.jpg in Resources */,
-				847BFBA51B32BC7300EB04ED /* Spanien.png in Resources */,
-				844BAC0A1B39D03D00E14D0A /* Quark.jpg in Resources */,
-				844BAC051B39D03D00E14D0A /* Mandeln.jpg in Resources */,
-				844BAC0E1B39D03D00E14D0A /* Walnüsse.jpg in Resources */,
-				844BAC0C1B39D03D00E14D0A /* Thunfisch.jpg in Resources */,
-				844BABFF1B39D03D00E14D0A /* Himbeeren.jpg in Resources */,
 				844AF5B71B3206AE00353B6B /* Info.plist in Resources */,
-				847BFBA31B32BC7300EB04ED /* Schweiz.png in Resources */,
-				844BAC031B39D03D00E14D0A /* Kaffee.jpg in Resources */,
-				847BFBB81B32BCF100EB04ED /* Erdbeere.png in Resources */,
 				84DC36E21B35845D00A94CBA /* CustomCell.xib in Resources */,
+				84575BB91B3EC176006C298D /* RecipeCustomCell.xib in Resources */,
 				844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */,
-				844BABFE1B39D03D00E14D0A /* Grüner Tee2.jpg in Resources */,
-				844BAC091B39D03D00E14D0A /* Putenfleisch2.jpg in Resources */,
-				844BAC011B39D03D00E14D0A /* Hüttenkäse2.png in Resources */,
-				847BFBA41B32BC7300EB04ED /* Schweden.png in Resources */,
-				844BAC081B39D03D00E14D0A /* Putenfleisch.jpg in Resources */,
-				844BABFB1B39D03D00E14D0A /* Feige.png in Resources */,
+				8441B9401B3AD1CF008698B4 /* data.plist in Resources */,
 				844AF5A21B31FE0400353B6B /* InfoPlist.strings in Resources */,
-				847BFBAB1B32BC7300EB04ED /* Liechtenstein.png in Resources */,
-				847BFBB21B32BC7E00EB04ED /* Griechenland.png in Resources */,
-				844BAC001B39D03D00E14D0A /* Hüttenkäse.jpg in Resources */,
-				847BFBA91B32BC7300EB04ED /* Norwegen.png in Resources */,
-				847BFBA81B32BC7300EB04ED /* Polen.png in Resources */,
-				844BABF71B39D03D00E14D0A /* Brokkoli2.jpg in Resources */,
-				847BFBB41B32BC7E00EB04ED /* Finnland.png in Resources */,
-				844BABFA1B39D03D00E14D0A /* Erbsen.jpg in Resources */,
-				847BFBA21B32BC7300EB04ED /* Türkei.png in Resources */,
-				844BABFD1B39D03D00E14D0A /* Grüner Tee.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8441B9431B3AD4CF008698B4 /* Zutat.m in Sources */,
 				84DC36D71B35815800A94CBA /* DetailsViewController.m in Sources */,
 				84DC36D41B3580A000A94CBA /* CustomCell.m in Sources */,
 				849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */,
@@ -639,15 +489,19 @@
 				849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */,
 				D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */,
 				84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */,
+				84575BBC1B3EC8D9006C298D /* Recipe.m in Sources */,
+				84575BB11B3EBB83006C298D /* RecipeDetailVC.m in Sources */,
 				849689A71B2C4BC10000CAE2 /* SavedWorkoutsVC.m in Sources */,
 				8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */,
 				84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */,
 				84DC36D11B35805600A94CBA /* Datahandler.m in Sources */,
+				84575BB71B3EBF65006C298D /* RecipeCustomCell.m in Sources */,
 				849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
 				84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */,
+				F70A68C51B3ED8D40057A016 /* ChooseMode.m in Sources */,
+				84575BB41B3EBE42006C298D /* RecipeTableViewController.m in Sources */,
 				D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */,
-				849689A61B2C4BC10000CAE2 /* RezepteVC.m in Sources */,
 				84DC36DA1B35819B00A94CBA /* CountiesTableViewController.m in Sources */,
 				D4DA7B3E1B28815D00440996 /* main.m in Sources */,
 			);

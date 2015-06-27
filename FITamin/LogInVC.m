@@ -9,6 +9,7 @@
 #import "LogInVC.h"
 #import <ParseUI/PFLogInViewController.h>
 #import "StartmenuVC.h"
+#import "ChooseMode.h"
 
 @implementation LogInVC
 

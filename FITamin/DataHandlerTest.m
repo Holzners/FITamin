@@ -1,14 +1,15 @@
 //
-//  Datahandler.m
+//  DataHandlerTest.m
 //  FITamin
 //
-//  Created by admin on 20.06.15.
+//  Created by admin on 27.06.15.
 //  Copyright (c) 2015 iOS-Praktikum. All rights reserved.
 //
 
-#import "Datahandler.h"
+#import "DataHandlerTest.h"
 
-@implementation Datahandler
+@implementation DataHandlerTest
+
 
 
 +(NSString*)getFilePath
@@ -29,7 +30,7 @@
         
         NSError *error = nil;
         
-        NSString *filePath = [Datahandler getFilePath];
+        NSString *filePath = [DataHandlerTest getFilePath];
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
         
@@ -48,12 +49,12 @@
 
 +(NSArray *)loadData
 {
-    return [NSArray arrayWithContentsOfFile:[Datahandler getFilePath]];
+    return [NSArray arrayWithContentsOfFile:[DataHandlerTest getFilePath]];
 }
 
 +(BOOL)saveData:(NSArray *)array
 {
-    if (![array writeToFile:[Datahandler getFilePath] atomically:YES]) {
+    if (![array writeToFile:[DataHandlerTest getFilePath] atomically:YES]) {
         return NO;
     }
     return YES;

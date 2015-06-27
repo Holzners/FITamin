@@ -8,16 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "Zutat.h"
+#import "CustomCell.h"
 
 
 @interface DetailsViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *zutatenNameLabel;
 @property (strong, nonatomic) NSString *zutatenName;
-@property (strong , nonatomic) NSMutableArray *zutatenDetails;
-@property (weak, nonatomic) IBOutlet UIImageView *zutatImage;
 
+@property (weak, nonatomic) IBOutlet UIImageView *zutatenFoto;
 
--(PFObject *) getZutat:(NSString *)name;
+@property (weak, nonatomic) IBOutlet UITextView *zutatenText;
+
+@property (nonatomic, strong) Zutat *zutat;
 
 @end
