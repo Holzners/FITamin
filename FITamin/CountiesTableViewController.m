@@ -160,12 +160,12 @@ NSDictionary *zutDic;
     Zutat *zutat17 = [Zutat new];
     zutat17.zutatDetailName = cell.zutatenNameLabel.text;
     zutat17.zutatDetailImage = @"Haferflocken.jpg";
-    zutat17.zutatDetailText = @"fehlt";
+    zutat17.zutatDetailText = @"Haferflocken beinhalten einen hohen Gehalt an gesunden, ungesättigten Fettsäuren und einen hohen Magnesium-Anteil der die Fettverbrennung fördert. ";
 
     Zutat *zutat18 = [Zutat new];
     zutat18.zutatDetailName = cell.zutatenNameLabel.text;
     zutat18.zutatDetailImage = @"Huelsenfruechte.jpg";
-    zutat18.zutatDetailText = @"fehlt";
+    zutat18.zutatDetailText = @"Sie sind ein Muss für jeden Sportler, denn sie liefern lang anhaltende Energie. Sie enthalten zwischen 50 und 70 Prozent hochwertige Kohlenhydrate, die dem Körper auch über längere Zeit Energie für Höchstleistungen liefern.";
     
     Zutat *zutat19 = [Zutat new];
     zutat19.zutatDetailName = cell.zutatenNameLabel.text;
