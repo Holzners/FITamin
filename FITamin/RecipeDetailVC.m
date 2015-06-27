@@ -1,27 +1,28 @@
 //
-//  DetailsViewController.m
+//  RecipeDetailVC.m
 //  FITamin
 //
-//  Created by admin on 20.06.15.
+//  Created by admin on 27.06.15.
 //  Copyright (c) 2015 iOS-Praktikum. All rights reserved.
 //
 
+#import "RecipeDetailVC.h"
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-#import "CustomCell.h"
-#import "DetailsViewController.h"
+#import "RecipeCustomCell.h"
 
-@interface DetailsViewController()
+@interface RecipeDetailVC ()
+
+
 @end
 
-@implementation DetailsViewController
+@implementation RecipeDetailVC
 
 
-@synthesize zutatenFoto;
-@synthesize zutatenText;
-@synthesize zutat;
-
+@synthesize recipeImage;
+@synthesize recipeText;
+@synthesize recipe;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,10 +37,10 @@
 {
     [super viewDidLoad];
     
-    self.title = zutat.zutatDetailName;
-    self.zutatenFoto.image = [UIImage imageNamed:zutat.zutatDetailImage];
+    self.title = recipe.recipeDetailName;
+    self.recipeImage.image = [UIImage imageNamed:recipe.recipeDetailImage];
     
-    self.zutatenText.text = zutat.zutatDetailText;
+    self.recipeText.text = recipe.recipeDetailText;
     
 }
 
@@ -51,8 +52,8 @@
 
 - (void)viewDidUnload
 {
-    [self setZutatenFoto:nil];
-    [self setZutatenText:nil];
+    [self setRecipeImage:nil];
+    [self setRecipeText:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -61,5 +62,6 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 @end
