@@ -13,19 +13,18 @@
 
 @interface RecipeTableViewController () <UISearchDisplayDelegate, UISearchBarDelegate>
 
-
 @property (nonatomic, strong) NSArray *recipeArray;
 @property (nonatomic, strong) NSMutableArray *sectionTitles;
 @property (nonatomic, strong) NSDictionary *recipeDictionary;
 
 @property (strong, nonatomic) NSArray *searchRecipeArray;
-@property (strong, nonatomic) NSMutableArray *searchSectionTitles;
+@property (strong, nonatomic) NSMutableArray *searchRecipeSectionTitles;
 @property (strong, nonatomic) NSDictionary *searchRecipeDict;
 
-@property (nonatomic, strong) UISearchBar *searchBar;
-@property (nonatomic, strong) UISearchController *searchController;
+@property (nonatomic, strong) UISearchBar *searchRecipeBar;
+@property (nonatomic, strong) UISearchController *searchRecipeController;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchRecipeButton;
 
 - (IBAction)searchButtonPressed:(id)sender;
 
@@ -33,9 +32,9 @@
 
 @implementation RecipeTableViewController
 
-RecipeCustomCell *cell;
-NSArray *zutatenArray;
-NSDictionary *zutDic;
+RecipeCustomCell *recipeCell;
+NSArray *recipeArray;
+NSDictionary *recDic;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -58,27 +57,27 @@ NSDictionary *zutDic;
     [self.tableView setSectionIndexTrackingBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0]];
     
     // SearchBar erzeugen
-    self.searchBar = [[UISearchBar alloc] init];
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-    self.searchController.searchResultsUpdater = self;
-    self.searchController.dimsBackgroundDuringPresentation = NO;
-    self.searchController.delegate = self;
-    self.tableView.tableHeaderView = self.searchController.searchBar;
-    [self.searchBar sizeToFit];
+    self.searchRecipeBar = [[UISearchBar alloc] init];
+    self.searchRecipeController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchRecipeController.searchResultsUpdater = self;
+    self.searchRecipeController.dimsBackgroundDuringPresentation = NO;
+    self.searchRecipeController.delegate = self;
+    self.tableView.tableHeaderView = self.searchRecipeController.searchBar;
+    [self.searchRecipeBar sizeToFit];
     
     
     Recipe *recipe1 = [Recipe new];
-    recipe1.recipeDetailName = cell.recipeNameLabel.text;
+    recipe1.recipeDetailName = recipeCell.recipeNameLabel.text;
     recipe1.recipeDetailImage = @"Avocado.jpg";
     recipe1.recipeDetailText = @"Test";
     
     Recipe *recipe2 = [Recipe new];
-    recipe2.recipeDetailName = cell.recipeNameLabel.text;
+    recipe2.recipeDetailName = recipeCell.recipeNameLabel.text;
     recipe2.recipeDetailImage = @"Avocado.jpg";
     recipe2.recipeDetailText = @"Test";
     
     
-    zutatenArray = [NSArray arrayWithObjects:recipe1, recipe2, nil];
+    recipeArray = [NSArray arrayWithObjects:recipe1, recipe2, nil];
     
     
 }
@@ -119,7 +118,7 @@ NSDictionary *zutDic;
     if (tableView == self.tableView) {
         return [self.sectionTitles count];
     } else {
-        return [self.searchSectionTitles count];
+        return [self.searchRecipeSectionTitles count];
     }
 }
 
@@ -129,7 +128,7 @@ NSDictionary *zutDic;
         NSArray *array = [self.recipeDictionary valueForKey:self.sectionTitles[section]];
         return [array count];
     } else { // (tableView == self.searchDisplayController.searchResultsTableView)
-        NSArray *array = [self.searchRecipeDict valueForKey:self.searchSectionTitles[section]];
+        NSArray *array = [self.searchRecipeDict valueForKey:self.searchRecipeSectionTitles[section]];
         return [array count];
     }
 }
@@ -139,7 +138,7 @@ NSDictionary *zutDic;
     if (tableView == self.tableView) {
         return self.sectionTitles[section];
     } else {
-        return self.searchSectionTitles[section];
+        return self.searchRecipeSectionTitles[section];
     }
 }
 
@@ -149,7 +148,7 @@ NSDictionary *zutDic;
     if (tableView == self.tableView) {
         return self.sectionTitles;
     } else {
-        return self.searchSectionTitles;
+        return self.searchRecipeSectionTitles;
     }
 }
 
@@ -158,7 +157,7 @@ NSDictionary *zutDic;
     if (tableView == self.tableView) {
         return [self.sectionTitles indexOfObject:title];
     } else {
-        return [self.searchSectionTitles indexOfObject:title];
+        return [self.searchRecipeSectionTitles indexOfObject:title];
     }
 }
 
@@ -185,7 +184,7 @@ NSDictionary *zutDic;
         
     } else {
         
-        NSString *sectionTitle = self.searchSectionTitles[indexPath.section];
+        NSString *sectionTitle = self.searchRecipeSectionTitles[indexPath.section];
         array = (self.searchRecipeDict)[sectionTitle];
     }
     
@@ -271,8 +270,8 @@ NSDictionary *zutDic;
     // Übergebenes Array alphabetisch sortieren
     NSArray *sortedArray = [array sortedArrayUsingSelector:@selector(compare:)];
     
-    if ([self.searchController isActive]) {
-        self.searchSectionTitles = [NSMutableArray new];
+    if ([self.searchRecipeController isActive]) {
+        self.searchRecipeSectionTitles = [NSMutableArray new];
         
         NSLog(@"ZutatenDic: %@", sortedArray);
     } else {
@@ -290,7 +289,7 @@ NSDictionary *zutDic;
         
         NSString *character = [NSString stringWithCharacters:&c length:1];
         
-        if (![self.searchController isActive]) {
+        if (![self.searchRecipeController isActive]) {
             
             if (![self.sectionTitles containsObject:character]) {
                 
@@ -310,9 +309,9 @@ NSDictionary *zutDic;
             
         } else {
             
-            if (![self.searchSectionTitles containsObject:character]) {
+            if (![self.searchRecipeSectionTitles containsObject:character]) {
                 
-                [self.searchSectionTitles addObject:character];
+                [self.searchRecipeSectionTitles addObject:character];
                 NSMutableArray *countryStringArray = [NSMutableArray new];
                 [countryStringArray addObject:string];
                 dict[character] = countryStringArray;
@@ -341,9 +340,9 @@ NSDictionary *zutDic;
 {
     if (self.tableView.tableHeaderView == nil) {
         
-        self.tableView.tableHeaderView = self.searchBar;
+        self.tableView.tableHeaderView = self.searchRecipeBar;
         
-        [self.tableView setContentOffset:CGPointMake(0, self.searchBar.frame.size.height)];
+        [self.tableView setContentOffset:CGPointMake(0, self.searchRecipeBar.frame.size.height)];
         
         [UIView animateWithDuration:0.25f animations:^{
             [self.tableView setContentOffset:CGPointZero];
@@ -353,7 +352,7 @@ NSDictionary *zutDic;
         
     } else {
         [UIView animateWithDuration:0.25f animations:^{
-            [self.tableView setContentOffset:CGPointMake(0, self.searchBar.frame.size.height)];
+            [self.tableView setContentOffset:CGPointMake(0, self.searchRecipeBar.frame.size.height)];
         } completion:^(BOOL finished) {
             [self.tableView setContentOffset:CGPointZero];
             self.tableView.tableHeaderView = nil;
@@ -378,8 +377,8 @@ NSDictionary *zutDic;
         
         NSArray *array = [NSArray array];
         
-        if ([self.searchController isActive]) {
-            NSString *sectionTitle = self.searchSectionTitles[indexPath.section];
+        if ([self.searchRecipeController isActive]) {
+            NSString *sectionTitle = self.searchRecipeSectionTitles[indexPath.section];
             array = (self.searchRecipeDict)[sectionTitle];
             // dvc.zutat = [zutatenArray objectAtIndex:indexPath.row];
             dvc.recipeName = array[indexPath.row];
@@ -391,7 +390,7 @@ NSDictionary *zutDic;
             
             if([dvc.recipeName isEqual:@"Avocado"]){
                 NSLog(@"blblblblblblb");
-                dvc.recipe = [zutatenArray objectAtIndex:0];
+                dvc.recipe = [recipeArray objectAtIndex:0];
             }
 
             
