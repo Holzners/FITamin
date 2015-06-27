@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="osx-wA-ZOB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -380,7 +380,7 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" image="StartButton">
-                                    <color key="titleColor" patternImage="EF5FFAA6-48AD-4CDD-B465-F731866D05C4" colorSpace="pattern"/>
+                                    <color key="titleColor" patternImage="F367048C-AAEF-4BBD-8AFA-DEF3F318BF7D" colorSpace="pattern"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -614,6 +614,15 @@
                                     <constraint firstAttribute="width" secondItem="Usc-Uf-z5z" secondAttribute="height" multiplier="1:1" id="i16-Jm-hoB"/>
                                 </constraints>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-av-v5s">
+                                <rect key="frame" x="240" y="438" width="121" height="30"/>
+                                <state key="normal" title="TargetReached">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="simulateTargetReached:" destination="RiL-f8-nGI" eventType="touchUpInside" id="xq7-C7-fQJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -630,7 +639,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDt-JD-ep9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="300"/>
+            <point key="canvasLocation" x="1233" y="274"/>
         </scene>
         <!--UebungAnleitungVC-->
         <scene sceneID="OdY-Bk-Zwq">
@@ -643,10 +652,23 @@
                     <view key="view" contentMode="scaleToFill" id="bfO-9j-2sL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvd-Ha-W2e">
+                                <rect key="frame" x="273" y="473" width="55" height="30"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmExercise:" destination="P5q-zc-nxY" eventType="touchUpInside" id="3SM-28-fVM"/>
+                                    <segue destination="xBJ-Xg-6Ar" kind="unwind" unwindAction="unwindToUebungRouteVC:" id="Xp5-jU-dCO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYP-OE-cAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xBJ-Xg-6Ar" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1970" y="266"/>
         </scene>
@@ -712,7 +734,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="EF5FFAA6-48AD-4CDD-B465-F731866D05C4" width="256" height="256">
+        <image name="ErnährungTeil" width="1349" height="1964"/>
+        <image name="F367048C-AAEF-4BBD-8AFA-DEF3F318BF7D" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -5154,7 +5177,6 @@ BA6JAAQOkQAEDp4ABA6jAAQOpQAEDqcABA6sAAQOtAAEDrcABA68AAQOxAAEDscABA7ZAAQO3AAEDuEA
 AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAAQO4w
 </mutableData>
         </image>
-        <image name="ErnährungTeil" width="1349" height="1964"/>
         <image name="FaulwarGestern" width="1271" height="1700"/>
         <image name="FitnessRezepte1Button" width="418" height="144"/>
         <image name="FitnessRezepte2Button" width="418" height="144"/>

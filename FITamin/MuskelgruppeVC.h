@@ -24,5 +24,6 @@
 - (IBAction)chooseArms:(id)sender;
 
 -(NSMutableArray *)getExercises;
+-(void)loadExerciseRessources:(PFObject *)exercise;
 
 @end
