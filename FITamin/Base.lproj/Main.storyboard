@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -9,9 +9,74 @@
         <mutableArray key="mywanderingheart.ttf">
             <string>mywanderingheart</string>
             <string>mywanderingheart</string>
+            <string>mywanderingheart</string>
+            <string>mywanderingheart</string>
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Choose Mode-->
+        <scene sceneID="vde-ip-HWs">
+            <objects>
+                <viewController id="Mec-MB-sYY" customClass="ChooseMode" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fIN-Jm-fgG"/>
+                        <viewControllerLayoutGuide type="bottom" id="9gd-I3-uFT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="nj0-Ls-HHm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ModusScreen" translatesAutoresizingMaskIntoConstraints="NO" id="0zf-na-2m9">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                                <color key="backgroundColor" white="0.39810238489999999" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnk-hp-7cb">
+                                <rect key="frame" x="226" y="298" width="149" height="33"/>
+                                <fontDescription key="fontDescription" name="mywanderingheart" family="mywanderingheart" pointSize="20"/>
+                                <state key="normal" title="Fettverbrennung">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseFat:" destination="Mec-MB-sYY" eventType="touchUpInside" id="C3t-7v-e4K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWG-6E-Stv">
+                                <rect key="frame" x="239" y="234" width="122" height="33"/>
+                                <fontDescription key="fontDescription" name="mywanderingheart" family="mywanderingheart" pointSize="20"/>
+                                <state key="normal" title="Muskelaufbau">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseMuscle:" destination="Mec-MB-sYY" eventType="touchUpInside" id="bGK-oP-Sd9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.39810238489999999" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="UWG-6E-Stv" secondAttribute="centerX" id="Acy-E5-Lhh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0zf-na-2m9" secondAttribute="bottom" id="N2a-MK-RKl"/>
+                            <constraint firstAttribute="centerY" secondItem="0zf-na-2m9" secondAttribute="centerY" id="QpW-6P-Z6w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0zf-na-2m9" secondAttribute="trailing" id="SnE-iG-duE"/>
+                            <constraint firstAttribute="centerX" secondItem="0zf-na-2m9" secondAttribute="centerX" id="a9X-bq-cZD"/>
+                            <constraint firstAttribute="centerX" secondItem="Vnk-hp-7cb" secondAttribute="centerX" id="aq7-xS-39o"/>
+                            <constraint firstAttribute="centerY" secondItem="UWG-6E-Stv" secondAttribute="centerY" constant="50" id="fQg-A5-2Ru"/>
+                            <constraint firstAttribute="centerY" secondItem="Vnk-hp-7cb" secondAttribute="centerY" constant="-14" id="n8v-sx-bHi"/>
+                            <constraint firstItem="0zf-na-2m9" firstAttribute="leading" secondItem="nj0-Ls-HHm" secondAttribute="leadingMargin" id="ylx-S3-SRb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="modeImage" destination="0zf-na-2m9" id="ODe-FH-dps"/>
+                        <outlet property="muscleButton" destination="UWG-6E-Stv" id="v3R-VK-l5X"/>
+                        <outlet property="slimButton" destination="n8v-sx-bHi" id="Iw0-Zj-S1N"/>
+                        <segue destination="4Fq-bX-CD2" kind="show" identifier="StartScreenSegue" id="qPp-0u-8Bl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeH-pi-nLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-908" y="-1039"/>
+        </scene>
         <!--StartmenuVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -48,12 +113,12 @@
             <objects>
                 <viewController id="ndf-BK-YH0" customClass="LogInVC" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="4Fq-bX-CD2" kind="show" identifier="LoginSegue" id="hFo-bc-BcD"/>
+                        <segue destination="Mec-MB-sYY" kind="show" identifier="LoginSegue" id="hoy-sg-fGQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bL2-KO-qKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1536" y="-928"/>
+            <point key="canvasLocation" x="-1750" y="-964"/>
         </scene>
         <!--Startmenu-->
         <scene sceneID="57p-MJ-mko">
@@ -75,7 +140,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCH-Q7-M21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-858" y="-76"/>
+            <point key="canvasLocation" x="-970" y="-72"/>
         </scene>
         <!--ChangeModusVC-->
         <scene sceneID="KjL-UB-SzX">
@@ -807,6 +872,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A50-M8-2bp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-931" y="886"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lTa-XN-Gai">
+            <objects>
+                <viewController id="zL5-nP-q7K" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v4R-Fy-vim"/>
+                        <viewControllerLayoutGuide type="bottom" id="xHL-DN-iUc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vat-LS-CEF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Fl-M1-vS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
@@ -5271,7 +5353,7 @@ AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAAQO4w
         <image name="StartScreenFITamin" width="1339" height="1964"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MEM-97-fmL"/>
-        <segue reference="hFo-bc-BcD"/>
+        <segue reference="qPp-0u-8Bl"/>
+        <segue reference="cft-Yp-lvk"/>
     </inferredMetricsTieBreakers>
 </document>
