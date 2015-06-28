@@ -11,7 +11,7 @@
 #import <MBProgressHUD.h>
 
 
-@interface RecipeTableViewController : UITableViewController{
+@interface RecipeTableViewController : UITableViewController <UISearchControllerDelegate ,UISearchResultsUpdating> {
     MBProgressHUD *HUD;
 }
 

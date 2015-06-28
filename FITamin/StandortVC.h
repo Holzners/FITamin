@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface StandortVC : UITableViewController
+@interface StandortVC : UITableViewController <CLLocationManagerDelegate>
 
 @property(weak, nonatomic) NSString *selectedMuscleGroup;
 
