@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Recipe.h"
+#import "RecipeModel.h"
 #import <Parse/Parse.h>
 #import "RecipeCustomCell.h"
 
@@ -19,6 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *recipeText;
 
-@property (nonatomic, strong) Recipe *recipe;
+@property (strong, nonatomic) RecipeModel *recipe;
 
 @end

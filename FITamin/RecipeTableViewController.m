@@ -39,6 +39,8 @@
 RecipeCustomCell *recipeCell;
 NSArray *recipeArray;
 NSDictionary *recDic;
+RecipeModel *selectedRecipe;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -54,7 +56,6 @@ NSDictionary *recDic;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     UINib *nib = [UINib nibWithNibName:@"RecipeCustomCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"RecipeCustomCell"];
     
@@ -82,7 +83,7 @@ NSDictionary *recDic;
     recipe2.recipeDetailImage = @"Avocado.jpg";
     recipe2.recipeDetailText = @"Test";
    */
-    
+    self.searchSummary = [[SearchModel alloc]init];
     recipeArray = [[NSArray alloc]init];
     [self searchWithValue:@"chicken"];
     
@@ -227,8 +228,8 @@ NSDictionary *recDic;
     
     RecipeListModel *recipe = [[self.searchSummary recipes] objectAtIndex:indexPath.row];
     
-    NSLog(@"Name %@" ,  recipe.title);
-    cell.recipeNameLabel.text = recipe.title;
+    NSLog(@"Name %@" ,  [recipe title]);
+    cell.recipeNameLabel.text = [recipe title];
     
     [cell.recipeImageView setImageWithURL:[NSURL URLWithString:[[recipe image_url ]stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]] usingProgressView:nil];
     
@@ -350,15 +351,41 @@ NSDictionary *recDic;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   // [self performSegueWithIdentifier:@"recipeSegue" sender:indexPath];
+    HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [HUD setMode:MBProgressHUDModeIndeterminate];
+    [HUD setLabelText:@"fetching"];
+    [HUD show:YES];
+    
+    RecipeListModel *recipe = [[self.searchSummary recipes] objectAtIndex:indexPath.row];
+    [[RecipeApiController instanceShared] getReceipeWithID:[recipe recipe_id] withBlock:^(GetRequestModel *response, NSError *error) {
+        if (error==nil) {
+            if ([response recipe]!=nil) {
+                selectedRecipe = [response recipe];
+                [self performSegueWithIdentifier:@"recipeSegue" sender:self];
+                // [self.navigationController pushViewController:detailVC animated:YES];
+                [HUD hide:YES];
+            }else{
+                [HUD setMode:MBProgressHUDModeCustomView];
+                [HUD setCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"alert-failed"]]];
+                [HUD setLabelText:@"Fetching failed"];
+                [HUD hide:YES afterDelay:1];
+            }
+        }else{
+            [HUD setMode:MBProgressHUDModeCustomView];
+            [HUD setCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"alert-error"]]];
+            [HUD setLabelText:@"Connection error"];
+            [HUD hide:YES afterDelay:1];
+        }
+    }];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+
     if ([segue.identifier isEqualToString:@"recipeSegue"]) {
         
         RecipeDetailVC *dvc = segue.destinationViewController;
-        
+        dvc.recipe = selectedRecipe;/**
         NSIndexPath *indexPath = sender;
         
         NSArray *array = [NSArray array];
@@ -380,7 +407,7 @@ NSDictionary *recDic;
             }
 
             
-        }
+        }*/
     }
 }
 
@@ -395,7 +422,7 @@ NSDictionary *recDic;
             if (error==nil) {
                 if ([response count]!=nil) {
                     self.searchSummary = response;
-                    NSLog(@"Länge rückgabe array: %d", [self.searchSummary.recipes count]);
+                    NSLog(@"Länge rückgabe array: %d", [[self.searchSummary recipes] count]);
                     [self.tableView reloadData];
                     [HUD hide:YES];
                 }else{

@@ -9,7 +9,7 @@
 #import "RecipeDetailVC.h"
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-
+#import <SDWebImage-ProgressView/UIImageView+ProgressView.h>
 #import "RecipeCustomCell.h"
 
 @interface RecipeDetailVC ()
@@ -37,11 +37,13 @@
 {
     [super viewDidLoad];
     
-    self.title = recipe.recipeDetailName;
-    self.recipeImage.image = [UIImage imageNamed:recipe.recipeDetailImage];
-    
-    self.recipeText.text = recipe.recipeDetailText;
-    
+    self.title = [self.recipe title];
+  
+    [self.recipeImage setImageWithURL:[NSURL URLWithString:[[self.recipe image_url] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]] usingProgressView:nil];
+    NSString * resultConditions = [[self.recipe ingredients] componentsJoinedByString:@"\n"];
+    self.recipeName = [self.recipe title];
+    self.recipeText.text = resultConditions;
+     [recipeText sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning
