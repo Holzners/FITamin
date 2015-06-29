@@ -9,6 +9,7 @@
 #import "StartmenuVC.h"
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
+#import "LogInVC.h"
 
 //Implementieren
 #import "StartmenuView.h"
@@ -36,23 +37,21 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController
  didSelectViewController:(UIViewController *)viewController{
-    NSLog(@"LogoutTest1");
-    NSLog(@"LogoutTest3 %@", tabBarController.selectedViewController.title);
-    if(viewController == tabBarController.moreNavigationController){
+     if(viewController == tabBarController.moreNavigationController){
         tabBarController.moreNavigationController.delegate = self;
-        NSLog(@"LogoutTest2");
-    }
+            }
     
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if(navigationController == self.tabBarController.moreNavigationController){
-        NSLog(@"LogoutTest3 %@", viewController.title);
         if([viewController.title  isEqual: @"LogoutVC"]){
-            [PFUser logOut];
-            [self dismissModalViewControllerAnimated:YES];
-            NSLog(@"Logout");
-        }
+        
+            [self dismissViewControllerAnimated:YES completion:NULL];
+            LogInVC *livc = [LogInVC new];
+            [livc logOutUser];
+            [self.navigationController popToViewController:livc animated:YES];
+            }
     }
 }
 

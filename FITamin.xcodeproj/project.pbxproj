@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840F04A11B4173C300AFE817 /* TabBarStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A01B4173C300AFE817 /* TabBarStart.m */; };
 		840F04A41B41861D00AFE817 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A31B41861D00AFE817 /* LogoutVC.m */; };
 		840F04A71B41C25800AFE817 /* SavedWorkoutsTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
@@ -84,8 +83,6 @@
 
 /* Begin PBXFileReference section */
 		778406AD3732DDB7A2323C38 /* Pods-FITamin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FITamin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FITamin/Pods-FITamin.debug.xcconfig"; sourceTree = "<group>"; };
-		840F049F1B4173C300AFE817 /* TabBarStart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarStart.h; sourceTree = "<group>"; };
-		840F04A01B4173C300AFE817 /* TabBarStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarStart.m; sourceTree = "<group>"; };
 		840F04A21B41861D00AFE817 /* LogoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutVC.h; sourceTree = "<group>"; };
 		840F04A31B41861D00AFE817 /* LogoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutVC.m; sourceTree = "<group>"; };
 		840F04A51B41C25800AFE817 /* SavedWorkoutsTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedWorkoutsTableVC.h; sourceTree = "<group>"; };
@@ -555,7 +552,6 @@
 			files = (
 				8441B9431B3AD4CF008698B4 /* Zutat.m in Sources */,
 				84DC36D71B35815800A94CBA /* DetailsViewController.m in Sources */,
-				840F04A11B4173C300AFE817 /* TabBarStart.m in Sources */,
 				840F04A41B41861D00AFE817 /* LogoutVC.m in Sources */,
 				D475D1FA1B3F1962008D046B /* SearchModel.m in Sources */,
 				84DC36D41B3580A000A94CBA /* CustomCell.m in Sources */,
