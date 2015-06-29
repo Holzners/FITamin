@@ -28,9 +28,9 @@
     
     if([PFUser currentUser])
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Loggged in" message:@"Logged In" delegate:nil cancelButtonTitle:@"Proceed"
-                                              otherButtonTitles:nil];
-        [alert show];
+        //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Loggged in" message:@"Logged In" delegate:nil cancelButtonTitle:@"Proceed"
+        //                                      otherButtonTitles:nil];
+        //[alert show];
         [PFUser logOut];
             //StartmenuVC *startMenu = [StartmenuVC new];
         

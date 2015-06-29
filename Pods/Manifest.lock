@@ -49,6 +49,7 @@ PODS:
     - Parse (~> 1.7.1)
   - ParseUI (1.1.4):
     - Parse (~> 1.7)
+  - RateView (1.2)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage-ProgressView (0.3.1):
@@ -64,6 +65,7 @@ DEPENDENCIES:
   - Parse (= 1.7.1)
   - ParseFacebookUtilsV4 (= 1.7.1)
   - ParseUI
+  - RateView (~> 1.1)
   - SDWebImage (~> 3.6)
   - SDWebImage-ProgressView (~> 0.3.1)
   - TPKeyboardAvoiding (~> 1.2.3)
@@ -77,6 +79,7 @@ SPEC CHECKSUMS:
   Parse: fa8ec29de6d82035635986c11946299fb1b38316
   ParseFacebookUtilsV4: fc44a339e38513fb6fc0bafbef34f69df6559e06
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
+  RateView: d4d12e9bb76dc23a77a56f4e5c5fb530a3f3f998
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   SDWebImage-ProgressView: ee42f6f8119d68ac2062920bc9afb0ccfcf2dea1
   TPKeyboardAvoiding: f1ef0028fe9ba98ef2871cf55b4bbc39cae0267b

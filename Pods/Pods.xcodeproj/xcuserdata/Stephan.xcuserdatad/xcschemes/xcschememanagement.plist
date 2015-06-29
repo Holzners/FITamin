@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FITamin-RateView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FITamin-SDWebImage-ProgressView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,52 +62,57 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>017E2423FC8201C1BC37F425</key>
+		<key>217B1023B0BDE1AEA61B437D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>212CF28F449E603BC6186916</key>
+		<key>404CAF81EEAF2B3893DB2DE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>21B50ADE061305789DEE775F</key>
+		<key>4428933406C77F36297F5189</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>316BDFF32AB111236F337A93</key>
+		<key>59C4872A4A7C8B04A49F64CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>700149856203CED5FB1EA3C9</key>
+		<key>5F3EAACE3409A6C9234AFE34</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>994D9E8D220078854E3D5046</key>
+		<key>64F434D9D243F70BB8789224</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2BA76F5F5CCEA9437EB44B9</key>
+		<key>6A5294AB76BD6F27B6E4DFD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB2D5705AEFEF1D203CB1ADF</key>
+		<key>9F53CF97401F2422E0E87680</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D63D4214774FC78B0AF9B9E0</key>
+		<key>A27F17E4470A1AA788517CBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB0CD371979214E8D68BE5A0</key>
+		<key>AB18F1E7D40C6648F9700018</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1478FCF79D67F391F2A46D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

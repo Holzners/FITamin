@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A27F17E4470A1AA788517CBC"
-               BuildableName = "libPods-FITamin-MBProgressHUD.a"
-               BlueprintName = "Pods-FITamin-MBProgressHUD"
+               BlueprintIdentifier = "59C4872A4A7C8B04A49F64CC"
+               BuildableName = "libPods-FITamin-RateView.a"
+               BlueprintName = "Pods-FITamin-RateView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
