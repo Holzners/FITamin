@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface StartmenuVC : UIViewController
+@interface StartmenuVC : UIViewController <UITabBarControllerDelegate, UINavigationControllerDelegate>
 
 
 @end

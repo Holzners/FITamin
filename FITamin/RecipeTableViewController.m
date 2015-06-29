@@ -236,8 +236,13 @@ RecipeModel *selectedRecipe;
     [cell.recipeImageView setImageWithURL:[NSURL URLWithString:[[recipe image_url ]stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]] usingProgressView:nil];
     
 
-
+    cell.rateView.canRate = false;
+    cell.rateView.rating = ([[recipe social_rank]doubleValue]/100) * 5;
+    cell.rateView.starSize = 10;
     cell.recipeNameLabel.font = [UIFont fontWithName:@"Avenir Next" size:15];
+    NSLog(@"Rating %@", [recipe social_rank]);
+     NSLog(@"Rating Star%f",  cell.rateView.rating);
+    
     
     return cell;
 }

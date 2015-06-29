@@ -12,7 +12,7 @@ pod 'Parse',            '1.7.1'
 pod 'ParseFacebookUtilsV4','1.7.1'
 pod 'Facebook-iOS-SDK', '4.0.1'
 pod 'ParseUI'
-pod 'RateView' ,'~>1.1'
+pod 'RateView',  '~> 1.1'
 end
 
 target 'FITaminTests' do

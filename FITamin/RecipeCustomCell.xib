@@ -13,8 +13,8 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C6c-D6-dPt" id="hCS-9F-Yr6">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRA-zp-8lV">
-                        <rect key="frame" x="24" y="21" width="197" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRA-zp-8lV">
+                        <rect key="frame" x="24" y="8" width="197" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="197" id="hE1-j5-nAN"/>
                         </constraints>
@@ -29,6 +29,10 @@
                             <constraint firstAttribute="height" constant="50" id="yXb-EY-2hQ"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EMg-sL-xdm" customClass="RateView">
+                        <rect key="frame" x="24" y="50" width="119" height="27"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
@@ -37,6 +41,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="rateView" destination="EMg-sL-xdm" id="V94-AH-Iw8"/>
                 <outlet property="recipeImageView" destination="vMb-5A-yyg" id="G3t-cJ-Gce"/>
                 <outlet property="recipeNameLabel" destination="TRA-zp-8lV" id="AaW-Jq-bCp"/>
             </connections>
