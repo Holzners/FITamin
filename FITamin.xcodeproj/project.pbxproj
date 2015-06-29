@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		840F04A11B4173C300AFE817 /* TabBarStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A01B4173C300AFE817 /* TabBarStart.m */; };
 		840F04A41B41861D00AFE817 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A31B41861D00AFE817 /* LogoutVC.m */; };
+		840F04A71B41C25800AFE817 /* SavedWorkoutsTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
 		8441B9401B3AD1CF008698B4 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8441B93F1B3AD1CF008698B4 /* data.plist */; };
 		8441B9431B3AD4CF008698B4 /* Zutat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8441B9421B3AD4CF008698B4 /* Zutat.m */; };
@@ -87,6 +88,8 @@
 		840F04A01B4173C300AFE817 /* TabBarStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarStart.m; sourceTree = "<group>"; };
 		840F04A21B41861D00AFE817 /* LogoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutVC.h; sourceTree = "<group>"; };
 		840F04A31B41861D00AFE817 /* LogoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutVC.m; sourceTree = "<group>"; };
+		840F04A51B41C25800AFE817 /* SavedWorkoutsTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedWorkoutsTableVC.h; sourceTree = "<group>"; };
+		840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedWorkoutsTableVC.m; sourceTree = "<group>"; };
 		84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeModusVC.h; sourceTree = "<group>"; };
 		84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeModusVC.m; sourceTree = "<group>"; };
 		8441B93F1B3AD1CF008698B4 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
@@ -342,6 +345,8 @@
 				F790D0E21B31B5B50092654E /* Images.xcassets */,
 				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
+				840F04A51B41C25800AFE817 /* SavedWorkoutsTableVC.h */,
+				840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */,
 				840F049F1B4173C300AFE817 /* TabBarStart.h */,
 				840F04A01B4173C300AFE817 /* TabBarStart.m */,
 				F70A68C31B3ED8D40057A016 /* ChooseMode.h */,
@@ -571,6 +576,7 @@
 				84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */,
 				84DC36D11B35805600A94CBA /* Datahandler.m in Sources */,
 				84575BB71B3EBF65006C298D /* RecipeCustomCell.m in Sources */,
+				840F04A71B41C25800AFE817 /* SavedWorkoutsTableVC.m in Sources */,
 				849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */,
 				D475D1F41B3F1947008D046B /* RecipeModel.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
