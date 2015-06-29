@@ -44,6 +44,11 @@
     self.recipeName = [self.recipe title];
     self.recipeText.text = resultConditions;
      [recipeText sizeToFit];
+    
+    self.recipeImage.layer.shadowOffset = CGSizeMake(0, 3);
+    self.recipeImage.layer.shadowRadius = 5.0;
+    self.recipeImage.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.recipeImage.layer.shadowOpacity = 1;
 }
 
 - (void)didReceiveMemoryWarning

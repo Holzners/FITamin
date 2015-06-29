@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRA-zp-8lV">
-                        <rect key="frame" x="24" y="32" width="197" height="21"/>
+                        <rect key="frame" x="24" y="21" width="197" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="197" id="hE1-j5-nAN"/>
                         </constraints>

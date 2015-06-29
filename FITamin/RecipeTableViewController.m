@@ -87,6 +87,8 @@ RecipeModel *selectedRecipe;
     recipeArray = [[NSArray alloc]init];
     [self searchWithValue:@"chicken"];
     
+
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -143,16 +145,16 @@ RecipeModel *selectedRecipe;
     }*/
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{   return @"Rezepte";
-    /**
-    if (tableView == self.tableView) {
-        return self.sectionTitles[section];
-    } else {
-        return self.searchRecipeSectionTitles[section];
-    }
-  */
-}
+//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{   return @"Rezepte";
+//    /**
+//    if (tableView == self.tableView) {
+//        return self.sectionTitles[section];
+//    } else {
+//        return self.searchRecipeSectionTitles[section];
+//    }
+//  */
+//}
 
 /* SCHNELLINDEX ANFANG
 -(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
@@ -233,7 +235,9 @@ RecipeModel *selectedRecipe;
     
     [cell.recipeImageView setImageWithURL:[NSURL URLWithString:[[recipe image_url ]stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]] usingProgressView:nil];
     
-    cell.recipeNameLabel.font = [UIFont fontWithName:@"mywanderingheart" size:25];
+
+
+    cell.recipeNameLabel.font = [UIFont fontWithName:@"Avenir Next" size:15];
     
     return cell;
 }
@@ -269,7 +273,7 @@ RecipeModel *selectedRecipe;
     // Label
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 40, 40)];
     label.text = [self tableView:tableView titleForHeaderInSection:section];
-    label.font = [UIFont fontWithName:@"mywanderingheart" size:25];
+    label.font = [UIFont fontWithName:@"Avenir Next" size:15];
     label.shadowOffset = CGSizeMake(0, 1);
     label.shadowColor = [UIColor whiteColor];
     label.backgroundColor = [UIColor clearColor];
