@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchModel.h"
+#import <MBProgressHUD.h>
 
-@interface RecipeTableViewController : UITableViewController
+
+@interface RecipeTableViewController : UITableViewController {
+    MBProgressHUD *HUD;
+}
+
+@property(strong, nonatomic)SearchModel *searchSummary;
 
 @end

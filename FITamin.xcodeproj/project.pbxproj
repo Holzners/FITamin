@@ -7,12 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84191B471B2C48E1006C0C86 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B411B2C48E1006C0C86 /* Bolts.framework */; };
-		84191B481B2C48E1006C0C86 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B421B2C48E1006C0C86 /* Parse.framework */; };
-		84191B491B2C48E1006C0C86 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B431B2C48E1006C0C86 /* ParseCrashReporting.framework */; };
-		84191B4A1B2C48E1006C0C86 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B441B2C48E1006C0C86 /* ParseFacebookUtils.framework */; };
-		84191B4B1B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B451B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework */; };
-		84191B4C1B2C48E1006C0C86 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84191B461B2C48E1006C0C86 /* ParseUI.framework */; };
+		840F04A11B4173C300AFE817 /* TabBarStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A01B4173C300AFE817 /* TabBarStart.m */; };
+		840F04A41B41861D00AFE817 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A31B41861D00AFE817 /* LogoutVC.m */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
 		8441B9401B3AD1CF008698B4 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8441B93F1B3AD1CF008698B4 /* data.plist */; };
 		8441B9431B3AD4CF008698B4 /* Zutat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8441B9421B3AD4CF008698B4 /* Zutat.m */; };
@@ -58,8 +54,14 @@
 		84DC36DA1B35819B00A94CBA /* CountiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */; };
 		84DC36E21B35845D00A94CBA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E11B35845D00A94CBA /* CustomCell.xib */; };
 		84DC36E71B35A88B00A94CBA /* mywanderingheart.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */; };
+		B9F47C3697E9FF05607928C2 /* libPods-FITamin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F76DA9E59A064428B161FC /* libPods-FITamin.a */; };
 		D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F790D0E21B31B5B50092654E /* Images.xcassets */; };
 		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
+		D475D1F41B3F1947008D046B /* RecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F31B3F1947008D046B /* RecipeModel.m */; };
+		D475D1F71B3F1956008D046B /* RecipeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F61B3F1956008D046B /* RecipeListModel.m */; };
+		D475D1FA1B3F1962008D046B /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F91B3F1962008D046B /* SearchModel.m */; };
+		D475D1FD1B3F1972008D046B /* GetRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1FC1B3F1972008D046B /* GetRequestModel.m */; };
+		D475D2001B3F1A83008D046B /* RecipeApiController.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1FF1B3F1A83008D046B /* RecipeApiController.m */; };
 		D4DA7B3E1B28815D00440996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B3D1B28815D00440996 /* main.m */; };
 		D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B401B28815D00440996 /* AppDelegate.m */; };
 		D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B431B28815D00440996 /* StartmenuVC.m */; };
@@ -80,12 +82,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		84191B411B2C48E1006C0C86 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		84191B421B2C48E1006C0C86 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		84191B431B2C48E1006C0C86 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
-		84191B441B2C48E1006C0C86 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		84191B451B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		84191B461B2C48E1006C0C86 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		778406AD3732DDB7A2323C38 /* Pods-FITamin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FITamin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FITamin/Pods-FITamin.debug.xcconfig"; sourceTree = "<group>"; };
+		840F049F1B4173C300AFE817 /* TabBarStart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarStart.h; sourceTree = "<group>"; };
+		840F04A01B4173C300AFE817 /* TabBarStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarStart.m; sourceTree = "<group>"; };
+		840F04A21B41861D00AFE817 /* LogoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutVC.h; sourceTree = "<group>"; };
+		840F04A31B41861D00AFE817 /* LogoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutVC.m; sourceTree = "<group>"; };
 		84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeModusVC.h; sourceTree = "<group>"; };
 		84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeModusVC.m; sourceTree = "<group>"; };
 		8441B93F1B3AD1CF008698B4 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
@@ -154,7 +155,18 @@
 		84DC36E11B35845D00A94CBA /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCell.xib; path = FITamin.xcodeproj/../CustomCell.xib; sourceTree = SOURCE_ROOT; };
 		84DC36E31B35866C00A94CBA /* CountiesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountiesTableViewController.h; sourceTree = "<group>"; };
 		84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mywanderingheart.ttf; sourceTree = "<group>"; };
+		D2F76DA9E59A064428B161FC /* libPods-FITamin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FITamin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D475D1F21B3F1947008D046B /* RecipeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeModel.h; sourceTree = "<group>"; };
+		D475D1F31B3F1947008D046B /* RecipeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeModel.m; sourceTree = "<group>"; };
+		D475D1F51B3F1956008D046B /* RecipeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeListModel.h; sourceTree = "<group>"; };
+		D475D1F61B3F1956008D046B /* RecipeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeListModel.m; sourceTree = "<group>"; };
+		D475D1F81B3F1962008D046B /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
+		D475D1F91B3F1962008D046B /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
+		D475D1FB1B3F1972008D046B /* GetRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetRequestModel.h; sourceTree = "<group>"; };
+		D475D1FC1B3F1972008D046B /* GetRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetRequestModel.m; sourceTree = "<group>"; };
+		D475D1FE1B3F1A83008D046B /* RecipeApiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeApiController.h; sourceTree = "<group>"; };
+		D475D1FF1B3F1A83008D046B /* RecipeApiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeApiController.m; sourceTree = "<group>"; };
 		D4DA7B381B28815D00440996 /* FITamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FITamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DA7B3D1B28815D00440996 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4DA7B3F1B28815D00440996 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +178,7 @@
 		D4DA7B511B28815D00440996 /* FITaminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FITaminTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DA7B561B28815D00440996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4DA7B571B28815D00440996 /* FITaminTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FITaminTests.m; sourceTree = "<group>"; };
+		EEE53A2F2669ABAFC6AA89FE /* Pods-FITamin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FITamin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FITamin/Pods-FITamin.release.xcconfig"; sourceTree = "<group>"; };
 		F70A68C31B3ED8D40057A016 /* ChooseMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseMode.h; sourceTree = "<group>"; };
 		F70A68C41B3ED8D40057A016 /* ChooseMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseMode.m; sourceTree = "<group>"; };
 		F790D0E21B31B5B50092654E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -184,17 +197,12 @@
 				84CD91BB1B2C30D100B1AAD5 /* libz.dylib in Frameworks */,
 				84CD91B81B2C30AB00B1AAD5 /* StoreKit.framework in Frameworks */,
 				84CD91B91B2C30AB00B1AAD5 /* SystemConfiguration.framework in Frameworks */,
-				84191B4B1B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				84CD91B51B2C309800B1AAD5 /* Security.framework in Frameworks */,
-				84191B491B2C48E1006C0C86 /* ParseCrashReporting.framework in Frameworks */,
 				84CD91B31B2C308800B1AAD5 /* QuartzCore.framework in Frameworks */,
 				84CD91B11B2C307700B1AAD5 /* MobileCoreServices.framework in Frameworks */,
-				84191B4A1B2C48E1006C0C86 /* ParseFacebookUtils.framework in Frameworks */,
-				84191B481B2C48E1006C0C86 /* Parse.framework in Frameworks */,
-				84191B471B2C48E1006C0C86 /* Bolts.framework in Frameworks */,
 				84CD91AC1B2C302C00B1AAD5 /* CFNetwork.framework in Frameworks */,
-				84191B4C1B2C48E1006C0C86 /* ParseUI.framework in Frameworks */,
 				84CD91A91B2C301800B1AAD5 /* AudioToolbox.framework in Frameworks */,
+				B9F47C3697E9FF05607928C2 /* libPods-FITamin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,8 +253,27 @@
 				84575BB01B3EBB83006C298D /* RecipeDetailVC.m */,
 				84575BB51B3EBF65006C298D /* RecipeCustomCell.h */,
 				84575BB61B3EBF65006C298D /* RecipeCustomCell.m */,
+				D475D1F21B3F1947008D046B /* RecipeModel.h */,
+				D475D1F31B3F1947008D046B /* RecipeModel.m */,
+				D475D1F51B3F1956008D046B /* RecipeListModel.h */,
+				D475D1F61B3F1956008D046B /* RecipeListModel.m */,
+				D475D1F81B3F1962008D046B /* SearchModel.h */,
+				D475D1F91B3F1962008D046B /* SearchModel.m */,
+				D475D1FB1B3F1972008D046B /* GetRequestModel.h */,
+				D475D1FC1B3F1972008D046B /* GetRequestModel.m */,
+				D475D1FE1B3F1A83008D046B /* RecipeApiController.h */,
+				D475D1FF1B3F1A83008D046B /* RecipeApiController.m */,
 			);
 			name = FitnessRezepte;
+			sourceTree = "<group>";
+		};
+		BD4CD3B1950E0CD3C4E65AA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				778406AD3732DDB7A2323C38 /* Pods-FITamin.debug.xcconfig */,
+				EEE53A2F2669ABAFC6AA89FE /* Pods-FITamin.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D4DA7B2F1B28815D00440996 = {
@@ -268,6 +295,8 @@
 				D4DA7B3A1B28815D00440996 /* FITamin */,
 				D4DA7B541B28815D00440996 /* FITaminTests */,
 				D4DA7B391B28815D00440996 /* Products */,
+				BD4CD3B1950E0CD3C4E65AA5 /* Pods */,
+				F29F7DD480755A2E9A97B68E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -283,16 +312,12 @@
 		D4DA7B3A1B28815D00440996 /* FITamin */ = {
 			isa = PBXGroup;
 			children = (
-				84191B411B2C48E1006C0C86 /* Bolts.framework */,
-				84191B421B2C48E1006C0C86 /* Parse.framework */,
-				84191B431B2C48E1006C0C86 /* ParseCrashReporting.framework */,
-				84191B441B2C48E1006C0C86 /* ParseFacebookUtils.framework */,
-				84191B451B2C48E1006C0C86 /* ParseFacebookUtilsV4.framework */,
-				84191B461B2C48E1006C0C86 /* ParseUI.framework */,
 				D4DA7B3F1B28815D00440996 /* AppDelegate.h */,
 				D4DA7B401B28815D00440996 /* AppDelegate.m */,
 				D4DA7B421B28815D00440996 /* StartmenuVC.h */,
 				D4DA7B431B28815D00440996 /* StartmenuVC.m */,
+				840F04A21B41861D00AFE817 /* LogoutVC.h */,
+				840F04A31B41861D00AFE817 /* LogoutVC.m */,
 				84567A3A1B2EEBBD0062E0D6 /* ErnaehrungView.h */,
 				84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */,
 				84567A371B2EE92E0062E0D6 /* StartmenuView.h */,
@@ -317,6 +342,8 @@
 				F790D0E21B31B5B50092654E /* Images.xcassets */,
 				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
+				840F049F1B4173C300AFE817 /* TabBarStart.h */,
+				840F04A01B4173C300AFE817 /* TabBarStart.m */,
 				F70A68C31B3ED8D40057A016 /* ChooseMode.h */,
 				F70A68C41B3ED8D40057A016 /* ChooseMode.m */,
 				84567A401B2EFEB10062E0D6 /* NeuWorkoutView.h */,
@@ -367,6 +394,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F29F7DD480755A2E9A97B68E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2F76DA9E59A064428B161FC /* libPods-FITamin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,9 +409,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4DA7B5B1B28815D00440996 /* Build configuration list for PBXNativeTarget "FITamin" */;
 			buildPhases = (
+				8016B4FCB72B43693752B37D /* Check Pods Manifest.lock */,
 				D4DA7B341B28815D00440996 /* Sources */,
 				D4DA7B351B28815D00440996 /* Frameworks */,
 				D4DA7B361B28815D00440996 /* Resources */,
+				231564C9BF297CEDFCE4EB8F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -473,6 +510,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		231564C9BF297CEDFCE4EB8F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FITamin/Pods-FITamin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8016B4FCB72B43693752B37D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4DA7B341B28815D00440996 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -480,6 +550,9 @@
 			files = (
 				8441B9431B3AD4CF008698B4 /* Zutat.m in Sources */,
 				84DC36D71B35815800A94CBA /* DetailsViewController.m in Sources */,
+				840F04A11B4173C300AFE817 /* TabBarStart.m in Sources */,
+				840F04A41B41861D00AFE817 /* LogoutVC.m in Sources */,
+				D475D1FA1B3F1962008D046B /* SearchModel.m in Sources */,
 				84DC36D41B3580A000A94CBA /* CustomCell.m in Sources */,
 				849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */,
 				845BDB611B3013B000F6C7B3 /* LogInVC.m in Sources */,
@@ -489,7 +562,9 @@
 				849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */,
 				D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */,
 				84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */,
+				D475D1FD1B3F1972008D046B /* GetRequestModel.m in Sources */,
 				84575BBC1B3EC8D9006C298D /* Recipe.m in Sources */,
+				D475D2001B3F1A83008D046B /* RecipeApiController.m in Sources */,
 				84575BB11B3EBB83006C298D /* RecipeDetailVC.m in Sources */,
 				849689A71B2C4BC10000CAE2 /* SavedWorkoutsVC.m in Sources */,
 				8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */,
@@ -497,7 +572,9 @@
 				84DC36D11B35805600A94CBA /* Datahandler.m in Sources */,
 				84575BB71B3EBF65006C298D /* RecipeCustomCell.m in Sources */,
 				849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */,
+				D475D1F41B3F1947008D046B /* RecipeModel.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
+				D475D1F71B3F1956008D046B /* RecipeListModel.m in Sources */,
 				84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */,
 				F70A68C51B3ED8D40057A016 /* ChooseMode.m in Sources */,
 				84575BB41B3EBE42006C298D /* RecipeTableViewController.m in Sources */,
@@ -629,6 +706,7 @@
 		};
 		D4DA7B5C1B28815D00440996 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 778406AD3732DDB7A2323C38 /* Pods-FITamin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -646,6 +724,7 @@
 		};
 		D4DA7B5D1B28815D00440996 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE53A2F2669ABAFC6AA89FE /* Pods-FITamin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

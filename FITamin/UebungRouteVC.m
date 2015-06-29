@@ -15,7 +15,7 @@
 
 @end
 
-@implementation UebungRouteVC{
+@implementation UebungRouteVC {
     NSMutableArray *locationPoints;
     NSMutableArray *locationDistances;
     Boolean distancesCalculated;
@@ -74,9 +74,27 @@
 {
     NSLog(@"didFailWithError: %@", error);
     UIAlertView *errorAlert = [[UIAlertView alloc]
-                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                               initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@/%@",@"Failed to Get Your Location", error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [errorAlert show];
 }
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if (self.exercises != nil){
+        UebungAnleitungVC *dest = [segue destinationViewController];
+        dest.currentExercise = [_exercises objectAtIndex:_currentExercise];
+        
+        
+    }
+    
+}
+
+
+
+
 
 #pragma mark - CLLocationManagerDelegate
 
@@ -85,6 +103,7 @@
 {
     if(distancesCalculated){
         NSLog(@"didUpdateToLocation: %@", newLocation);
+        
         _currentLocation = newLocation;
     
         if (_currentLocation != nil) {
@@ -92,7 +111,8 @@
             if (_targetLocation != nil) {
                 CLLocationDistance distanceToTarget =[self calculateDistanceToLocation:_targetLocation];
                 if([NSNumber numberWithDouble:distanceToTarget].doubleValue < 15){
-                    [self nextView:self];
+                    [_locationManager stopUpdatingLocation];
+                    [self performSegueWithIdentifier:@"mapToDescription" sender:self];
                 }
             }
         } else{
@@ -113,11 +133,11 @@
         PFGeoPoint *tmpCurrentLoc
         = [PFGeoPoint geoPointWithLocation:_currentLocation];
         
-        for(int i = 0 ; i < [_excersices count] ; i++){
+        for(int i = 0 ; i < [_exercises count] ; i++){
             
             PFQuery *query;
             query = [PFQuery queryWithClassName:@"Location"];
-            [query whereKey:@"exercises" equalTo:[_excersices objectAtIndex:i]];
+            [query whereKey:@"exercises" equalTo:[_exercises objectAtIndex:i]];
         
             NSArray *locationsFromQuery = [query findObjects];
             NSMutableArray *tmpLocationDistances = [[NSMutableArray alloc] init];
@@ -129,7 +149,7 @@
                 CLLocation *tmpTarget = [[CLLocation alloc]initWithLatitude:target.latitude longitude:target.longitude];
                 NSMutableDictionary *point = [[NSMutableDictionary alloc] init];
                 [point setObject:tmpTarget forKey:@"location"];
-                [point setObject:[_excersices objectAtIndex:i] forKey:@"exercise"];
+                [point setObject:[_exercises objectAtIndex:i] forKey:@"exercise"];
                 [point setObject:[[NSNumber alloc] initWithDouble:distanceToCurrent] forKey:@"distance"];
                 [tmpLocationDistances addObject:point];
                 
@@ -234,10 +254,7 @@
     return renderer;
 }
 
-- (IBAction) nextView:(id)sender{
-    [_locationManager stopUpdatingLocation]; 
-    [self performSegueWithIdentifier:@"mapToDescription" sender:sender];
-}
+
 
 -(void) sortByDistance:(NSMutableArray*)arrayToSort{
     [self quickSort:0 withRight:(arrayToSort.count-1) forArray:arrayToSort];
@@ -284,6 +301,35 @@
     }
     
     return right;
+}
+
+
+- (IBAction)simulateTargetReached:(id)sender {
+    
+//    NSArray *coords;
+//    CLLocation *dest = [[CLLocation alloc]initWithLatitude:48.165013 longitude:11.601947];
+//    coords = [NSArray arrayWithObjects: dest, nil];
+    // [self locationManager:_locationManager  :coords];
+    
+    
+    [_locationManager stopUpdatingLocation];
+    [self performSegueWithIdentifier:@"mapToDescription" sender:self];
+
+}
+
+- (IBAction) nextView:(id)sender{
+    [_locationManager stopUpdatingLocation];
+    [self performSegueWithIdentifier:@"mapToDescription" sender:self];
+}
+
+- (IBAction)unwindToUebungRouteVC:(UIStoryboardSegue *)unwindSegue{
+    UIViewController* sourceViewController = unwindSegue.sourceViewController;
+    
+    if ([sourceViewController isKindOfClass:[UebungAnleitungVC class]])
+    {
+        NSLog(@"Coming from UebungAnleitungVC!");
+    }
+
 }
 
 @end

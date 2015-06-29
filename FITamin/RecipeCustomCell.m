@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.rateView.starFillColor = [UIColor yellowColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

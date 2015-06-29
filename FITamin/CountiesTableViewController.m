@@ -80,6 +80,8 @@ NSDictionary *zutDic;
     Zutat *zutat1 = [Zutat new];
     zutat1.zutatDetailName = cell.zutatenNameLabel.text;
     zutat1.zutatDetailImage = @"Avocado.jpg";
+    
+//    zutat1.zutatenDetailText = [UIFont fontWithName:@"mywanderingheart" size:25];
     zutat1.zutatDetailText = @"Die Avocado enthält viele gesunde Fettsäuren und ist deshalb gut für den Muskelaufbau und die allgemeine Fitness.";
     
     Zutat *zutat2 = [Zutat new];
@@ -105,7 +107,7 @@ NSDictionary *zutDic;
     Zutat *zutat6 = [Zutat new];
     zutat6.zutatDetailName = cell.zutatenNameLabel.text;
     zutat6.zutatDetailImage = @"Mandeln.jpg";
-    zutat6.zutatDetailText = @"Hallo Mandel";
+    zutat6.zutatDetailText = @"Mandeln enthalten reichlich Ballaststoffe, Eiweiß, Mineralstoffe und Vitamine.";
     
     Zutat *zutat7 = [Zutat new];
     zutat7.zutatDetailName = cell.zutatenNameLabel.text;
@@ -114,8 +116,8 @@ NSDictionary *zutDic;
     
     Zutat *zutat8 = [Zutat new];
     zutat8.zutatDetailName = cell.zutatenNameLabel.text;
-    zutat8.zutatDetailImage = @"Walnüsse.jpg";
-    zutat8.zutatDetailText = @"Eine Hand voll Walnüsse am Tag senkt das Risiko an Krebs zu erkranken. Noch dazu ist die Walnuss gut für das Gedächtnis, für die Zufuhr von wichtigen Fettsäuren und wehr Entzündungsreaktionen ab. ";
+    zutat8.zutatDetailImage = @"Walnuesse.jpg";
+    zutat8.zutatDetailText = @"Eine Hand voll Walnüsse am Tag senkt das Risiko an Krebs zu erkranken und ist gut für die Zufuhr von wichtigen Fettsäuren. ";
     
     Zutat *zutat9 = [Zutat new];
     zutat9.zutatDetailName = cell.zutatenNameLabel.text;
@@ -160,12 +162,12 @@ NSDictionary *zutDic;
     Zutat *zutat17 = [Zutat new];
     zutat17.zutatDetailName = cell.zutatenNameLabel.text;
     zutat17.zutatDetailImage = @"Haferflocken.jpg";
-    zutat17.zutatDetailText = @"Haferflocken beinhalten einen hohen Gehalt an gesunden, ungesättigten Fettsäuren und einen hohen Magnesium-Anteil der die Fettverbrennung fördert. ";
+    zutat17.zutatDetailText = @"Haferflocken beinhalten einen hohen Magnesium-Anteil, der die Fettverbrennung fördert. ";
 
     Zutat *zutat18 = [Zutat new];
     zutat18.zutatDetailName = cell.zutatenNameLabel.text;
     zutat18.zutatDetailImage = @"Huelsenfruechte.jpg";
-    zutat18.zutatDetailText = @"Sie sind ein Muss für jeden Sportler, denn sie liefern lang anhaltende Energie. Sie enthalten zwischen 50 und 70 Prozent hochwertige Kohlenhydrate, die dem Körper auch über längere Zeit Energie für Höchstleistungen liefern.";
+    zutat18.zutatDetailText = @"Ein Muss für jeden Sportler, denn sie enthalten zwischen 50 und 70 Prozent Kohlennhydrate und dies liefert lang anhaltende Energie.";
     
     Zutat *zutat19 = [Zutat new];
     zutat19.zutatDetailName = cell.zutatenNameLabel.text;
@@ -323,16 +325,16 @@ NSDictionary *zutDic;
     [background.layer insertSublayer:farbverlauf atIndex:0];
     cell.backgroundView = background;
     
-    cell.zutatenImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
-    cell.zutatenImageView.layer.borderWidth = 1;
-    cell.zutatenImageView.layer.cornerRadius = 5;
-    cell.zutatenImageView.clipsToBounds = YES;
+  //  cell.zutatenImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
+// cell.zutatenImageView.layer.borderWidth = 1;
+   // cell.zutatenImageView.layer.cornerRadius = 5;
+  //  cell.zutatenImageView.clipsToBounds = YES;
     
     cell.zutatenNameLabel.text = array[indexPath.row];
     NSString *imageString = [array[indexPath.row] stringByReplacingOccurrencesOfString:@"ü" withString:@"ue"];
     imageString = [imageString stringByReplacingOccurrencesOfString:@"ä" withString:@"ae"];
     cell.zutatenImageView.image = [UIImage imageNamed:imageString];
-    cell.zutatenNameLabel.font = [UIFont fontWithName:@"mywanderingheart" size:25];
+    cell.zutatenNameLabel.font = [UIFont fontWithName:@"Avenir Next" size:25];
     
     NSLog(@"ZutatenCell: %@",array[indexPath.row]);
     NSLog(@"ZutatenCell: %@",imageString);
@@ -346,13 +348,13 @@ NSDictionary *zutDic;
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 40;
+    return 20;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     
-    CGRect headerFrame = CGRectMake(0, 0, tableView.bounds.size.width, 40);
+    CGRect headerFrame = CGRectMake(0, 0, tableView.bounds.size.width, 20);
     UIView *headerView = [[UIView alloc] initWithFrame:headerFrame];
     
     UIColor *colorOne = [UIColor colorWithRed:(120/255.0) green:(135/255.0) blue:(150/255.0) alpha:1.0];
@@ -368,9 +370,9 @@ NSDictionary *zutDic;
     [headerView.layer insertSublayer:farbverlauf atIndex:0];
     
     // Label
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 40, 40)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 40, 20)];
     label.text = [self tableView:tableView titleForHeaderInSection:section];
-    label.font = [UIFont fontWithName:@"mywanderingheart" size:25];
+    label.font = [UIFont fontWithName:@"Avenir Next" size:15];
     label.shadowOffset = CGSizeMake(0, 1);
     label.shadowColor = [UIColor whiteColor];
     label.backgroundColor = [UIColor clearColor];
@@ -410,16 +412,16 @@ NSDictionary *zutDic;
             if (![self.sectionTitles containsObject:character]) {
                 
                 [self.sectionTitles addObject:character];
-                NSMutableArray *countryStringArray = [NSMutableArray new];
-                [countryStringArray addObject:string];
-                dict[character] = countryStringArray;
+                NSMutableArray *zutatenStringArray = [NSMutableArray new];
+                [zutatenStringArray addObject:string];
+                dict[character] = zutatenStringArray;
                 
             } else {
                 
-                NSMutableArray *countryArray = [NSMutableArray new];
-                countryArray = dict[character];
-                [countryArray addObject:string];
-                dict[character] = countryArray;
+                NSMutableArray *zutatenArray = [NSMutableArray new];
+                zutatenArray = dict[character];
+                [zutatenArray addObject:string];
+                dict[character] = zutatenArray;
                 
             }
             
@@ -428,16 +430,16 @@ NSDictionary *zutDic;
             if (![self.searchSectionTitles containsObject:character]) {
                 
                 [self.searchSectionTitles addObject:character];
-                NSMutableArray *countryStringArray = [NSMutableArray new];
-                [countryStringArray addObject:string];
-                dict[character] = countryStringArray;
+                NSMutableArray *zutatenStringArray = [NSMutableArray new];
+                [zutatenStringArray addObject:string];
+                dict[character] = zutatenStringArray;
                 
             } else {
                 
-                NSMutableArray *countryArray = [NSMutableArray new];
-                countryArray = dict[character];
-                [countryArray addObject:string];
-                dict[character] = countryArray;
+                NSMutableArray *zutatenArray = [NSMutableArray new];
+                zutatenArray = dict[character];
+                [zutatenArray addObject:string];
+                dict[character] = zutatenArray;
                 
             }
         }
