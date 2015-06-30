@@ -9,6 +9,8 @@
 #import "UebungRouteVC.h"
 #import "UebungAnleitungVC.h"
 #import <Parse/Parse.h>
+#import "MapViewExerciseAnnotation.h"
+
 @import CoreLocation;
 
 @interface UebungRouteVC ()
@@ -93,7 +95,35 @@
 }
 
 
+- (NSMutableArray *)createAnnotations:(NSArray *)locations{
 
+    
+    NSMutableArray *annotations = [[NSMutableArray alloc] init];
+    //Read locations details from plist
+    
+    //NSString *path = [[NSBundle mainBundle] pathForResource:@”locations” ofType:@”plist”];
+    
+    //NSArray *locations = [NSArray arrayWithContentsOfFile:path];
+    
+    for (NSDictionary *row in locations) {
+        
+        //NSNumber *latitude = [row objectForKey:@"latitude"];
+        
+        //NSNumber *longitude = [row objectForKey:@"longitude"];
+        
+        //NSString *title = [row objectForKey:@"title"];
+        
+        PFObject *exercise = [row objectForKey:@"exercise"];
+        CLLocation *pfObj = [row objectForKey:@"location"];
+
+        //Create coordinates from the latitude and longitude values
+        MapViewExerciseAnnotation *annotation = [[MapViewExerciseAnnotation alloc]initWithTitle:exercise[@"title"] AndCoordinate:pfObj.coordinate];
+        //[annotation setCoordinate:pfObj.coordinate];
+        
+        [annotations addObject:annotation];
+    }
+    return annotations;
+}
 
 
 #pragma mark - CLLocationManagerDelegate
@@ -101,11 +131,14 @@
 //called for each location update Location Manager receives
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
+    //Wurden Distances initial schon berechnet??
     if(distancesCalculated){
+        
+        //Distanzen wurden berechnet, jetzt nur noch dieser Fall
         NSLog(@"didUpdateToLocation: %@", newLocation);
         
         _currentLocation = newLocation;
-    
+        
         if (_currentLocation != nil) {
         
             if (_targetLocation != nil) {
@@ -121,6 +154,7 @@
         
     }else{
         
+        //Die Distanzen müssen berechnet werden
         _currentLocation = newLocation;
         self.selectedLocationsWithDistancesAndExercises = [[NSMutableArray alloc]init];
         CLLocationCoordinate2D zoomLocation;
@@ -130,9 +164,9 @@
                                                                            0.5*5000, 0.5*5000);
         [_mapView setRegion:viewRegion animated:YES];
         
-        PFGeoPoint *tmpCurrentLoc
-        = [PFGeoPoint geoPointWithLocation:_currentLocation];
+        PFGeoPoint *tmpCurrentLoc = [PFGeoPoint geoPointWithLocation:_currentLocation];
         
+        //Gehe alle Exercises durch und hole eine Location für diese Exercise
         for(int i = 0 ; i < [_exercises count] ; i++){
             
             PFQuery *query;
@@ -142,11 +176,15 @@
             NSArray *locationsFromQuery = [query findObjects];
             NSMutableArray *tmpLocationDistances = [[NSMutableArray alloc] init];
             
+            //Es werden alle Locations angefordert die auf diese Exercise verweisen
+            //jetzt wählen wir die Exercise mit minimaler Diatanz zum aktuellen Standpunkt
             for (PFObject *p in locationsFromQuery){
                 
                 PFGeoPoint *target = p[@"location"];
                 double distanceToCurrent = [target distanceInKilometersTo:tmpCurrentLoc];
                 CLLocation *tmpTarget = [[CLLocation alloc]initWithLatitude:target.latitude longitude:target.longitude];
+                
+                //Hier wird ein Dictionary erstellt, das eine Location repräsentieren soll: location + exercise + Distanz zu Standpunkt
                 NSMutableDictionary *point = [[NSMutableDictionary alloc] init];
                 [point setObject:tmpTarget forKey:@"location"];
                 [point setObject:[_exercises objectAtIndex:i] forKey:@"exercise"];
@@ -154,6 +192,8 @@
                 [tmpLocationDistances addObject:point];
                 
             }
+            
+            //Finde Minimum Distanz aller Locations (tmpLocationDistance ist Array von Dictionarys)
             [self sortByDistance:tmpLocationDistances];
             
             NSLog(@"Next Distances: %d" , i);
@@ -163,28 +203,36 @@
             }
             
             
-            NSMutableDictionary *listEntry = [[NSMutableDictionary alloc]init];
-            [listEntry setDictionary:[tmpLocationDistances firstObject]];
+            //NSMutableDictionary *listEntry = [[NSMutableDictionary alloc]init];
+            //[listEntry setDictionary:[tmpLocationDistances firstObject]];
             
-            [self.selectedLocationsWithDistancesAndExercises addObject:listEntry];
-            tmpCurrentLoc = [PFGeoPoint geoPointWithLocation:[listEntry objectForKey:@"location"]];
+            //Füge jetzt diese Location zu Location-Exercise Array hinzu
+            [self.selectedLocationsWithDistancesAndExercises addObject:[tmpLocationDistances firstObject]];
+            
+            //Setze current Location auf den aktuellen berechneten Punkt um weiter zu rechnen
+            tmpCurrentLoc = [PFGeoPoint geoPointWithLocation:[[tmpLocationDistances firstObject] objectForKey:@"location"]];
             
         }
+        
+        //Loggin für alle gefundenen Locations
         for (NSMutableDictionary *entry in _selectedLocationsWithDistancesAndExercises){
             PFObject *pfObj = [entry objectForKey:@"exercise"];
             NSNumber *dist = [entry objectForKey:@"distance"];
             NSLog(@"Übung Name: %@" , pfObj[@"title"]);
             NSLog(@"Distanz zur vorherigen %@" , dist);
         }
+        
         _targetLocation = [[self.selectedLocationsWithDistancesAndExercises objectAtIndex:0]objectForKey:@"location"];
         [self calculateRouteFromCurrentToDestination:_targetLocation];
+        [_mapView addAnnotations:[self createAnnotations:self.selectedLocationsWithDistancesAndExercises]];
         distancesCalculated = true;
         
     }
 }
 
+
 //calculates Distance beetween currentLocation and otherLocation
-- (CLLocationDistance) calculateDistanceToLocation:(CLLocation*)otherLocation{
+-(CLLocationDistance) calculateDistanceToLocation:(CLLocation*)otherLocation{
     if(_currentLocation!= nil){
         return[_currentLocation distanceFromLocation:otherLocation];
     }else{
@@ -194,20 +242,28 @@
 }
 
 //start calculating route from current location to destination
-- (void) calculateRouteFromCurrentToDestination:(CLLocation * )destinationLocation{
+-(void) calculateRouteFromCurrentToDestination:(CLLocation * )destinationLocation{
     
     //Convert CLLocation to MKMapItem
+    MKMapItem *src = [MKMapItem mapItemForCurrentLocation];
     MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:(destinationLocation.coordinate) addressDictionary:nil];
-    MKMapItem *destination = [[MKMapItem alloc] initWithPlacemark:placemark];
+    //MKMapItem *destination = [[MKMapItem alloc] initWithPlacemark:placemark];
     
+    for (NSMutableDictionary *entry in _selectedLocationsWithDistancesAndExercises){
+        
+        CLLocation *pfObj = [entry objectForKey:@"location"];
+        MKPlacemark *placemarkl1 = [[MKPlacemark alloc] initWithCoordinate:(pfObj.coordinate) addressDictionary:nil];
+        MKMapItem *destination = [[MKMapItem alloc] initWithPlacemark:placemarkl1];
+        
     //Init MKDirectionRequest
     MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
     //Set requests transport type to walk
     [request setTransportType:MKDirectionsTransportTypeWalking];
     //start = currentLocation
-    request.source = [MKMapItem mapItemForCurrentLocation];
+        request.source = src;
     //set destination
     request.destination = destination;
+    
     
     request.requestsAlternateRoutes = YES;
     
@@ -225,6 +281,10 @@
              [self showRoute:response];
          }
      }];
+     
+        src = destination;
+    }
+    
 }
 
 //Prints Overlay on MKMapView
@@ -233,8 +293,9 @@
     //add overlay polyline step by step for all points of interest
     for (MKRoute *route in response.routes)
     {
+        
         [_mapView
-         addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
+addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
         
         //additonaly print navigation command in Log
         /* for (MKRouteStep *step in route.steps)
@@ -245,7 +306,7 @@
 }
 
 //Override the rendererForOverlay method from MapView Delegate for custon line color and stroke
-- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
+-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
 {
     MKPolylineRenderer *renderer =
     [[MKPolylineRenderer alloc] initWithOverlay:overlay];
@@ -254,14 +315,12 @@
     return renderer;
 }
 
-
-
 -(void) sortByDistance:(NSMutableArray*)arrayToSort{
     [self quickSort:0 withRight:(arrayToSort.count-1) forArray:arrayToSort];
     
 }
 
-- (void) quickSort:(NSInteger)left withRight:(NSInteger)right forArray:(NSMutableArray*)arrayToSort{
+-(void) quickSort:(NSInteger)left withRight:(NSInteger)right forArray:(NSMutableArray*)arrayToSort{
     if(left < right){
         NSInteger pivot;
         pivot = [self quickSortHelper:left withRight:right forArray:arrayToSort];
@@ -303,8 +362,7 @@
     return right;
 }
 
-
-- (IBAction)simulateTargetReached:(id)sender {
+-(IBAction)simulateTargetReached:(id)sender {
     
 //    NSArray *coords;
 //    CLLocation *dest = [[CLLocation alloc]initWithLatitude:48.165013 longitude:11.601947];
@@ -317,19 +375,43 @@
 
 }
 
-- (IBAction) nextView:(id)sender{
+-(IBAction) nextView:(id)sender{
     [_locationManager stopUpdatingLocation];
     [self performSegueWithIdentifier:@"mapToDescription" sender:self];
 }
 
-- (IBAction)unwindToUebungRouteVC:(UIStoryboardSegue *)unwindSegue{
+-(IBAction)unwindToUebungRouteVC:(UIStoryboardSegue *)unwindSegue{
+    
     UIViewController* sourceViewController = unwindSegue.sourceViewController;
+    
+    [_locationManager startUpdatingLocation];
     
     if ([sourceViewController isKindOfClass:[UebungAnleitungVC class]])
     {
         NSLog(@"Coming from UebungAnleitungVC!");
     }
 
+}
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if([annotation isKindOfClass:[MapViewExerciseAnnotation class]]){
+        
+        MapViewExerciseAnnotation *myLocation = (MapViewExerciseAnnotation *)annotation;
+        
+        MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"MapViewExerciseAnnotation"];
+        
+        if(annotation == nil){
+            annotationView = myLocation.annotationView;
+        }
+        else{
+            annotationView.annotation = annotation;
+        }
+        return annotationView;
+    }
+    else {
+        return nil;
+    }
 }
 
 @end

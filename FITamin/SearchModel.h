@@ -11,6 +11,6 @@
 @interface SearchModel : JSONModel
 
 @property (nonatomic, retain) NSNumber * count;
-@property (nonatomic, strong) NSArray<RecipeListModel, Optional> * recipes;
+@property (nonatomic, strong) NSArray<RecipesModel, Optional> * recipes;
 
 @end
