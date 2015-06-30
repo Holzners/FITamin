@@ -7,6 +7,9 @@
 //
 
 #import "StartmenuVC.h"
+#import <Parse/Parse.h>
+#import "AppDelegate.h"
+#import "LogInVC.h"
 
 //Implementieren
 #import "StartmenuView.h"
@@ -28,7 +31,28 @@
     
     //damit Tab Bar die View nicht überlappt
     self.tabBarController.tabBar.translucent = NO;
+    [self.tabBarController setDelegate:self];
     
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController
+ didSelectViewController:(UIViewController *)viewController{
+     if(viewController == tabBarController.moreNavigationController){
+        tabBarController.moreNavigationController.delegate = self;
+            }
+    
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if(navigationController == self.tabBarController.moreNavigationController){
+        if([viewController.title  isEqual: @"LogoutVC"]){
+        
+            [self dismissViewControllerAnimated:YES completion:NULL];
+            LogInVC *livc = [LogInVC new];
+            [livc logOutUser];
+            [self.navigationController popToViewController:livc animated:YES];
+            }
+    }
 }
 
 /*Programmatisches Erzeugen der View

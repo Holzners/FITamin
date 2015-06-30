@@ -44,6 +44,7 @@
     [[RecipeApiController instanceShared] POST:@"api/search/" parameters:parameter success:^(NSURLSessionDataTask *task, id responseObject) {
         if (block) {
             block([[SearchModel alloc] initWithDictionary:responseObject error:nil], nil);
+        
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (block) {

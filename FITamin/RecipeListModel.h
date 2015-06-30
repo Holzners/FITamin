@@ -8,7 +8,7 @@
 
 #import "JSONModel.h"
 
-@protocol RecipesModel
+@protocol RecipeListModel
 
 @end
 

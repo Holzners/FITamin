@@ -20,5 +20,8 @@
 -(void) logInViewController:(PFLogInViewController * __nonnull)logInController didLogInUser:(PFUser * __nonnull)user;
 -(void) logInViewControllerDidCancelLogIn:(PFLogInViewController * __nonnull)logInController;
 
+-(void)showLoginController;
+
+-(void) logOutUser;
 
 @end

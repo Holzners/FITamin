@@ -39,6 +39,8 @@
 RecipeCustomCell *recipeCell;
 NSArray *recipeArray;
 NSDictionary *recDic;
+RecipeModel *selectedRecipe;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -54,14 +56,13 @@ NSDictionary *recDic;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     UINib *nib = [UINib nibWithNibName:@"RecipeCustomCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"RecipeCustomCell"];
     
     // Schnellindex anpassen
     [self.tableView setSectionIndexColor:[UIColor blackColor]];
     [self.tableView setSectionIndexTrackingBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0]];
-    
+    /**
     // SearchBar erzeugen
     self.searchRecipeBar = [[UISearchBar alloc] init];
     self.searchRecipeController = [[UISearchController alloc] initWithSearchResultsController:nil];
@@ -70,7 +71,7 @@ NSDictionary *recDic;
     self.searchRecipeController.delegate = self;
     self.tableView.tableHeaderView = self.searchRecipeController.searchBar;
     [self.searchRecipeBar sizeToFit];
-    
+    **
     
     Recipe *recipe1 = [Recipe new];
     recipe1.recipeDetailName = recipeCell.recipeNameLabel.text;
@@ -81,10 +82,12 @@ NSDictionary *recDic;
     recipe2.recipeDetailName = recipeCell.recipeNameLabel.text;
     recipe2.recipeDetailImage = @"Avocado.jpg";
     recipe2.recipeDetailText = @"Test";
+   */
+    self.searchSummary = [[SearchModel alloc]init];
+    recipeArray = [[NSArray alloc]init];
+    [self searchWithValue:@"chicken"];
     
-    
-    recipeArray = [NSArray arrayWithObjects:recipe1, recipe2, nil];
-    
+
     
 }
 
@@ -93,8 +96,8 @@ NSDictionary *recDic;
     [super viewWillAppear:animated];
     
    // self.recipeArray = [Datahandler loadData];
-    self.recipeDictionary = [self dictionaryAusArray:self.recipeArray];
-    [self.tableView reloadData];
+   // self.recipeDictionary = [self dictionaryAusArray:self.recipeArray];
+   // [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,7 +105,7 @@ NSDictionary *recDic;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+/**
 - (void)filterContentForSearchText: (NSString *) searchText
 {
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@", searchText];
@@ -114,57 +117,63 @@ NSDictionary *recDic;
 {
     [self filterContentForSearchText:searchString];
     return YES;
-}
+}*/
 
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+{   return 1;
+    /**
     if (tableView == self.tableView) {
         return [self.sectionTitles count];
     } else {
         return [self.searchRecipeSectionTitles count];
-    }
+    } */
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (tableView == self.tableView) {
+    NSLog(@"Anzahl reihen: %d" , self.searchSummary.recipes.count);
+    return self.searchSummary.recipes.count;
+   /** if (tableView == self.tableView) {
         NSArray *array = [self.recipeDictionary valueForKey:self.sectionTitles[section]];
         return [array count];
     } else { // (tableView == self.searchDisplayController.searchResultsTableView)
         NSArray *array = [self.searchRecipeDict valueForKey:self.searchRecipeSectionTitles[section]];
         return [array count];
-    }
+    }*/
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if (tableView == self.tableView) {
-        return self.sectionTitles[section];
-    } else {
-        return self.searchRecipeSectionTitles[section];
-    }
-}
+//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{   return @"Rezepte";
+//    /**
+//    if (tableView == self.tableView) {
+//        return self.sectionTitles[section];
+//    } else {
+//        return self.searchRecipeSectionTitles[section];
+//    }
+//  */
+//}
 
-/* SCHNELLINDEX ANFANG */
+/* SCHNELLINDEX ANFANG
 -(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     if (tableView == self.tableView) {
         return self.sectionTitles;
     } else {
-        return self.searchRecipeSectionTitles;
+        //return self.searchRecipeSectionTitles;
     }
-}
+} */
 
 -(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
-{
+{ return 1;
+    /**
     if (tableView == self.tableView) {
         return [self.sectionTitles indexOfObject:title];
     } else {
         return [self.searchRecipeSectionTitles indexOfObject:title];
-    }
+    } */
 }
 
 /* SCHNELLINDEX ENDE */
@@ -175,26 +184,27 @@ NSDictionary *recDic;
     
     RecipeCustomCell *cell;
     
-    if (tableView == self.tableView) {
-        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    } else {
-        cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    }
+  
     
-    NSArray *array = [NSArray array];
+   /** NSArray *array = [NSArray array];
     
     if (tableView == self.tableView) {
         
-        NSString *sectionTitle = self.sectionTitles[indexPath.section];
-        array = (self.recipeDictionary)[sectionTitle];
+        //NSString *sectionTitle = self.sectionTitles[indexPath.section];
+        //array = (self.recipeDictionary)[sectionTitle];
         
     } else {
         
         NSString *sectionTitle = self.searchRecipeSectionTitles[indexPath.section];
         array = (self.searchRecipeDict)[sectionTitle];
-    }
+    }*/
     
     // Zellenhintergrund mit Farbverlauf füllen
+    if (tableView == self.tableView) {
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    } else {
+        cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    }
     cell.backgroundColor = [UIColor clearColor];
     
     UIColor *colorOne = [UIColor colorWithRed:(120/255.0) green:(135/255.0) blue:(150/255.0) alpha:1.0];
@@ -213,19 +223,27 @@ NSDictionary *recDic;
     [background.layer insertSublayer:farbverlauf atIndex:0];
     cell.backgroundView = background;
     
-    cell.recipeImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
+  /**  cell.recipeImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
     cell.recipeImageView.layer.borderWidth = 1;
     cell.recipeImageView.layer.cornerRadius = 5;
-    cell.recipeImageView.clipsToBounds = YES;
+    cell.recipeImageView.clipsToBounds = YES; */
     
-    cell.recipeNameLabel.text = array[indexPath.row];
-    NSString *imageString = [array[indexPath.row] stringByReplacingOccurrencesOfString:@"ü" withString:@"ue"];
-    imageString = [imageString stringByReplacingOccurrencesOfString:@"ä" withString:@"ae"];
-    cell.recipeImageView.image = [UIImage imageNamed:imageString];
-    cell.recipeNameLabel.font = [UIFont fontWithName:@"mywanderingheart" size:25];
+    RecipeListModel *recipe = [[self.searchSummary recipes] objectAtIndex:indexPath.row];
     
-    NSLog(@"ZutatenCell: %@",array[indexPath.row]);
-    NSLog(@"ZutatenCell: %@",imageString);
+    NSLog(@"Name %@" ,  [recipe title]);
+    cell.recipeNameLabel.text = [recipe title];
+    
+    [cell.recipeImageView setImageWithURL:[NSURL URLWithString:[[recipe image_url ]stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]] usingProgressView:nil];
+    
+
+    cell.rateView.canRate = false;
+    cell.rateView.rating = ([[recipe social_rank]doubleValue]/100) * 5;
+    cell.rateView.starSize = 10;
+    cell.recipeNameLabel.font = [UIFont fontWithName:@"Avenir Next" size:15];
+    NSLog(@"Rating %@", [recipe social_rank]);
+     NSLog(@"Rating Star%f",  cell.rateView.rating);
+    
+    
     return cell;
 }
 
@@ -260,7 +278,7 @@ NSDictionary *recDic;
     // Label
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 40, 40)];
     label.text = [self tableView:tableView titleForHeaderInSection:section];
-    label.font = [UIFont fontWithName:@"mywanderingheart" size:25];
+    label.font = [UIFont fontWithName:@"Avenir Next" size:15];
     label.shadowOffset = CGSizeMake(0, 1);
     label.shadowColor = [UIColor whiteColor];
     label.backgroundColor = [UIColor clearColor];
@@ -270,7 +288,7 @@ NSDictionary *recDic;
     
     return headerView;
 }
-
+/*
 -(NSDictionary *)dictionaryAusArray:(NSArray *)array
 {
     // Übergebenes Array alphabetisch sortieren
@@ -335,50 +353,48 @@ NSDictionary *recDic;
     NSLog(@"ZutatenDic3: %@", dict);
     return dict;
     
-}
+}*/
 
--(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
-{
-    
-}
 
-- (IBAction)searchButtonPressed:(id)sender
-{
-    if (self.tableView.tableHeaderView == nil) {
-        
-        self.tableView.tableHeaderView = self.searchRecipeBar;
-        
-        [self.tableView setContentOffset:CGPointMake(0, self.searchRecipeBar.frame.size.height)];
-        
-        [UIView animateWithDuration:0.25f animations:^{
-            [self.tableView setContentOffset:CGPointZero];
-        } completion:^(BOOL finished) {
-            
-        }];
-        
-    } else {
-        [UIView animateWithDuration:0.25f animations:^{
-            [self.tableView setContentOffset:CGPointMake(0, self.searchRecipeBar.frame.size.height)];
-        } completion:^(BOOL finished) {
-            [self.tableView setContentOffset:CGPointZero];
-            self.tableView.tableHeaderView = nil;
-        }];
-        
-    }
-}
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"recipeSegue" sender:indexPath];
+    HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [HUD setMode:MBProgressHUDModeIndeterminate];
+    [HUD setLabelText:@"fetching"];
+    [HUD show:YES];
+    
+    RecipeListModel *recipe = [[self.searchSummary recipes] objectAtIndex:indexPath.row];
+    [[RecipeApiController instanceShared] getReceipeWithID:[recipe recipe_id] withBlock:^(GetRequestModel *response, NSError *error) {
+        if (error==nil) {
+            if ([response recipe]!=nil) {
+                selectedRecipe = [response recipe];
+                [self performSegueWithIdentifier:@"recipeSegue" sender:self];
+                // [self.navigationController pushViewController:detailVC animated:YES];
+                [HUD hide:YES];
+            }else{
+                [HUD setMode:MBProgressHUDModeCustomView];
+                [HUD setCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"alert-failed"]]];
+                [HUD setLabelText:@"Fetching failed"];
+                [HUD hide:YES afterDelay:1];
+            }
+        }else{
+            [HUD setMode:MBProgressHUDModeCustomView];
+            [HUD setCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"alert-error"]]];
+            [HUD setLabelText:@"Connection error"];
+            [HUD hide:YES afterDelay:1];
+        }
+    }];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+
     if ([segue.identifier isEqualToString:@"recipeSegue"]) {
         
         RecipeDetailVC *dvc = segue.destinationViewController;
-        
+        dvc.recipe = selectedRecipe;/**
         NSIndexPath *indexPath = sender;
         
         NSArray *array = [NSArray array];
@@ -400,7 +416,7 @@ NSDictionary *recDic;
             }
 
             
-        }
+        }*/
     }
 }
 
@@ -415,6 +431,8 @@ NSDictionary *recDic;
             if (error==nil) {
                 if ([response count]!=nil) {
                     self.searchSummary = response;
+                    NSLog(@"Länge rückgabe array: %d", [[self.searchSummary recipes] count]);
+                    [self.tableView reloadData];
                     [HUD hide:YES];
                 }else{
                     [HUD setMode:MBProgressHUDModeCustomView];

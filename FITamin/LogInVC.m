@@ -26,16 +26,10 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    if([PFUser currentUser])
+    if([PFUser currentUser] != nil)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Loggged in" message:@"Logged In" delegate:nil cancelButtonTitle:@"Proceed"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [PFUser logOut];
-            //StartmenuVC *startMenu = [StartmenuVC new];
-        
-    
-        //[self presentViewController:startMenu animated:YES completion:NULL];
+       // [PFUser logOut];
+
         [self performSegueWithIdentifier:@"LoginSegue" sender:self];
     }
     
@@ -43,23 +37,28 @@
         // Create the log in view controller
     else
     {
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-        [logInViewController setDelegate:self]; // Set ourselves as the delegate
-        
-        logInViewController.fields = PFLogInFieldsDefault;
-        
-        // Create the sign up view controller
-        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
-        [signUpViewController setDelegate:self]; // Set ourselves as the delegate
-        
-        // Assign our sign up controller to be displayed from the login controller
-        [logInViewController setSignUpController:signUpViewController];
-        
-        // Present the log in view controller
-        [self presentViewController:logInViewController animated:YES completion:NULL];
-        
+        [self showLoginController];
     }
 }
+
+-(void) showLoginController{
+    PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+    [logInViewController setDelegate:self]; // Set ourselves as the delegate
+    
+    logInViewController.fields = PFLogInFieldsDefault;
+    
+    // Create the sign up view controller
+    PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+    [signUpViewController setDelegate:self]; // Set ourselves as the delegate
+    
+    // Assign our sign up controller to be displayed from the login controller
+    [logInViewController setSignUpController:signUpViewController];
+    
+    // Present the log in view controller
+    [self presentViewController:logInViewController animated:YES completion:NULL];
+    
+}
+
 
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
 - (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
@@ -78,11 +77,10 @@
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    //[self dismissViewControllerAnimated:YES completion:NULL];
-    //StartmenuVC *startMenu = [StartmenuVC new];
+    [self dismissViewControllerAnimated:YES completion:NULL];
+
     NSLog(@"Login: change View %@",@"ChangeView");
     
-    //[self presentViewController:startMenu animated:YES completion:NULL];
     [self performSegueWithIdentifier:@"LoginSegue" sender:self];
     }
 
@@ -125,7 +123,7 @@
 
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
-    [self dismissModalViewControllerAnimated:YES]; // Dismiss the PFSignUpViewController
+    [self dismissViewControllerAnimated:YES completion:NULL]; // Dismiss the PFSignUpViewController
 }
 
 // Sent to the delegate when the sign up attempt fails.
@@ -136,6 +134,10 @@
 // Sent to the delegate when the sign up screen is dismissed.
 - (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
     NSLog(@"User dismissed the signUpViewController");
+}
+
+-(void) logOutUser {
+    [PFUser logOutInBackground];
 }
 
 

@@ -11,10 +11,10 @@
 #import <MBProgressHUD.h>
 
 
-@interface RecipeTableViewController : UITableViewController{
+@interface RecipeTableViewController : UITableViewController {
     MBProgressHUD *HUD;
 }
 
-@property(weak, nonatomic)SearchModel *searchSummary;
+@property(strong, nonatomic)SearchModel *searchSummary;
 
 @end

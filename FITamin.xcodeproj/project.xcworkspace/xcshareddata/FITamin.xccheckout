@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BAFABF6B-31E3-449E-918F-5A14D70C67BC</string>
+	<string>59A78B62-D22A-42FF-B87F-99F8F9F62C16</string>
 	<key>IDESourceControlProjectName</key>
 	<string>FITamin</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0144197BC2BE4D9357B7510FB18C9012EE0554B5</key>
-		<string>https://github.com/Holzners/FITamin.git</string>
+		<string>https://github.com/Holzners/FITamin</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>FITamin.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Holzners/FITamin.git</string>
+	<string>https://github.com/Holzners/FITamin</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
