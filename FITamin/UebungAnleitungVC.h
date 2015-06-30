@@ -15,11 +15,17 @@
 
     MPMoviePlayerController *moviePlayer;
     PFObject *currentExercise;
+    NSTimer *timer;
+    IBOutlet UILabel *exerciseCounterLabel;
 }
 
 @property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
 
 @property (strong, nonatomic) PFObject  *currentExercise;
+
+@property (nonatomic, retain) UILabel *exerciseCounterLabel;
+-(void)updateCounter:(NSTimer *)theTimer;
+-(void)countdownnTimer;
 
 
 @end
