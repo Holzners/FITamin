@@ -34,18 +34,26 @@
 */
 - (IBAction)chooseMuscle:(id)sender {
     modeImage.image = [UIImage imageNamed: @"ModusScreenMuskel.png"];
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
-        PFObject *mode = [PFObject objectWithClassName:@"Mode"];
-        mode[@"title"] = @"Modus";
-        mode[@"body"] = @"Muskelaufbau";
-        mode[@"user"] = currentUser;
-        [mode save];
-        NSLog(@"%@",mode);
-        // do stuff with the user
-    } else {
-        // show the signup or login screen
-    }
+    //Muscle Bottom in Array einfügen
+    PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
+        if (!error) {
+            [mode setObject:@"Muskelaufbau" forKey:@"title"];
+            
+            // Save
+            [mode saveInBackground];
+        } else {
+            // Did not find any UserStats for the current user
+            //Muscle Arms in Array einfügen
+            PFObject *mode = [PFObject objectWithClassName:@"Mode"];
+            mode[@"title"]  = @"Muskelaufbau";
+            mode[@"user"] = [PFUser currentUser];
+            [mode save];
+
+            NSLog(@"Error: %@", error);
+        }
+    }];
    
     [self performSegueWithIdentifier:@"StartScreenSegue" sender:self];
     
@@ -54,18 +62,24 @@
     modeImage.image = [UIImage imageNamed: @"ModusScreenFett.png"];
     [self performSegueWithIdentifier:@"StartScreenSegue" sender:self];
     
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
-        PFObject *mode = [PFObject objectWithClassName:@"Mode"];
-        mode[@"title"] = @"Modus";
-        mode[@"body"] = @"Fettverbrennung";
-        mode[@"user"] = currentUser;
-        [mode save];
-        NSLog(@"%@",mode);
-        // do stuff with the user
-    } else {
-        // show the signup or login screen
-    }
-}
+    PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
+        if (!error) {
+            [mode setObject:@"Fettverbrennung" forKey:@"title"];
+            
+            // Save
+            [mode saveInBackground];
+        } else {
+            // Did not find any UserStats for the current user
+            //Muscle Arms in Array einfügen
+            PFObject *mode = [PFObject objectWithClassName:@"Mode"];
+            mode[@"title"]  = @"Fettverbrennung";
+            mode[@"user"] = [PFUser currentUser];
+            [mode save];
+            
+            NSLog(@"Error: %@", error);
+        }
+    }];}
 
 @end

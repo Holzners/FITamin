@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChangeModusVC : UIViewController
+@interface ChangeModusVC : UIViewController{
+     __weak IBOutlet UIImageView *modusImage;
+}
+
+@property (weak, nonatomic) IBOutlet UIImageView *modusImage;
 
 @end

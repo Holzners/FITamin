@@ -36,6 +36,7 @@ WorkoutRecipeCustomCell *workoutRecipeCell;
 NSArray *workoutRecipeArray;
 NSDictionary *workoutRecDic;
 RecipeModel *selectedWorkoutRecipe;
+NSString *chosenMuscle;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -60,11 +61,23 @@ RecipeModel *selectedWorkoutRecipe;
 
     self.searchSummary = [[SearchModel alloc]init];
     workoutRecipeArray = [[NSArray alloc]init];
-    [self searchWithValue:@"rasperry"];
     
-    PFObject *muscle = [PFObject objectWithClassName:@"Muscle"];
-
-        NSLog(@"Muskelgruppe: %@", muscle);
+    PFQuery *query = [PFQuery queryWithClassName:@"Muscle"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
+        if (!error) {
+            
+            chosenMuscle = muscle[@"title"];
+            NSLog(@"Muskelgruppe: %@", chosenMuscle);
+            
+        } else {
+            // Did not find any UserStats for the current user
+            NSLog(@"Error: %@", error);
+        }
+    }];
+    
+    
+    [self searchWithValue:@"rasperry"];
 
 
 }

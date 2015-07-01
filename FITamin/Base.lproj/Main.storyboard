@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="osx-wA-ZOB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -188,6 +188,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseMuscle:" destination="psV-M1-5YD" eventType="touchUpInside" id="GRT-lA-gjO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJu-fs-t9f">
                                 <rect key="frame" x="175" y="304" width="250" height="33"/>
@@ -199,6 +202,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseFat:" destination="psV-M1-5YD" eventType="touchUpInside" id="161-og-C9a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.39810238489999999" alpha="1" colorSpace="calibratedWhite"/>
@@ -216,6 +222,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Modus ändern" image="IconModus" id="AnP-gk-pD1"/>
+                    <connections>
+                        <outlet property="modusImage" destination="1rM-Id-pg3" id="zkc-6V-exr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipN-Ak-QD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -685,11 +694,11 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" image="StartButton">
-                                    <color key="titleColor" patternImage="D3A70C38-8DD0-4016-8AC9-495E529F4013" colorSpace="pattern"/>
+                                    <color key="titleColor" patternImage="CDBAD376-57FB-4EB2-93FB-325BF7F7FB74" colorSpace="pattern"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="osx-wA-ZOB" kind="show" id="La3-FQ-I4P"/>
+                                    <action selector="startWorkout:" destination="sDG-GK-8S2" eventType="touchUpInside" id="o2F-SU-R96"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -709,6 +718,10 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Neu" image="IconLogo" id="WAM-c5-7cO"/>
+                    <connections>
+                        <segue destination="osx-wA-ZOB" kind="show" identifier="muskelaufbauSegue" id="yVn-xu-tJO"/>
+                        <segue destination="RiL-f8-nGI" kind="show" identifier="fettverbrennungSegue" id="yn9-O2-k6c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hE9-d7-8Fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -906,7 +919,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjb-RY-yVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="499" y="253"/>
+            <point key="canvasLocation" x="483" y="-79"/>
         </scene>
         <!--UebungRouteVC-->
         <scene sceneID="efV-sf-N3u">
@@ -1153,7 +1166,7 @@
     </scenes>
     <resources>
         <image name="Back" width="15" height="20"/>
-        <image name="D3A70C38-8DD0-4016-8AC9-495E529F4013" width="256" height="256">
+        <image name="CDBAD376-57FB-4EB2-93FB-325BF7F7FB74" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -5617,6 +5630,7 @@ AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAAQO4w
     <inferredMetricsTieBreakers>
         <segue reference="JDs-Wr-iew"/>
         <segue reference="Rtp-t8-oKQ"/>
+        <segue reference="yn9-O2-k6c"/>
         <segue reference="7zk-au-qxp"/>
     </inferredMetricsTieBreakers>
 </document>
