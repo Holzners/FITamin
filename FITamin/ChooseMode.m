@@ -7,6 +7,7 @@
 //
 
 #import "ChooseMode.h"
+#import <Parse/Parse.h>
 
 @implementation ChooseMode
 
@@ -33,12 +34,38 @@
 */
 - (IBAction)chooseMuscle:(id)sender {
     modeImage.image = [UIImage imageNamed: @"ModusScreenMuskel.png"];
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        PFObject *mode = [PFObject objectWithClassName:@"Mode"];
+        mode[@"title"] = @"Modus";
+        mode[@"body"] = @"Muskelaufbau";
+        mode[@"user"] = currentUser;
+        [mode save];
+        NSLog(@"%@",mode);
+        // do stuff with the user
+    } else {
+        // show the signup or login screen
+    }
+   
     [self performSegueWithIdentifier:@"StartScreenSegue" sender:self];
     
 }
 - (IBAction)chooseFat:(id)sender {
     modeImage.image = [UIImage imageNamed: @"ModusScreenFett.png"];
     [self performSegueWithIdentifier:@"StartScreenSegue" sender:self];
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        PFObject *mode = [PFObject objectWithClassName:@"Mode"];
+        mode[@"title"] = @"Modus";
+        mode[@"body"] = @"Fettverbrennung";
+        mode[@"user"] = currentUser;
+        [mode save];
+        NSLog(@"%@",mode);
+        // do stuff with the user
+    } else {
+        // show the signup or login screen
+    }
 }
 
 @end

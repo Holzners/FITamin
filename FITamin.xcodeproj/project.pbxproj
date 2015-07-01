@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840F04A41B41861D00AFE817 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A31B41861D00AFE817 /* LogoutVC.m */; };
 		840F04A71B41C25800AFE817 /* SavedWorkoutsTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
 		8438BEF41B417A3F00E3FA62 /* MapViewExerciseAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438BEF31B417A3F00E3FA62 /* MapViewExerciseAnnotation.m */; };
@@ -72,6 +71,9 @@
 		D4DA7B4C1B28815D00440996 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */; };
 		D4DA7B581B28815D00440996 /* FITaminTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DA7B571B28815D00440996 /* FITaminTests.m */; };
 		F70A68C51B3ED8D40057A016 /* ChooseMode.m in Sources */ = {isa = PBXBuildFile; fileRef = F70A68C41B3ED8D40057A016 /* ChooseMode.m */; };
+		F76F16671B43E4040065BBCE /* WorkoutRecipesTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76F16661B43E4040065BBCE /* WorkoutRecipesTableTableViewController.m */; };
+		F76F16691B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F16681B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib */; };
+		F76F166C1B43E9220065BBCE /* WorkoutRecipeCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F76F166B1B43E9220065BBCE /* WorkoutRecipeCustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +153,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D4DA7B371B28815D00440996;
 			remoteInfo = FITamin;
+		};
+		F76F16631B43E3870065BBCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 31CC2864CA54C82631B565C4;
+			remoteInfo = "Pods-FITamin-RateView";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -272,6 +281,11 @@
 		EEE53A2F2669ABAFC6AA89FE /* Pods-FITamin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FITamin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FITamin/Pods-FITamin.release.xcconfig"; sourceTree = "<group>"; };
 		F70A68C31B3ED8D40057A016 /* ChooseMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseMode.h; sourceTree = "<group>"; };
 		F70A68C41B3ED8D40057A016 /* ChooseMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseMode.m; sourceTree = "<group>"; };
+		F76F16651B43E4040065BBCE /* WorkoutRecipesTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutRecipesTableTableViewController.h; sourceTree = "<group>"; };
+		F76F16661B43E4040065BBCE /* WorkoutRecipesTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutRecipesTableTableViewController.m; sourceTree = "<group>"; };
+		F76F16681B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkoutRecipeCustomCell.xib; sourceTree = "<group>"; };
+		F76F166A1B43E9220065BBCE /* WorkoutRecipeCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutRecipeCustomCell.h; sourceTree = "<group>"; };
+		F76F166B1B43E9220065BBCE /* WorkoutRecipeCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutRecipeCustomCell.m; sourceTree = "<group>"; };
 		F790D0E21B31B5B50092654E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -322,6 +336,7 @@
 			children = (
 				84DC36E11B35845D00A94CBA /* CustomCell.xib */,
 				84575BB81B3EC176006C298D /* RecipeCustomCell.xib */,
+				F76F16681B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib */,
 			);
 			name = "Nib Files";
 			sourceTree = "<group>";
@@ -378,6 +393,7 @@
 				84C9F7EF1B4094A000BDD104 /* libPods-FITamin-JSONModel.a */,
 				84C9F7F11B4094A000BDD104 /* libPods-FITamin-MBProgressHUD.a */,
 				84C9F7F31B4094A000BDD104 /* libPods-FITamin-ParseUI.a */,
+				F76F16641B43E3870065BBCE /* libPods-FITamin-RateView.a */,
 				84C9F7F51B4094A000BDD104 /* libPods-FITamin-SDWebImage.a */,
 				84C9F7F71B4094A000BDD104 /* libPods-FITamin-SDWebImage-ProgressView.a */,
 				84C9F7F91B4094A000BDD104 /* libPods-FITamin-TPKeyboardAvoiding.a */,
@@ -462,8 +478,6 @@
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
 				840F04A51B41C25800AFE817 /* SavedWorkoutsTableVC.h */,
 				840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */,
-				840F049F1B4173C300AFE817 /* TabBarStart.h */,
-				840F04A01B4173C300AFE817 /* TabBarStart.m */,
 				F70A68C31B3ED8D40057A016 /* ChooseMode.h */,
 				F70A68C41B3ED8D40057A016 /* ChooseMode.m */,
 				84567A401B2EFEB10062E0D6 /* NeuWorkoutView.h */,
@@ -471,6 +485,7 @@
 				84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */,
 				84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */,
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
+				F76F16571B43E3860065BBCE /* RecipesForWorkout */,
 				8438BEE71B41799C00E3FA62 /* CustomMapObjects */,
 				84575BA21B3EBABA006C298D /* FitnessRezepte */,
 				844AF5B81B3207FF00353B6B /* FitnessZutaten */,
@@ -537,6 +552,17 @@
 				D2F76DA9E59A064428B161FC /* libPods-FITamin.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F76F16571B43E3860065BBCE /* RecipesForWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				F76F16651B43E4040065BBCE /* WorkoutRecipesTableTableViewController.h */,
+				F76F16661B43E4040065BBCE /* WorkoutRecipesTableTableViewController.m */,
+				F76F166A1B43E9220065BBCE /* WorkoutRecipeCustomCell.h */,
+				F76F166B1B43E9220065BBCE /* WorkoutRecipeCustomCell.m */,
+			);
+			name = RecipesForWorkout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -693,6 +719,13 @@
 			remoteRef = 84C9F7F81B4094A000BDD104 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F76F16641B43E3870065BBCE /* libPods-FITamin-RateView.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin-RateView.a";
+			remoteRef = F76F16631B43E3870065BBCE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -710,6 +743,7 @@
 				848C56A21B31962400B407C5 /* Default.png in Resources */,
 				D4DA7B4C1B28815D00440996 /* LaunchScreen.xib in Resources */,
 				844AF5B71B3206AE00353B6B /* Info.plist in Resources */,
+				F76F16691B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib in Resources */,
 				84DC36E21B35845D00A94CBA /* CustomCell.xib in Resources */,
 				84575BB91B3EC176006C298D /* RecipeCustomCell.xib in Resources */,
 				844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */,
@@ -771,6 +805,7 @@
 				D475D1FA1B3F1962008D046B /* SearchModel.m in Sources */,
 				84DC36D41B3580A000A94CBA /* CustomCell.m in Sources */,
 				849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */,
+				F76F166C1B43E9220065BBCE /* WorkoutRecipeCustomCell.m in Sources */,
 				845BDB611B3013B000F6C7B3 /* LogInVC.m in Sources */,
 				8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */,
 				84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */,
@@ -779,6 +814,7 @@
 				D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */,
 				84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */,
 				D475D1FD1B3F1972008D046B /* GetRequestModel.m in Sources */,
+				F76F16671B43E4040065BBCE /* WorkoutRecipesTableTableViewController.m in Sources */,
 				84575BBC1B3EC8D9006C298D /* Recipe.m in Sources */,
 				D475D2001B3F1A83008D046B /* RecipeApiController.m in Sources */,
 				84575BB11B3EBB83006C298D /* RecipeDetailVC.m in Sources */,
