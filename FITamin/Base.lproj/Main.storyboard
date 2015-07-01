@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6YQ-ng-lYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1672" y="138"/>
+            <point key="canvasLocation" x="-1806" y="498"/>
         </scene>
         <!--Startmenu-->
         <scene sceneID="57p-MJ-mko">
@@ -253,7 +253,7 @@
                                     <constraint firstAttribute="width" constant="284" id="qpn-4L-0Um"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-rv-YaT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-rv-YaT">
                                 <rect key="frame" x="180" y="367" width="240" height="146"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="zI3-ix-DHp"/>
@@ -429,11 +429,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hjk-gN-q7m">
-                                <rect key="frame" x="143" y="101" width="329" height="235"/>
+                                <rect key="frame" x="36" y="33" width="528" height="296"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="528" id="hlV-Ps-5ne"/>
+                                    <constraint firstAttribute="height" constant="296" id="mrd-af-mIO"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mrd-af-mIO"/>
+                                    </mask>
+                                </variation>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="MKA-U2-dni">
-                                <rect key="frame" x="187" y="416" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="VzC-LN-E8z">
+                                <rect key="frame" x="36" y="457" width="90" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="MKA-U2-dni">
+                                <rect key="frame" x="191" y="441" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="V4V-gA-Axh"/>
                                 </constraints>
@@ -464,12 +478,12 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="5Nj-nW-Ixx"/>
-                                <exclude reference="E9y-qz-ROC"/>
-                                <exclude reference="Iug-7e-gko"/>
                                 <exclude reference="2Rs-GI-QnE"/>
                                 <exclude reference="lXW-f6-4SX"/>
                                 <exclude reference="ptO-AE-TEq"/>
+                                <exclude reference="5Nj-nW-Ixx"/>
+                                <exclude reference="E9y-qz-ROC"/>
+                                <exclude reference="Iug-7e-gko"/>
                                 <exclude reference="zk7-ej-4c4"/>
                             </mask>
                         </variation>
@@ -582,7 +596,7 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" image="StartButton">
-                                    <color key="titleColor" patternImage="49885038-C20D-437C-9600-2FA15D50F9CE" colorSpace="pattern"/>
+                                    <color key="titleColor" patternImage="BFB93F90-ED12-4F16-947D-7F7D1F24AFF2" colorSpace="pattern"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -937,7 +951,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="49885038-C20D-437C-9600-2FA15D50F9CE" width="256" height="256">
+        <image name="BFB93F90-ED12-4F16-947D-7F7D1F24AFF2" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
