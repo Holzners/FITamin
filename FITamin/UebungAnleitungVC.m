@@ -7,6 +7,8 @@
 //
 
 #import "UebungAnleitungVC.h"
+#import "ExerciseCheckView.h"
+
 @import MediaPlayer;
 
 
@@ -26,6 +28,8 @@ NSMutableArray *lbls;
     //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Current Exercise" message:[NSString stringWithFormat:@"%@/%@", @"Exercise Name:", _currentExercise[@"title"]] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
        // [alert show];
     
+    [self.view setBackgroundColor:[UIColor orangeColor]];
+    
     //Load video and add Player
     PFFile *theFile = [_currentExercise objectForKey:@"video"];
     NSLog(@"%@",theFile.url); // the .url property contains the URL for the file (video or otherwise)..
@@ -38,7 +42,7 @@ NSMutableArray *lbls;
     //Counter
     exerciseCounterLabel  = [[UILabel alloc] initWithFrame:CGRectMake(150,350, self.view.frame.size.width / 2, self.view.frame.size.height / 2)];
     exerciseCounterLabel.textColor = [UIColor blueColor];
-    [exerciseCounterLabel setText:@"10"];
+    [exerciseCounterLabel setText:@"Let's get started!"];
     exerciseCounterLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:exerciseCounterLabel];
     
@@ -46,23 +50,36 @@ NSMutableArray *lbls;
     //erstmal angelegt werden (Exercise Objekt erweitern)
     intExerciseSeconds = 20;
     intPauseSeconds = 10;
-    intNumberOfRepetitions = 3;
+    intNumberOfRepetitions = [_currentExercise[@"repetition"] intValue];
     intTimerSeconds = intPauseSeconds;
     blnPause = YES;
     
     //Add circles for each Repetition
-    lbls = [NSMutableArray new];
-    for (int i = 0; i < intNumberOfRepetitions; i++)
-    {
-        CGPoint center = CGPointMake(self.view.frame.size.width, self.view.frame.size.height / 2);
-        
-        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(50+(i*100),250, self.view.frame.size.width / 2 +(i*100), self.view.frame.size.height / 2)];
-        label.text = [NSString stringWithFormat:@"%@%d", @"Round ", i+1];
-        [label setBackgroundColor:[UIColor yellowColor]];
-        [self.view addSubview:label];
-        [lbls addObject:label];
-
+//    lbls = [NSMutableArray new];
+//    for (int i = 0; i < intNumberOfRepetitions; i++)
+//    {
+//        CGPoint center = CGPointMake(self.view.frame.size.width, self.view.frame.size.height / 2);
+//        
+//        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(50+(i*100),250, self.view.frame.size.width / 2 +(i*100), self.view.frame.size.height / 2)];
+//        label.text = [NSString stringWithFormat:@"%@%d", @"Round ", i+1];
+//        [label setBackgroundColor:[UIColor yellowColor]];
+//        [self.view addSubview:label];
+//        [lbls addObject:label];
+//
+//    }
+    
+    //Add Circles for each Repetition
+    CGRect bigRect = CGRectMake(0, 320, self.view.frame.size.width, 100);
+    self.exerciseCheckView = [[ExerciseCheckView alloc ] initWithFrame:bigRect];
+    self.exerciseCheckView.intNumberOfRepetitions = intNumberOfRepetitions;
+    self.exerciseCheckView.colors = [[NSMutableArray alloc]initWithCapacity:intNumberOfRepetitions];
+    
+    for(int i=0; i<intNumberOfRepetitions; i++){
+        [self.exerciseCheckView.colors addObject:[[NSNumber alloc]initWithDouble:0.0]];
     }
+    
+    [self.exerciseCheckView setBackgroundColor:[UIColor orangeColor]];
+    [self.view addSubview:self.exerciseCheckView];
     
 }
 
@@ -91,20 +108,23 @@ NSMutableArray *lbls;
             [self.view setBackgroundColor:[UIColor greenColor]];
             intTimerSeconds = intExerciseSeconds;
             blnPause = NO;
-            intCounter += 1;
+            
             }
         else
         {
             [self.view setBackgroundColor:[UIColor orangeColor]];
-                intTimerSeconds = intPauseSeconds;
-                blnPause = YES;
-            [lbls[intCounter] setBackgroundColor:[UIColor blueColor]];
+            intTimerSeconds = intPauseSeconds;
+            blnPause = YES;
+            [self.exerciseCheckView.colors replaceObjectAtIndex:intCounter withObject:[[NSNumber alloc]initWithDouble:1.0]];
+            [self.exerciseCheckView setNeedsDisplay];
+            intCounter += 1;
             }
     }
     [exerciseCounterLabel setText:[NSString stringWithFormat:@"%02d" ,intTimerSeconds]];
     }
     else {
         [timer invalidate];
+        [exerciseCounterLabel setText:@"You're Done!"];
     }
 
 }

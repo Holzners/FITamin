@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "ExerciseCheckView.h"
 
 @import MediaPlayer;
 
@@ -24,6 +25,9 @@
 @property (strong, nonatomic) PFObject  *currentExercise;
 
 @property (nonatomic, retain) UILabel *exerciseCounterLabel;
+
+@property (nonatomic, retain) ExerciseCheckView *exerciseCheckView;
+
 -(void)updateCounter:(NSTimer *)theTimer;
 -(void)countdownnTimer;
 
