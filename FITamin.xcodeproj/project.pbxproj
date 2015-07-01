@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840F04A11B4173C300AFE817 /* TabBarStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A01B4173C300AFE817 /* TabBarStart.m */; };
 		840F04A41B41861D00AFE817 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A31B41861D00AFE817 /* LogoutVC.m */; };
+		840F04A71B41C25800AFE817 /* SavedWorkoutsTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
+		8438BEF41B417A3F00E3FA62 /* MapViewExerciseAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438BEF31B417A3F00E3FA62 /* MapViewExerciseAnnotation.m */; };
+		8438BEF61B418BCC00E3FA62 /* erdbeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 8438BEF51B418BCC00E3FA62 /* erdbeere.png */; };
 		8441B9401B3AD1CF008698B4 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8441B93F1B3AD1CF008698B4 /* data.plist */; };
 		8441B9431B3AD4CF008698B4 /* Zutat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8441B9421B3AD4CF008698B4 /* Zutat.m */; };
 		844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF58C1B31E29600353B6B /* zutatenListe.plist */; };
@@ -38,6 +40,7 @@
 		849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A91B2C4BFE0000CAE2 /* StandortVC.m */; };
 		849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */; };
 		849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */; };
+		84C9F7CB1B40948200BDD104 /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9F7CA1B40948200BDD104 /* AFNetworking */; };
 		84CD91A91B2C301800B1AAD5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91A81B2C301700B1AAD5 /* AudioToolbox.framework */; };
 		84CD91AC1B2C302C00B1AAD5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91AA1B2C302C00B1AAD5 /* CFNetwork.framework */; };
 		84CD91AF1B2C305A00B1AAD5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91AE1B2C305A00B1AAD5 /* CoreLocation.framework */; };
@@ -72,6 +75,76 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		84C9F7E61B4094A000BDD104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F405BE5FA8443FB91308424;
+			remoteInfo = "Pods-FITamin";
+		};
+		84C9F7E81B4094A000BDD104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5258A89BB30F2457A363C740;
+			remoteInfo = "Pods-FITamin-AFNetworking";
+		};
+		84C9F7EA1B4094A000BDD104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B6B8B402DD6E5EF6E2E898FA;
+			remoteInfo = "Pods-FITamin-Bolts";
+		};
+		84C9F7EC1B4094A000BDD104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 340EF3C27F63899B2BC691AA;
+			remoteInfo = "Pods-FITamin-Facebook-iOS-SDK";
+		};
+		84C9F7EE1B4094A000BDD104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19CA89D43A379B42C89991CE;
+			remoteInfo = "Pods-FITamin-JSONModel";
+		};
+		84C9F7F01B4094A000BDD104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EDA22F3A1AD1B5957B967189;
+			remoteInfo = "Pods-FITamin-MBProgressHUD";
+		};
+		84C9F7F21B4094A000BDD104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 000A66DE254AB22A508F524F;
+			remoteInfo = "Pods-FITamin-ParseUI";
+		};
+		84C9F7F41B4094A000BDD104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D57BC2BFFC29E51064FB4DF;
+			remoteInfo = "Pods-FITamin-SDWebImage";
+		};
+		84C9F7F61B4094A000BDD104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C334169D1C72550197AE8B6;
+			remoteInfo = "Pods-FITamin-SDWebImage-ProgressView";
+		};
+		84C9F7F81B4094A000BDD104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6E250768C14FA7F043C1FA0;
+			remoteInfo = "Pods-FITamin-TPKeyboardAvoiding";
+		};
 		D4DA7B521B28815D00440996 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4DA7B301B28815D00440996 /* Project object */;
@@ -83,12 +156,15 @@
 
 /* Begin PBXFileReference section */
 		778406AD3732DDB7A2323C38 /* Pods-FITamin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FITamin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FITamin/Pods-FITamin.debug.xcconfig"; sourceTree = "<group>"; };
-		840F049F1B4173C300AFE817 /* TabBarStart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarStart.h; sourceTree = "<group>"; };
-		840F04A01B4173C300AFE817 /* TabBarStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarStart.m; sourceTree = "<group>"; };
 		840F04A21B41861D00AFE817 /* LogoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutVC.h; sourceTree = "<group>"; };
 		840F04A31B41861D00AFE817 /* LogoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutVC.m; sourceTree = "<group>"; };
+		840F04A51B41C25800AFE817 /* SavedWorkoutsTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedWorkoutsTableVC.h; sourceTree = "<group>"; };
+		840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedWorkoutsTableVC.m; sourceTree = "<group>"; };
 		84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeModusVC.h; sourceTree = "<group>"; };
 		84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeModusVC.m; sourceTree = "<group>"; };
+		8438BEF21B4179EC00E3FA62 /* MapViewExerciseAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewExerciseAnnotation.h; sourceTree = "<group>"; };
+		8438BEF31B417A3F00E3FA62 /* MapViewExerciseAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewExerciseAnnotation.m; sourceTree = "<group>"; };
+		8438BEF51B418BCC00E3FA62 /* erdbeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = erdbeere.png; sourceTree = "<group>"; };
 		8441B93F1B3AD1CF008698B4 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		8441B9411B3AD4CF008698B4 /* Zutat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zutat.h; sourceTree = "<group>"; };
 		8441B9421B3AD4CF008698B4 /* Zutat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zutat.m; sourceTree = "<group>"; };
@@ -135,6 +211,21 @@
 		849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UebungAnleitungVC.m; sourceTree = "<group>"; };
 		849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UebungRouteVC.h; sourceTree = "<group>"; };
 		849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UebungRouteVC.m; sourceTree = "<group>"; };
+		84C9F7CA1B40948200BDD104 /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AFNetworking; path = Pods/AFNetworking; sourceTree = "<group>"; };
+		84C9F7CC1B40949E00BDD104 /* Bolts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Bolts; path = Pods/Bolts; sourceTree = "<group>"; };
+		84C9F7CD1B40949E00BDD104 /* Facebook-iOS-SDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Facebook-iOS-SDK"; path = "Pods/Facebook-iOS-SDK"; sourceTree = "<group>"; };
+		84C9F7CE1B40949E00BDD104 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = Pods/Headers; sourceTree = "<group>"; };
+		84C9F7CF1B40949E00BDD104 /* JSONModel */ = {isa = PBXFileReference; lastKnownFileType = folder; name = JSONModel; path = Pods/JSONModel; sourceTree = "<group>"; };
+		84C9F7D01B40949E00BDD104 /* Manifest.lock */ = {isa = PBXFileReference; lastKnownFileType = text; name = Manifest.lock; path = Pods/Manifest.lock; sourceTree = "<group>"; };
+		84C9F7D11B40949E00BDD104 /* MBProgressHUD */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MBProgressHUD; path = Pods/MBProgressHUD; sourceTree = "<group>"; };
+		84C9F7D21B40949E00BDD104 /* Parse */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Parse; path = Pods/Parse; sourceTree = "<group>"; };
+		84C9F7D31B40949E00BDD104 /* ParseFacebookUtilsV4 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ParseFacebookUtilsV4; path = Pods/ParseFacebookUtilsV4; sourceTree = "<group>"; };
+		84C9F7D41B40949E00BDD104 /* ParseUI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ParseUI; path = Pods/ParseUI; sourceTree = "<group>"; };
+		84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		84C9F7D81B40949F00BDD104 /* SDWebImage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SDWebImage; path = Pods/SDWebImage; sourceTree = "<group>"; };
+		84C9F7D91B40949F00BDD104 /* SDWebImage-ProgressView */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SDWebImage-ProgressView"; path = "Pods/SDWebImage-ProgressView"; sourceTree = "<group>"; };
+		84C9F7DA1B40949F00BDD104 /* Target Support Files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Target Support Files"; path = "Pods/Target Support Files"; sourceTree = "<group>"; };
+		84C9F7DB1B40949F00BDD104 /* TPKeyboardAvoiding */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TPKeyboardAvoiding; path = Pods/TPKeyboardAvoiding; sourceTree = "<group>"; };
 		84CD91A81B2C301700B1AAD5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		84CD91AA1B2C302C00B1AAD5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		84CD91AE1B2C305A00B1AAD5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -189,6 +280,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C9F7CB1B40948200BDD104 /* AFNetworking in Frameworks */,
 				845BDB661B30166100F6C7B3 /* Accounts.framework in Frameworks */,
 				845BDB641B30165800F6C7B3 /* Social.framework in Frameworks */,
 				D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */,
@@ -216,6 +308,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8438BEE71B41799C00E3FA62 /* CustomMapObjects */ = {
+			isa = PBXGroup;
+			children = (
+				8438BEF21B4179EC00E3FA62 /* MapViewExerciseAnnotation.h */,
+				8438BEF31B417A3F00E3FA62 /* MapViewExerciseAnnotation.m */,
+			);
+			name = CustomMapObjects;
+			sourceTree = "<group>";
+		};
 		844AF59B1B31FD8400353B6B /* Nib Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +366,23 @@
 				D475D1FF1B3F1A83008D046B /* RecipeApiController.m */,
 			);
 			name = FitnessRezepte;
+			sourceTree = "<group>";
+		};
+		84C9F7D61B40949E00BDD104 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84C9F7E71B4094A000BDD104 /* libPods-FITamin.a */,
+				84C9F7E91B4094A000BDD104 /* libPods-FITamin-AFNetworking.a */,
+				84C9F7EB1B4094A000BDD104 /* libPods-FITamin-Bolts.a */,
+				84C9F7ED1B4094A000BDD104 /* libPods-FITamin-Facebook-iOS-SDK.a */,
+				84C9F7EF1B4094A000BDD104 /* libPods-FITamin-JSONModel.a */,
+				84C9F7F11B4094A000BDD104 /* libPods-FITamin-MBProgressHUD.a */,
+				84C9F7F31B4094A000BDD104 /* libPods-FITamin-ParseUI.a */,
+				84C9F7F51B4094A000BDD104 /* libPods-FITamin-SDWebImage.a */,
+				84C9F7F71B4094A000BDD104 /* libPods-FITamin-SDWebImage-ProgressView.a */,
+				84C9F7F91B4094A000BDD104 /* libPods-FITamin-TPKeyboardAvoiding.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BD4CD3B1950E0CD3C4E65AA5 /* Pods */ = {
@@ -342,6 +460,8 @@
 				F790D0E21B31B5B50092654E /* Images.xcassets */,
 				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
+				840F04A51B41C25800AFE817 /* SavedWorkoutsTableVC.h */,
+				840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */,
 				840F049F1B4173C300AFE817 /* TabBarStart.h */,
 				840F04A01B4173C300AFE817 /* TabBarStart.m */,
 				F70A68C31B3ED8D40057A016 /* ChooseMode.h */,
@@ -351,6 +471,7 @@
 				84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */,
 				84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */,
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
+				8438BEE71B41799C00E3FA62 /* CustomMapObjects */,
 				84575BA21B3EBABA006C298D /* FitnessRezepte */,
 				844AF5B81B3207FF00353B6B /* FitnessZutaten */,
 				844AF59B1B31FD8400353B6B /* Nib Files */,
@@ -362,6 +483,7 @@
 		D4DA7B3B1B28815D00440996 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8438BEF51B418BCC00E3FA62 /* erdbeere.png */,
 				84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */,
 				844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */,
 				844AF5B61B3206AE00353B6B /* Info.plist */,
@@ -397,6 +519,21 @@
 		F29F7DD480755A2E9A97B68E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84C9F7CC1B40949E00BDD104 /* Bolts */,
+				84C9F7CD1B40949E00BDD104 /* Facebook-iOS-SDK */,
+				84C9F7CE1B40949E00BDD104 /* Headers */,
+				84C9F7CF1B40949E00BDD104 /* JSONModel */,
+				84C9F7D01B40949E00BDD104 /* Manifest.lock */,
+				84C9F7D11B40949E00BDD104 /* MBProgressHUD */,
+				84C9F7D21B40949E00BDD104 /* Parse */,
+				84C9F7D31B40949E00BDD104 /* ParseFacebookUtilsV4 */,
+				84C9F7D41B40949E00BDD104 /* ParseUI */,
+				84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */,
+				84C9F7D81B40949F00BDD104 /* SDWebImage */,
+				84C9F7D91B40949F00BDD104 /* SDWebImage-ProgressView */,
+				84C9F7DA1B40949F00BDD104 /* Target Support Files */,
+				84C9F7DB1B40949F00BDD104 /* TPKeyboardAvoiding */,
+				84C9F7CA1B40948200BDD104 /* AFNetworking */,
 				D2F76DA9E59A064428B161FC /* libPods-FITamin.a */,
 			);
 			name = Frameworks;
@@ -471,6 +608,12 @@
 			mainGroup = D4DA7B2F1B28815D00440996;
 			productRefGroup = D4DA7B391B28815D00440996 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 84C9F7D61B40949E00BDD104 /* Products */;
+					ProjectRef = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D4DA7B371B28815D00440996 /* FITamin */,
@@ -478,6 +621,79 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		84C9F7E71B4094A000BDD104 /* libPods-FITamin.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin.a";
+			remoteRef = 84C9F7E61B4094A000BDD104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C9F7E91B4094A000BDD104 /* libPods-FITamin-AFNetworking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin-AFNetworking.a";
+			remoteRef = 84C9F7E81B4094A000BDD104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C9F7EB1B4094A000BDD104 /* libPods-FITamin-Bolts.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin-Bolts.a";
+			remoteRef = 84C9F7EA1B4094A000BDD104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C9F7ED1B4094A000BDD104 /* libPods-FITamin-Facebook-iOS-SDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin-Facebook-iOS-SDK.a";
+			remoteRef = 84C9F7EC1B4094A000BDD104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C9F7EF1B4094A000BDD104 /* libPods-FITamin-JSONModel.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin-JSONModel.a";
+			remoteRef = 84C9F7EE1B4094A000BDD104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C9F7F11B4094A000BDD104 /* libPods-FITamin-MBProgressHUD.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin-MBProgressHUD.a";
+			remoteRef = 84C9F7F01B4094A000BDD104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C9F7F31B4094A000BDD104 /* libPods-FITamin-ParseUI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin-ParseUI.a";
+			remoteRef = 84C9F7F21B4094A000BDD104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C9F7F51B4094A000BDD104 /* libPods-FITamin-SDWebImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin-SDWebImage.a";
+			remoteRef = 84C9F7F41B4094A000BDD104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C9F7F71B4094A000BDD104 /* libPods-FITamin-SDWebImage-ProgressView.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin-SDWebImage-ProgressView.a";
+			remoteRef = 84C9F7F61B4094A000BDD104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C9F7F91B4094A000BDD104 /* libPods-FITamin-TPKeyboardAvoiding.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-FITamin-TPKeyboardAvoiding.a";
+			remoteRef = 84C9F7F81B4094A000BDD104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D4DA7B361B28815D00440996 /* Resources */ = {
@@ -487,6 +703,7 @@
 				844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */,
 				848C56A31B31962400B407C5 /* Default@2x.png in Resources */,
 				D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */,
+				8438BEF61B418BCC00E3FA62 /* erdbeere.png in Resources */,
 				84DC36E71B35A88B00A94CBA /* mywanderingheart.ttf in Resources */,
 				D4DA7B471B28815D00440996 /* Main.storyboard in Resources */,
 				848C56A41B31962400B407C5 /* Default-568h@2x.png in Resources */,
@@ -550,8 +767,7 @@
 			files = (
 				8441B9431B3AD4CF008698B4 /* Zutat.m in Sources */,
 				84DC36D71B35815800A94CBA /* DetailsViewController.m in Sources */,
-				840F04A11B4173C300AFE817 /* TabBarStart.m in Sources */,
-				840F04A41B41861D00AFE817 /* LogoutVC.m in Sources */,
+				8438BEF41B417A3F00E3FA62 /* MapViewExerciseAnnotation.m in Sources */,
 				D475D1FA1B3F1962008D046B /* SearchModel.m in Sources */,
 				84DC36D41B3580A000A94CBA /* CustomCell.m in Sources */,
 				849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */,
@@ -571,6 +787,7 @@
 				84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */,
 				84DC36D11B35805600A94CBA /* Datahandler.m in Sources */,
 				84575BB71B3EBF65006C298D /* RecipeCustomCell.m in Sources */,
+				840F04A71B41C25800AFE817 /* SavedWorkoutsTableVC.m in Sources */,
 				849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */,
 				D475D1F41B3F1947008D046B /* RecipeModel.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,

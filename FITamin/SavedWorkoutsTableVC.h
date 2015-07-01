@@ -1,5 +1,5 @@
 //
-//  TabBarStart.h
+//  SavedWorkoutsTableVC.h
 //  FITamin
 //
 //  Created by admin on 29.06.15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabBarStart : UITabBarController <UINavigationControllerDelegate>
+@interface SavedWorkoutsTableVC : UITableViewController
 
 @end
