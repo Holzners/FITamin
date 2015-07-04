@@ -30,6 +30,7 @@
 		845BDB641B30165800F6C7B3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845BDB631B30165800F6C7B3 /* Social.framework */; };
 		845BDB661B30166100F6C7B3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845BDB651B30166100F6C7B3 /* Accounts.framework */; };
 		846311181B43D935006DD69F /* ExerciseCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846311171B43D935006DD69F /* ExerciseCheckView.m */; };
+		84856E321B47AB650039E1EF /* LocationUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84856E311B47AB650039E1EF /* LocationUploadVC.m */; };
 		848C56A21B31962400B407C5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C569F1B31962400B407C5 /* Default.png */; };
 		848C56A31B31962400B407C5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C56A01B31962400B407C5 /* Default@2x.png */; };
 		848C56A41B31962400B407C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C56A11B31962400B407C5 /* Default-568h@2x.png */; };
@@ -78,13 +79,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		846311151B43D920006DD69F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 31CC2864CA54C82631B565C4;
-			remoteInfo = "Pods-FITamin-RateView";
-		};
 		84C9F7E61B4094A000BDD104 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84C9F7D51B40949E00BDD104 /* Pods.xcodeproj */;
@@ -213,6 +207,8 @@
 		845BDB651B30166100F6C7B3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		846311091B43D920006DD69F /* ExerciseCheckView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExerciseCheckView.h; sourceTree = "<group>"; };
 		846311171B43D935006DD69F /* ExerciseCheckView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseCheckView.m; sourceTree = "<group>"; };
+		84856E301B47AB4F0039E1EF /* LocationUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationUploadVC.h; sourceTree = "<group>"; };
+		84856E311B47AB650039E1EF /* LocationUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationUploadVC.m; sourceTree = "<group>"; };
 		848C569F1B31962400B407C5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		848C56A01B31962400B407C5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		848C56A11B31962400B407C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -395,6 +391,15 @@
 			name = FitnessRezepte;
 			sourceTree = "<group>";
 		};
+		84856E2F1B47AAB40039E1EF /* LocationUpload */ = {
+			isa = PBXGroup;
+			children = (
+				84856E301B47AB4F0039E1EF /* LocationUploadVC.h */,
+				84856E311B47AB650039E1EF /* LocationUploadVC.m */,
+			);
+			name = LocationUpload;
+			sourceTree = "<group>";
+		};
 		84C9F7D61B40949E00BDD104 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,12 +487,10 @@
 				849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */,
 				849689A81B2C4BFE0000CAE2 /* StandortVC.h */,
 				849689A91B2C4BFE0000CAE2 /* StandortVC.m */,
+				849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */,
+				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
 				849689AB1B2C4C160000CAE2 /* UebungAnleitungVC.h */,
 				849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */,
-				849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */,
-				F790D0E21B31B5B50092654E /* Images.xcassets */,
-				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
-				D4DA7B451B28815D00440996 /* Main.storyboard */,
 				840F04A51B41C25800AFE817 /* SavedWorkoutsTableVC.h */,
 				840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */,
 				F70A68C31B3ED8D40057A016 /* ChooseMode.h */,
@@ -497,6 +500,9 @@
 				84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */,
 				84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */,
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
+				D4DA7B451B28815D00440996 /* Main.storyboard */,
+				F790D0E21B31B5B50092654E /* Images.xcassets */,
+				84856E2F1B47AAB40039E1EF /* LocationUpload */,
 				F76F16571B43E3860065BBCE /* RecipesForWorkout */,
 				8438BEE71B41799C00E3FA62 /* CustomMapObjects */,
 				84575BA21B3EBABA006C298D /* FitnessRezepte */,
@@ -661,13 +667,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		846311161B43D920006DD69F /* libPods-FITamin-RateView.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPods-FITamin-RateView.a";
-			remoteRef = 846311151B43D920006DD69F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		84C9F7E71B4094A000BDD104 /* libPods-FITamin.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -823,6 +822,7 @@
 				8438BEF41B417A3F00E3FA62 /* MapViewExerciseAnnotation.m in Sources */,
 				D475D1FA1B3F1962008D046B /* SearchModel.m in Sources */,
 				84DC36D41B3580A000A94CBA /* CustomCell.m in Sources */,
+				84856E321B47AB650039E1EF /* LocationUploadVC.m in Sources */,
 				849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */,
 				F76F166C1B43E9220065BBCE /* WorkoutRecipeCustomCell.m in Sources */,
 				845BDB611B3013B000F6C7B3 /* LogInVC.m in Sources */,
