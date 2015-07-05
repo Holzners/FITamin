@@ -14,10 +14,10 @@
 
 @synthesize title=_title;
 
--(id) initWithTitle:(NSString *) title AndCoordinate:(CLLocationCoordinate2D)coordinate
+-(id) initWithTitle:(NSString *) title AndCoordinate:(CLLocationCoordinate2D)coordinate AndNumber:(NSNumber *) number
 {
     self = [super init];
-    _title = title;
+    _title = [NSString stringWithFormat:@"%d %@", [number intValue], title];
     _coordinate = coordinate;
     return self;
 }

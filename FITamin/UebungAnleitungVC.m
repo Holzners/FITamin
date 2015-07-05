@@ -15,6 +15,7 @@
 
 @implementation UebungAnleitungVC
 
+@synthesize currentExercise;
 @synthesize moviePlayer;
 @synthesize exerciseCounterLabel;
 
@@ -25,13 +26,13 @@ NSMutableArray *lbls;
 
 -(void)viewDidLoad {
 
-    //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Current Exercise" message:[NSString stringWithFormat:@"%@/%@", @"Exercise Name:", _currentExercise[@"title"]] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-       // [alert show];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Current Exercise" message:[NSString stringWithFormat:@"%@/%@", @"Exercise Name:", currentExercise[@"title"]] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+        [alert show];
     
     [self.view setBackgroundColor:[UIColor orangeColor]];
     
     //Load video and add Player
-    PFFile *theFile = [_currentExercise objectForKey:@"video"];
+    PFFile *theFile = [currentExercise objectForKey:@"video"];
     NSLog(@"%@",theFile.url); // the .url property contains the URL for the file (video or otherwise)..
     NSURL *urlString = [NSURL URLWithString:theFile.url];
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:urlString ];
@@ -40,17 +41,18 @@ NSMutableArray *lbls;
     [self.view addSubview:self.moviePlayer.view];
 
     //Counter
-    exerciseCounterLabel  = [[UILabel alloc] initWithFrame:CGRectMake(150,350, self.view.frame.size.width / 2, self.view.frame.size.height / 2)];
+   // exerciseCounterLabel  = [[UILabel alloc] initWithFrame:CGRectMake(150,350, self.view.frame.size.width / 2, self.view.frame.size.height / 2)];
     exerciseCounterLabel.textColor = [UIColor blueColor];
     [exerciseCounterLabel setText:@"Let's get started!"];
     exerciseCounterLabel.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:exerciseCounterLabel];
+    //[self.view addSubview:exerciseCounterLabel];
+    
     
     //ToDo: Die exercise und pause Zeit muss noch aus dem Exercise objekt geholt werden und
     //erstmal angelegt werden (Exercise Objekt erweitern)
     intExerciseSeconds = 20;
     intPauseSeconds = 10;
-    intNumberOfRepetitions = [_currentExercise[@"repetition"] intValue];
+    intNumberOfRepetitions = [currentExercise[@"repetition"] intValue];
     intTimerSeconds = intPauseSeconds;
     blnPause = YES;
     
@@ -128,6 +130,7 @@ NSMutableArray *lbls;
     }
 
 }
+
 - (IBAction)startExercise:(id)sender {
     [self startTimer];
 }

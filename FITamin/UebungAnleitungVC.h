@@ -17,19 +17,21 @@
     MPMoviePlayerController *moviePlayer;
     PFObject *currentExercise;
     NSTimer *timer;
-    IBOutlet UILabel *exerciseCounterLabel;
+
+
 }
 
 @property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
 
-@property (strong, nonatomic) PFObject  *currentExercise;
+@property (weak, nonatomic) IBOutlet UILabel *exerciseCounterLabel;
 
-@property (nonatomic, retain) UILabel *exerciseCounterLabel;
+@property (strong, nonatomic) PFObject  *currentExercise;
 
 @property (nonatomic, retain) ExerciseCheckView *exerciseCheckView;
 
--(void)updateCounter:(NSTimer *)theTimer;
--(void)countdownnTimer;
+-(void)startTimer;
+
+-(void)timerFired;
 
 
 @end

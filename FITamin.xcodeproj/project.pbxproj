@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		840F04A71B41C25800AFE817 /* SavedWorkoutsTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */; };
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
+		842FCA5C1B493E380038D1CF /* Quicksort.m in Sources */ = {isa = PBXBuildFile; fileRef = 842FCA5B1B493E380038D1CF /* Quicksort.m */; };
 		8438BEF41B417A3F00E3FA62 /* MapViewExerciseAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438BEF31B417A3F00E3FA62 /* MapViewExerciseAnnotation.m */; };
 		8438BEF61B418BCC00E3FA62 /* erdbeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 8438BEF51B418BCC00E3FA62 /* erdbeere.png */; };
 		8441B9401B3AD1CF008698B4 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8441B93F1B3AD1CF008698B4 /* data.plist */; };
@@ -173,6 +174,8 @@
 		840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedWorkoutsTableVC.m; sourceTree = "<group>"; };
 		84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeModusVC.h; sourceTree = "<group>"; };
 		84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeModusVC.m; sourceTree = "<group>"; };
+		842FCA5A1B493C5E0038D1CF /* Quicksort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quicksort.h; sourceTree = "<group>"; };
+		842FCA5B1B493E380038D1CF /* Quicksort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quicksort.m; sourceTree = "<group>"; };
 		8438BEF21B4179EC00E3FA62 /* MapViewExerciseAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewExerciseAnnotation.h; sourceTree = "<group>"; };
 		8438BEF31B417A3F00E3FA62 /* MapViewExerciseAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewExerciseAnnotation.m; sourceTree = "<group>"; };
 		8438BEF51B418BCC00E3FA62 /* erdbeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = erdbeere.png; sourceTree = "<group>"; };
@@ -328,6 +331,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842FCA4E1B493C060038D1CF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				842FCA5A1B493C5E0038D1CF /* Quicksort.h */,
+				842FCA5B1B493E380038D1CF /* Quicksort.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		8438BEE71B41799C00E3FA62 /* CustomMapObjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +514,7 @@
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
 				F790D0E21B31B5B50092654E /* Images.xcassets */,
+				842FCA4E1B493C060038D1CF /* Helper */,
 				84856E2F1B47AAB40039E1EF /* LocationUpload */,
 				F76F16571B43E3860065BBCE /* RecipesForWorkout */,
 				8438BEE71B41799C00E3FA62 /* CustomMapObjects */,
@@ -850,6 +863,7 @@
 				D475D1F71B3F1956008D046B /* RecipeListModel.m in Sources */,
 				84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */,
 				F70A68C51B3ED8D40057A016 /* ChooseMode.m in Sources */,
+				842FCA5C1B493E380038D1CF /* Quicksort.m in Sources */,
 				84575BB41B3EBE42006C298D /* RecipeTableViewController.m in Sources */,
 				D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */,
 				84DC36DA1B35819B00A94CBA /* CountiesTableViewController.m in Sources */,

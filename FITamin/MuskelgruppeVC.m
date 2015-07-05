@@ -31,9 +31,11 @@ UIButton *button;
         batman.image = [UIImage imageNamed: @"MuskelgruppeArm.png"];
         self.confirmButton.enabled=true;
         self.selectedMuscleGroup = @"MuskelgruppeArm";
-        
+
         PFQuery *query = [PFQuery queryWithClassName:@"Muscle"];
-        [query whereKey:@"user" equalTo:[PFUser currentUser]];
+        [query whereKey:@"title" equalTo:@"Arms"];
+        
+        //[query whereKey:@"user" equalTo:[PFUser currentUser]];
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
@@ -49,10 +51,11 @@ UIButton *button;
                 muscle[@"user"] = [PFUser currentUser];
                 [muscle save];
                 
-                if(muscle != NULL){
-                    [self.muscles addObject:muscle];
-                }
                 NSLog(@"Error: %@", error);
+            }
+            
+            if(muscle != NULL){
+                [self.muscles addObject:muscle];
             }
         }];
         
@@ -69,7 +72,9 @@ UIButton *button;
         
         //Muscle Stomach in Array einfügen
         PFQuery *query = [PFQuery queryWithClassName:@"Muscle"];
-        [query whereKey:@"user" equalTo:[PFUser currentUser]];
+        [query whereKey:@"title" equalTo:@"Stomach"];
+        //[query whereKey:@"user" equalTo:[PFUser currentUser]];
+        
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
@@ -85,10 +90,10 @@ UIButton *button;
                 muscle[@"user"] = [PFUser currentUser];
                 [muscle save];
                 
-                if(muscle != NULL){
-                    [self.muscles addObject:muscle];
-                }
                 NSLog(@"Error: %@", error);
+            }
+            if(muscle != NULL){
+                [self.muscles addObject:muscle];
             }
         }];
     }
@@ -102,7 +107,8 @@ UIButton *button;
         
         //Muscle Legs in Array einfügen
         PFQuery *query = [PFQuery queryWithClassName:@"Muscle"];
-        [query whereKey:@"user" equalTo:[PFUser currentUser]];
+        [query whereKey:@"title" equalTo:@"Legs"];
+        //[query whereKey:@"user" equalTo:[PFUser currentUser]];
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
@@ -118,11 +124,12 @@ UIButton *button;
                 muscle[@"user"] = [PFUser currentUser];
                 [muscle save];
                 
-                if(muscle != NULL){
-                    [self.muscles addObject:muscle];
-                }
-                NSLog(@"Error: %@", error);
+                                NSLog(@"Error: %@", error);
             }
+            if(muscle != NULL){
+                [self.muscles addObject:muscle];
+            }
+
         }];
     }
 }
@@ -135,7 +142,8 @@ UIButton *button;
         
         //Muscle Breast in Array einfügen
         PFQuery *query = [PFQuery queryWithClassName:@"Muscle"];
-        [query whereKey:@"user" equalTo:[PFUser currentUser]];
+        [query whereKey:@"title" equalTo:@"Breast"];
+        //[query whereKey:@"user" equalTo:[PFUser currentUser]];
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
@@ -151,10 +159,11 @@ UIButton *button;
                 muscle[@"user"] = [PFUser currentUser];
                 [muscle save];
                 
-                if(muscle != NULL){
-                    [self.muscles addObject:muscle];
-                }
+
                 NSLog(@"Error: %@", error);
+            }
+            if(muscle != NULL){
+                [self.muscles addObject:muscle];
             }
         }];
     }
@@ -168,7 +177,8 @@ UIButton *button;
         
         //Muscle Back in Array einfügen
         PFQuery *query = [PFQuery queryWithClassName:@"Muscle"];
-        [query whereKey:@"user" equalTo:[PFUser currentUser]];
+        [query whereKey:@"title" equalTo:@"Back"];
+        //[query whereKey:@"user" equalTo:[PFUser currentUser]];
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
@@ -184,10 +194,11 @@ UIButton *button;
                 muscle[@"user"] = [PFUser currentUser];
                 [muscle save];
                 
-                if(muscle != NULL){
-                    [self.muscles addObject:muscle];
-                }
+
                 NSLog(@"Error: %@", error);
+            }
+            if(muscle != NULL){
+                [self.muscles addObject:muscle];
             }
         }];
     }
@@ -201,7 +212,9 @@ UIButton *button;
         
         //Muscle Bottom in Array einfügen
         PFQuery *query = [PFQuery queryWithClassName:@"Muscle"];
-        [query whereKey:@"user" equalTo:[PFUser currentUser]];
+        [query whereKey:@"title" equalTo:@"Bottom"];
+        
+        //[query whereKey:@"user" equalTo:[PFUser currentUser]];
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
@@ -217,10 +230,11 @@ UIButton *button;
                 muscle[@"user"] = [PFUser currentUser];
                 [muscle save];
                 
-                if(muscle != NULL){
-                    [self.muscles addObject:muscle];
-                }
+                
                 NSLog(@"Error: %@", error);
+            }
+            if(muscle != NULL){
+                [self.muscles addObject:muscle];
             }
         }];
         
