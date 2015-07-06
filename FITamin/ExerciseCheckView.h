@@ -10,7 +10,7 @@
 
 @interface ExerciseCheckView : UIView
 
-@property(nonatomic)int intNumberOfRepetitions;
+@property(nonatomic)int intNumberOfSets;
 @property(nonatomic, strong)NSMutableArray *colors;
 
 @end

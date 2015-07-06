@@ -732,7 +732,7 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" image="StartButton">
-                                    <color key="titleColor" patternImage="9CFB5B18-8AC0-4883-BBBF-8627D4E27F92" colorSpace="pattern"/>
+                                    <color key="titleColor" patternImage="2955DA7B-DC68-4FD7-B6EC-A6E0B670768C" colorSpace="pattern"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1046,9 +1046,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MessageBox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJn-Id-bAK">
                                 <rect key="frame" x="250" y="435" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oeu-M8-fqd">
+                                <rect key="frame" x="153" y="464" width="285" height="30"/>
+                                <state key="normal" title="FERTIG">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmExercise:" destination="P5q-zc-nxY" eventType="touchUpInside" id="OJQ-C9-40W"/>
+                                    <action selector="confirmSingleExercise:" destination="P5q-zc-nxY" eventType="touchUpInside" id="EU2-h5-wlR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1058,9 +1068,11 @@
                             <constraint firstItem="uMw-m0-LXn" firstAttribute="leading" secondItem="bfO-9j-2sL" secondAttribute="leading" constant="277" id="Yci-mv-gq6"/>
                             <constraint firstItem="aWo-nc-mbY" firstAttribute="top" secondItem="Lvd-Ha-W2e" secondAttribute="bottom" constant="21" id="ckU-st-kb9"/>
                             <constraint firstItem="SJn-Id-bAK" firstAttribute="centerX" secondItem="bfO-9j-2sL" secondAttribute="centerX" id="eAO-0d-pZB"/>
+                            <constraint firstAttribute="centerX" secondItem="Oeu-M8-fqd" secondAttribute="centerX" id="v2o-o7-uyG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmExercise" destination="Oeu-M8-fqd" id="lWX-3b-9bz"/>
                         <outlet property="exerciseCounterLabel" destination="SJn-Id-bAK" id="lhn-uC-ezF"/>
                     </connections>
                 </viewController>
@@ -1228,7 +1240,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="9CFB5B18-8AC0-4883-BBBF-8627D4E27F92" width="256" height="256">
+        <image name="2955DA7B-DC68-4FD7-B6EC-A6E0B670768C" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
