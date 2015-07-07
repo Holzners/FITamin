@@ -27,6 +27,8 @@
 
 @property (strong, nonatomic) PFObject  *currentExercise;
 
+@property (weak, nonatomic) IBOutlet UIButton *confirmExercise;
+
 @property (nonatomic, retain) ExerciseCheckView *exerciseCheckView;
 
 -(void)startTimer;

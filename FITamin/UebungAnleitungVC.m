@@ -18,8 +18,9 @@
 @synthesize currentExercise;
 @synthesize moviePlayer;
 @synthesize exerciseCounterLabel;
+@synthesize confirmExercise;
 
-int intExerciseSeconds, intPauseSeconds, intTimerSeconds, intNumberOfRepetitions, intCounter;
+int intExerciseSeconds, intPauseSeconds, intTimerSeconds, intNumberOfSets,intNumberOfRepetitions, intCounter;
 bool blnPause;
 NSMutableArray *lbls;
 
@@ -30,6 +31,8 @@ NSMutableArray *lbls;
         [alert show];
     
     [self.view setBackgroundColor:[UIColor orangeColor]];
+    
+    [confirmExercise setAlpha:0];
     
     //Load video and add Player
     PFFile *theFile = [currentExercise objectForKey:@"video"];
@@ -50,33 +53,20 @@ NSMutableArray *lbls;
     
     //ToDo: Die exercise und pause Zeit muss noch aus dem Exercise objekt geholt werden und
     //erstmal angelegt werden (Exercise Objekt erweitern)
-    intExerciseSeconds = 20;
-    intPauseSeconds = 10;
+    intNumberOfSets = [currentExercise[@"set"] intValue];
+    intExerciseSeconds = [currentExercise[@"duration"] intValue];
     intNumberOfRepetitions = [currentExercise[@"repetition"] intValue];
+    intPauseSeconds = 10;
     intTimerSeconds = intPauseSeconds;
     blnPause = YES;
     
-    //Add circles for each Repetition
-//    lbls = [NSMutableArray new];
-//    for (int i = 0; i < intNumberOfRepetitions; i++)
-//    {
-//        CGPoint center = CGPointMake(self.view.frame.size.width, self.view.frame.size.height / 2);
-//        
-//        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(50+(i*100),250, self.view.frame.size.width / 2 +(i*100), self.view.frame.size.height / 2)];
-//        label.text = [NSString stringWithFormat:@"%@%d", @"Round ", i+1];
-//        [label setBackgroundColor:[UIColor yellowColor]];
-//        [self.view addSubview:label];
-//        [lbls addObject:label];
-//
-//    }
-    
-    //Add Circles for each Repetition
+    //Add Circles for each Set
     CGRect bigRect = CGRectMake(0, 320, self.view.frame.size.width, 100);
     self.exerciseCheckView = [[ExerciseCheckView alloc ] initWithFrame:bigRect];
-    self.exerciseCheckView.intNumberOfRepetitions = intNumberOfRepetitions;
-    self.exerciseCheckView.colors = [[NSMutableArray alloc]initWithCapacity:intNumberOfRepetitions];
+    self.exerciseCheckView.intNumberOfSets = intNumberOfSets;
+    self.exerciseCheckView.colors = [[NSMutableArray alloc]initWithCapacity:intNumberOfSets];
     
-    for(int i=0; i<intNumberOfRepetitions; i++){
+    for(int i=0; i<intNumberOfSets; i++){
         [self.exerciseCheckView.colors addObject:[[NSNumber alloc]initWithDouble:0.0]];
     }
     
@@ -85,22 +75,35 @@ NSMutableArray *lbls;
     
 }
 
-- (IBAction)confirmExercise:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-        [alert show];
+- (IBAction)startExercise:(id)sender {
+    if(intExerciseSeconds != 0){
+        //duration-exercise
+        [self startDurationExerciseTimer];
+    }
+    else{
+        //repetition-exercise
+        [self startRepetitionExerciseTimer];
+        
+    }
+    
     
 }
 
 
--(void)startTimer
-{
-    timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
-    
+-(void)startRepetitionExerciseTimer{
+    timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(repetitionTimer) userInfo:nil repeats:YES];
 }
 
--(void)timerFired
+-(void)startDurationExerciseTimer{
+    timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(durationTimer) userInfo:nil repeats:YES];
+}
+
+
+
+
+-(void)durationTimer
 {
-    if(intCounter < intNumberOfRepetitions){
+    if(intCounter < intNumberOfSets){
     if(intTimerSeconds > 0 ){
         intTimerSeconds -=1 ;
     }
@@ -126,13 +129,56 @@ NSMutableArray *lbls;
     }
     else {
         [timer invalidate];
+        //Set counter wieder zurücksetzen
+        intCounter = 0;
         [exerciseCounterLabel setText:@"You're Done!"];
     }
 
 }
 
-- (IBAction)startExercise:(id)sender {
-    [self startTimer];
+
+-(void)repetitionTimer
+{
+    if(intCounter < intNumberOfSets){
+        if(intTimerSeconds > 0 ){
+            intTimerSeconds -=1 ;
+            [exerciseCounterLabel setText:[NSString stringWithFormat:@"%02d" ,intTimerSeconds]];
+        }
+        else{
+                [self.view setBackgroundColor:[UIColor greenColor]];
+                [timer invalidate];
+                [exerciseCounterLabel setText:@"TRAIN!"];
+                [confirmExercise setAlpha:1];
+        }
+        
+    }
+    else {
+        [timer invalidate];
+        //Set counter wieder zurücksetzen
+        intCounter = 0;
+        [exerciseCounterLabel setText:@"You're Done!"];
+    }
+    
 }
+
+- (IBAction)confirmExercise:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+    [alert show];
+    
+}
+- (IBAction)confirmSingleExercise:(id)sender {
+    
+    [self.view setBackgroundColor:[UIColor orangeColor]];
+    intTimerSeconds = intPauseSeconds;
+    blnPause = YES;
+    [self.exerciseCheckView.colors replaceObjectAtIndex:intCounter withObject:[[NSNumber alloc]initWithDouble:1.0]];
+    [self.exerciseCheckView setNeedsDisplay];
+    intCounter += 1;
+    timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(repetitionTimer) userInfo:nil repeats:YES];
+}
+
+
+
+
 
 @end
