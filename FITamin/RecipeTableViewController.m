@@ -56,41 +56,12 @@ RecipeModel *selectedRecipe;
     UINib *nib = [UINib nibWithNibName:@"RecipeCustomCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"RecipeCustomCell"];
     
-    /**
-    // SearchBar erzeugen
-    self.searchRecipeBar = [[UISearchBar alloc] init];
-    self.searchRecipeController = [[UISearchController alloc] initWithSearchResultsController:nil];
-    self.searchRecipeController.searchResultsUpdater = self;
-    self.searchRecipeController.dimsBackgroundDuringPresentation = NO;
-    self.searchRecipeController.delegate = self;
-    self.tableView.tableHeaderView = self.searchRecipeController.searchBar;
-    [self.searchRecipeBar sizeToFit];
-    **
-    
-    Recipe *recipe1 = [Recipe new];
-    recipe1.recipeDetailName = recipeCell.recipeNameLabel.text;
-    recipe1.recipeDetailImage = @"Avocado.jpg";
-    recipe1.recipeDetailText = @"Test";
-    
-    Recipe *recipe2 = [Recipe new];
-    recipe2.recipeDetailName = recipeCell.recipeNameLabel.text;
-    recipe2.recipeDetailImage = @"Avocado.jpg";
-    recipe2.recipeDetailText = @"Test";
-   */
     self.searchSummary = [[SearchModel alloc]init];
-    //recipeArray = [[NSArray alloc]init];
-    
-
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-   // self.recipeArray = [Datahandler loadData];
-   // self.recipeDictionary = [self dictionaryAusArray:self.recipeArray];
-   // [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,33 +70,36 @@ RecipeModel *selectedRecipe;
     // Dispose of any resources that can be recreated.
 }
 
-
 #pragma mark Content Filtering
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
     
     [self searchWithValue:searchText];
     
-    if ([scope isEqualToString:@"Protein"]) {
-        NSLog(@"Protein");
-        // Further filter the array with the scope
-        [self searchWithValue:@"protein"];
-    } else if([scope isEqualToString:@"Low Carb"]){
-        [self searchWithValue:@"low carb"];
+    if(![scope isEqualToString:@"All"]){
 
-    }else if([scope isEqualToString:@"Quinoa"]){
-        [self searchWithValue:@"quinoa"];
-        
-    }else if([scope isEqualToString:@"Tuna"]){
-        [self searchWithValue:@"tuna"];
-        
-    }else if([scope isEqualToString:@"Oats"]){
-        [self searchWithValue:@"oats"];
-        
-    }else if([scope isEqualToString:@"Avocado"]){
-        [self searchWithValue:@"avocado"];
-        
-    }
+        if ([scope isEqualToString:@"Protein"]) {
+            NSLog(@"Protein");
+            // Further filter the array with the scope
+            [self searchWithValue:@"protein"];
+        } else if([scope isEqualToString:@"Low Carb"]){
+            [self searchWithValue:@"low carb"];
+
+        }else if([scope isEqualToString:@"Quinoa"]){
+            [self searchWithValue:@"quinoa"];
+            
+        }else if([scope isEqualToString:@"Tuna"]){
+            [self searchWithValue:@"tuna"];
+            
+        }else if([scope isEqualToString:@"Oats"]){
+            [self searchWithValue:@"oats"];
+            
+        }else if([scope isEqualToString:@"Avocado"]){
+            [self searchWithValue:@"avocado"];
+            
+        }
     
+    
+    }
     
     NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
 }
@@ -141,6 +115,7 @@ RecipeModel *selectedRecipe;
     // Return YES to cause the search result table view to be reloaded.
     return YES;
 }
+
 
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
@@ -180,62 +155,39 @@ RecipeModel *selectedRecipe;
 //    } */
 //}
 
+//Hier eventuell Fehler
+//andere Methode:
+
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    if (tableView == self.searchDisplayController.searchResultsTableView) {
+//        return [searchResults count];
+//        
+//    } else {
+//        return [recipes count];
+//    }
+//}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSLog(@"Anzahl reihen: %lu" , (unsigned long)self.searchSummary.recipes.count);
+    if(self.searchSummary.recipes.count > 30){
+        NSLog(@"Über 30");
+        return 30;
+    } else{
+        NSLog(@"Unter 30");
     return self.searchSummary.recipes.count;
-   /** if (tableView == self.tableView) {
-        NSArray *array = [self.recipeDictionary valueForKey:self.sectionTitles[section]];
-        return [array count];
-    } else { // (tableView == self.searchDisplayController.searchResultsTableView)
-        NSArray *array = [self.searchRecipeDict valueForKey:self.searchRecipeSectionTitles[section]];
-        return [array count];
-    }*/
+    }
+    
 }
 
-//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{   return @"Rezepte";
-//    /**
-//    if (tableView == self.tableView) {
-//        return self.sectionTitles[section];
-//    } else {
-//        return self.searchRecipeSectionTitles[section];
-//    }
-//  */
-//}
 
-/* SCHNELLINDEX ANFANG
--(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-{
-    if (tableView == self.tableView) {
-        return self.sectionTitles;
-    } else {
-        //return self.searchRecipeSectionTitles;
-    }
-} */
-
-/* SCHNELLINDEX ENDE */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"RecipeCustomCell";
     
     RecipeCustomCell *cell;
-    
-  
-    
-   /** NSArray *array = [NSArray array];
-    
-    if (tableView == self.tableView) {
-        
-        //NSString *sectionTitle = self.sectionTitles[indexPath.section];
-        //array = (self.recipeDictionary)[sectionTitle];
-        
-    } else {
-        
-        NSString *sectionTitle = self.searchRecipeSectionTitles[indexPath.section];
-        array = (self.searchRecipeDict)[sectionTitle];
-    }*/
     
     // Zellenhintergrund mit Farbverlauf füllen
     if (tableView == self.tableView) {
@@ -244,28 +196,7 @@ RecipeModel *selectedRecipe;
         cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     }
     cell.backgroundColor = [UIColor clearColor];
-    
-    UIColor *colorOne = [UIColor colorWithRed:(120/255.0) green:(135/255.0) blue:(150/255.0) alpha:1.0];
-    UIColor *colorTwo = [UIColor colorWithRed:(57/255.0)  green:(79/255.0)  blue:(96/255.0)  alpha:1.0];
-    
-    // Farben für Farbverlauf
-    //    UIColor *whiteColor = [UIColor whiteColor];
-    //    UIColor *darkGreyColor = [UIColor colorWithRed:255.0/255.0 green:230.0/255.0 blue:255.0/255.0 alpha:1.0];
-    //
-//    CAGradientLayer *farbverlauf = [CAGradientLayer layer];
-//    
-//    farbverlauf.frame = cell.bounds;
-//    farbverlauf.colors = @[(id)colorOne.CGColor, (id)colorTwo.CGColor];
-//    
-//    UIView *background = [[UIView alloc] initWithFrame:cell.bounds];
-//    [background.layer insertSublayer:farbverlauf atIndex:0];
-//    cell.backgroundView = background;
-    
-  /**  cell.recipeImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
-    cell.recipeImageView.layer.borderWidth = 1;
-    cell.recipeImageView.layer.cornerRadius = 5;
-    cell.recipeImageView.clipsToBounds = YES; */
-    
+
     RecipeListModel *recipe = [[self.searchSummary recipes] objectAtIndex:indexPath.row];
     
     NSLog(@"Name %@" ,  [recipe title]);
@@ -289,110 +220,6 @@ RecipeModel *selectedRecipe;
 {
     return 70;
 }
-
-//-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    return 40;
-//}
-//
-//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    
-//    CGRect headerFrame = CGRectMake(0, 0, tableView.bounds.size.width, 40);
-//    UIView *headerView = [[UIView alloc] initWithFrame:headerFrame];
-//    
-//    UIColor *colorOne = [UIColor colorWithRed:(120/255.0) green:(135/255.0) blue:(150/255.0) alpha:1.0];
-//    UIColor *colorTwo = [UIColor colorWithRed:(57/255.0)  green:(79/255.0)  blue:(96/255.0)  alpha:1.0];
-//    CAGradientLayer *farbverlauf = [CAGradientLayer layer];
-//    
-//    farbverlauf.frame = headerView.frame;
-//    
-//    farbverlauf.colors = @[(id)colorOne.CGColor, (id)colorTwo.CGColor];
-//    
-//    farbverlauf.locations =@[@0.0f, @0.5f, @0.51f, @1.0f];
-//    
-//    [headerView.layer insertSublayer:farbverlauf atIndex:0];
-//    
-//    // Label
-//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 40, 40)];
-//    label.text = [self tableView:tableView titleForHeaderInSection:section];
-//    label.font = [UIFont fontWithName:@"Avenir Next" size:15];
-//    label.shadowOffset = CGSizeMake(0, 1);
-//    label.shadowColor = [UIColor whiteColor];
-//    label.backgroundColor = [UIColor clearColor];
-//    label.textColor = [UIColor whiteColor];
-//    
-//    [headerView addSubview:label];
-//    
-//    return headerView;
-//}
-/*
--(NSDictionary *)dictionaryAusArray:(NSArray *)array
-{
-    // Übergebenes Array alphabetisch sortieren
-    NSArray *sortedArray = [array sortedArrayUsingSelector:@selector(compare:)];
-    
-    if ([self.searchRecipeController isActive]) {
-        self.searchRecipeSectionTitles = [NSMutableArray new];
-        
-        NSLog(@"ZutatenDic: %@", sortedArray);
-    } else {
-        self.sectionTitles = [NSMutableArray new];
-        
-        NSLog(@"ZutatenDic2: %@", sortedArray);
-    }
-    
-    // Dictionary, welches zurück gegeben werden soll, initialisieren
-    NSMutableDictionary *dict = [NSMutableDictionary new];
-    
-    for (NSString *string in sortedArray) {
-        
-        unichar c = [string characterAtIndex:0];
-        
-        NSString *character = [NSString stringWithCharacters:&c length:1];
-        
-        if (![self.searchRecipeController isActive]) {
-            
-            if (![self.sectionTitles containsObject:character]) {
-                
-                [self.sectionTitles addObject:character];
-                NSMutableArray *countryStringArray = [NSMutableArray new];
-                [countryStringArray addObject:string];
-                dict[character] = countryStringArray;
-                
-            } else {
-                
-                NSMutableArray *countryArray = [NSMutableArray new];
-                countryArray = dict[character];
-                [countryArray addObject:string];
-                dict[character] = countryArray;
-                
-            }
-            
-        } else {
-            
-            if (![self.searchRecipeSectionTitles containsObject:character]) {
-                
-                [self.searchRecipeSectionTitles addObject:character];
-                NSMutableArray *countryStringArray = [NSMutableArray new];
-                [countryStringArray addObject:string];
-                dict[character] = countryStringArray;
-                
-            } else {
-                
-                NSMutableArray *countryArray = [NSMutableArray new];
-                countryArray = dict[character];
-                [countryArray addObject:string];
-                dict[character] = countryArray;
-                
-            }
-        }
-    }
-    NSLog(@"ZutatenDic3: %@", dict);
-    return dict;
-    
-}*/
-
 
 
 
@@ -432,7 +259,9 @@ RecipeModel *selectedRecipe;
     if ([segue.identifier isEqualToString:@"recipeSegue"]) {
         
         RecipeDetailVC *dvc = segue.destinationViewController;
-        dvc.recipe = selectedRecipe;/**
+        dvc.recipe = selectedRecipe;
+        
+        /**
         NSIndexPath *indexPath = sender;
         
         NSArray *array = [NSArray array];
@@ -459,7 +288,8 @@ RecipeModel *selectedRecipe;
 }
 
 - (void) searchWithValue:(NSString*) param{
-        
+    
+    NSLog(@"Sucht");
         HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [HUD setMode:MBProgressHUDModeIndeterminate];
         [HUD setLabelText:@"searching"];
