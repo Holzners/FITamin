@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -370,8 +370,18 @@
                             <outlet property="delegate" destination="yPP-bX-JOf" id="wVO-l6-CWk"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Rezepte für Workout" id="RB9-tx-120"/>
+                    <toolbarItems>
+                        <barButtonItem image="Back" id="Pdu-2q-zxT">
+                            <connections>
+                                <segue destination="4Fq-bX-CD2" kind="presentation" id="zx0-KT-eaU"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Rezepte für Workout" id="hgY-sL-knc">
+                        <connections>
+                            <outlet property="leftBarButtonItem" destination="Pdu-2q-zxT" id="UWS-Gh-hLV"/>
+                        </connections>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="uZu-7K-9cS" kind="show" identifier="showRecipeDetail" id="Rtp-t8-oKQ"/>
@@ -987,7 +997,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjb-RY-yVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="-79"/>
+            <point key="canvasLocation" x="515" y="93"/>
         </scene>
         <!--UebungRouteVC-->
         <scene sceneID="efV-sf-N3u">
@@ -5741,10 +5751,10 @@ AAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAAQO4w
         <image name="StartScreenFITamin" width="1339" height="1964"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="zx0-KT-eaU"/>
         <segue reference="gF0-Hu-fC4"/>
-        <segue reference="7zk-au-qxp"/>
-        <segue reference="rF0-Cq-HR9"/>
-        <segue reference="59z-La-M52"/>
+        <segue reference="cft-Yp-lvk"/>
+        <segue reference="Rtp-t8-oKQ"/>
         <segue reference="yn9-O2-k6c"/>
     </inferredMetricsTieBreakers>
 </document>
