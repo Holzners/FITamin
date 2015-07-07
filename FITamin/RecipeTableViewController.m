@@ -79,7 +79,6 @@ RecipeModel *selectedRecipe;
    */
     self.searchSummary = [[SearchModel alloc]init];
     //recipeArray = [[NSArray alloc]init];
-    [self searchWithValue:@"chicken"];
     
 
     
@@ -110,7 +109,23 @@ RecipeModel *selectedRecipe;
         NSLog(@"Protein");
         // Further filter the array with the scope
         [self searchWithValue:@"protein"];
+    } else if([scope isEqualToString:@"Low Carb"]){
+        [self searchWithValue:@"low carb"];
+
+    }else if([scope isEqualToString:@"Quinoa"]){
+        [self searchWithValue:@"quinoa"];
+        
+    }else if([scope isEqualToString:@"Tuna"]){
+        [self searchWithValue:@"tuna"];
+        
+    }else if([scope isEqualToString:@"Oats"]){
+        [self searchWithValue:@"oats"];
+        
+    }else if([scope isEqualToString:@"Avocado"]){
+        [self searchWithValue:@"avocado"];
+        
     }
+    
     
     NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
 }
@@ -449,7 +464,7 @@ RecipeModel *selectedRecipe;
         [HUD setMode:MBProgressHUDModeIndeterminate];
         [HUD setLabelText:@"searching"];
         [HUD show:YES];
-        
+    
         [[RecipeApiController instanceShared] searchWithValue:param Page:nil SortBy:SortingByNon withBlock:^(SearchModel *response, NSError *error) {
             if (error==nil) {
                 if ([response count]!=nil) {

@@ -276,6 +276,7 @@ RecipeModel *selectedWorkoutRecipe;
         if (error==nil) {
             if ([response count]!=nil) {
                 self.searchSummary = response;
+                NSLog(@"searchSummary %@", self.searchSummary);
                 NSLog(@"Länge rückgabe array: %lu", (unsigned long)[[self.searchSummary recipes] count]);
                 [self.tableView reloadData];
                 [HUD hide:YES];

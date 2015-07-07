@@ -15,7 +15,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+     [super viewWillAppear:animated];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
+        if (!error) {
+            [self performSegueWithIdentifier:@"StartScreenSegue" sender:self];
+        } else {
+        }
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,7 +73,7 @@
 }
 - (IBAction)chooseFat:(id)sender {
     modeImage.image = [UIImage imageNamed: @"ModusScreenFett.png"];
-    [self performSegueWithIdentifier:@"StartScreenSegue" sender:self];
+    
     
     PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
@@ -80,6 +93,9 @@
             
             NSLog(@"Error: %@", error);
         }
-    }];}
+    }];
+    
+    [self performSegueWithIdentifier:@"StartScreenSegue" sender:self];
+}
 
 @end
