@@ -164,10 +164,10 @@
     }
 }
 
--(void) sortByDistance:(NSMutableArray*)arrayToSort{
-    [self quickSort:0 withRight:(locationDistances.count-1)];
+-(void) getMinDistance:(NSMutableDictionary*)array{
+ 
+    }
     
-}
 
 - (void) quickSort:(NSInteger)left withRight:(NSInteger)right{
     if(left < right){

@@ -176,7 +176,7 @@
         }
         
         //Finde Minimum Distanz aller Locations (tmpLocationDistance ist Array von Dictionarys)
-        [self sortByDistance:tmpLocationDistances];
+        
         
         NSLog(@"Next Distances: %d" , i);
         for(NSMutableDictionary *dict in tmpLocationDistances){
@@ -186,7 +186,8 @@
         
         
         //Füge jetzt diese Location zu Location-Exercise Array hinzu
-        [self.selectedLocationsWithDistancesAndExercises addObject:[tmpLocationDistances firstObject]];
+        [self.selectedLocationsWithDistancesAndExercises addObject:[
+            tmpLocationDistances objectAtIndex:[self getMinDistanceIndex:tmpLocationDistances]]];
         
         //Setze current Location auf den aktuellen berechneten Punkt um weiter zu rechnen
         tmpCurrentLoc = [PFGeoPoint geoPointWithLocation:[[tmpLocationDistances firstObject] objectForKey:@"location"]];
@@ -201,6 +202,19 @@
         NSLog(@"Distanz zur vorherigen %@" , dist);
     }
     
+}
+
+- (NSInteger) getMinDistanceIndex : (NSMutableArray*) array{
+    NSInteger result = 0;
+    NSNumber *maxVal = [NSNumber numberWithInt:INT16_MAX];
+   
+    for(NSMutableDictionary *dict in array){
+        if([dict objectForKey:@"distance"] < maxVal){
+            maxVal = [dict objectForKey:@"distance"];
+            result = [array indexOfObject:dict];
+        }
+    }
+    return result;
 }
 
 
@@ -358,7 +372,7 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
     _currentLocation = [self.selectedLocationsWithDistancesAndExercises objectAtIndex:_currentExercise];
     
     if(_currentExercise >= [_exercises count]){
-         [self performSegueWithIdentifier:@"RouteToFinish" sender:self];
+         [self performSegueWithIdentifier:@"workoutFinished" sender:self];
     }
     else {
         [self performSegueWithIdentifier:@"mapToDescription" sender:self];
@@ -374,11 +388,14 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
     _currentExercise += 1;
     
     if(_currentExercise >= [_exercises count]){
-     
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Workout Finished" message:[NSString stringWithFormat:@"%@", @"Well Done"] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-        [alert show];
-    
         [targetReached setAlpha:0];
+        
+       [self performSegueWithIdentifier:@"workoutFinished" sender:self];
+       /**
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Workout Finished" message:[NSString stringWithFormat:@"%@", @"Well Done"] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+        [alert show]; */
+    
+        
         
     }
     
