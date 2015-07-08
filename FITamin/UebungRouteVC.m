@@ -21,7 +21,7 @@
     NSMutableArray *locationPoints;
     NSMutableArray *locationDistances;
     Boolean distancesCalculated;
-    BOOL _workoutFinished;
+    NSString *workoutFinished;
     
 }
 
@@ -29,14 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    if(_workoutFinished){
-        _workoutFinished = NO;
-        [self performSegueWithIdentifier:@"workoutFinished" sender:self];
-        [self.locationManager stopUpdatingLocation];
-    }
-    
-    
     distancesCalculated = false;
     
     //init Location Manager
@@ -60,7 +52,7 @@
     
     [_locationManager startUpdatingLocation];
     
-    NSLog(@"ID %@", self);
+  
     
    
 }
@@ -74,8 +66,17 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation,
                                                                        0.5*5000, 0.5*5000);
     [_mapView setRegion:viewRegion animated:YES];
-
     
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if(workoutFinished){
+        [self performSegueWithIdentifier:workoutFinished sender:self];
+        NSLog(@"ID %@", workoutFinished);
+        workoutFinished = nil;
+        
+        // return;
+    }
     
 }
 
@@ -385,19 +386,20 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
         }
     }
     else{
-        NSLog(@"Log %@",segue.identifier);
+        NSLog(@"Segue performed %@",segue.identifier);
     }
     
 }
 
 -(IBAction)simulateTargetReached:(id)sender {
     //Get next Location
-    _currentLocation = [self.selectedLocationsWithDistancesAndExercises objectAtIndex:_currentExercise];
+    
     
     if(_currentExercise >= [_exercises count]){
          [self performSegueWithIdentifier:@"workoutFinished" sender:self];
     }
     else {
+        _currentLocation = [self.selectedLocationsWithDistancesAndExercises objectAtIndex:_currentExercise];
         [self performSegueWithIdentifier:@"mapToDescription" sender:self];
     }
     
@@ -411,10 +413,9 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
     
     if(_currentExercise >= [_exercises count]){
   //      unwindSegue.destinationViewController;
-        _workoutFinished = YES;
+        workoutFinished = @"workoutFinished";
         [self.locationManager stopUpdatingLocation];
-       
-        [targetReached setAlpha:0];
+    //    [targetReached setAlpha:0];
     }else{
     
        /** UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Workout Finished" message:[NSString stringWithFormat:@"%@", @"Well Done"] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
