@@ -15,7 +15,7 @@
 #import "RecipeApiController.h"
 #import "RecipeListModel.h"
 
-@interface RecipeTableViewController () <UISearchBarDelegate>
+@interface RecipeTableViewController () <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, strong) NSArray *recipeArray;
 @property (nonatomic, strong) NSMutableArray *sectionTitles;
@@ -57,6 +57,7 @@ RecipeModel *selectedRecipe;
     [self.tableView registerNib:nib forCellReuseIdentifier:@"RecipeCustomCell"];
     
     self.searchSummary = [[SearchModel alloc]init];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -103,28 +104,26 @@ RecipeModel *selectedRecipe;
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     
-    [searchBar resignFirstResponder];
+   
     
     NSString *searchtext = recipeSearchBar.text;
     [self searchWithValue:searchtext];
+    [searchBar resignFirstResponder];
     NSLog(@"search Text %@", recipeSearchBar.text);
     NSLog(@"searchButton clicked");
+    self.searchDisplayController.active = NO;
     [self.tableView reloadData];
 
 }
 
-//
-//#pragma mark - UISearchDisplayController Delegate Methods
-//
-//- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-//{
-//    // Tells the table data source to reload when text changes
-//    [self filterContentForSearchText:searchString scope:
-//     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
-//    
-//    // Return YES to cause the search result table view to be reloaded.
-//    return YES;
-//}
+
+#pragma mark - UISearchDisplayController Delegate Methods
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
 //
 //
 //- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
@@ -298,20 +297,14 @@ RecipeModel *selectedRecipe;
 
 - (void) searchWithValue:(NSString*) param{
         
-//        HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-//        [HUD setMode:MBProgressHUDModeIndeterminate];
-//        [HUD setLabelText:@"searching"];
-//        [HUD show:YES];
+        HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [HUD setMode:MBProgressHUDModeIndeterminate];
+        [HUD setLabelText:@"searching"];
+        [HUD show:YES];
     
         [[RecipeApiController instanceShared] searchWithValue:param Page:nil SortBy:SortingByNon withBlock:^(SearchModel *response, NSError *error) {
             if (error==nil) {
                 if ([response count]!=nil) {
-                    NSUInteger count = [[response recipes] count];
-                    for (NSUInteger i = 0; i < count; ++i) {
-                        unsigned long nElements = count - i;
-                        unsigned long n = (arc4random() % nElements) + i;
-                        [[response recipes] exchangeObjectAtIndex:i withObjectAtIndex:n];
-                    }
                     self.searchSummary = response;
                     NSLog(@"Länge rückgabe array: %lu", (unsigned long)[[self.searchSummary recipes] count]);
                     [self.tableView reloadData];
@@ -327,9 +320,8 @@ RecipeModel *selectedRecipe;
                 [HUD hide:YES afterDelay:1];
             }
         }];
+    
+        [[[self searchDisplayController] searchResultsTableView] performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     }
-
-
-
 
 @end
