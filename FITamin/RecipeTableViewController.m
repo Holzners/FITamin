@@ -102,7 +102,7 @@ RecipeModel *selectedRecipe;
 //    NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
 //}
 
--(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+        }
     
    
     
