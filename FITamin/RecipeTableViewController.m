@@ -84,18 +84,6 @@ RecipeModel *selectedRecipe;
         } else if([scope isEqualToString:@"Low Carb"]){
             [self searchWithValue:@"low carb"];
 
-        }else if([scope isEqualToString:@"Quinoa"]){
-            [self searchWithValue:@"quinoa"];
-            
-        }else if([scope isEqualToString:@"Tuna"]){
-            [self searchWithValue:@"tuna"];
-            
-        }else if([scope isEqualToString:@"Oats"]){
-            [self searchWithValue:@"oats"];
-            
-        }else if([scope isEqualToString:@"Avocado"]){
-            [self searchWithValue:@"avocado"];
-            
         }
     
     
