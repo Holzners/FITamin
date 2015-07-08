@@ -647,6 +647,7 @@
 				TargetAttributes = {
 					D4DA7B371B28815D00440996 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = C7PLUFBAM2;
 					};
 					D4DA7B501B28815D00440996 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -996,6 +997,7 @@
 			baseConfigurationReference = 778406AD3732DDB7A2323C38 /* Pods-FITamin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/admin/Downloads/parse-starter-project-1/ParseStarterProject",
@@ -1014,6 +1016,7 @@
 			baseConfigurationReference = EEE53A2F2669ABAFC6AA89FE /* Pods-FITamin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/admin/Downloads/parse-starter-project-1/ParseStarterProject",
