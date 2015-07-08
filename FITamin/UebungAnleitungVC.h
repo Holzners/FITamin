@@ -26,7 +26,11 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *exerciseCounterLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnStart;
+
 @property (strong, nonatomic) PFObject  *currentExercise;
+
+@property (strong, nonatomic) NSString *strExerciseType;
 
 @property (nonatomic, retain) ExerciseCheckView *exerciseCheckView;
 

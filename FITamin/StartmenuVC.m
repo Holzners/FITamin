@@ -22,10 +22,6 @@
 
 - (void)viewDidLoad {
     
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"IchHabeMichEingeloggt"] = @"LogIN";
-    
-    [testObject saveInBackground];
     
     [super viewDidLoad];
     

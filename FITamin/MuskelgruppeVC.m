@@ -331,9 +331,17 @@ UIButton *button;
         }
     }
     
+    PFObject *workout = [PFObject objectWithClassName:@"Workout"];
+    workout[@"exercises"] = exercises;
+    
+    workout[@"title"] = [[NSString alloc] initWithFormat:@"%@ %@", [PFUser currentUser][@"username"], [exercises description]];
+    workout[@"user"] = [PFUser currentUser];
+    [workout save];
+    
     return exercises;
     
 }
+
 
 -(void)loadExerciseRessources:(PFObject *)exercise{
     //hier muss jetzt geprüft werden welche Ressource noch von
