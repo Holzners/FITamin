@@ -21,6 +21,7 @@
     NSMutableArray *locationPoints;
     NSMutableArray *locationDistances;
     Boolean distancesCalculated;
+    NSString *workoutFinished;
     
 }
 
@@ -28,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     distancesCalculated = false;
     
     //init Location Manager
@@ -52,6 +52,9 @@
     
     [_locationManager startUpdatingLocation];
     
+  
+    
+   
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -63,7 +66,17 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation,
                                                                        0.5*5000, 0.5*5000);
     [_mapView setRegion:viewRegion animated:YES];
-
+    
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if(workoutFinished){
+        [self performSegueWithIdentifier:workoutFinished sender:self];
+        NSLog(@"ID %@", workoutFinished);
+        workoutFinished = nil;
+        
+        // return;
+    }
     
 }
 
@@ -128,11 +141,17 @@
 
         //Die Route wurde noch nicht berechnet
         [self calculateInitialRoute];
+        // falls keine übungen gefunden werden gibts hier ne NPE
         
         //Das heißt die Route wurde berechnet, setze erstes Target an Stelle 0 im Location array
+        if([self.selectedLocationsWithDistancesAndExercises count]>0){
         _targetLocation = [[self.selectedLocationsWithDistancesAndExercises objectAtIndex:0]objectForKey:@"location"];
-        [self calculateRouteFromCurrentToDestination:_targetLocation];
-        [_mapView addAnnotations:[self createAnnotations:self.selectedLocationsWithDistancesAndExercises]];
+            
+            [self calculateRouteFromCurrentToDestination:_targetLocation];
+
+        }
+        
+                [_mapView addAnnotations:[self createAnnotations:self.selectedLocationsWithDistancesAndExercises]];
         distancesCalculated = true;
         
         }
@@ -176,7 +195,7 @@
         }
         
         //Finde Minimum Distanz aller Locations (tmpLocationDistance ist Array von Dictionarys)
-        [self sortByDistance:tmpLocationDistances];
+        
         
         NSLog(@"Next Distances: %d" , i);
         for(NSMutableDictionary *dict in tmpLocationDistances){
@@ -186,7 +205,8 @@
         
         
         //Füge jetzt diese Location zu Location-Exercise Array hinzu
-        [self.selectedLocationsWithDistancesAndExercises addObject:[tmpLocationDistances firstObject]];
+        [self.selectedLocationsWithDistancesAndExercises addObject:[
+            tmpLocationDistances objectAtIndex:[self getMinDistanceIndex:tmpLocationDistances]]];
         
         //Setze current Location auf den aktuellen berechneten Punkt um weiter zu rechnen
         tmpCurrentLoc = [PFGeoPoint geoPointWithLocation:[[tmpLocationDistances firstObject] objectForKey:@"location"]];
@@ -201,6 +221,19 @@
         NSLog(@"Distanz zur vorherigen %@" , dist);
     }
     
+}
+
+- (NSInteger) getMinDistanceIndex : (NSMutableArray*) array{
+    NSInteger result = 0;
+    NSNumber *maxVal = [NSNumber numberWithInt:INT16_MAX];
+   
+    for(NSMutableDictionary *dict in array){
+        if([dict objectForKey:@"distance"] < maxVal){
+            maxVal = [dict objectForKey:@"distance"];
+            result = [array indexOfObject:dict];
+        }
+    }
+    return result;
 }
 
 
@@ -343,24 +376,30 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    if([segue.identifier isEqual:@"mapToDescription"]){
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if (self.exercises != nil){
-        UebungAnleitungVC *dest = [segue destinationViewController];
-        dest.currentExercise = [_exercises objectAtIndex:_currentExercise];
+        if (self.exercises != nil){
+            UebungAnleitungVC *dest = [segue destinationViewController];
+            dest.currentExercise = [_exercises objectAtIndex:_currentExercise];
         
+        }
     }
+    else{
+        NSLog(@"Segue performed %@",segue.identifier);
+    }
+    
 }
 
 -(IBAction)simulateTargetReached:(id)sender {
     //Get next Location
-    _currentLocation = [self.selectedLocationsWithDistancesAndExercises objectAtIndex:_currentExercise];
+    
     
     if(_currentExercise >= [_exercises count]){
-         [self performSegueWithIdentifier:@"RouteToFinish" sender:self];
+         [self performSegueWithIdentifier:@"workoutFinished" sender:self];
     }
     else {
+        _currentLocation = [self.selectedLocationsWithDistancesAndExercises objectAtIndex:_currentExercise];
         [self performSegueWithIdentifier:@"mapToDescription" sender:self];
     }
     
@@ -369,25 +408,25 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
 
 -(IBAction)unwindToUebungRouteVC:(UIStoryboardSegue *)unwindSegue{
     
-    UIViewController* sourceViewController = unwindSegue.sourceViewController;
-    
     _currentExercise += 1;
     
+    
     if(_currentExercise >= [_exercises count]){
-     
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Workout Finished" message:[NSString stringWithFormat:@"%@", @"Well Done"] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-        [alert show];
+  //      unwindSegue.destinationViewController;
+        workoutFinished = @"workoutFinished";
+        [self.locationManager stopUpdatingLocation];
+    //    [targetReached setAlpha:0];
+    }else{
     
-        [targetReached setAlpha:0];
-        
-    }
-    
+       /** UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Workout Finished" message:[NSString stringWithFormat:@"%@", @"Well Done"] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+        [alert show]; */
+     UIViewController* sourceViewController = unwindSegue.sourceViewController;
     [_locationManager startUpdatingLocation];
     
     if ([sourceViewController isKindOfClass:[UebungAnleitungVC class]])
     {
         NSLog(@"Coming from UebungAnleitungVC!");
     }
-    
+    }
 }
 @end

@@ -12,14 +12,15 @@
 
 @import MediaPlayer;
 
-@interface UebungAnleitungVC : UIViewController{
+@interface UebungAnleitungVC : UIViewController <UIGestureRecognizerDelegate> {
 
     MPMoviePlayerController *moviePlayer;
     PFObject *currentExercise;
     NSTimer *timer;
-
+    bool blnPause;
 
 }
+@property (weak, nonatomic) IBOutlet UIView *videoView;
 
 @property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
 
@@ -27,13 +28,6 @@
 
 @property (strong, nonatomic) PFObject  *currentExercise;
 
-@property (weak, nonatomic) IBOutlet UIButton *confirmExercise;
-
 @property (nonatomic, retain) ExerciseCheckView *exerciseCheckView;
-
--(void)startTimer;
-
--(void)timerFired;
-
 
 @end

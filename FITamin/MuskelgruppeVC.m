@@ -21,6 +21,11 @@ UIButton *button;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Code um Beziehungen zu generieren (Standardmäßig auskommentiert)
+    //[self createRelations];
+    
+    
     self.confirmButton.enabled=false;
     self.muscles = [[NSMutableArray alloc] init];
     
@@ -344,5 +349,30 @@ UIButton *button;
     
 }
 
+-(void)createRelations{
+    
+    
+    PFQuery *query1 = [PFQuery queryWithClassName:@"Exercise"];
+    [query1 whereKey:@"title" equalTo:@"BodyWeightRow"];
+    PFObject *e1 = [query1 getFirstObject];
+    
+    //Dann erste Exercise holen, die auf diesen Muskeltyp zeigt
+    PFQuery *query = [PFQuery queryWithClassName:@"Location"];
+    [query whereKey:@"title" equalTo:@"l6"];
+    PFObject *l1 = [query getFirstObject];
+    
+    if(l1 != NULL && e1 != NULL){
+        
+        
+        PFRelation *relation = [l1 relationForKey:@"exercises"];
+        [relation addObject:e1];
+        
+        // now save the exercise object
+        [l1 save];
+    }
+
+    
+    
+}
 
 @end
