@@ -1,0 +1,153 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "08C-d9-vuE"; */
+"08C-d9-vuE.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "FitnessZutatenVC"; ObjectID = "290-XX-Ds5"; */
+"290-XX-Ds5.title" = "FitnessZutatenVC";
+
+/* Class = "UIButton"; normalTitle = "Back to menu"; ObjectID = "30u-4W-Zoa"; */
+"30u-4W-Zoa.normalTitle" = "Back to menu";
+
+/* Class = "UITabBarController"; title = "Startmenu"; ObjectID = "4Fq-bX-CD2"; */
+"4Fq-bX-CD2.title" = "Startmenu";
+
+/* Class = "UIViewController"; title = "ErnaehrungVC"; ObjectID = "6RS-UE-gOb"; */
+"6RS-UE-gOb.title" = "ErnaehrungVC";
+
+/* Class = "UINavigationItem"; title = "Deine Workouts"; ObjectID = "7mG-bD-P4s"; */
+"7mG-bD-P4s.title" = "Deine Workouts";
+
+/* Class = "UISearchBar"; placeholder = "Rezeptsuche"; ObjectID = "ABc-1v-pXD"; */
+"ABc-1v-pXD.placeholder" = "Rezeptsuche";
+
+/* Class = "UIButton"; normalTitle = "Fettverbrennung"; ObjectID = "AJu-fs-t9f"; */
+"AJu-fs-t9f.normalTitle" = "Fettverbrennung";
+
+/* Class = "UITabBarItem"; title = "Modus ändern"; ObjectID = "AnP-gk-pD1"; */
+"AnP-gk-pD1.title" = "Modus ändern";
+
+/* Class = "UIViewController"; title = "StartmenuVC"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "StartmenuVC";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "Ck5-6t-NMz"; */
+"Ck5-6t-NMz.normalTitle" = "NEXT";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FiJ-4V-3ct"; */
+"FiJ-4V-3ct.normalTitle" = "Button";
+
+/* Class = "UITextView"; text = "CONGRATULATIONS!\n"; ObjectID = "GGU-cR-imW"; */
+"GGU-cR-imW.text" = "CONGRATULATIONS!\n";
+
+/* Class = "UILabel"; text = "Gespeicherte Workouts"; ObjectID = "HWR-QS-HXE"; */
+"HWR-QS-HXE.text" = "Gespeicherte Workouts";
+
+/* Class = "UITabBarItem"; title = "Saved Workouts"; ObjectID = "I0t-fh-RXv"; */
+"I0t-fh-RXv.title" = "Saved Workouts";
+
+/* Class = "UIViewController"; title = "SavedWorkoutVC"; ObjectID = "Jne-Lq-nH9"; */
+"Jne-Lq-nH9.title" = "SavedWorkoutVC";
+
+/* Class = "UIButton"; normalTitle = "Back to Route"; ObjectID = "Lvd-Ha-W2e"; */
+"Lvd-Ha-W2e.normalTitle" = "Back to Route";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "M7h-uP-hiV"; */
+"M7h-uP-hiV.text" = "Title";
+
+/* Class = "UITextView"; text = "Text"; ObjectID = "MKA-U2-dni"; */
+"MKA-U2-dni.text" = "Text";
+
+/* Class = "UIButton"; normalTitle = "Rezepte für dein Workout"; ObjectID = "NG5-D4-4bT"; */
+"NG5-D4-4bT.normalTitle" = "Rezepte für dein Workout";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OEs-Pr-rKt"; */
+"OEs-Pr-rKt.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "UebungAnleitungVC"; ObjectID = "P5q-zc-nxY"; */
+"P5q-zc-nxY.title" = "UebungAnleitungVC";
+
+/* Class = "UIViewController"; title = "UebungRouteVC"; ObjectID = "RiL-f8-nGI"; */
+"RiL-f8-nGI.title" = "UebungRouteVC";
+
+/* Class = "UILabel"; text = "MessageBox"; ObjectID = "SJn-Id-bAK"; */
+"SJn-Id-bAK.text" = "MessageBox";
+
+/* Class = "UITabBarItem"; title = "Logout"; ObjectID = "Tvs-7o-DXv"; */
+"Tvs-7o-DXv.title" = "Logout";
+
+/* Class = "UIButton"; normalTitle = "Muskelaufbau"; ObjectID = "UWG-6E-Stv"; */
+"UWG-6E-Stv.normalTitle" = "Muskelaufbau";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Vbl-o2-we3"; */
+"Vbl-o2-we3.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Fettverbrennung"; ObjectID = "Vnk-hp-7cb"; */
+"Vnk-hp-7cb.normalTitle" = "Fettverbrennung";
+
+/* Class = "UILabel"; text = "Ingredients"; ObjectID = "VzC-LN-E8z"; */
+"VzC-LN-E8z.text" = "Ingredients";
+
+/* Class = "UITabBarItem"; title = "Neu"; ObjectID = "WAM-c5-7cO"; */
+"WAM-c5-7cO.title" = "Neu";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "btQ-ni-coN"; */
+"btQ-ni-coN.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Start"; ObjectID = "eGf-HD-JSe"; */
+"eGf-HD-JSe.title" = "Start";
+
+/* Class = "UITabBarItem"; title = "Ernährung"; ObjectID = "f5M-3W-C1x"; */
+"f5M-3W-C1x.title" = "Ernährung";
+
+/* Class = "UINavigationItem"; title = "Rezepte für Workout"; ObjectID = "hgY-sL-knc"; */
+"hgY-sL-knc.title" = "Rezepte für Workout";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kF3-SK-JY9"; */
+"kF3-SK-JY9.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Fitness Zutaten"; ObjectID = "ndv-FL-7XF"; */
+"ndv-FL-7XF.title" = "Fitness Zutaten";
+
+/* Class = "UILabel"; text = "Datum"; ObjectID = "okR-ne-vC4"; */
+"okR-ne-vC4.text" = "Datum";
+
+/* Class = "UIViewController"; title = "MuskelgruppeVC"; ObjectID = "osx-wA-ZOB"; */
+"osx-wA-ZOB.title" = "MuskelgruppeVC";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "owg-zb-RXJ"; */
+"owg-zb-RXJ.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "ChangeModusVC"; ObjectID = "psV-M1-5YD"; */
+"psV-M1-5YD.title" = "ChangeModusVC";
+
+/* Class = "UIViewController"; title = "LogoutVC"; ObjectID = "qyJ-fc-Jvb"; */
+"qyJ-fc-Jvb.title" = "LogoutVC";
+
+/* Class = "UIViewController"; title = "NeuWorkoutVC"; ObjectID = "sDG-GK-8S2"; */
+"sDG-GK-8S2.title" = "NeuWorkoutVC";
+
+/* Class = "UIButton"; normalTitle = "Target Reached"; ObjectID = "sKY-av-v5s"; */
+"sKY-av-v5s.normalTitle" = "Target Reached";
+
+/* Class = "UILabel"; text = "Workout 1"; ObjectID = "sZ1-Gh-6rS"; */
+"sZ1-Gh-6rS.text" = "Workout 1";
+
+/* Class = "UITableViewController"; title = "ZutatenTableViewController"; ObjectID = "srP-0G-kt4"; */
+"srP-0G-kt4.title" = "ZutatenTableViewController";
+
+/* Class = "UINavigationItem"; title = "Rezepte"; ObjectID = "tcZ-sg-IcH"; */
+"tcZ-sg-IcH.title" = "Rezepte";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "uMw-m0-LXn"; */
+"uMw-m0-LXn.normalTitle" = "Start";
+
+/* Class = "UIViewController"; title = "RezepteVC"; ObjectID = "uZu-7K-9cS"; */
+"uZu-7K-9cS.title" = "RezepteVC";
+
+/* Class = "UILabel"; text = "YOU DID IT!"; ObjectID = "vf5-vb-oxO"; */
+"vf5-vb-oxO.text" = "YOU DID IT!";
+
+/* Class = "UIButton"; normalTitle = "Take Photo"; ObjectID = "z3z-0Y-NQ5"; */
+"z3z-0Y-NQ5.normalTitle" = "Take Photo";
+
+/* Class = "UIButton"; normalTitle = "Muskelaufbau"; ObjectID = "z8x-Ts-0Nx"; */
+"z8x-Ts-0Nx.normalTitle" = "Muskelaufbau";
