@@ -101,8 +101,8 @@ RecipeModel *selectedRecipe;
 //    NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
 //}
 
-        }
-    
+        
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
     
     NSString *searchtext = recipeSearchBar.text;
