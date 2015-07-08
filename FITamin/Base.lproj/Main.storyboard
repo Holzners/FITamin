@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ndf-BK-YH0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1079,14 +1079,14 @@
                                     <segue destination="6pT-S4-rWR" kind="unwind" unwindAction="unwindToUebungRouteVC:" id="Teb-y4-8z4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MessageBox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJn-Id-bAK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MessageBox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJn-Id-bAK">
                                 <rect key="frame" x="201" y="436" width="200" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="P1k-Ur-fg6"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="h5E-Wu-qru"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" red="0.3200404053" green="1" blue="0.96470119769999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.12720954640000001" green="0.1882998776" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.3200404053" green="1" blue="0.96470119769999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1106,6 +1106,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnStart" destination="uMw-m0-LXn" id="Rj3-jT-z9V"/>
                         <outlet property="exerciseCounterLabel" destination="SJn-Id-bAK" id="lhn-uC-ezF"/>
                     </connections>
                 </viewController>

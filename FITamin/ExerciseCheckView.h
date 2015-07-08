@@ -11,6 +11,9 @@
 @interface ExerciseCheckView : UIView
 
 @property(nonatomic)int intNumberOfSets;
+
+@property(nonatomic)int intCurrentSet;
+
 @property(nonatomic, strong)NSMutableArray *colors;
 
 @end
