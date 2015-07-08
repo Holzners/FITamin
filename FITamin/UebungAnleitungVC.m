@@ -27,8 +27,8 @@ bool blnRecreation, blnWorkoutFinished;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    
-    //Load video and add Player
+    [self.btnTarget setAlpha:0];
+     //Load video and add Player
     PFFile *theFile = [currentExercise objectForKey:@"video"];
     NSLog(@"%@",theFile.url); // the .url property contains the URL for the file (video or otherwise)..
     NSURL *urlString = [NSURL URLWithString:theFile.url];
@@ -100,7 +100,7 @@ bool blnRecreation, blnWorkoutFinished;
     }
     
     [btnStart setAlpha:0];
-    
+    [self.btnTarget setAlpha:1];
 }
 
 

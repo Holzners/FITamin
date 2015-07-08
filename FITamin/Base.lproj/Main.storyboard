@@ -1208,6 +1208,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                     </view>
                     <connections>
                         <outlet property="btnStart" destination="uMw-m0-LXn" id="Rj3-jT-z9V"/>
+                        <outlet property="btnTarget" destination="Lvd-Ha-W2e" id="bqn-7B-f4e"/>
                         <outlet property="exerciseCounterLabel" destination="SJn-Id-bAK" id="lhn-uC-ezF"/>
                     </connections>
                 </viewController>
