@@ -767,7 +767,7 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" image="StartButton">
-                                    <color key="titleColor" patternImage="837B82ED-BB7D-43BE-A72F-4710797C272A" colorSpace="pattern"/>
+                                    <color key="titleColor" patternImage="8E69718D-353B-47CF-A6AC-941C22014F3D" colorSpace="pattern"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1100,15 +1100,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uMw-m0-LXn" firstAttribute="top" secondItem="SJn-Id-bAK" secondAttribute="bottom" constant="44" id="LE8-Bi-UHz"/>
-                            <constraint firstItem="Lvd-Ha-W2e" firstAttribute="leading" secondItem="bfO-9j-2sL" secondAttribute="leadingMargin" constant="9" id="UPD-4s-I1I"/>
-                            <constraint firstItem="uMw-m0-LXn" firstAttribute="baseline" secondItem="Lvd-Ha-W2e" secondAttribute="baseline" id="W5P-52-1tH"/>
-                            <constraint firstItem="uMw-m0-LXn" firstAttribute="leading" secondItem="bfO-9j-2sL" secondAttribute="leading" constant="277" id="Yci-mv-gq6"/>
-                            <constraint firstItem="aWo-nc-mbY" firstAttribute="top" secondItem="Lvd-Ha-W2e" secondAttribute="bottom" constant="21" id="ckU-st-kb9"/>
-                            <constraint firstItem="Oeu-M8-fqd" firstAttribute="top" secondItem="SJn-Id-bAK" secondAttribute="bottom" constant="8" symbolic="YES" id="d0D-GN-jte"/>
-                            <constraint firstItem="SJn-Id-bAK" firstAttribute="centerX" secondItem="bfO-9j-2sL" secondAttribute="centerX" id="eAO-0d-pZB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uMw-m0-LXn" secondAttribute="trailing" constant="9" id="ivX-5y-BPl"/>
-                            <constraint firstAttribute="centerX" secondItem="Oeu-M8-fqd" secondAttribute="centerX" id="v2o-o7-uyG"/>
+                            <constraint firstItem="aWo-nc-mbY" firstAttribute="top" secondItem="Lvd-Ha-W2e" secondAttribute="bottom" constant="51" id="9Ia-EF-tH0"/>
+                            <constraint firstItem="Lvd-Ha-W2e" firstAttribute="leading" secondItem="bfO-9j-2sL" secondAttribute="leadingMargin" constant="20" id="Q1c-nn-KGB"/>
+                            <constraint firstItem="aWo-nc-mbY" firstAttribute="top" secondItem="uMw-m0-LXn" secondAttribute="bottom" constant="51" id="Qz8-pj-faZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uMw-m0-LXn" secondAttribute="trailing" constant="20" id="Xn7-3C-Fx5"/>
+                            <constraint firstAttribute="centerY" secondItem="SJn-Id-bAK" secondAttribute="centerY" constant="-150" id="a4B-LC-ozQ"/>
+                            <constraint firstAttribute="centerX" secondItem="SJn-Id-bAK" secondAttribute="centerX" constant="-1" id="t3l-pm-CaX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -1284,7 +1281,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="837B82ED-BB7D-43BE-A72F-4710797C272A" width="256" height="256">
+        <image name="8E69718D-353B-47CF-A6AC-941C22014F3D" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
