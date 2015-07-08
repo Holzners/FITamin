@@ -36,8 +36,7 @@
     //For Push Notifications
     [Parse setApplicationId:@"29lF9eRw2DLXeAwOghJ2u73L1CHp5jFgDwCUKNM5" clientKey:@"4uVWMK5T0IR16CEavgb5ZeM5qxykU1KQyMxuqPEM"];
     
-    [application registerForRemoteNotificationsTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert |UIRemoteNotificationTypeSound];
-    
+   
     return YES;
 }
 
