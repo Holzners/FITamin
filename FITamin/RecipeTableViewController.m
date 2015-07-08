@@ -38,6 +38,7 @@ NSArray *recipeArray;
 NSDictionary *recDic;
 RecipeModel *selectedRecipe;
 @synthesize recipeSearchBar;
+@synthesize tableView;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -108,6 +109,7 @@ RecipeModel *selectedRecipe;
     [self searchWithValue:searchtext];
     NSLog(@"search Text %@", recipeSearchBar.text);
     NSLog(@"searchButton clicked");
+    [self.tableView reloadData];
 
 }
 

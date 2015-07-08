@@ -19,4 +19,6 @@
 
 @property(strong, nonatomic)SearchModel *searchSummary;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @end
