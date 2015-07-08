@@ -102,18 +102,15 @@ RecipeModel *selectedRecipe;
 //    NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
 //}
 
-        }
-    
-   
-    
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+
     NSString *searchtext = recipeSearchBar.text;
     [self searchWithValue:searchtext];
     [searchBar resignFirstResponder];
     NSLog(@"search Text %@", recipeSearchBar.text);
     NSLog(@"searchButton clicked");
-    self.searchDisplayController.active = NO;
+    [self.searchDisplayController setActive:NO animated:YES];
     [self.tableView reloadData];
-
 }
 
 
