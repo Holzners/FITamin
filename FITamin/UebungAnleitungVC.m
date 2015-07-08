@@ -18,29 +18,15 @@
 @synthesize currentExercise;
 @synthesize moviePlayer;
 @synthesize exerciseCounterLabel;
-
+@synthesize btnStart;
+@synthesize strExerciseType;
 
 int intExerciseSeconds, intRecreationSeconds, intTimerSeconds, intNumberOfSets,intNumberOfRepetitions, intSetCounter;
-bool blnRecreation;
+bool blnRecreation, blnWorkoutFinished;
 
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-
-    //Initialize TapRecognizer
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
-    tapGestureRecognizer.numberOfTapsRequired = 1;
-    [self.view addGestureRecognizer:tapGestureRecognizer];
-    tapGestureRecognizer.delegate = self;
-    
-    UILongPressGestureRecognizer *longPressGestureRecognize = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressFrom:)];
-    longPressGestureRecognize.minimumPressDuration = 1;
-    [self.view addGestureRecognizer:longPressGestureRecognize];
-    longPressGestureRecognize.delegate = self;
-    
-    //Announce current Exercise
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Current Exercise" message:[NSString stringWithFormat:@"%@/%@", @"Exercise Name:", currentExercise[@"title"]] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-        [alert show];
     
     //Load video and add Player
     PFFile *theFile = [currentExercise objectForKey:@"video"];
@@ -60,27 +46,50 @@ bool blnRecreation;
     intNumberOfSets = [currentExercise[@"set"] intValue];
     intExerciseSeconds = [currentExercise[@"duration"] intValue];
     intNumberOfRepetitions = [currentExercise[@"repetition"] intValue];
+    strExerciseType = [[NSString alloc ] initWithString:currentExercise[@"exerciseType"]];
     intRecreationSeconds = 10;
     intTimerSeconds = intRecreationSeconds;
     blnRecreation = YES;
+    blnWorkoutFinished = NO;
+    
+    //Initialize TapRecognizer
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:tapGestureRecognizer];
+    tapGestureRecognizer.delegate = self;
+    
+    //Initialize LongPressRecognizer
+    if([strExerciseType isEqualToString:@"rep"]){
+    
+        //Longpress wird nur aktiviert wenn es sich um repetition exercises handelt
+        UILongPressGestureRecognizer *longPressGestureRecognize = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressFrom:)];
+        longPressGestureRecognize.minimumPressDuration = 1;
+        [self.view addGestureRecognizer:longPressGestureRecognize];
+        longPressGestureRecognize.delegate = self;
+    
+    }
     
     //Create view and that contains Circles for each Set
-    CGRect bigRect = CGRectMake(0, 320, self.view.frame.size.width, 100);
+    CGRect bigRect = CGRectMake(0, moviePlayer.view.bounds.origin.y + moviePlayer.view.bounds.size.height + 50, self.view.frame.size.width, 100);
     self.exerciseCheckView = [[ExerciseCheckView alloc ] initWithFrame:bigRect];
     self.exerciseCheckView.intNumberOfSets = intNumberOfSets;
     self.exerciseCheckView.colors = [[NSMutableArray alloc]initWithCapacity:intNumberOfSets];
+    self.exerciseCheckView.intCurrentSet = 0;
     
     for(int i=0; i<intNumberOfSets; i++){
-        [self.exerciseCheckView.colors addObject:[[NSNumber alloc]initWithDouble:0.0]];
+        
+        //Für jeden Kreis wird ein Array mit den drei Farbendefinitionen angelegt -> initial [0.0,0.0,0.0] also weiss
+        NSArray *circle = [[NSArray alloc] initWithObjects:[[NSNumber alloc] initWithDouble:0.0],[[NSNumber alloc] initWithDouble:0.0],[[NSNumber alloc ]initWithDouble:1.0] ,nil];
+        [self.exerciseCheckView.colors addObject:circle];
     }
     
-    [self.exerciseCheckView setBackgroundColor:[UIColor blueColor]];
     [self.view addSubview:self.exerciseCheckView];
     
 }
 
 - (IBAction)startExercise:(id)sender {
-    if(intExerciseSeconds != 0){
+    
+    if([strExerciseType isEqualToString:@"dur"]){
         //duration-exercise
         [self startDurationExerciseTimer];
     }
@@ -90,6 +99,7 @@ bool blnRecreation;
         
     }
     
+    [btnStart setAlpha:0];
     
 }
 
@@ -118,7 +128,6 @@ bool blnRecreation;
         if(blnRecreation)
         {
             //Recreation -> Exercise
-            [self.view setBackgroundColor:[UIColor greenColor]];
             intTimerSeconds = intExerciseSeconds;
             blnRecreation = NO;
             
@@ -126,10 +135,13 @@ bool blnRecreation;
         else
         {
             //Exercise -> Recreation
-            [self.view setBackgroundColor:[UIColor blueColor]];
             intTimerSeconds = intRecreationSeconds;
             blnRecreation = YES;
-            [self.exerciseCheckView.colors replaceObjectAtIndex:intSetCounter withObject:[[NSNumber alloc]initWithDouble:1.0]];
+            
+            //Der Kreis der das Set repräsentiert wird schwarz eingefärbt
+            [self.exerciseCheckView.colors replaceObjectAtIndex:intSetCounter withObject:[[NSArray alloc]initWithObjects:[[NSNumber alloc]initWithDouble:0.0],[[NSNumber alloc]initWithDouble:0.0],[[NSNumber alloc]initWithDouble:1.0],nil]];
+            
+            self.exerciseCheckView.intCurrentSet = intSetCounter + 1;
             [self.exerciseCheckView setNeedsDisplay];
             intSetCounter += 1;
             }
@@ -141,6 +153,7 @@ bool blnRecreation;
         //Alle Sets durch -> Fertig
         [timer invalidate];
         intSetCounter = 0;
+        blnWorkoutFinished = YES;
         [exerciseCounterLabel setText:@"You're Done!"];
     }
 
@@ -159,7 +172,6 @@ bool blnRecreation;
         }
         else{
                 //Hier ist Exercise Phase ohne Timer
-                [self.view setBackgroundColor:[UIColor greenColor]];
                 [timer invalidate];
                 blnRecreation =  NO;
                 [exerciseCounterLabel setText:@"TRAIN!"];
@@ -171,6 +183,7 @@ bool blnRecreation;
         [timer invalidate];
         //Set counter wieder zurücksetzen
         intSetCounter = 0;
+         blnWorkoutFinished = YES;
         [exerciseCounterLabel setText:@"You're Done!"];
     }
     
@@ -185,9 +198,9 @@ bool blnRecreation;
 
 - (IBAction)confirmSingleExercise:(id)sender {
     
-    [self.view setBackgroundColor:[UIColor blueColor]];
     intTimerSeconds = intRecreationSeconds;
-    [self.exerciseCheckView.colors replaceObjectAtIndex:intSetCounter withObject:[[NSNumber alloc]initWithDouble:1.0]];
+    [self.exerciseCheckView.colors replaceObjectAtIndex:intSetCounter withObject:[[NSArray alloc]initWithObjects:[[NSNumber alloc]initWithDouble:0.0],[[NSNumber alloc]initWithDouble:0.0],[[NSNumber alloc]initWithDouble:1.0],nil]];
+    self.exerciseCheckView.intCurrentSet = intSetCounter +1;
     [self.exerciseCheckView setNeedsDisplay];
     intSetCounter += 1;
     timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(repetitionTimer) userInfo:nil repeats:YES];
@@ -196,7 +209,7 @@ bool blnRecreation;
 
 - (void) handleTapFrom: (UITapGestureRecognizer *)recognizer
 {
-    if (recognizer.state == UIGestureRecognizerStateEnded)
+    if (recognizer.state == UIGestureRecognizerStateEnded && !blnWorkoutFinished)
     {
         if(!blnPause){
         // User tapped screen -> Pause Exercise
@@ -204,7 +217,7 @@ bool blnRecreation;
         blnPause = true;
             
         }
-        else{
+        else if(timer != NULL){
             //User tapped screen again -> continue Exercise
             if(intExerciseSeconds != 0){
                 //duration-exercise
@@ -215,10 +228,10 @@ bool blnRecreation;
                 [self startRepetitionExerciseTimer];
                 
             }
+            
             blnPause = false;
 
         }
-        
     }
 }
 
@@ -231,16 +244,13 @@ bool blnRecreation;
         if(!blnRecreation){
             
             blnRecreation = YES;
-            
-            [self.view setBackgroundColor:[UIColor blueColor]];
             intTimerSeconds = intRecreationSeconds;
-            [self.exerciseCheckView.colors replaceObjectAtIndex:intSetCounter withObject:[[NSNumber alloc]initWithDouble:1.0]];
+            [self.exerciseCheckView.colors replaceObjectAtIndex:intSetCounter withObject:[[NSArray alloc]initWithObjects:[[NSNumber alloc]initWithDouble:0.0],[[NSNumber alloc]initWithDouble:0.0],[[NSNumber alloc]initWithDouble:1.0],nil]];
+            self.exerciseCheckView.intCurrentSet = intSetCounter +1;
             [self.exerciseCheckView setNeedsDisplay];
             intSetCounter += 1;
             timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(repetitionTimer) userInfo:nil repeats:YES];
             
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"LONG PRESS" message:[NSString stringWithFormat:@"%@/%@", @"LONG PRESS", @"LONG PRESS"] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-            [alert show];
             
         }
     }
