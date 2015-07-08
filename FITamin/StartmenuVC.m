@@ -51,25 +51,4 @@
     }
 }
 
-/*Programmatisches Erzeugen der View
-- (void) loadView{
-    CGRect frame = [[UIScreen mainScreen] bounds];
-    StartmenuView *startmenuView = [[StartmenuView alloc] initWithFrame: frame];
-    self.view = startmenuView;
-}
-
-//Benennung der Tabs
--(instancetype)init{
-    self = [super init];
-    if (self){
-        self.tabBarItem.title = @"Hier";
-    }
-    return self;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-*/
 @end

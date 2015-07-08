@@ -274,7 +274,15 @@ RecipeModel *selectedWorkoutRecipe;
     
     [[RecipeApiController instanceShared] searchWithValue:param Page:nil SortBy:SortingByNon withBlock:^(SearchModel *response, NSError *error) {
         if (error==nil) {
+
             if ([response count]!=nil) {
+                NSUInteger count = [[response recipes] count];
+                for (NSUInteger i = 0; i < count; ++i) {
+                    unsigned long nElements = count - i;
+                    unsigned long n = (arc4random() % nElements) + i;
+                    [[response recipes] exchangeObjectAtIndex:i withObjectAtIndex:n];
+                }
+                
                 self.searchSummary = response;
                 NSLog(@"searchSummary %@", self.searchSummary);
                 NSLog(@"Länge rückgabe array: %lu", (unsigned long)[[self.searchSummary recipes] count]);

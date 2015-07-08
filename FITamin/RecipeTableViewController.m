@@ -15,7 +15,7 @@
 #import "RecipeApiController.h"
 #import "RecipeListModel.h"
 
-@interface RecipeTableViewController () <UISearchDisplayDelegate, UISearchBarDelegate>
+@interface RecipeTableViewController () <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, strong) NSArray *recipeArray;
 @property (nonatomic, strong) NSMutableArray *sectionTitles;
@@ -25,7 +25,6 @@
 @property (strong, nonatomic) NSMutableArray *searchRecipeSectionTitles;
 @property (strong, nonatomic) NSDictionary *searchRecipeDict;
 
-@property (nonatomic, strong) UISearchBar *searchRecipeBar;
 @property (nonatomic, strong) UISearchController *searchRecipeController;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *searchRecipeButton;
@@ -39,6 +38,7 @@ NSArray *recipeArray;
 NSDictionary *recDic;
 RecipeModel *selectedRecipe;
 @synthesize recipeSearchBar;
+@synthesize tableView;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -57,6 +57,7 @@ RecipeModel *selectedRecipe;
     [self.tableView registerNib:nib forCellReuseIdentifier:@"RecipeCustomCell"];
     
     self.searchSummary = [[SearchModel alloc]init];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -70,63 +71,69 @@ RecipeModel *selectedRecipe;
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark Content Filtering
--(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
-    
-    [self searchWithValue:searchText];
-    
-    if(![scope isEqualToString:@"All"]){
 
-        if ([scope isEqualToString:@"Protein"]) {
-            NSLog(@"Protein");
-            // Further filter the array with the scope
-            [self searchWithValue:@"protein"];
-        } else if([scope isEqualToString:@"Low Carb"]){
-            [self searchWithValue:@"low carb"];
+//#pragma mark Content Filtering
+//-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
+//    
+//    [self searchWithValue:searchText];
+//    
+//    if ([scope isEqualToString:@"Protein"]) {
+//        NSLog(@"Protein");
+//        // Further filter the array with the scope
+//        [self searchWithValue:@"protein"];
+//    } else if([scope isEqualToString:@"Low Carb"]){
+//        [self searchWithValue:@"low carb"];
+//
+//    }else if([scope isEqualToString:@"Quinoa"]){
+//        [self searchWithValue:@"quinoa"];
+//        
+//    }else if([scope isEqualToString:@"Tuna"]){
+//        [self searchWithValue:@"tuna"];
+//        
+//    }else if([scope isEqualToString:@"Oats"]){
+//        [self searchWithValue:@"oats"];
+//        
+//    }else if([scope isEqualToString:@"Avocado"]){
+//        [self searchWithValue:@"avocado"];
+//        
+//    }
+//    
+//    
+//    NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
+//}
 
-        }else if([scope isEqualToString:@"Quinoa"]){
-            [self searchWithValue:@"quinoa"];
-            
-        }else if([scope isEqualToString:@"Tuna"]){
-            [self searchWithValue:@"tuna"];
-            
-        }else if([scope isEqualToString:@"Oats"]){
-            [self searchWithValue:@"oats"];
-            
-        }else if([scope isEqualToString:@"Avocado"]){
-            [self searchWithValue:@"avocado"];
-            
-        }
+        
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
     
-    
-    }
-    
-    NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
+    NSString *searchtext = recipeSearchBar.text;
+    [self searchWithValue:searchtext];
+    [searchBar resignFirstResponder];
+    NSLog(@"search Text %@", recipeSearchBar.text);
+    NSLog(@"searchButton clicked");
+    [self.searchDisplayController setActive:NO animated:YES];
+    [self.tableView reloadData];
 }
+
 
 #pragma mark - UISearchDisplayController Delegate Methods
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    // Tells the table data source to reload when text changes
-    [self filterContentForSearchText:searchString scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
-    
     // Return YES to cause the search result table view to be reloaded.
     return YES;
 }
-
-
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
-{
-    // Tells the table data source to reload when scope bar selection changes
-    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
-    
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
+//
+//
+//- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+//{
+//    // Tells the table data source to reload when scope bar selection changes
+//    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
+//     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+//    
+//    // Return YES to cause the search result table view to be reloaded.
+//    return YES;
+//}
 
 /**
 - (void)filterContentForSearchText: (NSString *) searchText
@@ -288,8 +295,7 @@ RecipeModel *selectedRecipe;
 }
 
 - (void) searchWithValue:(NSString*) param{
-    
-    NSLog(@"Sucht");
+        
         HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [HUD setMode:MBProgressHUDModeIndeterminate];
         [HUD setLabelText:@"searching"];
@@ -313,9 +319,8 @@ RecipeModel *selectedRecipe;
                 [HUD hide:YES afterDelay:1];
             }
         }];
+    
+        [[[self searchDisplayController] searchResultsTableView] performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     }
-
-
-
 
 @end
