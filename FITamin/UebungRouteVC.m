@@ -21,6 +21,7 @@
     NSMutableArray *locationPoints;
     NSMutableArray *locationDistances;
     Boolean distancesCalculated;
+    BOOL _workoutFinished;
     
 }
 
@@ -28,6 +29,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if(_workoutFinished){
+        _workoutFinished = NO;
+        [self performSegueWithIdentifier:@"workoutFinished" sender:self];
+        [self.locationManager stopUpdatingLocation];
+    }
+    
     
     distancesCalculated = false;
     
@@ -52,6 +60,9 @@
     
     [_locationManager startUpdatingLocation];
     
+    NSLog(@"ID %@", self);
+    
+   
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -64,6 +75,7 @@
                                                                        0.5*5000, 0.5*5000);
     [_mapView setRegion:viewRegion animated:YES];
 
+    
     
 }
 
@@ -128,11 +140,17 @@
 
         //Die Route wurde noch nicht berechnet
         [self calculateInitialRoute];
+        // falls keine übungen gefunden werden gibts hier ne NPE
         
         //Das heißt die Route wurde berechnet, setze erstes Target an Stelle 0 im Location array
+        if([self.selectedLocationsWithDistancesAndExercises count]>0){
         _targetLocation = [[self.selectedLocationsWithDistancesAndExercises objectAtIndex:0]objectForKey:@"location"];
-        [self calculateRouteFromCurrentToDestination:_targetLocation];
-        [_mapView addAnnotations:[self createAnnotations:self.selectedLocationsWithDistancesAndExercises]];
+            
+            [self calculateRouteFromCurrentToDestination:_targetLocation];
+
+        }
+        
+                [_mapView addAnnotations:[self createAnnotations:self.selectedLocationsWithDistancesAndExercises]];
         distancesCalculated = true;
         
         }
@@ -357,14 +375,19 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    if([segue.identifier isEqual:@"mapToDescription"]){
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if (self.exercises != nil){
-        UebungAnleitungVC *dest = [segue destinationViewController];
-        dest.currentExercise = [_exercises objectAtIndex:_currentExercise];
+        if (self.exercises != nil){
+            UebungAnleitungVC *dest = [segue destinationViewController];
+            dest.currentExercise = [_exercises objectAtIndex:_currentExercise];
         
+        }
     }
+    else{
+        NSLog(@"Log %@",segue.identifier);
+    }
+    
 }
 
 -(IBAction)simulateTargetReached:(id)sender {
@@ -383,28 +406,26 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
 
 -(IBAction)unwindToUebungRouteVC:(UIStoryboardSegue *)unwindSegue{
     
-    UIViewController* sourceViewController = unwindSegue.sourceViewController;
-    
     _currentExercise += 1;
     
+    
     if(_currentExercise >= [_exercises count]){
+  //      unwindSegue.destinationViewController;
+        _workoutFinished = YES;
+        [self.locationManager stopUpdatingLocation];
+       
         [targetReached setAlpha:0];
-        
-       [self performSegueWithIdentifier:@"workoutFinished" sender:self];
-       /**
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Workout Finished" message:[NSString stringWithFormat:@"%@", @"Well Done"] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+    }else{
+    
+       /** UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Workout Finished" message:[NSString stringWithFormat:@"%@", @"Well Done"] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
         [alert show]; */
-    
-        
-        
-    }
-    
+     UIViewController* sourceViewController = unwindSegue.sourceViewController;
     [_locationManager startUpdatingLocation];
     
     if ([sourceViewController isKindOfClass:[UebungAnleitungVC class]])
     {
         NSLog(@"Coming from UebungAnleitungVC!");
     }
-    
+    }
 }
 @end

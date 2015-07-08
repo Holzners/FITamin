@@ -27,8 +27,8 @@ NSMutableArray *lbls;
 
 -(void)viewDidLoad {
 
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Current Exercise" message:[NSString stringWithFormat:@"%@/%@", @"Exercise Name:", currentExercise[@"title"]] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-        [alert show];
+   /** UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Current Exercise" message:[NSString stringWithFormat:@"%@/%@", @"Exercise Name:", currentExercise[@"title"]] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+        [alert show]; */
     
     [self.view setBackgroundColor:[UIColor orangeColor]];
     
@@ -162,8 +162,8 @@ NSMutableArray *lbls;
 }
 
 - (IBAction)confirmExercise:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-    [alert show];
+   /* UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+    [alert show]; */
     
 }
 - (IBAction)confirmSingleExercise:(id)sender {
