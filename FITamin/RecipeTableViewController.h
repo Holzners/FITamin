@@ -15,6 +15,8 @@
     MBProgressHUD *HUD;
 }
 
+@property (weak, nonatomic) IBOutlet UISearchBar *recipeSearchBar;
+
 @property(strong, nonatomic)SearchModel *searchSummary;
 
 @end

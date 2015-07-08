@@ -39,6 +39,8 @@
 
 -(void)showRoute:(MKDirectionsResponse *)response;
 
+-(NSInteger)getMinDistanceIndex : (NSMutableArray*) array;
+
 -(void) sortByDistance:(NSMutableArray*)arrayToSort;
 
 -(void) calculateRouteFromCurrentToDestination:(CLLocation * ) destinationLocation;

@@ -178,8 +178,8 @@ bool blnRecreation;
 
 
 - (IBAction)confirmExercise:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-    [alert show];
+   /* UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+    [alert show]; */
     
 }
 

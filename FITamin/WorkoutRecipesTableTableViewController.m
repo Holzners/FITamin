@@ -36,7 +36,6 @@ WorkoutRecipeCustomCell *workoutRecipeCell;
 NSArray *workoutRecipeArray;
 NSDictionary *workoutRecDic;
 RecipeModel *selectedWorkoutRecipe;
-NSString *chosenMuscle;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -62,13 +61,19 @@ NSString *chosenMuscle;
     self.searchSummary = [[SearchModel alloc]init];
     workoutRecipeArray = [[NSArray alloc]init];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Muscle"];
+    PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
         if (!error) {
             
-            chosenMuscle = muscle[@"title"];
-            NSLog(@"Muskelgruppe: %@", chosenMuscle);
+            NSString *chosenMode = mode[@"title"];
+            NSLog(@"Muskelgruppe: %@", chosenMode);
+            if([chosenMode  isEqual: @"Muskelaufbau"]){
+                [self searchWithValue:@"Protein"];
+            } else if([chosenMode  isEqual: @"Fettverbrennung"]){
+                [self searchWithValue:@"Low Carb"];
+            }
+            
             
         } else {
             // Did not find any UserStats for the current user
@@ -77,7 +82,7 @@ NSString *chosenMuscle;
     }];
     
     
-    [self searchWithValue:@"rasperry"];
+    
 
 
 }
@@ -103,7 +108,7 @@ NSString *chosenMuscle;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSLog(@"Anzahl reihen: %lu" , (unsigned long)self.searchSummary.recipes.count);
-    return self.searchSummary.recipes.count;
+    return 10;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
@@ -271,6 +276,7 @@ NSString *chosenMuscle;
         if (error==nil) {
             if ([response count]!=nil) {
                 self.searchSummary = response;
+                NSLog(@"searchSummary %@", self.searchSummary);
                 NSLog(@"Länge rückgabe array: %lu", (unsigned long)[[self.searchSummary recipes] count]);
                 [self.tableView reloadData];
                 [HUD hide:YES];
