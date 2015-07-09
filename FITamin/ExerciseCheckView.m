@@ -25,7 +25,7 @@
     CGPoint firstCircleCenter = CGPointMake(bounds.origin.x + bounds.size.width/(intNumberOfSets+1),
                 bounds.origin.y + bounds.size.height/2);
     
-    float radius = hypot(bounds.size.width, bounds.size.height) / 12.0;
+    float radius = hypot(bounds.size.width, bounds.size.height) / 15.0;
     
     CGContextSetLineWidth(ctx, 5);
     

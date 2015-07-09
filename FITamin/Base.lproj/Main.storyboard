@@ -1200,8 +1200,6 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                             <constraint firstItem="Lvd-Ha-W2e" firstAttribute="leading" secondItem="bfO-9j-2sL" secondAttribute="leadingMargin" id="Q1c-nn-KGB"/>
                             <constraint firstItem="aWo-nc-mbY" firstAttribute="top" secondItem="uMw-m0-LXn" secondAttribute="bottom" constant="21" id="Qz8-pj-faZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uMw-m0-LXn" secondAttribute="trailing" constant="5" id="Xn7-3C-Fx5"/>
-                            <constraint firstAttribute="centerY" secondItem="SJn-Id-bAK" secondAttribute="centerY" constant="-150" id="a4B-LC-ozQ"/>
-                            <constraint firstAttribute="centerX" secondItem="SJn-Id-bAK" secondAttribute="centerX" constant="-1" id="t3l-pm-CaX"/>
                             <constraint firstItem="Lvd-Ha-W2e" firstAttribute="leading" secondItem="bfO-9j-2sL" secondAttribute="leadingMargin" constant="9" id="whf-nX-Jw9"/>
                         </constraints>
                         <variation key="default">
@@ -1213,7 +1211,6 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                     <connections>
                         <outlet property="btnStart" destination="uMw-m0-LXn" id="Rj3-jT-z9V"/>
                         <outlet property="btnTarget" destination="Lvd-Ha-W2e" id="bqn-7B-f4e"/>
-                        <outlet property="exerciseCounterLabel" destination="SJn-Id-bAK" id="lhn-uC-ezF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYP-OE-cAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1288,32 +1285,12 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
         <!--Deine Workouts-->
         <scene sceneID="xkE-fb-tPC">
             <objects>
-                <tableViewController id="5Nm-9x-vMw" sceneMemberID="viewController">
+                <tableViewController id="5Nm-9x-vMw" customClass="SavedWorkoutsTableVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5uz-Hi-RR8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="sZ1-Gh-6rS" detailTextLabel="okR-ne-vC4" style="IBUITableViewCellStyleSubtitle" id="ci8-Qh-8nG">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ci8-Qh-8nG" id="XD7-XM-10f">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Workout 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sZ1-Gh-6rS">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Datum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="okR-ne-vC4">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ihx-HL-DOj">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -1321,17 +1298,10 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gun-9G-xUW">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gun-9G-xUW" id="Ocu-9I-7yE">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="5Nm-9x-vMw" id="krh-i6-jVg"/>
-                            <outlet property="delegate" destination="5Nm-9x-vMw" id="ele-J2-C8a"/>
+                            <outlet property="dataSource" destination="5Nm-9x-vMw" id="lhw-7J-OOn"/>
+                            <outlet property="delegate" destination="5Nm-9x-vMw" id="a3q-5e-sHH"/>
                         </connections>
                     </tableView>
                     <toolbarItems/>
