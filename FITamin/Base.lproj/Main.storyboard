@@ -1341,9 +1341,11 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
         <image name="StartScreenFITamin" width="1339" height="1964"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6IJ-aM-La2"/>
         <segue reference="JDs-Wr-iew"/>
-        <segue reference="Hzs-WW-0LJ"/>
+        <segue reference="6IJ-aM-La2"/>
+        <segue reference="MEM-97-fmL"/>
+        <segue reference="q8W-Y5-gLL"/>
+        <segue reference="gF0-Hu-fC4"/>
         <segue reference="rF0-Cq-HR9"/>
         <segue reference="cft-Yp-lvk"/>
     </inferredMetricsTieBreakers>
