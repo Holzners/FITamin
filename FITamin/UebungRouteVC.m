@@ -382,7 +382,7 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
         if (self.exercises != nil){
             UebungAnleitungVC *dest = [segue destinationViewController];
             dest.currentExercise = [_exercises objectAtIndex:_currentExercise];
-        
+            dest.intSetCounter = 0;
         }
     }
     else{

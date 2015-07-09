@@ -34,4 +34,6 @@
 
 @property (nonatomic, retain) ExerciseCheckView *exerciseCheckView;
 
+@property (nonatomic) int intSetCounter;
+
 @end
