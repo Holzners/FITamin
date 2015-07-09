@@ -57,11 +57,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(workoutsLoad){
-         NSLog(@"Cells %d" ,[self.savedWorkouts count]);
         return [self.savedWorkouts count];
     }
-    
-    NSLog(@"Cells %d" ,0);
     return 0;
 }
 
@@ -77,10 +74,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    
     NSString *string =[self.savedWorkouts objectAtIndex:indexPath.item];
-    
-    NSLog(@"Title %@" ,string );
+
     
     [cell.textLabel setText:string];
     
