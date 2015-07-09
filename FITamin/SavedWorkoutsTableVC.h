@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface SavedWorkoutsTableVC : UITableViewController
 
+@property (weak, nonatomic) NSArray *savedWorkouts;
 @end

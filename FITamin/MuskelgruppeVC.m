@@ -331,10 +331,22 @@ UIButton *button;
         }
     }
     
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"d.M.yyyy";
+    NSString *string = [formatter stringFromDate:[NSDate date]];
+    
+    NSDate *now = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"hh:mm:ss";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    [string stringByAppendingString: [dateFormatter stringFromDate:now]];
+    
     PFObject *workout = [PFObject objectWithClassName:@"Workout"];
     workout[@"exercises"] = exercises;
     
-    workout[@"title"] = [[NSString alloc] initWithFormat:@"%@ %@", [PFUser currentUser][@"username"], [exercises description]];
+    workout[@"title"] = [[NSString alloc] initWithFormat: @" Workout from %@", string];
     workout[@"user"] = [PFUser currentUser];
     [workout save];
     
