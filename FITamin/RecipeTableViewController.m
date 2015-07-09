@@ -73,34 +73,21 @@ RecipeModel *selectedRecipe;
 
 
 //#pragma mark Content Filtering
-//-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
-//    
-//    [self searchWithValue:searchText];
-//    
-//    if ([scope isEqualToString:@"Protein"]) {
-//        NSLog(@"Protein");
-//        // Further filter the array with the scope
-//        [self searchWithValue:@"protein"];
-//    } else if([scope isEqualToString:@"Low Carb"]){
-//        [self searchWithValue:@"low carb"];
-//
-//    }else if([scope isEqualToString:@"Quinoa"]){
-//        [self searchWithValue:@"quinoa"];
-//        
-//    }else if([scope isEqualToString:@"Tuna"]){
-//        [self searchWithValue:@"tuna"];
-//        
-//    }else if([scope isEqualToString:@"Oats"]){
-//        [self searchWithValue:@"oats"];
-//        
-//    }else if([scope isEqualToString:@"Avocado"]){
-//        [self searchWithValue:@"avocado"];
-//        
-//    }
-//    
-//    
-//    NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
-//}
+-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
+        
+        if ([scope isEqualToString:@"Protein"]) {
+            NSLog(@"Protein");
+            // Further filter the array with the scope
+            [self searchWithValue:@"protein"];
+            [self.searchDisplayController setActive:NO animated:YES];
+        } else if([scope isEqualToString:@"Low Carb"]){
+            [self searchWithValue:@"low carb"];
+            [self.searchDisplayController setActive:NO animated:YES];
+        }
+    
+    
+    NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
+}
 
         
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
@@ -116,38 +103,20 @@ RecipeModel *selectedRecipe;
 }
 
 
-#pragma mark - UISearchDisplayController Delegate Methods
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
 {
+    // Tells the table data source to reload when scope bar selection changes
+    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    
     // Return YES to cause the search result table view to be reloaded.
     return YES;
-}
-//
-//
-//- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
-//{
-//    // Tells the table data source to reload when scope bar selection changes
-//    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
-//     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
-//    
-//    // Return YES to cause the search result table view to be reloaded.
-//    return YES;
-//}
-
-/**
-- (void)filterContentForSearchText: (NSString *) searchText
-{
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@", searchText];
-    self.searchRecipeArray = [self.recipeArray filteredArrayUsingPredicate:resultPredicate];
-    self.searchRecipeDict = [self dictionaryAusArray:self.searchRecipeArray];
 }
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    [self filterContentForSearchText:searchString];
     return YES;
-}*/
+}
 
 
 #pragma mark - Table view data source

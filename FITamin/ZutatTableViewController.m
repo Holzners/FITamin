@@ -1,18 +1,18 @@
 //
-//  CountiesTableTableViewController.m
+//  ZutatTableTableViewController.m
 //  FITamin
 //
 //  Created by admin on 20.06.15.
 //  Copyright (c) 2015 iOS-Praktikum. All rights reserved.
 //
 
-#import "CountiesTableViewController.h"
+#import "ZutatTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "CustomCell.h"
 #import "DetailsViewController.h"
-#import "Datahandler.h"
+#import "DataPlist.h"
 
-@interface CountiesTableViewController () <UISearchDisplayDelegate, UISearchBarDelegate>
+@interface ZutatTableViewController () <UISearchDisplayDelegate, UISearchBarDelegate>
 
 @property (nonatomic, strong) NSArray *zutatenArray;
 @property (nonatomic, strong) NSMutableArray *sectionTitles;
@@ -31,7 +31,7 @@
 
 @end
 
-@implementation CountiesTableViewController
+@implementation ZutatTableViewController
 
 CustomCell *cell;
 NSArray *zutatenArray;
@@ -204,7 +204,7 @@ NSDictionary *zutDic;
 {
     [super viewWillAppear:animated];
     
-    self.zutatenArray = [Datahandler loadData];
+    self.zutatenArray = [DataPlist loadData];
     self.zutatenDictionary = [self dictionaryAusArray:self.zutatenArray];
     [self.tableView reloadData];
 }
@@ -313,9 +313,6 @@ NSDictionary *zutDic;
     UIColor *colorTwo = [UIColor colorWithRed:(57/255.0)  green:(79/255.0)  blue:(96/255.0)  alpha:1.0];
     
     // Farben für Farbverlauf
-//    UIColor *whiteColor = [UIColor whiteColor];
-//    UIColor *darkGreyColor = [UIColor colorWithRed:255.0/255.0 green:230.0/255.0 blue:255.0/255.0 alpha:1.0];
-//    
     CAGradientLayer *farbverlauf = [CAGradientLayer layer];
     
     farbverlauf.frame = cell.bounds;
@@ -324,11 +321,6 @@ NSDictionary *zutDic;
     UIView *background = [[UIView alloc] initWithFrame:cell.bounds];
     [background.layer insertSublayer:farbverlauf atIndex:0];
     cell.backgroundView = background;
-    
-  //  cell.zutatenImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
-// cell.zutatenImageView.layer.borderWidth = 1;
-   // cell.zutatenImageView.layer.cornerRadius = 5;
-  //  cell.zutatenImageView.clipsToBounds = YES;
     
     cell.zutatenNameLabel.text = array[indexPath.row];
     NSString *imageString = [array[indexPath.row] stringByReplacingOccurrencesOfString:@"ü" withString:@"ue"];
@@ -488,13 +480,6 @@ NSDictionary *zutDic;
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"detailsSegue"]) {
-//        
-//        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//        DetailsViewController *destVC = segue.destinationViewController;
-//        destVC.zutat = [zutatenArray objectAtIndex:indexPath.row];
-//        
-//        NSLog(@"ZutatenDic4: %@", indexPath);
-//        NSLog(@"ZutatenDic4: %@", cell);
         
         DetailsViewController *dvc = segue.destinationViewController;
         

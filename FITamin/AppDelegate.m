@@ -8,7 +8,7 @@
 #import <Parse/Parse.h>
 
 #import "AppDelegate.h"
-#import "Datahandler.h"
+#import "DataPlist.h"
 
 @interface AppDelegate ()
 
@@ -31,7 +31,7 @@
         // [Optional] Track statistics around application opens.
         [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-        [Datahandler createFile];
+        [DataPlist createFile];
     // Register for Push Notitications
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                     UIUserNotificationTypeBadge |
