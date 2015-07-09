@@ -949,8 +949,8 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                                     <action selector="chooseArms:" destination="osx-wA-ZOB" eventType="touchUpInside" id="Fkw-Yt-yH5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-d5-AJF">
-                                <rect key="frame" x="385" y="481" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-d5-AJF">
+                                <rect key="frame" x="385" y="530" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="C3i-MR-oZa"/>
                                     <constraint firstAttribute="width" constant="50" id="OlC-I7-nYy"/>
@@ -1164,21 +1164,6 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                                     <segue destination="6pT-S4-rWR" kind="unwind" unwindAction="unwindToUebungRouteVC:" id="Teb-y4-8z4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MessageBox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJn-Id-bAK">
-                                <rect key="frame" x="201" y="436" width="200" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="P1k-Ur-fg6"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="h5E-Wu-qru"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" red="0.12720954640000001" green="0.1882998776" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.3200404053" green="1" blue="0.96470119769999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="h5E-Wu-qru"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-m0-LXn">
                                 <rect key="frame" x="479" y="476" width="100" height="54"/>
                                 <constraints>
@@ -1199,8 +1184,6 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                             <constraint firstItem="Lvd-Ha-W2e" firstAttribute="leading" secondItem="bfO-9j-2sL" secondAttribute="leadingMargin" id="Q1c-nn-KGB"/>
                             <constraint firstItem="aWo-nc-mbY" firstAttribute="top" secondItem="uMw-m0-LXn" secondAttribute="bottom" constant="21" id="Qz8-pj-faZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uMw-m0-LXn" secondAttribute="trailing" constant="5" id="Xn7-3C-Fx5"/>
-                            <constraint firstAttribute="centerY" secondItem="SJn-Id-bAK" secondAttribute="centerY" constant="-150" id="a4B-LC-ozQ"/>
-                            <constraint firstAttribute="centerX" secondItem="SJn-Id-bAK" secondAttribute="centerX" constant="-1" id="t3l-pm-CaX"/>
                             <constraint firstItem="Lvd-Ha-W2e" firstAttribute="leading" secondItem="bfO-9j-2sL" secondAttribute="leadingMargin" constant="9" id="whf-nX-Jw9"/>
                         </constraints>
                         <variation key="default">
@@ -1212,7 +1195,6 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                     <connections>
                         <outlet property="btnStart" destination="uMw-m0-LXn" id="Rj3-jT-z9V"/>
                         <outlet property="btnTarget" destination="Lvd-Ha-W2e" id="bqn-7B-f4e"/>
-                        <outlet property="exerciseCounterLabel" destination="SJn-Id-bAK" id="lhn-uC-ezF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYP-OE-cAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
