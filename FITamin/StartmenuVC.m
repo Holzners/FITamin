@@ -68,9 +68,7 @@
         if([viewController.title  isEqual: @"LogoutVC"]){
         
             [self dismissViewControllerAnimated:YES completion:NULL];
-            LogInVC *livc = [LogInVC new];
-            [livc logOutUser];
-            [self.navigationController popToViewController:livc animated:YES];
+            [PFUser logOut];
             }
     }
 }
