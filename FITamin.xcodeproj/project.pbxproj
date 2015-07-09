@@ -65,8 +65,6 @@
 		D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F790D0E21B31B5B50092654E /* Images.xcassets */; };
 		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
 		D47374011B4E866C00208785 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A31B41861D00AFE817 /* LogoutVC.m */; };
-		D473740F1B4E8E6200208785 /* SavedWorkoutsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D473740E1B4E8E6200208785 /* SavedWorkoutsCell.xib */; };
-		D47374121B4E8ED400208785 /* SavedWorkoutsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D47374111B4E8ED400208785 /* SavedWorkoutsCell.m */; };
 		D475D1F41B3F1947008D046B /* RecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F31B3F1947008D046B /* RecipeModel.m */; };
 		D475D1F71B3F1956008D046B /* RecipeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F61B3F1956008D046B /* RecipeListModel.m */; };
 		D475D1FA1B3F1962008D046B /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F91B3F1962008D046B /* SearchModel.m */; };
@@ -274,9 +272,6 @@
 		84F283651B4E83CB004A58D6 /* LogInVCDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInVCDetail.m; sourceTree = "<group>"; };
 		D2F76DA9E59A064428B161FC /* libPods-FITamin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FITamin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		D473740E1B4E8E6200208785 /* SavedWorkoutsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedWorkoutsCell.xib; sourceTree = "<group>"; };
-		D47374101B4E8ED400208785 /* SavedWorkoutsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedWorkoutsCell.h; sourceTree = "<group>"; };
-		D47374111B4E8ED400208785 /* SavedWorkoutsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedWorkoutsCell.m; sourceTree = "<group>"; };
 		D475D1F21B3F1947008D046B /* RecipeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeModel.h; sourceTree = "<group>"; };
 		D475D1F31B3F1947008D046B /* RecipeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeModel.m; sourceTree = "<group>"; };
 		D475D1F51B3F1956008D046B /* RecipeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeListModel.h; sourceTree = "<group>"; };
@@ -367,7 +362,6 @@
 			isa = PBXGroup;
 			children = (
 				84DC36E11B35845D00A94CBA /* CustomCell.xib */,
-				D473740E1B4E8E6200208785 /* SavedWorkoutsCell.xib */,
 				84575BB81B3EC176006C298D /* RecipeCustomCell.xib */,
 				F76F16681B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib */,
 			);
@@ -457,8 +451,6 @@
 			children = (
 				840F04A51B41C25800AFE817 /* SavedWorkoutsTableVC.h */,
 				840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */,
-				D47374101B4E8ED400208785 /* SavedWorkoutsCell.h */,
-				D47374111B4E8ED400208785 /* SavedWorkoutsCell.m */,
 			);
 			name = SavedWorkouts;
 			sourceTree = "<group>";
@@ -804,7 +796,6 @@
 				844AF5B71B3206AE00353B6B /* Info.plist in Resources */,
 				F76F16691B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib in Resources */,
 				84DC36E21B35845D00A94CBA /* CustomCell.xib in Resources */,
-				D473740F1B4E8E6200208785 /* SavedWorkoutsCell.xib in Resources */,
 				84575BB91B3EC176006C298D /* RecipeCustomCell.xib in Resources */,
 				844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */,
 				8441B9401B3AD1CF008698B4 /* data.plist in Resources */,
@@ -873,7 +864,6 @@
 				84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */,
 				846311181B43D935006DD69F /* ExerciseCheckView.m in Sources */,
 				849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */,
-				D47374121B4E8ED400208785 /* SavedWorkoutsCell.m in Sources */,
 				849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */,
 				D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */,
 				84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */,

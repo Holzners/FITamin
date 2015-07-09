@@ -68,21 +68,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"SavedWorkoutsCell";
+    static NSString *CellIdentifier = @"WorkoutCell";
     
-    SavedWorkoutsCell *cell;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (tableView == self.tableView) {
-        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    } else {
-        cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
     
     NSString *string =[self.savedWorkouts objectAtIndex:indexPath.item];
     
     NSLog(@"Title %@" ,string );
     
-    [cell.nameTextLabel setText:string];
+    [cell.textLabel setText:string];
     
     return cell;
 }
