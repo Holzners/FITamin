@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self performSegueWithIdentifier:@"backToLogIn" sender:self]
+    [self performSegueWithIdentifier:@"backToLogIn" sender:self];
     // Do any additional setup after loading the view.
 }
 
