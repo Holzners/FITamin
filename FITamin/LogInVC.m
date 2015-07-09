@@ -26,6 +26,10 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    UILabel *name;
+    name.text = @"FITamin";
+    
+    
     if([PFUser currentUser] != nil)
     {
        // [PFUser logOut];

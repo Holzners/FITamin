@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bL2-KO-qKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1865" y="-769"/>
+            <point key="canvasLocation" x="-1907" y="-759"/>
         </scene>
         <!--ImpressumVC-->
         <scene sceneID="8ui-a1-XPZ">
@@ -146,7 +146,7 @@
                                     <constraint firstAttribute="height" constant="400" id="l5A-tE-zbx"/>
                                     <constraint firstAttribute="width" constant="400" id="q1j-DC-Eeq"/>
                                 </constraints>
-                                <string key="text">Diese App wurde von Stephan Holzner, Nora Unterbruner, Julia Kinshofer und Kyrill im IOS Praktikum des Lehrstuhls Mobile und Verteilte Systeme an der LMU München im Sommersemester 2015 entwickelt. 
+                                <string key="text">Diese App wurde von Stephan Holzner, Nora Unterbruner, Julia Kinshofer und Kyrill Schmidt im IOS Praktikum des Lehrstuhls Mobile und Verteilte Systeme an der LMU München im Sommersemester 2015 entwickelt. 
 
 Die Informationen zu den Zutatenbeschreibungen stammen aus den Büchern "Der LOGI Muskelcoach" (Dr. Torsten Albers, Dr. Nicolai Worm und Kirsten Segler und "Das Women's Health Workout ohne Geräte "(Martina Steinbach).
 
@@ -191,10 +191,13 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Logout" id="Tvs-7o-DXv"/>
+                    <connections>
+                        <segue destination="ndf-BK-YH0" kind="show" identifier="backToLogIn" id="o6K-T0-Qm4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6YQ-ng-lYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1806" y="498"/>
+            <point key="canvasLocation" x="-1818" y="750"/>
         </scene>
         <!--Startmenu-->
         <scene sceneID="57p-MJ-mko">
@@ -533,7 +536,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
         <!--ZutatenTableViewController-->
         <scene sceneID="6v2-3f-dTr">
             <objects>
-                <tableViewController title="ZutatenTableViewController" id="srP-0G-kt4" customClass="CountiesTableViewController" sceneMemberID="viewController">
+                <tableViewController title="ZutatenTableViewController" id="srP-0G-kt4" customClass="ZutatenTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZdO-yB-1oS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1404,11 +1407,11 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
         <image name="StartScreenFITamin" width="1339" height="1964"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="gF0-Hu-fC4"/>
+        <segue reference="MEM-97-fmL"/>
         <segue reference="JDs-Wr-iew"/>
         <segue reference="6IJ-aM-La2"/>
-        <segue reference="MEM-97-fmL"/>
-        <segue reference="gF0-Hu-fC4"/>
+        <segue reference="q8W-Y5-gLL"/>
         <segue reference="rF0-Cq-HR9"/>
-        <segue reference="eP9-vX-fVy"/>
     </inferredMetricsTieBreakers>
 </document>
