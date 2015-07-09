@@ -37,5 +37,6 @@
 @property (nonatomic, retain) ExerciseCheckView *exerciseCheckView;
 
 @property (nonatomic) int intSetCounter;
+@property (weak, nonatomic) IBOutlet UIButton *btnTest;
 
 @end
