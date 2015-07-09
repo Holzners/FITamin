@@ -11,5 +11,5 @@
 
 @interface SavedWorkoutsTableVC : UITableViewController
 
-@property (weak, nonatomic) NSArray *savedWorkouts;
+@property (strong, nonatomic) NSMutableArray *savedWorkouts;
 @end
