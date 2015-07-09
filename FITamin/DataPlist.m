@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 iOS-Praktikum. All rights reserved.
 //
 
-#import "Datahandler.h"
+#import "DataPlist.h"
 
-@implementation Datahandler
+@implementation DataPlist
 
 
 +(NSString*)getFilePath
 {
+    //Pfad zu data.plist bauen
     NSString *documentsPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
     return [documentsPath stringByAppendingPathComponent:@"data.plist"];
-    //mit listArray einen anderen Pfad bauen -> es sucht im falschen Verzeichnis und holt sich somit das falsche File
     
 }
 
@@ -29,7 +29,7 @@
         
         NSError *error = nil;
         
-        NSString *filePath = [Datahandler getFilePath];
+        NSString *filePath = [DataPlist getFilePath];
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
         
@@ -41,19 +41,19 @@
             [userDefaults setObject:[NSNumber numberWithBool:NO] forKey:@"firstRun"];
             [userDefaults synchronize];
         } else {
-            NSLog(@"Fehler beim Erstellen der Plist aufgetreten: %@", error.localizedDescription);
+            NSLog(@"Fehler: %@", error.localizedDescription);
         }
     }
 }
 
 +(NSArray *)loadData
 {
-    return [NSArray arrayWithContentsOfFile:[Datahandler getFilePath]];
+    return [NSArray arrayWithContentsOfFile:[DataPlist getFilePath]];
 }
 
 +(BOOL)saveData:(NSArray *)array
 {
-    if (![array writeToFile:[Datahandler getFilePath] atomically:YES]) {
+    if (![array writeToFile:[DataPlist getFilePath] atomically:YES]) {
         return NO;
     }
     return YES;

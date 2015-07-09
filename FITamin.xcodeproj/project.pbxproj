@@ -54,12 +54,13 @@
 		84CD91B91B2C30AB00B1AAD5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91B71B2C30AB00B1AAD5 /* SystemConfiguration.framework */; };
 		84CD91BB1B2C30D100B1AAD5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91BA1B2C30D100B1AAD5 /* libz.dylib */; };
 		84CD91BD1B2C30FC00B1AAD5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD91BC1B2C30FC00B1AAD5 /* libsqlite3.dylib */; };
-		84DC36D11B35805600A94CBA /* Datahandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D01B35805600A94CBA /* Datahandler.m */; };
+		84DC36D11B35805600A94CBA /* DataPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D01B35805600A94CBA /* DataPlist.m */; };
 		84DC36D41B3580A000A94CBA /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D31B3580A000A94CBA /* CustomCell.m */; };
 		84DC36D71B35815800A94CBA /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D61B35815800A94CBA /* DetailsViewController.m */; };
-		84DC36DA1B35819B00A94CBA /* CountiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */; };
+		84DC36DA1B35819B00A94CBA /* ZutatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC36D91B35819B00A94CBA /* ZutatTableViewController.m */; };
 		84DC36E21B35845D00A94CBA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E11B35845D00A94CBA /* CustomCell.xib */; };
 		84DC36E71B35A88B00A94CBA /* mywanderingheart.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */; };
+		84F283661B4E83CB004A58D6 /* LogInVCDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F283651B4E83CB004A58D6 /* LogInVCDetail.m */; };
 		B9F47C3697E9FF05607928C2 /* libPods-FITamin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F76DA9E59A064428B161FC /* libPods-FITamin.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F790D0E21B31B5B50092654E /* Images.xcassets */; };
 		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
@@ -256,16 +257,18 @@
 		84CD91B71B2C30AB00B1AAD5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		84CD91BA1B2C30D100B1AAD5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		84CD91BC1B2C30FC00B1AAD5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		84DC36CF1B35805600A94CBA /* Datahandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datahandler.h; sourceTree = "<group>"; };
-		84DC36D01B35805600A94CBA /* Datahandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Datahandler.m; sourceTree = "<group>"; };
+		84DC36CF1B35805600A94CBA /* DataPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPlist.h; sourceTree = "<group>"; };
+		84DC36D01B35805600A94CBA /* DataPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPlist.m; sourceTree = "<group>"; };
 		84DC36D21B3580A000A94CBA /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		84DC36D31B3580A000A94CBA /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		84DC36D51B35815800A94CBA /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		84DC36D61B35815800A94CBA /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
-		84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountiesTableViewController.m; sourceTree = "<group>"; };
+		84DC36D91B35819B00A94CBA /* ZutatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZutatTableViewController.m; sourceTree = "<group>"; };
 		84DC36E11B35845D00A94CBA /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCell.xib; path = FITamin.xcodeproj/../CustomCell.xib; sourceTree = SOURCE_ROOT; };
-		84DC36E31B35866C00A94CBA /* CountiesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountiesTableViewController.h; sourceTree = "<group>"; };
+		84DC36E31B35866C00A94CBA /* ZutatTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZutatTableViewController.h; sourceTree = "<group>"; };
 		84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mywanderingheart.ttf; sourceTree = "<group>"; };
+		84F283641B4E83CB004A58D6 /* LogInVCDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInVCDetail.h; sourceTree = "<group>"; };
+		84F283651B4E83CB004A58D6 /* LogInVCDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInVCDetail.m; sourceTree = "<group>"; };
 		D2F76DA9E59A064428B161FC /* libPods-FITamin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FITamin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D475D1F21B3F1947008D046B /* RecipeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeModel.h; sourceTree = "<group>"; };
@@ -367,16 +370,16 @@
 		844AF5B81B3207FF00353B6B /* FitnessZutaten */ = {
 			isa = PBXGroup;
 			children = (
-				84DC36D91B35819B00A94CBA /* CountiesTableViewController.m */,
-				84DC36E31B35866C00A94CBA /* CountiesTableViewController.h */,
+				84DC36D91B35819B00A94CBA /* ZutatTableViewController.m */,
+				84DC36E31B35866C00A94CBA /* ZutatTableViewController.h */,
 				8441B9411B3AD4CF008698B4 /* Zutat.h */,
 				8441B9421B3AD4CF008698B4 /* Zutat.m */,
 				84DC36D51B35815800A94CBA /* DetailsViewController.h */,
 				84DC36D61B35815800A94CBA /* DetailsViewController.m */,
 				84DC36D21B3580A000A94CBA /* CustomCell.h */,
 				84DC36D31B3580A000A94CBA /* CustomCell.m */,
-				84DC36CF1B35805600A94CBA /* Datahandler.h */,
-				84DC36D01B35805600A94CBA /* Datahandler.m */,
+				84DC36CF1B35805600A94CBA /* DataPlist.h */,
+				84DC36D01B35805600A94CBA /* DataPlist.m */,
 			);
 			name = FitnessZutaten;
 			sourceTree = "<group>";
@@ -490,6 +493,8 @@
 				84567A381B2EE92E0062E0D6 /* StartmenuView.m */,
 				845BDB621B3013ED00F6C7B3 /* LogInVC.h */,
 				845BDB601B3013B000F6C7B3 /* LogInVC.m */,
+				84F283641B4E83CB004A58D6 /* LogInVCDetail.h */,
+				84F283651B4E83CB004A58D6 /* LogInVCDetail.m */,
 				84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */,
 				84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */,
 				849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */,
@@ -859,11 +864,12 @@
 				849689A71B2C4BC10000CAE2 /* SavedWorkoutsVC.m in Sources */,
 				8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */,
 				84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */,
-				84DC36D11B35805600A94CBA /* Datahandler.m in Sources */,
+				84DC36D11B35805600A94CBA /* DataPlist.m in Sources */,
 				84575BB71B3EBF65006C298D /* RecipeCustomCell.m in Sources */,
 				840F04A71B41C25800AFE817 /* SavedWorkoutsTableVC.m in Sources */,
 				849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */,
 				D475D1F41B3F1947008D046B /* RecipeModel.m in Sources */,
+				84F283661B4E83CB004A58D6 /* LogInVCDetail.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
 				D475D1F71B3F1956008D046B /* RecipeListModel.m in Sources */,
 				84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */,
@@ -871,7 +877,7 @@
 				842FCA5C1B493E380038D1CF /* Quicksort.m in Sources */,
 				84575BB41B3EBE42006C298D /* RecipeTableViewController.m in Sources */,
 				D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */,
-				84DC36DA1B35819B00A94CBA /* CountiesTableViewController.m in Sources */,
+				84DC36DA1B35819B00A94CBA /* ZutatTableViewController.m in Sources */,
 				D4DA7B3E1B28815D00440996 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
