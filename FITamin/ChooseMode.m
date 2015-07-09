@@ -20,15 +20,6 @@
 - (void)viewWillAppear:(BOOL)animated {
      [super viewWillAppear:animated];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
-    [query whereKey:@"user" equalTo:[PFUser currentUser]];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
-        if (!error) {
-            [self performSegueWithIdentifier:@"StartScreenSegue" sender:self];
-        } else {
-        }
-    }];
-    
 }
 
 - (void)didReceiveMemoryWarning {
