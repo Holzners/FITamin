@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Datahandler : NSObject
+@interface DataPlist : NSObject
+
 +(void)createFile;
+
 +(NSArray *)loadData;
+
 +(BOOL)saveData:(NSArray *)array;
+
 @end
