@@ -62,6 +62,7 @@
 		B9F47C3697E9FF05607928C2 /* libPods-FITamin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F76DA9E59A064428B161FC /* libPods-FITamin.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F790D0E21B31B5B50092654E /* Images.xcassets */; };
 		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
+		D47374011B4E866C00208785 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A31B41861D00AFE817 /* LogoutVC.m */; };
 		D475D1F41B3F1947008D046B /* RecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F31B3F1947008D046B /* RecipeModel.m */; };
 		D475D1F71B3F1956008D046B /* RecipeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F61B3F1956008D046B /* RecipeListModel.m */; };
 		D475D1FA1B3F1962008D046B /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F91B3F1962008D046B /* SearchModel.m */; };
@@ -831,6 +832,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47374011B4E866C00208785 /* LogoutVC.m in Sources */,
 				8441B9431B3AD4CF008698B4 /* Zutat.m in Sources */,
 				84DC36D71B35815800A94CBA /* DetailsViewController.m in Sources */,
 				8438BEF41B417A3F00E3FA62 /* MapViewExerciseAnnotation.m in Sources */,

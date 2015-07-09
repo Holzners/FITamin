@@ -331,14 +331,13 @@ UIButton *button;
         }
     }
     
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
     
+    NSDate *now = [NSDate date];
+
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"d.M.yyyy";
     NSString *string = [formatter stringFromDate:[NSDate date]];
-    
-    NSDate *now = [NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"hh:mm:ss";
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     [string stringByAppendingString: [dateFormatter stringFromDate:now]];

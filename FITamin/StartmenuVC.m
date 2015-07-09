@@ -66,10 +66,8 @@
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if(navigationController == self.tabBarController.moreNavigationController){
         if([viewController.title  isEqual: @"LogoutVC"]){
-        
-            [self dismissViewControllerAnimated:YES completion:NULL];
             [PFUser logOut];
-            }
+        }
     }
 }
 
