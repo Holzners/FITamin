@@ -10,6 +10,7 @@
 #import <ParseUI/PFLogInViewController.h>
 #import "StartmenuVC.h"
 #import "ChooseMode.h"
+#import "LogInVCDetail.h"
 
 @implementation LogInVC
 
@@ -18,9 +19,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor darkGrayColor];
-    
-    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"erdbeere.jpg"]];
-  //  self.logInView.logo = logoView; // logo can be any UIView
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -42,7 +40,7 @@
 }
 
 -(void) showLoginController{
-    PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+    LogInVCDetail *logInViewController = [[LogInVCDetail alloc] init];
     [logInViewController setDelegate:self]; // Set ourselves as the delegate
     
     logInViewController.fields = PFLogInFieldsDefault;

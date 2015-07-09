@@ -11,6 +11,7 @@
 #import <ParseUI/PFLogInViewController.h>
 #import <ParseUI/PFSignUpViewController.h>
 #import "StartmenuVC.h"
+#import "LogInVCDetail.h"
 
 // Implement both delegates
 @interface LogInVC :UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
