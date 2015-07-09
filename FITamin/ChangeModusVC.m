@@ -126,4 +126,8 @@ NSString *chosenMode;
 
 }
 
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
 @end

@@ -27,9 +27,18 @@
     if([PFUser currentUser] != nil)
     {
        // [PFUser logOut];
+        PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
+        [query whereKey:@"user" equalTo:[PFUser currentUser]];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
+            if (!error) {
+                [self performSegueWithIdentifier:@"startMenu" sender:self];
+            } else {
+                [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+            }
+        }];
+
         
-        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
-    }
+            }
     
      // No user logged in
         // Create the log in view controller

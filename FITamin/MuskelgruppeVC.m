@@ -258,7 +258,7 @@ UIButton *button;
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
         CGFloat center = screenWidth/2 -80;
-        button.frame = CGRectMake(center, 140.0, 160.0, 180.0);
+        button.frame = CGRectMake(center, 115.0, 160.0, 160.0);
         [self.view addSubview:button];
         front = false;
     } else{
@@ -331,10 +331,21 @@ UIButton *button;
         }
     }
     
+    
+    NSDate *now = [NSDate date];
+
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"d.M.yyyy";
+    NSString *string = [formatter stringFromDate:[NSDate date]];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"hh:mm:ss";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    [string stringByAppendingString: [dateFormatter stringFromDate:now]];
+    
     PFObject *workout = [PFObject objectWithClassName:@"Workout"];
     workout[@"exercises"] = exercises;
     
-    workout[@"title"] = [[NSString alloc] initWithFormat:@"%@ %@", [PFUser currentUser][@"username"], [exercises description]];
+    workout[@"title"] = [[NSString alloc] initWithFormat: @" Workout from %@", string];
     workout[@"user"] = [PFUser currentUser];
     [workout save];
     
