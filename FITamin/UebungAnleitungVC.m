@@ -74,7 +74,7 @@ BOOL blnRecreation, blnWorkoutFinished;
     UILabel *lblExerciseName = [[UILabel alloc] initWithFrame:rectExerciseName];
     [lblExerciseName setText:currentExercise[@"title"]];
     [lblExerciseName setTextAlignment:NSTextAlignmentCenter];
-    [lblExerciseName setTextColor:[UIColor blackColor]];
+    [lblExerciseName setTextColor:[UIColor whiteColor]];
     [lblExerciseName setBackgroundColor:[UIColor grayColor]];
     [self.view addSubview:lblExerciseName];
     
@@ -90,8 +90,7 @@ BOOL blnRecreation, blnWorkoutFinished;
     CGRect rectCounter = CGRectMake(0, moviePlayer.view.bounds.origin.y + moviePlayer.view.bounds.size.height +150, self.view.frame.size.width, 50);
      self.lblCounter = [[UILabel alloc] initWithFrame:rectCounter];
     [lblCounter setTextAlignment:NSTextAlignmentCenter];
-    [lblCounter setTextColor:[UIColor blueColor]];
-    [lblCounter setText:@"Let's get started!"];
+    [lblCounter setTextColor:[UIColor whiteColor]];
     [self.view addSubview:lblCounter];
     lblCounter.minimumScaleFactor = 15;
     lblCounter.numberOfLines = 0;
@@ -291,5 +290,12 @@ BOOL blnRecreation, blnWorkoutFinished;
     
 }
 
+- (IBAction)confirmTest:(id)sender {
+    
+    //Tear down Timer
+    [timer invalidate];
+    blnWorkoutFinished = YES;
+    timer = NULL;
+}
 
 @end
