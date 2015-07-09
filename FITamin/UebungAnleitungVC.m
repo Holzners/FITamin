@@ -28,8 +28,8 @@ BOOL blnRecreation, blnWorkoutFinished;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    
-    //Load video and add Player
+    [self.btnTarget setAlpha:0];
+     //Load video and add Player
     PFFile *theFile = [currentExercise objectForKey:@"video"];
     NSURL *urlString = [NSURL URLWithString:theFile.url];
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:urlString];
@@ -109,7 +109,7 @@ BOOL blnRecreation, blnWorkoutFinished;
     }
     
     [btnStart setAlpha:0];
-    
+    [self.btnTarget setAlpha:1];
 }
 
 

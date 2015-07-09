@@ -28,6 +28,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnStart;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnTarget;
+
 @property (strong, nonatomic) PFObject  *currentExercise;
 
 @property (strong, nonatomic) NSString *strExerciseType;
