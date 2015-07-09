@@ -31,6 +31,7 @@
 		845BDB641B30165800F6C7B3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845BDB631B30165800F6C7B3 /* Social.framework */; };
 		845BDB661B30166100F6C7B3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845BDB651B30166100F6C7B3 /* Accounts.framework */; };
 		846311181B43D935006DD69F /* ExerciseCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846311171B43D935006DD69F /* ExerciseCheckView.m */; };
+		84713AAC1B4E9308004F817E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84713AAB1B4E9308004F817E /* AVFoundation.framework */; };
 		84856E321B47AB650039E1EF /* LocationUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84856E311B47AB650039E1EF /* LocationUploadVC.m */; };
 		848C56A21B31962400B407C5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C569F1B31962400B407C5 /* Default.png */; };
 		848C56A31B31962400B407C5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848C56A01B31962400B407C5 /* Default@2x.png */; };
@@ -210,6 +211,7 @@
 		845BDB651B30166100F6C7B3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		846311091B43D920006DD69F /* ExerciseCheckView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExerciseCheckView.h; sourceTree = "<group>"; };
 		846311171B43D935006DD69F /* ExerciseCheckView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseCheckView.m; sourceTree = "<group>"; };
+		84713AAB1B4E9308004F817E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		84856E301B47AB4F0039E1EF /* LocationUploadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationUploadVC.h; sourceTree = "<group>"; };
 		84856E311B47AB650039E1EF /* LocationUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationUploadVC.m; sourceTree = "<group>"; };
 		848C569F1B31962400B407C5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84713AAC1B4E9308004F817E /* AVFoundation.framework in Frameworks */,
 				84C9F7CB1B40948200BDD104 /* AFNetworking in Frameworks */,
 				845BDB661B30166100F6C7B3 /* Accounts.framework in Frameworks */,
 				845BDB641B30165800F6C7B3 /* Social.framework in Frameworks */,
@@ -565,6 +568,7 @@
 		F29F7DD480755A2E9A97B68E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84713AAB1B4E9308004F817E /* AVFoundation.framework */,
 				84C9F7CC1B40949E00BDD104 /* Bolts */,
 				84C9F7CD1B40949E00BDD104 /* Facebook-iOS-SDK */,
 				84C9F7CE1B40949E00BDD104 /* Headers */,

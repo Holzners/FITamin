@@ -24,7 +24,7 @@
 
 @property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
 
-@property (weak, nonatomic) IBOutlet UILabel *exerciseCounterLabel;
+@property (strong, nonatomic)  UILabel *lblCounter;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnStart;
 

@@ -8,17 +8,18 @@
 
 #import "UebungAnleitungVC.h"
 #import "ExerciseCheckView.h"
+#import <AVFoundation/AVFoundation.h>
 
 @import MediaPlayer;
-
 
 
 @implementation UebungAnleitungVC
 
 @synthesize currentExercise;
 @synthesize moviePlayer;
-@synthesize exerciseCounterLabel;
+@synthesize lblCounter;
 @synthesize btnStart;
+@synthesize btnTarget;
 @synthesize strExerciseType;
 @synthesize intSetCounter;
 
@@ -27,6 +28,7 @@ BOOL blnRecreation, blnWorkoutFinished;
 
 
 -(void)viewDidLoad {
+    
     [super viewDidLoad];
     [self.btnTarget setAlpha:0];
      //Load video and add Player
@@ -39,8 +41,6 @@ BOOL blnRecreation, blnWorkoutFinished;
     [self.view addSubview:self.moviePlayer.view];
     [self.moviePlayer play];
     
-    //Counter
-    [exerciseCounterLabel setText:@"Let's get started!"];
     
     //hole die exercise spezifischen Attribute für den Timer
     intNumberOfSets = [currentExercise[@"set"] intValue];
@@ -85,6 +85,20 @@ BOOL blnRecreation, blnWorkoutFinished;
     self.exerciseCheckView.colors = [[NSMutableArray alloc]initWithCapacity:intNumberOfSets];
     self.exerciseCheckView.intCurrentSet = 0;
     
+    
+    //Label Counter/Message Box
+    CGRect rectCounter = CGRectMake(0, moviePlayer.view.bounds.origin.y + moviePlayer.view.bounds.size.height +150, self.view.frame.size.width, 50);
+     self.lblCounter = [[UILabel alloc] initWithFrame:rectCounter];
+    [lblCounter setTextAlignment:NSTextAlignmentCenter];
+    [lblCounter setTextColor:[UIColor blueColor]];
+    [lblCounter setText:@"Let's get started!"];
+    [self.view addSubview:lblCounter];
+    lblCounter.minimumScaleFactor = 15;
+    lblCounter.numberOfLines = 0;
+    //[lblCounter sizeToFit];
+
+    
+    
     for(int i=0; i<intNumberOfSets; i++){
         
         //Für jeden Kreis wird ein Array mit den drei Farbendefinitionen angelegt -> initial [0.0,0.0,0.0] also weiss
@@ -93,6 +107,7 @@ BOOL blnRecreation, blnWorkoutFinished;
     }
     
     [self.view addSubview:self.exerciseCheckView];
+    
     
 }
 
@@ -131,12 +146,12 @@ BOOL blnRecreation, blnWorkoutFinished;
         //Zähle Timer runter
         intTimerSeconds -=1 ;
         //Update Timer Label
-        [exerciseCounterLabel setText:[NSString stringWithFormat:@"%02d Tap to Pause" ,intTimerSeconds]];
+        [lblCounter setText:[NSString stringWithFormat:@"%02d\nTap to Pause" ,intTimerSeconds]];
     }
     else if(intTimerSeconds > 0){
         intTimerSeconds -=1;
         //Update Timer Label
-        [exerciseCounterLabel setText:[NSString stringWithFormat:@"%02d Get Ready!" ,intTimerSeconds]];
+        [lblCounter setText:[NSString stringWithFormat:@"%02d\nGet Ready!" ,intTimerSeconds]];
     }
     //Timer ist abgelaufen
     else{
@@ -165,7 +180,11 @@ BOOL blnRecreation, blnWorkoutFinished;
         //Alle Sets durch -> Fertig
         [timer invalidate];
         blnWorkoutFinished = YES;
-        [exerciseCounterLabel setText:@"You're Done!"];
+        [lblCounter setText:@"You're Done!"];
+        //Tear down Timer
+        [timer invalidate];
+        blnWorkoutFinished = YES;
+        timer = NULL;
     }
 
 }
@@ -181,7 +200,7 @@ BOOL blnRecreation, blnWorkoutFinished;
         [timer invalidate];
         blnPause = YES;
             
-        }
+        }  
         else if(timer != NULL && blnPause){
             //User tapped screen again -> continue Exercise
             if([strExerciseType isEqualToString:@"dur"]){
@@ -206,24 +225,28 @@ BOOL blnRecreation, blnWorkoutFinished;
         if(intTimerSeconds > 3 ){
             //Zähle Timer runter
             intTimerSeconds -=1 ;
-            [exerciseCounterLabel setText:[NSString stringWithFormat:@"%02d Tap to Pause" ,intTimerSeconds]];
+            [self.lblCounter setText:[NSString stringWithFormat:@"%02d\nTap to Pause" ,intTimerSeconds]];
         }
         else if(intTimerSeconds > 0){
             intTimerSeconds -=1;
-            [exerciseCounterLabel setText:[NSString stringWithFormat:@"%02d Get Ready!" ,intTimerSeconds]];
+            [lblCounter setText:[NSString stringWithFormat:@"%02d\nGet Ready!" ,intTimerSeconds]];
         }
         else{
             //Hier ist exercise Phase ohne Timer
             [timer invalidate];
             blnRecreation =  NO;
-            [exerciseCounterLabel setText:@"GO GO GO! (LONG PRESS TO COFIRM)"];
+            [lblCounter setText:@"GO GO GO!\n(LONG PRESS TO COFIRM)"];
         }
     }
     else {
         //Alle Sets sind durch -> Fertig
         [timer invalidate];
         blnWorkoutFinished = YES;
-        [exerciseCounterLabel setText:@"You're Done!"];
+        [lblCounter setText:@"You're Done!"];
+        //Tear down Timer
+        [timer invalidate];
+        blnWorkoutFinished = YES;
+        timer = NULL;
     }
 }
 
@@ -251,8 +274,14 @@ BOOL blnRecreation, blnWorkoutFinished;
 
 
 - (IBAction)confirmExercise:(id)sender {
-    /* UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-     [alert show]; */
+    
+    //Tear down Timer
+    [timer invalidate];
+    blnWorkoutFinished = YES;
+    timer = NULL;
+
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+//     [alert show];
     
 }
 
