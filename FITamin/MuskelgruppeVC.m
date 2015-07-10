@@ -373,10 +373,18 @@ UIButton *button;
         }
     }
     
-    //jetzt die exercises als Workout abspeichern
+
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"d.M.yyyy";
+    NSString *string = [formatter stringFromDate:[NSDate date]];
+
+    
     PFObject *workout = [PFObject objectWithClassName:@"Workout"];
     workout[@"exercises"] = exercises;
-    workout[@"title"] = [[NSString alloc] initWithFormat:@"%@ %@", [PFUser currentUser][@"username"], [exercises description]];
+    
+    NSString *muscleString = [self.muscles firstObject][@"title"];
+    
+    workout[@"title"] = [[NSString alloc] initWithFormat: @"%@: %@", string, muscleString];
     workout[@"user"] = [PFUser currentUser];
     [workout save];
     
