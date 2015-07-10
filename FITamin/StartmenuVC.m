@@ -66,13 +66,14 @@
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if(navigationController == self.tabBarController.moreNavigationController){
         if([viewController.title  isEqual: @"LogoutVC"]){
-        
-            [self dismissViewControllerAnimated:YES completion:NULL];
-            LogInVC *livc = [LogInVC new];
-            [livc logOutUser];
-            [self.navigationController popToViewController:livc animated:YES];
-            }
+            [PFUser logOut];
+           // self.tabBarController.tabBar.hidden = YES;
+        }
     }
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 @end

@@ -7,8 +7,13 @@
 //
 
 #import "SavedWorkoutsTableVC.h"
+#import "SavedWorkoutsCell.h"
+#import <Parse/Parse.h>
+#import "UebungRouteVC.h"
 
-@interface SavedWorkoutsTableVC ()
+@interface SavedWorkoutsTableVC (){
+    BOOL workoutsLoad;
+}
 
 @end
 
@@ -16,12 +21,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    workoutsLoad = NO;
+    //Erst Muskelobjekt holen
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    PFQuery *query1 = [PFQuery queryWithClassName:@"Workout"];
+    [query1 whereKey:@"user" equalTo:[PFUser currentUser]];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [query1 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            self.savedWorkoutsAsPFObjects = [NSMutableArray arrayWithArray:objects];
+            self.savedWorkoutsAsStrings = [[NSMutableArray alloc ]init];
+            for(PFObject *p in objects){
+                [self.savedWorkoutsAsStrings addObject:p[@"title"]];
+            }
+            workoutsLoad = YES;
+            [self.tableView reloadData];
+            // The find succeeded. The first 100 objects are available in objects
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,69 +53,60 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
+    if(workoutsLoad){
+        return [self.savedWorkoutsAsStrings count];
+    }
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    static NSString *CellIdentifier = @"WorkoutCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    NSString *string =[self.savedWorkoutsAsStrings objectAtIndex:indexPath.item];
+
+    
+    [cell.textLabel setText:string];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+       self.selectedWorkoutAsPFObject = [self.savedWorkoutsAsPFObjects objectAtIndex:indexPath.item];
+        //[self dismissViewControllerAnimated:NO completion:nil];
+        [self performSegueWithIdentifier:@"workoutSelected" sender:self];
+        
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    // id workoutSelected
+    if([segue.identifier  isEqual: @"workoutSelected"]){
+        
+        NSMutableArray *array = [[NSMutableArray alloc]
+                          initWithArray:self.selectedWorkoutAsPFObject[@"exercises"]];
+        
+        UebungRouteVC *routeViewController = segue.destinationViewController;
+        routeViewController.hidesBottomBarWhenPushed = YES;
+        [[self navigationController] setNavigationBarHidden:YES animated:NO];
+        routeViewController.exercises = array;
+        NSLog(@"Length exc %d" , [routeViewController.exercises count]);
+        
+    }
+    
+    
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

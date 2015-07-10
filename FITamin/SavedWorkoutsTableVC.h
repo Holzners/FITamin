@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface SavedWorkoutsTableVC : UITableViewController
+@interface SavedWorkoutsTableVC : UITableViewController 
+
+@property (strong, nonatomic) NSMutableArray *savedWorkoutsAsStrings;
+
+@property (strong, nonatomic) NSMutableArray *savedWorkoutsAsPFObjects;
+
+@property (strong, nonatomic) PFObject *selectedWorkoutAsPFObject;
 
 @end

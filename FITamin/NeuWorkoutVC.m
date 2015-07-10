@@ -26,6 +26,10 @@ NSString *currentMode;
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+}
+
 - (IBAction)tappedRightButton:(id)sender
 {
     NSUInteger selectedIndex = [self.tabBarController selectedIndex];
@@ -99,6 +103,10 @@ NSString *currentMode;
 
 
 
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 

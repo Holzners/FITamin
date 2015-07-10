@@ -316,7 +316,7 @@ UIButton *button;
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
         CGFloat center = screenWidth/2 -80;
-        button.frame = CGRectMake(center, 140.0, 160.0, 180.0);
+        button.frame = CGRectMake(center, 115.0, 160.0, 160.0);
         [self.view addSubview:button];
         front = false;
     } else{
