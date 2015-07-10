@@ -446,9 +446,35 @@ UIButton *button;
     
     //for(int i=0; [locations count]; i++){
         
-        // now save the exercise object
-        [l1 save];
-    }
+        for(int j=0; [exercises count]; j++){
+            
+           // PFObject *l = locations[i];
+            PFObject *e = exercises[j];
+            
+            PFRelation *relation = [l relationForKey:@"exercises"];
+            [relation addObject:e];
+             [l save];
+        }
+    //}
+    
+//    PFQuery *query1 = [PFQuery queryWithClassName:@"Location"];
+//    [query1 whereKey:@"exercises" equalTo:@"SitUp"];
+//    
+//    //Dann erste Exercise holen, die auf diesen Muskeltyp zeigt
+//    PFQuery *query = [PFQuery queryWithClassName:@"Muscle"];
+//    [query whereKey:@"title" equalTo:@"Stomach"];
+//    PFObject *m1 = [query getFirstObject];
+//    
+//    if( m1 != NULL && e1 != NULL){
+//        
+//        
+//        PFRelation *relation = [e1 relationForKey:@"muscles"];
+//        [relation addObject:m1];
+//        
+//        // now save the exercise object
+//        [e1 save];
+  //  }
+
     
 }
 
