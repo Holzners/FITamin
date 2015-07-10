@@ -107,6 +107,10 @@ BOOL blnRecreation, blnWorkoutFinished;
     
     [self.view addSubview:self.exerciseCheckView];
     
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmExercise:)];
+    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.view addGestureRecognizer:swipeRight];
+    
     
 }
 
@@ -224,7 +228,7 @@ BOOL blnRecreation, blnWorkoutFinished;
         if(intTimerSeconds > 3 ){
             //Zähle Timer runter
             intTimerSeconds -=1 ;
-            [self.lblCounter setText:[NSString stringWithFormat:@"%02d\nTap to Pause" ,intTimerSeconds]];
+            [self.lblCounter setText:[NSString stringWithFormat:@"%02d\n Relax!!!" ,intTimerSeconds]];
         }
         else if(intTimerSeconds > 0){
             intTimerSeconds -=1;
@@ -234,7 +238,7 @@ BOOL blnRecreation, blnWorkoutFinished;
             //Hier ist exercise Phase ohne Timer
             [timer invalidate];
             blnRecreation =  NO;
-            [lblCounter setText:@"GO GO GO!\n(LONG PRESS TO COFIRM)"];
+            [lblCounter setText:@"GO GO GO!\n(LONG PRESS TO CONFIRM)"];
         }
     }
     else {
@@ -274,10 +278,12 @@ BOOL blnRecreation, blnWorkoutFinished;
 
 - (IBAction)confirmExercise:(id)sender {
     
+    NSLog(@"test");
     //Tear down Timer
     [timer invalidate];
     blnWorkoutFinished = YES;
     timer = NULL;
+    [self performSegueWithIdentifier:@"unwindToUebungRouteVC" sender:self];
 
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
 //     [alert show];

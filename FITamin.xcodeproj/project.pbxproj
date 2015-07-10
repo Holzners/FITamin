@@ -61,8 +61,6 @@
 		D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F790D0E21B31B5B50092654E /* Images.xcassets */; };
 		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
 		D47374011B4E866C00208785 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A31B41861D00AFE817 /* LogoutVC.m */; };
-		D473740F1B4E8E6200208785 /* SavedWorkoutsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D473740E1B4E8E6200208785 /* SavedWorkoutsCell.xib */; };
-		D47374121B4E8ED400208785 /* SavedWorkoutsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D47374111B4E8ED400208785 /* SavedWorkoutsCell.m */; };
 		D475D1F41B3F1947008D046B /* RecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F31B3F1947008D046B /* RecipeModel.m */; };
 		D475D1F71B3F1956008D046B /* RecipeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F61B3F1956008D046B /* RecipeListModel.m */; };
 		D475D1FA1B3F1962008D046B /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F91B3F1962008D046B /* SearchModel.m */; };
@@ -262,9 +260,6 @@
 		84F283651B4E83CB004A58D6 /* LogInVCDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInVCDetail.m; sourceTree = "<group>"; };
 		D2F76DA9E59A064428B161FC /* libPods-FITamin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FITamin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		D473740E1B4E8E6200208785 /* SavedWorkoutsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedWorkoutsCell.xib; sourceTree = "<group>"; };
-		D47374101B4E8ED400208785 /* SavedWorkoutsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedWorkoutsCell.h; sourceTree = "<group>"; };
-		D47374111B4E8ED400208785 /* SavedWorkoutsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedWorkoutsCell.m; sourceTree = "<group>"; };
 		D475D1F21B3F1947008D046B /* RecipeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeModel.h; sourceTree = "<group>"; };
 		D475D1F31B3F1947008D046B /* RecipeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeModel.m; sourceTree = "<group>"; };
 		D475D1F51B3F1956008D046B /* RecipeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeListModel.h; sourceTree = "<group>"; };
@@ -355,7 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				84DC36E11B35845D00A94CBA /* CustomCell.xib */,
-				D473740E1B4E8E6200208785 /* SavedWorkoutsCell.xib */,
 				84575BB81B3EC176006C298D /* RecipeCustomCell.xib */,
 				F76F16681B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib */,
 			);
@@ -499,8 +493,6 @@
 			children = (
 				840F04A51B41C25800AFE817 /* SavedWorkoutsTableVC.h */,
 				840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */,
-				D47374101B4E8ED400208785 /* SavedWorkoutsCell.h */,
-				D47374111B4E8ED400208785 /* SavedWorkoutsCell.m */,
 			);
 			name = SavedWorkouts;
 			sourceTree = "<group>";
@@ -689,6 +681,7 @@
 					};
 					D4DA7B501B28815D00440996 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = C7PLUFBAM2;
 						TestTargetID = D4DA7B371B28815D00440996;
 					};
 				};
@@ -815,7 +808,6 @@
 				844AF5B71B3206AE00353B6B /* Info.plist in Resources */,
 				F76F16691B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib in Resources */,
 				84DC36E21B35845D00A94CBA /* CustomCell.xib in Resources */,
-				D473740F1B4E8E6200208785 /* SavedWorkoutsCell.xib in Resources */,
 				84575BB91B3EC176006C298D /* RecipeCustomCell.xib in Resources */,
 				844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */,
 				8441B9401B3AD1CF008698B4 /* data.plist in Resources */,
@@ -883,7 +875,6 @@
 				8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */,
 				846311181B43D935006DD69F /* ExerciseCheckView.m in Sources */,
 				849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */,
-				D47374121B4E8ED400208785 /* SavedWorkoutsCell.m in Sources */,
 				849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */,
 				D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */,
 				D475D1FD1B3F1972008D046B /* GetRequestModel.m in Sources */,
@@ -965,7 +956,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: ios.ss15.lmu.FITamin";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: ios.ss15.lmu.FITamin";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -987,6 +979,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "4088f360-1bf4-4ffa-8e6f-e2da296f6c47";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1009,7 +1002,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: ios.ss15.lmu.FITamin";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: ios.ss15.lmu.FITamin";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1024,6 +1018,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "4088f360-1bf4-4ffa-8e6f-e2da296f6c47";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1037,6 +1032,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/admin/Downloads/parse-starter-project-1/ParseStarterProject",
@@ -1058,6 +1054,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/admin/Downloads/parse-starter-project-1/ParseStarterProject",
@@ -1076,6 +1073,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1087,6 +1086,7 @@
 				INFOPLIST_FILE = FITaminTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FITamin.app/FITamin";
 			};
 			name = Debug;
@@ -1095,6 +1095,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1102,6 +1104,7 @@
 				INFOPLIST_FILE = FITaminTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FITamin.app/FITamin";
 			};
 			name = Release;

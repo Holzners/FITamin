@@ -71,11 +71,12 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if(workoutFinished){
-        [self performSegueWithIdentifier:workoutFinished sender:self];
-        NSLog(@"ID %@", workoutFinished);
-        workoutFinished = nil;
         
-        // return;
+        if(self.locationManager)[self.locationManager stopUpdatingLocation];
+        
+        [self performSegueWithIdentifier:workoutFinished sender:self];
+        workoutFinished = nil;
+     
     }
     
 }
@@ -217,7 +218,7 @@
     for (NSMutableDictionary *entry in _selectedLocationsWithDistancesAndExercises){
         PFObject *pfObj = [entry objectForKey:@"exercise"];
         NSNumber *dist = [entry objectForKey:@"distance"];
-        NSLog(@"Übung Name: %@" , pfObj[@"title"]);
+      //  NSLog(@"Übung Name: %@" , pfObj[@"title"]);
         NSLog(@"Distanz zur vorherigen %@" , dist);
     }
     
@@ -363,7 +364,7 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
     
     for (NSDictionary *row in locations) {
         
-        PFObject *exercise = [row objectForKey:@"exercise"];
+        PFObject *exercise = [[row objectForKey:@"exercise"] fetchIfNeeded];
         CLLocation *pfObj = [row objectForKey:@"location"];
         NSNumber *number = [row objectForKey:@"number"];
         

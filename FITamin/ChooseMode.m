@@ -15,15 +15,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
-//    [query whereKey:@"user" equalTo:[PFUser currentUser]];
-//    [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
-//        if (!error) {
-//            [self performSegueWithIdentifier:@"StartScreenSegue" sender:self];
-//        } else {
-//            NSLog(@"Error: %@", error);
-//        }
-//    }];
     
 }
 
