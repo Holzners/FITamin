@@ -228,7 +228,7 @@ BOOL blnRecreation, blnWorkoutFinished;
         if(intTimerSeconds > 3 ){
             //Zähle Timer runter
             intTimerSeconds -=1 ;
-            [self.lblCounter setText:[NSString stringWithFormat:@"%02d\nTap to Pause" ,intTimerSeconds]];
+            [self.lblCounter setText:[NSString stringWithFormat:@"%02d\n Relax!!!" ,intTimerSeconds]];
         }
         else if(intTimerSeconds > 0){
             intTimerSeconds -=1;
@@ -238,7 +238,7 @@ BOOL blnRecreation, blnWorkoutFinished;
             //Hier ist exercise Phase ohne Timer
             [timer invalidate];
             blnRecreation =  NO;
-            [lblCounter setText:@"GO GO GO!\n(LONG PRESS TO COFIRM)"];
+            [lblCounter setText:@"GO GO GO!\n(LONG PRESS TO CONFIRM)"];
         }
     }
     else {

@@ -171,7 +171,7 @@ NSDictionary *zutDic;
     
     Zutat *zutat19 = [Zutat new];
     zutat19.zutatDetailName = cell.zutatenNameLabel.text;
-    zutat19.zutatDetailImage = @"Hüttenkäse.jpg";
+    zutat19.zutatDetailImage = @"Huettenkaese.jpg";
     zutat19.zutatDetailText = @"Liefert viele Proteine und Eiweiße. Der perfekte Zusatz zum Frühstück.";
     
     Zutat *zutat20 = [Zutat new];
@@ -191,7 +191,7 @@ NSDictionary *zutDic;
     
     Zutat *zutat23 = [Zutat new];
     zutat23.zutatDetailName = cell.zutatenNameLabel.text;
-    zutat23.zutatDetailImage = @"Grüner Tee.jpg";
+    zutat23.zutatDetailImage = @"Gruener Tee.jpg";
     zutat23.zutatDetailText = @"Die hohe Konzentration an Katechinen regt den Stoffwechsel an und fördert somit die Fettverbrennung.";
     
     

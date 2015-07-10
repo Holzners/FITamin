@@ -10,17 +10,75 @@
 #import "StandortVC.h"
 #import <Parse/Parse.h>
 #import "UebungRouteVC.h"
+#include <stdio.h>
 
 @implementation MuskelgruppeVC
 
 @synthesize batman;
 @synthesize turnButton;
+@synthesize mode;
 
 bool  front=true;
 UIButton *button;
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    
+    //Get mode for user
+    PFQuery *queryMode = [PFQuery queryWithClassName:@"Mode"];
+    [queryMode whereKey:@"user" equalTo:[PFUser currentUser]];
+    PFObject *pfmode = [queryMode getFirstObject];
+    
+    if([pfmode[@"title"] isEqualToString:@"Muskelaufbau"])
+    {
+        self.mode = @"mus";
+    }
+    else
+    {
+        self.mode = @"fat";
+        
+        //In diesem Modus werden alle Muskelgruppen automatisch gesetzt und gleich weiter gesprungen zur nächsten view
+        [self chooseArms:self];
+        [self chooseBauch:self];
+        [self chooseBeine:self];
+        [self chooseBrust:self];
+        [self choosePo:self];
+        
+            [self performSegueWithIdentifier:@"segueToRoute" sender:self];
+   
+
+    }
+    
+}
+
 -(void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Get mode for user
+    PFQuery *queryMode = [PFQuery queryWithClassName:@"Mode"];
+    [queryMode whereKey:@"user" equalTo:[PFUser currentUser]];
+    PFObject *pfmode = [queryMode getFirstObject];
+    
+    if([pfmode[@"title"] isEqualToString:@"Muskelaufbau"])
+    {
+        self.mode = @"mus";
+    }
+    else
+    {
+        self.mode = @"fat";
+        
+        //In diesem Modus werden alle Muskelgruppen automatisch gesetzt und gleich weiter gesprungen zur nächsten view
+        [self chooseArms:self];
+        [self chooseBauch:self];
+        [self chooseBeine:self];
+        [self chooseBrust:self];
+        [self choosePo:self];
+        
+        [self performSegueWithIdentifier:@"segueToRoute" sender:self];
+        
+        
+        
+    }
     
     //Code um Beziehungen zu generieren (Standardmäßig auskommentiert)
     //[self createRelations];
@@ -44,10 +102,10 @@ UIButton *button;
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
-                [muscle setObject:@"Arms" forKey:@"title"];
+               // [muscle setObject:@"Arms" forKey:@"title"];
                 
                 // Save
-                [muscle saveInBackground];
+              //  [muscle saveInBackground];
             } else {
                 // Did not find any UserStats for the current user
                 //Muscle Arms in Array einfügen
@@ -83,10 +141,10 @@ UIButton *button;
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
-                [muscle setObject:@"Stomach" forKey:@"title"];
+               // [muscle setObject:@"Stomach" forKey:@"title"];
                 
                 // Save
-                [muscle saveInBackground];
+               // [muscle saveInBackground];
             } else {
                 // Did not find any UserStats for the current user
                 //Muscle Arms in Array einfügen
@@ -117,10 +175,10 @@ UIButton *button;
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
-                [muscle setObject:@"Legs" forKey:@"title"];
+                //[muscle setObject:@"Legs" forKey:@"title"];
                 
                 // Save
-                [muscle saveInBackground];
+                //[muscle saveInBackground];
             } else {
                 // Did not find any UserStats for the current user
                 //Muscle Arms in Array einfügen
@@ -152,10 +210,10 @@ UIButton *button;
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
-                [muscle setObject:@"Breast" forKey:@"title"];
+                //[muscle setObject:@"Breast" forKey:@"title"];
                 
                 // Save
-                [muscle saveInBackground];
+                //[muscle saveInBackground];
             } else {
                 // Did not find any UserStats for the current user
                 //Muscle Arms in Array einfügen
@@ -187,10 +245,10 @@ UIButton *button;
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
-                [muscle setObject:@"Back" forKey:@"title"];
+                //[muscle setObject:@"Back" forKey:@"title"];
                 
                 // Save
-                [muscle saveInBackground];
+                //[muscle saveInBackground];
             } else {
                 // Did not find any UserStats for the current user
                 //Muscle Arms in Array einfügen
@@ -208,6 +266,7 @@ UIButton *button;
         }];
     }
 }
+
 - (IBAction)choosePo:(id)sender {
     if(front == false){
         batman.image = [UIImage imageNamed: @"MuskelgruppePo.png"];
@@ -223,10 +282,10 @@ UIButton *button;
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * muscle, NSError *error) {
             if (!error) {
                 // Found UserStats
-                [muscle setObject:@"Bottom" forKey:@"title"];
+                //[muscle setObject:@"Bottom" forKey:@"title"];
                 
                 // Save
-                [muscle saveInBackground];
+                //[muscle saveInBackground];
             } else {
                 // Did not find any UserStats for the current user
                 //Muscle Arms in Array einfügen
@@ -265,7 +324,6 @@ UIButton *button;
         batman.image = [UIImage imageNamed: @"MuskelgruppenBatman.png"];
         button.hidden=YES;
         front = true;
-        
     }
 }
 
@@ -273,9 +331,12 @@ UIButton *button;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Choose Name" message:@"Choose your new workouts name!" delegate:self cancelButtonTitle:@"Give Random Name" otherButtonTitles:@"Confirm", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+    
     //zuerst Exercises zu spezifizierten Muskelgruppen abfragen
     NSMutableArray *exercises = self.getExercises;
-    
     
     if(exercises != NULL){
         //later getWorkout
@@ -287,10 +348,7 @@ UIButton *button;
     if (self.selectedMuscleGroup != nil){
         UebungRouteVC *dest = [segue destinationViewController];
         dest.exercises = [[NSMutableArray alloc] initWithArray:exercises];
-        
-        
     }
-    
 }
 
 -(NSMutableArray *)getExercises{
@@ -310,46 +368,52 @@ UIButton *button;
             //Dann erste Exercise holen, die auf diesen Muskeltyp zeigt
             query = [PFQuery queryWithClassName:@"Exercise"];
             [query whereKey:@"muscles" equalTo:mm1];
+            [query whereKey:@"mode" equalTo:self.mode];
+            //Hier muss jetzt noch eine zweite Bedingung rein
+            //die den aktuellen Modus angibt
+            
             PFObject *e1 = [query getFirstObject];
             if(e1 != NULL){
                 [exercises addObject:e1];
-                
             }
-            //                            InBackgroundWithBlock:^(PFObject *e1, NSError *error) {
-            //
-            //                if (!e1) {
-            //                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Couldnt Get Exercise" message:@"Exercise Query was not successful" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-            //                    [alert show];
-            //                }
-            //                else {
-            //                    // The find succeeded.
-            //                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exercise Found" message:[NSString stringWithFormat:@"%@/%@", @"Exercise Name:", e1[@"title"]] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-            //                    [alert show];
-            //                    [exercises addObject:e1];
-            //                }
-            //            }];
         }
     }
-    
-
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"d.M.yyyy";
-    NSString *string = [formatter stringFromDate:[NSDate date]];
-
-    
-    PFObject *workout = [PFObject objectWithClassName:@"Workout"];
-    workout[@"exercises"] = exercises;
-    
-    NSString *muscleString = [self.muscles firstObject][@"title"];
-    
-    workout[@"title"] = [[NSString alloc] initWithFormat: @"%@: %@", string, muscleString];
-    workout[@"user"] = [PFUser currentUser];
-    [workout save];
     
     return exercises;
     
 }
-
+/*
+ *User kann sein Workout selber benennen Random Gottheiten als Fallback
+ */
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    UITextField *alertTextField = [alertView textFieldAtIndex:0];
+    NSString *titleString;
+    
+    if(buttonIndex == 1){
+        // User bennent selbst
+        titleString = alertTextField.text;
+    }else{
+        // User ist zu faul und wählt Random
+        NSArray *array = [[NSArray alloc]init];
+        NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"griechische_gottheiten" ofType:@"plist"];
+        array = [NSArray arrayWithContentsOfFile:plistPath];
+        NSUInteger randomIndex = arc4random() % [array count];
+        titleString= [array objectAtIndex:randomIndex];
+    }
+    // DateStamp zum Titel des Workouts
+    NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
+    [DateFormatter setDateFormat:@"dd.MM.yyyy"];
+    NSString *dateString = [DateFormatter stringFromDate:[NSDate date]];
+    NSString *titleWithDate = [NSString stringWithFormat: @"%@ %@", titleString ,dateString];
+    
+    //Workout abspeichern
+    PFObject *workout = [PFObject objectWithClassName:@"Workout"];
+    workout[@"exercises"] = self.getExercises;
+    workout[@"title"] = titleWithDate;
+    workout[@"user"] = [PFUser currentUser];
+    [workout save];
+    
+}
 
 -(void)loadExerciseRessources:(PFObject *)exercise{
     //hier muss jetzt geprüft werden welche Ressource noch von
@@ -367,28 +431,52 @@ UIButton *button;
 
 -(void)createRelations{
     
+
+    //Get all locations
+    // PFQuery *query1 = [PFQuery queryWithClassName:@"Location"];
+    //NSArray *locations = [query1 findObjects];
     
-    PFQuery *query1 = [PFQuery queryWithClassName:@"Exercise"];
-    [query1 whereKey:@"title" equalTo:@"BodyWeightRow"];
-    PFObject *e1 = [query1 getFirstObject];
+       PFQuery *query1 = [PFQuery queryWithClassName:@"Location"];
+    [query1 whereKey:@"title" equalTo:@"l6"];
+    PFObject *l = [query1 getFirstObject];
     
-    //Dann erste Exercise holen, die auf diesen Muskeltyp zeigt
-    PFQuery *query = [PFQuery queryWithClassName:@"Location"];
-    [query whereKey:@"title" equalTo:@"l6"];
-    PFObject *l1 = [query getFirstObject];
+    PFQuery *query2 = [PFQuery queryWithClassName:@"Exercise"];
+    NSArray *exercises = [query2 findObjects];
     
-    if(l1 != NULL && e1 != NULL){
+    
+    //for(int i=0; [locations count]; i++){
         
-        
-        PFRelation *relation = [l1 relationForKey:@"exercises"];
-        [relation addObject:e1];
-        
-        // now save the exercise object
-        [l1 save];
-    }
+        for(int j=0; [exercises count]; j++){
+            
+           // PFObject *l = locations[i];
+            PFObject *e = exercises[j];
+            
+            PFRelation *relation = [l relationForKey:@"exercises"];
+            [relation addObject:e];
+             [l save];
+        }
+    //}
+    
+//    PFQuery *query1 = [PFQuery queryWithClassName:@"Location"];
+//    [query1 whereKey:@"exercises" equalTo:@"SitUp"];
+//    
+//    //Dann erste Exercise holen, die auf diesen Muskeltyp zeigt
+//    PFQuery *query = [PFQuery queryWithClassName:@"Muscle"];
+//    [query whereKey:@"title" equalTo:@"Stomach"];
+//    PFObject *m1 = [query getFirstObject];
+//    
+//    if( m1 != NULL && e1 != NULL){
+//        
+//        
+//        PFRelation *relation = [e1 relationForKey:@"muscles"];
+//        [relation addObject:m1];
+//        
+//        // now save the exercise object
+//        [e1 save];
+  //  }
 
     
-    
 }
+
 
 @end

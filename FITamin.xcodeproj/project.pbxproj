@@ -18,9 +18,6 @@
 		844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */; };
 		844AF5A21B31FE0400353B6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 844AF5A11B31FE0400353B6B /* InfoPlist.strings */; };
 		844AF5B71B3206AE00353B6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF5B61B3206AE00353B6B /* Info.plist */; };
-		84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A381B2EE92E0062E0D6 /* StartmenuView.m */; };
-		84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */; };
-		84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */; };
 		84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */; };
 		84575BB11B3EBB83006C298D /* RecipeDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84575BB01B3EBB83006C298D /* RecipeDetailVC.m */; };
 		84575BB41B3EBE42006C298D /* RecipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84575BB31B3EBE42006C298D /* RecipeTableViewController.m */; };
@@ -39,7 +36,6 @@
 		8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */; };
 		8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */; };
 		849689A11B2C4B9A0000CAE2 /* MuskelgruppeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */; };
-		849689A71B2C4BC10000CAE2 /* SavedWorkoutsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */; };
 		849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689A91B2C4BFE0000CAE2 /* StandortVC.m */; };
 		849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */; };
 		849689B01B2C4C160000CAE2 /* UebungRouteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */; };
@@ -63,6 +59,7 @@
 		84F283661B4E83CB004A58D6 /* LogInVCDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F283651B4E83CB004A58D6 /* LogInVCDetail.m */; };
 		B9F47C3697E9FF05607928C2 /* libPods-FITamin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F76DA9E59A064428B161FC /* libPods-FITamin.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F790D0E21B31B5B50092654E /* Images.xcassets */; };
+		D4515EA71B502AC70042ADCD /* griechische_gottheiten.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4515EA61B502AC70042ADCD /* griechische_gottheiten.plist */; };
 		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
 		D47374011B4E866C00208785 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A31B41861D00AFE817 /* LogoutVC.m */; };
 		D475D1F41B3F1947008D046B /* RecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F31B3F1947008D046B /* RecipeModel.m */; };
@@ -190,12 +187,6 @@
 		844AF5A11B31FE0400353B6B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		844AF5A31B31FE0800353B6B /* Dynamic Table Views-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dynamic Table Views-Prefix.pch"; sourceTree = "<group>"; };
 		844AF5B61B3206AE00353B6B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84567A371B2EE92E0062E0D6 /* StartmenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartmenuView.h; sourceTree = "<group>"; };
-		84567A381B2EE92E0062E0D6 /* StartmenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartmenuView.m; sourceTree = "<group>"; };
-		84567A3A1B2EEBBD0062E0D6 /* ErnaehrungView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErnaehrungView.h; sourceTree = "<group>"; };
-		84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErnaehrungView.m; sourceTree = "<group>"; };
-		84567A401B2EFEB10062E0D6 /* NeuWorkoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuWorkoutView.h; sourceTree = "<group>"; };
-		84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuWorkoutView.m; sourceTree = "<group>"; };
 		84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuWorkoutVC.h; sourceTree = "<group>"; };
 		84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuWorkoutVC.m; sourceTree = "<group>"; };
 		84575BAF1B3EBB83006C298D /* RecipeDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailVC.h; sourceTree = "<group>"; };
@@ -225,8 +216,6 @@
 		8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedScreenVC.m; sourceTree = "<group>"; };
 		8496899F1B2C4B9A0000CAE2 /* MuskelgruppeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuskelgruppeVC.h; sourceTree = "<group>"; };
 		849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuskelgruppeVC.m; sourceTree = "<group>"; };
-		849689A41B2C4BC10000CAE2 /* SavedWorkoutsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedWorkoutsVC.h; sourceTree = "<group>"; };
-		849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedWorkoutsVC.m; sourceTree = "<group>"; };
 		849689A81B2C4BFE0000CAE2 /* StandortVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandortVC.h; sourceTree = "<group>"; };
 		849689A91B2C4BFE0000CAE2 /* StandortVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandortVC.m; sourceTree = "<group>"; };
 		849689AB1B2C4C160000CAE2 /* UebungAnleitungVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UebungAnleitungVC.h; sourceTree = "<group>"; };
@@ -271,6 +260,7 @@
 		84F283641B4E83CB004A58D6 /* LogInVCDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInVCDetail.h; sourceTree = "<group>"; };
 		84F283651B4E83CB004A58D6 /* LogInVCDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInVCDetail.m; sourceTree = "<group>"; };
 		D2F76DA9E59A064428B161FC /* libPods-FITamin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FITamin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4515EA61B502AC70042ADCD /* griechische_gottheiten.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = griechische_gottheiten.plist; sourceTree = "<group>"; };
 		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D475D1F21B3F1947008D046B /* RecipeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeModel.h; sourceTree = "<group>"; };
 		D475D1F31B3F1947008D046B /* RecipeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeModel.m; sourceTree = "<group>"; };
@@ -385,6 +375,60 @@
 			name = FitnessZutaten;
 			sourceTree = "<group>";
 		};
+		8450CBF81B503701006A7E46 /* LogInLogOut */ = {
+			isa = PBXGroup;
+			children = (
+				840F04A21B41861D00AFE817 /* LogoutVC.h */,
+				840F04A31B41861D00AFE817 /* LogoutVC.m */,
+				845BDB621B3013ED00F6C7B3 /* LogInVC.h */,
+				845BDB601B3013B000F6C7B3 /* LogInVC.m */,
+				84F283641B4E83CB004A58D6 /* LogInVCDetail.h */,
+				84F283651B4E83CB004A58D6 /* LogInVCDetail.m */,
+			);
+			name = LogInLogOut;
+			sourceTree = "<group>";
+		};
+		8450CBF91B50371A006A7E46 /* NewWorkouts */ = {
+			isa = PBXGroup;
+			children = (
+				84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */,
+				84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */,
+				8496899B1B2C4A9B0000CAE2 /* FinishedScreenVC.h */,
+				8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */,
+				8496899F1B2C4B9A0000CAE2 /* MuskelgruppeVC.h */,
+				849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */,
+				849689A81B2C4BFE0000CAE2 /* StandortVC.h */,
+				849689A91B2C4BFE0000CAE2 /* StandortVC.m */,
+				849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */,
+				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
+				849689AB1B2C4C160000CAE2 /* UebungAnleitungVC.h */,
+				849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */,
+			);
+			name = NewWorkouts;
+			sourceTree = "<group>";
+		};
+		8450CBFA1B50375E006A7E46 /* Modus */ = {
+			isa = PBXGroup;
+			children = (
+				84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */,
+				84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */,
+				F70A68C31B3ED8D40057A016 /* ChooseMode.h */,
+				F70A68C41B3ED8D40057A016 /* ChooseMode.m */,
+			);
+			name = Modus;
+			sourceTree = "<group>";
+		};
+		8450CBFB1B5037BC006A7E46 /* Ernaehrung */ = {
+			isa = PBXGroup;
+			children = (
+				844AF5B81B3207FF00353B6B /* FitnessZutaten */,
+				84575BA21B3EBABA006C298D /* FitnessRezepte */,
+				849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */,
+				8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */,
+			);
+			name = Ernaehrung;
+			sourceTree = "<group>";
+		};
 		84575BA21B3EBABA006C298D /* FitnessRezepte */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,48 +539,18 @@
 				D4DA7B401B28815D00440996 /* AppDelegate.m */,
 				D4DA7B421B28815D00440996 /* StartmenuVC.h */,
 				D4DA7B431B28815D00440996 /* StartmenuVC.m */,
-				840F04A21B41861D00AFE817 /* LogoutVC.h */,
-				840F04A31B41861D00AFE817 /* LogoutVC.m */,
-				84567A3A1B2EEBBD0062E0D6 /* ErnaehrungView.h */,
-				84567A3B1B2EEBBD0062E0D6 /* ErnaehrungView.m */,
-				84567A371B2EE92E0062E0D6 /* StartmenuView.h */,
-				84567A381B2EE92E0062E0D6 /* StartmenuView.m */,
-				845BDB621B3013ED00F6C7B3 /* LogInVC.h */,
-				845BDB601B3013B000F6C7B3 /* LogInVC.m */,
-				84F283641B4E83CB004A58D6 /* LogInVCDetail.h */,
-				84F283651B4E83CB004A58D6 /* LogInVCDetail.m */,
-				84191B4D1B2C4904006C0C86 /* ChangeModusVC.h */,
-				84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */,
-				849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */,
-				8496899A1B2C4A9B0000CAE2 /* ErnaehrungVC.m */,
-				8496899B1B2C4A9B0000CAE2 /* FinishedScreenVC.h */,
-				8496899C1B2C4A9B0000CAE2 /* FinishedScreenVC.m */,
-				8496899F1B2C4B9A0000CAE2 /* MuskelgruppeVC.h */,
-				849689A01B2C4B9A0000CAE2 /* MuskelgruppeVC.m */,
-				849689A41B2C4BC10000CAE2 /* SavedWorkoutsVC.h */,
-				849689A51B2C4BC10000CAE2 /* SavedWorkoutsVC.m */,
-				849689A81B2C4BFE0000CAE2 /* StandortVC.h */,
-				849689A91B2C4BFE0000CAE2 /* StandortVC.m */,
-				849689AD1B2C4C160000CAE2 /* UebungRouteVC.h */,
-				849689AE1B2C4C160000CAE2 /* UebungRouteVC.m */,
-				849689AB1B2C4C160000CAE2 /* UebungAnleitungVC.h */,
-				849689AC1B2C4C160000CAE2 /* UebungAnleitungVC.m */,
-				F70A68C31B3ED8D40057A016 /* ChooseMode.h */,
-				F70A68C41B3ED8D40057A016 /* ChooseMode.m */,
-				84567A401B2EFEB10062E0D6 /* NeuWorkoutView.h */,
-				84567A411B2EFEB10062E0D6 /* NeuWorkoutView.m */,
-				84567A431B2EFEC40062E0D6 /* NeuWorkoutVC.h */,
-				84567A441B2EFEC40062E0D6 /* NeuWorkoutVC.m */,
 				D4DA7B4A1B28815D00440996 /* LaunchScreen.xib */,
 				D4DA7B451B28815D00440996 /* Main.storyboard */,
 				F790D0E21B31B5B50092654E /* Images.xcassets */,
+				8450CBFB1B5037BC006A7E46 /* Ernaehrung */,
+				8450CBFA1B50375E006A7E46 /* Modus */,
+				8450CBF91B50371A006A7E46 /* NewWorkouts */,
+				8450CBF81B503701006A7E46 /* LogInLogOut */,
 				D473740D1B4E8DF200208785 /* SavedWorkouts */,
 				842FCA4E1B493C060038D1CF /* Helper */,
 				84856E2F1B47AAB40039E1EF /* LocationUpload */,
 				F76F16571B43E3860065BBCE /* RecipesForWorkout */,
 				8438BEE71B41799C00E3FA62 /* CustomMapObjects */,
-				84575BA21B3EBABA006C298D /* FitnessRezepte */,
-				844AF5B81B3207FF00353B6B /* FitnessZutaten */,
 				844AF59B1B31FD8400353B6B /* Nib Files */,
 				D4DA7B3B1B28815D00440996 /* Supporting Files */,
 			);
@@ -554,6 +568,7 @@
 				844AF5A31B31FE0800353B6B /* Dynamic Table Views-Prefix.pch */,
 				D4DA7B3D1B28815D00440996 /* main.m */,
 				8441B93F1B3AD1CF008698B4 /* data.plist */,
+				D4515EA61B502AC70042ADCD /* griechische_gottheiten.plist */,
 				848C569F1B31962400B407C5 /* Default.png */,
 				848C56A01B31962400B407C5 /* Default@2x.png */,
 				848C56A11B31962400B407C5 /* Default-568h@2x.png */,
@@ -786,6 +801,7 @@
 			files = (
 				844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */,
 				848C56A31B31962400B407C5 /* Default@2x.png in Resources */,
+				D4515EA71B502AC70042ADCD /* griechische_gottheiten.plist in Resources */,
 				D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */,
 				8438BEF61B418BCC00E3FA62 /* erdbeere.png in Resources */,
 				84DC36E71B35A88B00A94CBA /* mywanderingheart.ttf in Resources */,
@@ -861,18 +877,15 @@
 				F76F166C1B43E9220065BBCE /* WorkoutRecipeCustomCell.m in Sources */,
 				845BDB611B3013B000F6C7B3 /* LogInVC.m in Sources */,
 				8496899E1B2C4A9B0000CAE2 /* FinishedScreenVC.m in Sources */,
-				84567A421B2EFEB10062E0D6 /* NeuWorkoutView.m in Sources */,
 				846311181B43D935006DD69F /* ExerciseCheckView.m in Sources */,
 				849689AA1B2C4BFE0000CAE2 /* StandortVC.m in Sources */,
 				849689AF1B2C4C160000CAE2 /* UebungAnleitungVC.m in Sources */,
 				D4DA7B441B28815D00440996 /* StartmenuVC.m in Sources */,
-				84567A3C1B2EEBBD0062E0D6 /* ErnaehrungView.m in Sources */,
 				D475D1FD1B3F1972008D046B /* GetRequestModel.m in Sources */,
 				F76F16671B43E4040065BBCE /* WorkoutRecipesTableTableViewController.m in Sources */,
 				84575BBC1B3EC8D9006C298D /* Recipe.m in Sources */,
 				D475D2001B3F1A83008D046B /* RecipeApiController.m in Sources */,
 				84575BB11B3EBB83006C298D /* RecipeDetailVC.m in Sources */,
-				849689A71B2C4BC10000CAE2 /* SavedWorkoutsVC.m in Sources */,
 				8496899D1B2C4A9B0000CAE2 /* ErnaehrungVC.m in Sources */,
 				84567A451B2EFEC40062E0D6 /* NeuWorkoutVC.m in Sources */,
 				84DC36D11B35805600A94CBA /* DataPlist.m in Sources */,
@@ -883,7 +896,6 @@
 				84F283661B4E83CB004A58D6 /* LogInVCDetail.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
 				D475D1F71B3F1956008D046B /* RecipeListModel.m in Sources */,
-				84567A391B2EE92F0062E0D6 /* StartmenuView.m in Sources */,
 				F70A68C51B3ED8D40057A016 /* ChooseMode.m in Sources */,
 				842FCA5C1B493E380038D1CF /* Quicksort.m in Sources */,
 				84575BB41B3EBE42006C298D /* RecipeTableViewController.m in Sources */,
