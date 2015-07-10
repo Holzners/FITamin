@@ -9,6 +9,7 @@
 #import "SavedWorkoutsTableVC.h"
 #import "SavedWorkoutsCell.h"
 #import <Parse/Parse.h>
+#import "UebungRouteVC.h"
 
 @interface SavedWorkoutsTableVC (){
     BOOL workoutsLoad;
@@ -25,13 +26,13 @@
     
     PFQuery *query1 = [PFQuery queryWithClassName:@"Workout"];
     [query1 whereKey:@"user" equalTo:[PFUser currentUser]];
-
     
     [query1 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            self.savedWorkouts = [[NSMutableArray alloc ]init];
+            self.savedWorkoutsAsPFObjects = [NSMutableArray arrayWithArray:objects];
+            self.savedWorkoutsAsStrings = [[NSMutableArray alloc ]init];
             for(PFObject *p in objects){
-                [self.savedWorkouts addObject:p[@"title"]];
+                [self.savedWorkoutsAsStrings addObject:p[@"title"]];
             }
             workoutsLoad = YES;
             [self.tableView reloadData];
@@ -57,7 +58,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(workoutsLoad){
-        return [self.savedWorkouts count];
+        return [self.savedWorkoutsAsStrings count];
     }
     return 0;
 }
@@ -74,12 +75,33 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    NSString *string =[self.savedWorkouts objectAtIndex:indexPath.item];
+    NSString *string =[self.savedWorkoutsAsStrings objectAtIndex:indexPath.item];
 
     
     [cell.textLabel setText:string];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+        self.selectedWorkoutAsPFObject = [self.savedWorkoutsAsPFObjects objectAtIndex:indexPath.item];
+        [self performSegueWithIdentifier:@"workoutSelected" sender:self];
+        
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    // id workoutSelected
+    if([segue.identifier  isEqual: @"workoutSelected"]){
+        
+        NSMutableArray *array = [[NSMutableArray alloc]
+                          initWithArray:self.selectedWorkoutAsPFObject[@"exercises"]];
+        
+        UebungRouteVC *routeViewController = segue.destinationViewController;
+        routeViewController.exercises = array;
+        NSLog(@"Length exc %d" , [routeViewController.exercises count]);
+        
+    }
 }
 
 

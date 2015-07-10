@@ -1023,7 +1023,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: ios.ss15.lmu.FITamin";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/admin/Downloads/parse-starter-project-1/ParseStarterProject",
@@ -1034,7 +1035,7 @@
 				INFOPLIST_FILE = FITamin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4088f360-1bf4-4ffa-8e6f-e2da296f6c47";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1044,7 +1045,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: ios.ss15.lmu.FITamin";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/admin/Downloads/parse-starter-project-1/ParseStarterProject",
@@ -1055,7 +1057,7 @@
 				INFOPLIST_FILE = FITamin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4088f360-1bf4-4ffa-8e6f-e2da296f6c47";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

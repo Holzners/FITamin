@@ -11,5 +11,10 @@
 
 @interface SavedWorkoutsTableVC : UITableViewController 
 
-@property (strong, nonatomic) NSMutableArray *savedWorkouts;
+@property (strong, nonatomic) NSMutableArray *savedWorkoutsAsStrings;
+
+@property (strong, nonatomic) NSMutableArray *savedWorkoutsAsPFObjects;
+
+@property (strong, nonatomic) PFObject *selectedWorkoutAsPFObject;
+
 @end

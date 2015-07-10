@@ -410,7 +410,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3C-FH-56b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101" y="1850"/>
+            <point key="canvasLocation" x="1213" y="2414"/>
         </scene>
         <!--WorkoutRecipesTableViewController-->
         <scene sceneID="thG-7D-gxL">
@@ -529,7 +529,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VP8-7D-4Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1780" y="-1412"/>
+            <point key="canvasLocation" x="2002" y="-1403"/>
         </scene>
         <!--ZutatenTableViewController-->
         <scene sceneID="6v2-3f-dTr">
@@ -1137,7 +1137,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDt-JD-ep9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="302"/>
+            <point key="canvasLocation" x="464" y="1792"/>
         </scene>
         <!--UebungAnleitungVC-->
         <scene sceneID="OdY-Bk-Zwq">
@@ -1276,10 +1276,13 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="RiL-f8-nGI" kind="show" identifier="workoutSelected" id="Thd-Cc-Qea"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpw-b3-TEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-563" y="1830"/>
+            <point key="canvasLocation" x="-323" y="1862"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L2S-7Z-MRC">
@@ -1297,7 +1300,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQU-AW-HyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="1830"/>
+            <point key="canvasLocation" x="343" y="2504"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fND-sm-Sov">
@@ -1341,10 +1344,10 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
         <image name="StartScreenFITamin" width="1339" height="1964"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="LXG-UN-tRA"/>
+        <segue reference="Thd-Cc-Qea"/>
+        <segue reference="rF0-Cq-HR9"/>
         <segue reference="cft-Yp-lvk"/>
         <segue reference="gF0-Hu-fC4"/>
-        <segue reference="rF0-Cq-HR9"/>
-        <segue reference="LXG-UN-tRA"/>
-        <segue reference="6IJ-aM-La2"/>
     </inferredMetricsTieBreakers>
 </document>
