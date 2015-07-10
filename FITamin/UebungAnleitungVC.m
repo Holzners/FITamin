@@ -107,9 +107,9 @@ BOOL blnRecreation, blnWorkoutFinished;
     
     [self.view addSubview:self.exerciseCheckView];
     
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmExercise:)];
-    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [self.view addGestureRecognizer:swipeRight];
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmExercise:)];
+    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:swipeLeft];
     
     
 }

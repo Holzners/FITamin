@@ -33,6 +33,21 @@
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.view addGestureRecognizer:swipeLeft];
     
+    // Create our Installation query
+//    PFQuery *pushQuery = [PFInstallation query];
+//    [pushQuery whereKey:@"user" equalTo:[PFUser currentUser]];
+    
+    PFQuery *innerQuery= [PFUser query];
+    [innerQuery whereKey:@"username" equalTo:[PFUser currentUser]];
+    PFQuery *pushQuery = [PFInstallation query];
+    [pushQuery whereKey:@"user" matchesQuery:innerQuery];
+    
+    // Send push notification to query
+    PFPush *push = [[PFPush alloc] init];
+    [push setQuery:pushQuery]; // Set our Installation query
+    [push setMessage:@"Test"];
+    [push sendPushInBackground];
+    
 }
 
 - (IBAction)tappedRightButton:(id)sender
