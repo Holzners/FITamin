@@ -95,7 +95,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartScreenFITamin" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-fV-OrM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="StartScreenFITamin" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-fV-OrM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="0.39810238486842109" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -139,7 +139,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="etr-fZ-AB8">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="etr-fZ-AB8">
                                 <rect key="frame" x="20" y="10" width="560" height="580"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -300,7 +300,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinishedWorkout" translatesAutoresizingMaskIntoConstraints="NO" id="ICn-OE-vXV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FinishedWorkout" translatesAutoresizingMaskIntoConstraints="NO" id="ICn-OE-vXV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="0.39810238489999999" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -484,14 +484,14 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fi8-jO-hlz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fi8-jO-hlz">
                                 <rect key="frame" x="158" y="40" width="284" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="8oq-JD-qNt"/>
                                     <constraint firstAttribute="width" constant="284" id="qpn-4L-0Um"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-rv-YaT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-rv-YaT">
                                 <rect key="frame" x="26" y="318" width="548" height="244"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="zI3-ix-DHp"/>
@@ -536,7 +536,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
         <!--ZutatenTableViewController-->
         <scene sceneID="6v2-3f-dTr">
             <objects>
-                <tableViewController title="ZutatenTableViewController" id="srP-0G-kt4" customClass="ZutatenTableViewController" sceneMemberID="viewController">
+                <tableViewController title="ZutatenTableViewController" id="srP-0G-kt4" customClass="ZutatTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZdO-yB-1oS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -687,16 +687,16 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hjk-gN-q7m">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hjk-gN-q7m">
                                 <rect key="frame" x="36" y="33" width="528" height="414"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="VzC-LN-E8z">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="VzC-LN-E8z">
                                 <rect key="frame" x="36" y="457" width="90" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="MKA-U2-dni">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" translatesAutoresizingMaskIntoConstraints="NO" id="MKA-U2-dni">
                                 <rect key="frame" x="191" y="491" width="240" height="78"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="V4V-gA-Axh"/>
@@ -817,13 +817,13 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FaulwarGestern" translatesAutoresizingMaskIntoConstraints="NO" id="7ex-sP-RpG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FaulwarGestern" translatesAutoresizingMaskIntoConstraints="NO" id="7ex-sP-RpG">
                                 <rect key="frame" x="-336" y="0.0" width="1272" height="551"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zI-n9-Z4T">
                                 <rect key="frame" x="197" y="393" width="206" height="94"/>
-                                <color key="backgroundColor" red="0.66666666666666663" green="0.30579378716146111" blue="0.49071835349236981" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.55214694664762698" green="0.60373648102139699" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="206" id="hOQ-8S-3ks"/>
                                     <constraint firstAttribute="height" constant="94" id="izy-Cg-iee"/>
@@ -876,7 +876,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MuskelgruppenBatman" translatesAutoresizingMaskIntoConstraints="NO" id="40P-uP-91b">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MuskelgruppenBatman" translatesAutoresizingMaskIntoConstraints="NO" id="40P-uP-91b">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" red="0.43541903497876006" green="0.44519172721446215" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -950,7 +950,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                                     <action selector="chooseArms:" destination="osx-wA-ZOB" eventType="touchUpInside" id="Fkw-Yt-yH5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-d5-AJF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-d5-AJF">
                                 <rect key="frame" x="385" y="530" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="C3i-MR-oZa"/>
@@ -1095,7 +1095,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                                     <constraint firstAttribute="width" secondItem="Usc-Uf-z5z" secondAttribute="height" multiplier="1:1" id="i16-Jm-hoB"/>
                                 </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-av-v5s">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-av-v5s">
                                 <rect key="frame" x="77" y="472" width="447" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="447" id="ph6-o0-Vcg"/>
@@ -1165,7 +1165,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                                     <segue destination="6pT-S4-rWR" kind="unwind" unwindAction="unwindToUebungRouteVC:" id="Teb-y4-8z4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MessageBox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJn-Id-bAK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="MessageBox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJn-Id-bAK">
                                 <rect key="frame" x="201" y="436" width="200" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="P1k-Ur-fg6"/>
@@ -1180,7 +1180,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-m0-LXn">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-m0-LXn">
                                 <rect key="frame" x="479" y="476" width="100" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="BXc-wi-6ST"/>
@@ -1378,11 +1378,10 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
         <image name="StartScreenFITamin" width="1339" height="1964"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JDs-Wr-iew"/>
-        <segue reference="6IJ-aM-La2"/>
-        <segue reference="MEM-97-fmL"/>
-        <segue reference="q8W-Y5-gLL"/>
-        <segue reference="gF0-Hu-fC4"/>
+        <segue reference="cft-Yp-lvk"/>
         <segue reference="rF0-Cq-HR9"/>
+        <segue reference="JDs-Wr-iew"/>
+        <segue reference="yn9-O2-k6c"/>
+        <segue reference="Hzs-WW-0LJ"/>
     </inferredMetricsTieBreakers>
 </document>

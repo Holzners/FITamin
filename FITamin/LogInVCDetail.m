@@ -11,6 +11,9 @@
 #import <Parse/Parse.h>
 #import <ParseUI/PFTextField.h>
 
+
+//Subclass von LogInVC für Details am LogIn Screen
+
 @interface LogInVCDetail ()
 
 @end
