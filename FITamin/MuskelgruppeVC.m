@@ -10,6 +10,7 @@
 #import "StandortVC.h"
 #import <Parse/Parse.h>
 #import "UebungRouteVC.h"
+#include <stdio.h>
 
 @implementation MuskelgruppeVC
 
@@ -329,6 +330,11 @@ UIButton *button;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Choose Name" message:@"Choose your new workouts name!" delegate:self cancelButtonTitle:@"Give Random Name" otherButtonTitles:@"Confirm", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+    
     //zuerst Exercises zu spezifizierten Muskelgruppen abfragen
     NSMutableArray *exercises = self.getExercises;
     
@@ -373,25 +379,41 @@ UIButton *button;
         }
     }
     
-
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"d.M.yyyy";
-    NSString *string = [formatter stringFromDate:[NSDate date]];
-
-    
-    PFObject *workout = [PFObject objectWithClassName:@"Workout"];
-    workout[@"exercises"] = exercises;
-    
-    NSString *muscleString = [self.muscles firstObject][@"title"];
-    
-    workout[@"title"] = [[NSString alloc] initWithFormat: @"%@: %@", string, muscleString];
-    workout[@"user"] = [PFUser currentUser];
-    [workout save];
-    
     return exercises;
     
 }
-
+/*
+ *User kann sein Workout selber benennen Random Gottheiten als Fallback
+ */
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    UITextField *alertTextField = [alertView textFieldAtIndex:0];
+    NSString *titleString;
+    
+    if(buttonIndex == 1){
+        // User bennent selbst
+        titleString = alertTextField.text;
+    }else{
+        // User ist zu faul und wählt Random
+        NSArray *array = [[NSArray alloc]init];
+        NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"griechische_gottheiten" ofType:@"plist"];
+        array = [NSArray arrayWithContentsOfFile:plistPath];
+        NSUInteger randomIndex = arc4random() % [array count];
+        titleString= [array objectAtIndex:randomIndex];
+    }
+    // DateStamp zum Titel des Workouts
+    NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
+    [DateFormatter setDateFormat:@"dd.MM.yyyy"];
+    NSString *dateString = [DateFormatter stringFromDate:[NSDate date]];
+    NSString *titleWithDate = [NSString stringWithFormat: @"%@ %@", titleString ,dateString];
+    
+    //Workout abspeichern
+    PFObject *workout = [PFObject objectWithClassName:@"Workout"];
+    workout[@"exercises"] = self.getExercises;
+    workout[@"title"] = titleWithDate;
+    workout[@"user"] = [PFUser currentUser];
+    [workout save];
+    
+}
 
 -(void)loadExerciseRessources:(PFObject *)exercise{
     //hier muss jetzt geprüft werden welche Ressource noch von
