@@ -67,6 +67,7 @@
     if(navigationController == self.tabBarController.moreNavigationController){
         if([viewController.title  isEqual: @"LogoutVC"]){
             [PFUser logOut];
+           // self.tabBarController.tabBar.hidden = YES;
         }
     }
 }

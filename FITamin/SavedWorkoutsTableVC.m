@@ -84,8 +84,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
-        self.selectedWorkoutAsPFObject = [self.savedWorkoutsAsPFObjects objectAtIndex:indexPath.item];
+       self.selectedWorkoutAsPFObject = [self.savedWorkoutsAsPFObjects objectAtIndex:indexPath.item];
+        //[self dismissViewControllerAnimated:NO completion:nil];
         [self performSegueWithIdentifier:@"workoutSelected" sender:self];
         
 }
@@ -98,10 +98,14 @@
                           initWithArray:self.selectedWorkoutAsPFObject[@"exercises"]];
         
         UebungRouteVC *routeViewController = segue.destinationViewController;
+        routeViewController.hidesBottomBarWhenPushed = YES;
+        [[self navigationController] setNavigationBarHidden:YES animated:NO];
         routeViewController.exercises = array;
         NSLog(@"Length exc %d" , [routeViewController.exercises count]);
         
     }
+    
+    
 }
 
 
