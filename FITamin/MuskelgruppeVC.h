@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @property (weak , nonatomic) NSString *selectedMuscleGroup;
 @property (strong , nonatomic) NSMutableArray *muscles;
-
+@property (weak, nonatomic) NSString *mode;
 
 - (IBAction)chooseArms:(id)sender;
 

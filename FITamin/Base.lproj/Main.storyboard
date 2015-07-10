@@ -986,7 +986,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RiL-f8-nGI" kind="show" id="6IJ-aM-La2"/>
+                                    <segue destination="RiL-f8-nGI" kind="show" identifier="segueToRoute" id="6IJ-aM-La2"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Klicke die Muskelgruppe an, die du trainieren willst und danach auf NEXT!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="h0q-SQ-9XV">

@@ -72,23 +72,23 @@ NSString *currentMode;
     [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
         if (!error) {
             
-             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-             [alert show];
+//             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
+//             [alert show];
             
             
             currentMode = mode[@"title"];
             
-            if ([currentMode  isEqual: @"Fettverbrennung"]){
-                
-                NSLog(@"Muskelgruppe: %@", currentMode);
-                    [self performSegueWithIdentifier:@"fettverbrennungSegue" sender:self];
+//            if ([currentMode  isEqual: @"Fettverbrennung"]){
+            
+//                NSLog(@"Muskelgruppe: %@", currentMode);
+//                    [self performSegueWithIdentifier:@"fettverbrennungSegue" sender:self];
 
-                
-            } else if ([currentMode  isEqual: @"Muskelaufbau"]){
-                NSLog(@"Muskelgruppe: %@", currentMode);
-                    [self performSegueWithIdentifier:@"muskelaufbauSegue" sender:self];
-
-            }
+//                
+//            } else if ([currentMode  isEqual: @"Muskelaufbau"]){
+//                NSLog(@"Muskelgruppe: %@", currentMode);
+                   [self performSegueWithIdentifier:@"muskelaufbauSegue" sender:self];
+//
+//            }
             
             
         } else {
