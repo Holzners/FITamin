@@ -216,7 +216,6 @@
     
     //Loggin für alle gefundenen Locations
     for (NSMutableDictionary *entry in _selectedLocationsWithDistancesAndExercises){
-        PFObject *pfObj = [entry objectForKey:@"exercise"];
         NSNumber *dist = [entry objectForKey:@"distance"];
       //  NSLog(@"Übung Name: %@" , pfObj[@"title"]);
         NSLog(@"Distanz zur vorherigen %@" , dist);
