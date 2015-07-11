@@ -12,7 +12,10 @@
 #import "LogInVC.h"
 
 //Implementieren
-#import "StartmenuView.h"
+//#import "StartmenuView.h"
+
+
+//Homescreen from TabBar
 
 @interface StartmenuVC ()
 
@@ -63,6 +66,7 @@
     
 }
 
+//Verbindung mit Logout Screen
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if(navigationController == self.tabBarController.moreNavigationController){
         if([viewController.title  isEqual: @"LogoutVC"]){

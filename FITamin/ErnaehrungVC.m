@@ -8,15 +8,13 @@
 
 #import "ErnaehrungVC.h"
 
-//Importieren des Headers der View
-#import "ErnaehrungView.h"
-
 
 @implementation ErnaehrungVC
 
 -(void) viewDidLoad{
     [super viewDidLoad];
     
+    //Swipe Effects
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(tappedRightButton:)];
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.view addGestureRecognizer:swipeLeft];
