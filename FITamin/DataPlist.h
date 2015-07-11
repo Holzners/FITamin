@@ -10,10 +10,16 @@
 
 @interface DataPlist : NSObject
 
-+(void)createFile;
 
-+(NSArray *)loadData;
+//müssen public sein, da es private nicht akzeptiert
 
-+(BOOL)saveData:(NSArray *)array;
+//Methoden zum Plist File erstellen, laden und speichern
+//Speicherung, damit ich immer darauf zugreifen kann
+
++ (void)createFile;
+
++ (NSArray *)loadData;
+
++ (BOOL)saveData:(NSArray *)array;
 
 @end

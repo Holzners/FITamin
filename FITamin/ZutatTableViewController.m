@@ -14,6 +14,10 @@
 
 @interface ZutatTableViewController () <UISearchDisplayDelegate, UISearchBarDelegate>
 
+
+//Properties für TableView und Suchfunktionen
+//teilweise noch von anderer iOS Version
+
 @property (nonatomic, strong) NSArray *zutatenArray;
 @property (nonatomic, strong) NSMutableArray *sectionTitles;
 @property (nonatomic, strong) NSDictionary *zutatenDictionary;
@@ -24,10 +28,6 @@
 
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) UISearchController *searchController;
-
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
-
-- (IBAction)searchButtonPressed:(id)sender;
 
 @end
 
@@ -50,6 +50,7 @@ NSDictionary *zutDic;
 {
     [super viewDidLoad];
     
+    //Laden der CustomCell
     UINib *nib = [UINib nibWithNibName:@"CustomCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"CustomCell"];
     
@@ -66,22 +67,11 @@ NSDictionary *zutDic;
     self.tableView.tableHeaderView = self.searchController.searchBar;
     [self.searchBar sizeToFit];
     
-#if TARGET_IPHONE_SIMULATOR
-    // where are you?
-    NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
-#endif
-    
-    //Zutaten anlegen
-    
-//    if(cell.selected @"Avocado"){
-//        
-//    }
+    //Zutaten mit Text und Image anlegen
     
     Zutat *zutat1 = [Zutat new];
     zutat1.zutatDetailName = cell.zutatenNameLabel.text;
     zutat1.zutatDetailImage = @"Avocado.jpg";
-    
-//    zutat1.zutatenDetailText = [UIFont fontWithName:@"mywanderingheart" size:25];
     zutat1.zutatDetailText = @"Die Avocado enthält viele gesunde Fettsäuren und ist deshalb gut für den Muskelaufbau und die allgemeine Fitness.";
     
     Zutat *zutat2 = [Zutat new];
@@ -204,7 +194,9 @@ NSDictionary *zutDic;
 {
     [super viewWillAppear:animated];
     
+    //Ladet Namen von der Plist
     self.zutatenArray = [DataPlist loadData];
+    //Füllt Dictionary mit Array
     self.zutatenDictionary = [self dictionaryAusArray:self.zutatenArray];
     [self.tableView reloadData];
 }
@@ -214,22 +206,6 @@ NSDictionary *zutDic;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)filterContentForSearchText: (NSString *) searchText
-{
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@", searchText];
-    self.searchZutatenArray = [self.zutatenArray filteredArrayUsingPredicate:resultPredicate];
-    self.searchZutatenDict = [self dictionaryAusArray:self.searchZutatenArray];
-}
-
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{
-    [self filterContentForSearchText:searchString];
-    return YES;
-}
-
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -260,7 +236,7 @@ NSDictionary *zutDic;
     }
 }
 
-/* SCHNELLINDEX ANFANG */
+// Schnellindex
 -(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     if (tableView == self.tableView) {
@@ -279,7 +255,6 @@ NSDictionary *zutDic;
     }
 }
 
-/* SCHNELLINDEX ENDE */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -499,95 +474,72 @@ NSDictionary *zutDic;
             dvc.zutatenName = array[indexPath.row];
             
             if([dvc.zutatenName isEqual:@"Avocado"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:0];
             }
             if([dvc.zutatenName isEqual:@"Erbsen"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:1];
             }
             if([dvc.zutatenName isEqual:@"Brokkoli"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:2];
             }
             if([dvc.zutatenName isEqual:@"Kaffee"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:3];
             }
             if([dvc.zutatenName isEqual:@"Milch"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:4];
             }
             if([dvc.zutatenName isEqual:@"Mandeln"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:5];
             }
             if([dvc.zutatenName isEqual:@"Feigen"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:6];
             }
             if([dvc.zutatenName isEqual:@"Walnüsse"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:7];
             }
             if([dvc.zutatenName isEqual:@"Quark"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:8];
             }
             if([dvc.zutatenName isEqual:@"Kurkuma"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:9];
             }
             if([dvc.zutatenName isEqual:@"Quinoa"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:10];
             }
             if([dvc.zutatenName isEqual:@"Joghurt"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:11];
             }
             if([dvc.zutatenName isEqual:@"Himbeeren"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:12];
             }
             if([dvc.zutatenName isEqual:@"Ingwer"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:13];
             }
             if([dvc.zutatenName isEqual:@"Chili"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:14];
             }
             if([dvc.zutatenName isEqual:@"Blaubeeren"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:15];
             }
             if([dvc.zutatenName isEqual:@"Haferflocken"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:16];
             }
             if([dvc.zutatenName isEqual:@"Hülsenfrüchte"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:17];
             }
             if([dvc.zutatenName isEqual:@"Hüttenkäse"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:18];
             }
             if([dvc.zutatenName isEqual:@"Eier"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:19];
             }
             if([dvc.zutatenName isEqual:@"Putenfleisch"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:20];
             }
             if([dvc.zutatenName isEqual:@"Thunfisch"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:21];
             }
             if([dvc.zutatenName isEqual:@"Grüner Tee"]){
-                NSLog(@"blblblblblblb");
                 dvc.zutat = [zutatenArray objectAtIndex:22];
             }
             
