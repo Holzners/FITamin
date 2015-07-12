@@ -40,7 +40,7 @@
     
 }
 
-//durch Tabs mit swipe & flop transition navigieren
+//durch Tabs mit swipe & flip transition navigieren
 - (IBAction)tappedRightButton:(id)sender
 {
     NSUInteger selectedIndex = [self.tabBarController selectedIndex];
@@ -71,6 +71,12 @@
 
 //Verbindung mit Logout Screen
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    
+    UINavigationBar *morenavbar = navigationController.navigationBar;
+    UINavigationItem *morenavitem = morenavbar.topItem;
+    /* We don't need Edit button in More screen. */
+    morenavitem.rightBarButtonItem = nil;
+    
     if(navigationController == self.tabBarController.moreNavigationController){
         if([viewController.title  isEqual: @"LogoutVC"]){
             [PFUser logOut];

@@ -73,6 +73,7 @@
 		F76F16671B43E4040065BBCE /* WorkoutRecipesTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76F16661B43E4040065BBCE /* WorkoutRecipesTableTableViewController.m */; };
 		F76F16691B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F16681B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib */; };
 		F76F166C1B43E9220065BBCE /* WorkoutRecipeCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F76F166B1B43E9220065BBCE /* WorkoutRecipeCustomCell.m */; };
+		F7D922401B52B80D00E6EF02 /* SavedWorkoutsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D9223F1B52B80D00E6EF02 /* SavedWorkoutsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +282,8 @@
 		F76F166A1B43E9220065BBCE /* WorkoutRecipeCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutRecipeCustomCell.h; sourceTree = "<group>"; };
 		F76F166B1B43E9220065BBCE /* WorkoutRecipeCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutRecipeCustomCell.m; sourceTree = "<group>"; };
 		F790D0E21B31B5B50092654E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F7D9223E1B52B80D00E6EF02 /* SavedWorkoutsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedWorkoutsVC.h; sourceTree = "<group>"; };
+		F7D9223F1B52B80D00E6EF02 /* SavedWorkoutsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedWorkoutsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -470,6 +473,8 @@
 		D473740D1B4E8DF200208785 /* SavedWorkouts */ = {
 			isa = PBXGroup;
 			children = (
+				F7D9223E1B52B80D00E6EF02 /* SavedWorkoutsVC.h */,
+				F7D9223F1B52B80D00E6EF02 /* SavedWorkoutsVC.m */,
 				840F04A51B41C25800AFE817 /* SavedWorkoutsTableVC.h */,
 				840F04A61B41C25800AFE817 /* SavedWorkoutsTableVC.m */,
 			);
@@ -867,6 +872,7 @@
 				84F283661B4E83CB004A58D6 /* LogInVCDetail.m in Sources */,
 				84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */,
 				D475D1F71B3F1956008D046B /* RecipeListModel.m in Sources */,
+				F7D922401B52B80D00E6EF02 /* SavedWorkoutsVC.m in Sources */,
 				F70A68C51B3ED8D40057A016 /* ChooseMode.m in Sources */,
 				84575BB41B3EBE42006C298D /* RecipeTableViewController.m in Sources */,
 				D4DA7B411B28815D00440996 /* AppDelegate.m in Sources */,

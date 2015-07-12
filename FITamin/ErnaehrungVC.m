@@ -25,6 +25,7 @@
     
 }
 
+//durch Tabs mit swipe & flip transition navigieren
 - (IBAction)tappedRightButton:(id)sender
 {
     NSUInteger selectedIndex = [self.tabBarController selectedIndex];
@@ -32,7 +33,7 @@
     UIView * fromView = self.tabBarController.selectedViewController.view;
     UIView * toView = [[self.tabBarController.viewControllers objectAtIndex:selectedIndex+1] view];
     
-    // Transition using a page curl.
+    // Transition using a page flip.
     [UIView transitionFromView:fromView
                         toView:toView
                       duration:0.5
@@ -45,13 +46,14 @@
                     }];
 }
 
+//durch Tabs mit swipe & flip transition navigieren
 - (IBAction)tappedLeftButton:(id)sender
 {
     NSUInteger selectedIndex = [self.tabBarController selectedIndex];
     UIView * fromView = self.tabBarController.selectedViewController.view;
     UIView * toView = [[self.tabBarController.viewControllers objectAtIndex:selectedIndex-1] view];
     
-    // Transition using a page curl.
+    // Transition using a page flip.
     [UIView transitionFromView:fromView
                         toView:toView
                       duration:0.5

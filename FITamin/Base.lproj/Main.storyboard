@@ -1129,7 +1129,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</mutableString>
         <!--SavedWorkoutVC-->
         <scene sceneID="IJ2-rO-ZHV">
             <objects>
-                <viewController title="SavedWorkoutVC" id="Jne-Lq-nH9" sceneMemberID="viewController">
+                <viewController title="SavedWorkoutVC" id="Jne-Lq-nH9" customClass="SavedWorkoutsVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="htc-Go-L0j"/>
                         <viewControllerLayoutGuide type="bottom" id="nMr-Kw-XSI"/>

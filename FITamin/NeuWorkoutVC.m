@@ -16,6 +16,8 @@ NSString *currentMode;
 -(void) viewDidLoad{
     [super viewDidLoad];
     
+    
+    //Swipe GestureRecognizer für Tabcontroller
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(tappedRightButton:)];
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.view addGestureRecognizer:swipeLeft];
@@ -30,6 +32,7 @@ NSString *currentMode;
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
+//durch Tabs mit swipe & flip transition navigieren
 - (IBAction)tappedRightButton:(id)sender
 {
     NSUInteger selectedIndex = [self.tabBarController selectedIndex];
@@ -50,13 +53,14 @@ NSString *currentMode;
                     }];
 }
 
+//durch Tabs mit swipe & flip transition navigieren
 - (IBAction)tappedLeftButton:(id)sender
 {
     NSUInteger selectedIndex = [self.tabBarController selectedIndex];
     UIView * fromView = self.tabBarController.selectedViewController.view;
     UIView * toView = [[self.tabBarController.viewControllers objectAtIndex:selectedIndex-1] view];
     
-    // Transition using a page curl.
+    // Transition using a page flip.
     [UIView transitionFromView:fromView
                         toView:toView
                       duration:0.5
@@ -105,6 +109,7 @@ NSString *currentMode;
 
 }
 
+//Statusbar verstecken
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
