@@ -32,27 +32,15 @@
     self.tabBarController.tabBar.translucent = NO;
     [self.tabBarController setDelegate:self];
     
+    //durch Tabs mit swipe navigieren
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(tappedRightButton:)];
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.view addGestureRecognizer:swipeLeft];
     
-    // Create our Installation query
-//    PFQuery *pushQuery = [PFInstallation query];
-//    [pushQuery whereKey:@"user" equalTo:[PFUser currentUser]];
-    
-    PFQuery *innerQuery= [PFUser query];
-    [innerQuery whereKey:@"username" equalTo:[PFUser currentUser]];
-    PFQuery *pushQuery = [PFInstallation query];
-    [pushQuery whereKey:@"user" matchesQuery:innerQuery];
-    
-    // Send push notification to query
-    PFPush *push = [[PFPush alloc] init];
-    [push setQuery:pushQuery]; // Set our Installation query
-    [push setMessage:@"Test"];
-    [push sendPushInBackground];
     
 }
 
+//durch Tabs mit swipe & flop transition navigieren
 - (IBAction)tappedRightButton:(id)sender
 {
     NSUInteger selectedIndex = [self.tabBarController selectedIndex];
@@ -60,7 +48,7 @@
     UIView * fromView = self.tabBarController.selectedViewController.view;
     UIView * toView = [[self.tabBarController.viewControllers objectAtIndex:selectedIndex+1] view];
     
-    // Transition using a page curl.
+    // Transition using a page flip.
     [UIView transitionFromView:fromView
                         toView:toView
                       duration:0.5
@@ -91,6 +79,7 @@
     }
 }
 
+//keine Statusbar anzeigen
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }

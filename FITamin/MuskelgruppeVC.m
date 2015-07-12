@@ -44,7 +44,7 @@ UIButton *button;
         [self chooseBrust:self];
         [self choosePo:self];
         
-            [self performSegueWithIdentifier:@"segueToRoute" sender:self];
+        [self performSegueWithIdentifier:@"segueToRoute" sender:self];
    
 
     }

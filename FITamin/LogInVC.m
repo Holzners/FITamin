@@ -24,20 +24,21 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    //User bereits eingeloggt
     if([PFUser currentUser] != nil)
     {
-       // [PFUser logOut];
+       //Modusauswahl überspringen, wenn bereits ein Modus für currentUser abgespeichert ist
         PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
         [query whereKey:@"user" equalTo:[PFUser currentUser]];
         [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
             if (!error) {
+                //Modusauswahl überpringen
                 [self performSegueWithIdentifier:@"startMenu" sender:self];
             } else {
+                //chooseModeVC anzeigen
                 [self performSegueWithIdentifier:@"LoginSegue" sender:self];
             }
         }];
-
-        
             }
     
      // No user logged in

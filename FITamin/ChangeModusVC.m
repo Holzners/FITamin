@@ -18,20 +18,53 @@ NSString *chosenMode;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //Modus in Parse für User abrufen und Bild anpassen
+    PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
+        if (!error) {
+            
+            //Modus abrufen
+            chosenMode = mode[@"title"];
+            
+            //Modus ist Fettverbrennung
+            if ([chosenMode  isEqual: @"Fettverbrennung"]){
+                
+                NSLog(@"Muskelgruppe: %@", chosenMode);
+                modusImage.image = [UIImage imageNamed: @"ModusScreenFett.png"];
+                
+            //Modus ist Muskelaufbau
+            } else if ([chosenMode  isEqual: @"Muskelaufbau"]){
+                NSLog(@"Muskelgruppe: %@", chosenMode);
+                modusImage.image = [UIImage imageNamed: @"ModusScreenMuskel.png"];
+            }
+            
+            
+        } else {
+            // Did not find any UserStats for the current user
+            NSLog(@"Error: %@", error);
+        }
+    }];
+    
+    NSLog(@"Muskelgruppe: %@", chosenMode);
 
+
+    //GestureRecognizer um durch Tabs mir swipe zu navigieren
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(tappedLeftButton:)];
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:swipeRight];
     
 }
 
+//neue View mit PageFlipTransition anzeigen
 - (IBAction)tappedLeftButton:(id)sender
 {
     NSUInteger selectedIndex = [self.tabBarController selectedIndex];
     UIView * fromView = self.tabBarController.selectedViewController.view;
     UIView * toView = [[self.tabBarController.viewControllers objectAtIndex:selectedIndex-1] view];
     
-    // Transition using a page curl.
+    // Transition using a page flip.
     [UIView transitionFromView:fromView
                         toView:toView
                       duration:0.5
@@ -47,35 +80,9 @@ NSString *chosenMode;
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
-    [query whereKey:@"user" equalTo:[PFUser currentUser]];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
-        if (!error) {
-            
-            chosenMode = mode[@"title"];
-            
-            if ([chosenMode  isEqual: @"Fettverbrennung"]){
-                
-                NSLog(@"Muskelgruppe: %@", chosenMode);
-                modusImage.image = [UIImage imageNamed: @"ModusScreenFett.png"];
-                
-            } else if ([chosenMode  isEqual: @"Muskelaufbau"]){
-                NSLog(@"Muskelgruppe: %@", chosenMode);
-                modusImage.image = [UIImage imageNamed: @"ModusScreenMuskel.png"];
-            }
-
-            
-        } else {
-            // Did not find any UserStats for the current user
-            NSLog(@"Error: %@", error);
-        }
-    }];
-    
-     NSLog(@"Muskelgruppe: %@", chosenMode);
-    
 }
 
+//Modus un Muskelaufbau ändern
 - (IBAction)chooseMuscle:(id)sender {
     modusImage.image = [UIImage imageNamed: @"ModusScreenMuskel.png"];
     
@@ -83,13 +90,13 @@ NSString *chosenMode;
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
         if (!error) {
+            //Modus in Muskelaufbau ändern
             [mode setObject:@"Muskelaufbau" forKey:@"title"];
             
             // Save
             [mode saveInBackground];
         } else {
-            // Did not find any UserStats for the current user
-            //Muscle Arms in Array einfügen
+            //kein Modus fü currentUser angelegt
             PFObject *mode = [PFObject objectWithClassName:@"Mode"];
             mode[@"title"]  = @"Muskelaufbau";
             mode[@"user"] = [PFUser currentUser];
@@ -100,6 +107,8 @@ NSString *chosenMode;
     }];
 
 }
+
+//Modus in Fettverbrennung ändern
 - (IBAction)chooseFat:(id)sender {
     modusImage.image = [UIImage imageNamed: @"ModusScreenFett.png"];
     
@@ -107,14 +116,13 @@ NSString *chosenMode;
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
         if (!error) {
-            
+            //Modus in Fettverbrennung ändern
             [mode setObject:@"Fettverbrennung" forKey:@"title"];
             
             // Save
             [mode saveInBackground];
         } else {
-            // Did not find any UserStats for the current user
-            //Muscle Arms in Array einfügen
+            //kein Modus fü currentUser angelegt
             PFObject *mode = [PFObject objectWithClassName:@"Mode"];
             mode[@"title"]  = @"Fettverbrennung";
             mode[@"user"] = [PFUser currentUser];
@@ -126,6 +134,7 @@ NSString *chosenMode;
 
 }
 
+//keine Statusbar anzeigen
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }

@@ -107,6 +107,8 @@ BOOL blnRecreation, blnWorkoutFinished;
     
     [self.view addSubview:self.exerciseCheckView];
     
+    //Initialisiere SwipeGestureRecognizer
+    //Zurück zu Route und nächster Übung bei swipe nach links
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmExercise:)];
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.view addGestureRecognizer:swipeLeft];
@@ -183,7 +185,7 @@ BOOL blnRecreation, blnWorkoutFinished;
         //Alle Sets durch -> Fertig
         [timer invalidate];
         blnWorkoutFinished = YES;
-        [lblCounter setText:@"You're Done!"];
+        [lblCounter setText:@"You're Done! \n Swipe to get to the next execise"];
         //Tear down Timer
         [timer invalidate];
         blnWorkoutFinished = YES;
@@ -245,7 +247,7 @@ BOOL blnRecreation, blnWorkoutFinished;
         //Alle Sets sind durch -> Fertig
         [timer invalidate];
         blnWorkoutFinished = YES;
-        [lblCounter setText:@"You're Done!"];
+        [lblCounter setText:@"You're Done! \n (Swipe to get to the next exercise)"];
         //Tear down Timer
         [timer invalidate];
         blnWorkoutFinished = YES;
@@ -275,15 +277,18 @@ BOOL blnRecreation, blnWorkoutFinished;
 }
 
 
-
+//Übung abgeschlossen und segue zurück zur Route/nächsten Übung
 - (IBAction)confirmExercise:(id)sender {
     
-    NSLog(@"test");
-    //Tear down Timer
-    [timer invalidate];
-    blnWorkoutFinished = YES;
-    timer = NULL;
-    [self performSegueWithIdentifier:@"unwindToUebungRouteVC" sender:self];
+    if(self.btnStart.alpha == 0){
+        NSLog(@"test");
+        //Tear down Timer
+        [timer invalidate];
+        blnWorkoutFinished = YES;
+        timer = NULL;
+        [self performSegueWithIdentifier:@"unwindToUebungRouteVC" sender:self];
+    }
+    
 
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
 //     [alert show];

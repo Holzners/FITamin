@@ -417,6 +417,7 @@
 		8450CBFB1B5037BC006A7E46 /* Ernaehrung */ = {
 			isa = PBXGroup;
 			children = (
+				F76F16571B43E3860065BBCE /* RezepteFuerWorkout */,
 				844AF5B81B3207FF00353B6B /* FitnessZutaten */,
 				84575BA21B3EBABA006C298D /* FitnessRezepte */,
 				849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */,
@@ -545,7 +546,6 @@
 				D473740D1B4E8DF200208785 /* SavedWorkouts */,
 				842FCA4E1B493C060038D1CF /* Helper */,
 				84856E2F1B47AAB40039E1EF /* LocationUpload */,
-				F76F16571B43E3860065BBCE /* RecipesForWorkout */,
 				8438BEE71B41799C00E3FA62 /* CustomMapObjects */,
 				844AF59B1B31FD8400353B6B /* Nib Files */,
 				D4DA7B3B1B28815D00440996 /* Supporting Files */,
@@ -612,7 +612,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F76F16571B43E3860065BBCE /* RecipesForWorkout */ = {
+		F76F16571B43E3860065BBCE /* RezepteFuerWorkout */ = {
 			isa = PBXGroup;
 			children = (
 				F76F16651B43E4040065BBCE /* WorkoutRecipesTableTableViewController.h */,
@@ -620,7 +620,7 @@
 				F76F166A1B43E9220065BBCE /* WorkoutRecipeCustomCell.h */,
 				F76F166B1B43E9220065BBCE /* WorkoutRecipeCustomCell.m */,
 			);
-			name = RecipesForWorkout;
+			name = RezepteFuerWorkout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
