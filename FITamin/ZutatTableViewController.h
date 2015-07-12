@@ -9,6 +9,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZutatTableViewController : UITableViewController <UISearchResultsUpdating , UISearchControllerDelegate>
-
+@interface ZutatTableViewController : UITableViewController 
 @end
