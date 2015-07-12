@@ -51,9 +51,6 @@
     _mapView.delegate = self;
     
     [_locationManager startUpdatingLocation];
-    
-  
-    
    
 }
 
@@ -96,12 +93,6 @@
 }
 
 
-
-
-
-
-
-
 #pragma mark - CLLocationManagerDelegate
 
 //called for each location update Location Manager receives
@@ -114,7 +105,6 @@
     if(distancesCalculated){
         
         //Distanzen wurden berechnet, jetzt nur noch dieser Fall
-        NSLog(@"didUpdateToLocation: %@", newLocation);
         
         if (_currentLocation != nil) {
         
@@ -146,20 +136,18 @@
         
         //Das heißt die Route wurde berechnet, setze erstes Target an Stelle 0 im Location array
         if([self.selectedLocationsWithDistancesAndExercises count]>0){
-        _targetLocation = [[self.selectedLocationsWithDistancesAndExercises objectAtIndex:0]objectForKey:@"location"];
-            
+            _targetLocation = [[self.selectedLocationsWithDistancesAndExercises objectAtIndex:0]objectForKey:@"location"];
             [self calculateRouteFromCurrentToDestination:_targetLocation];
-
         }
         
-                [_mapView addAnnotations:[self createAnnotations:self.selectedLocationsWithDistancesAndExercises]];
+        [_mapView addAnnotations:[self createAnnotations:self.selectedLocationsWithDistancesAndExercises]];
         distancesCalculated = true;
         
         }
     
 }
 
-
+//Berechnet die Zusammenstellung der Übungen
 -(void) calculateInitialRoute{
     
     //Die Distanzen müssen berechnet werden
@@ -195,16 +183,7 @@
             
         }
         
-        //Finde Minimum Distanz aller Locations (tmpLocationDistance ist Array von Dictionarys)
-        
-        
-        NSLog(@"Next Distances: %d" , i);
-        for(NSMutableDictionary *dict in tmpLocationDistances){
-            NSNumber *dist = [dict objectForKey:@"distance"];
-            NSLog(@"Distance: %@" , dist);
-        }
-        
-        
+        //Finde Minimum Distanz aller Locations (tmpLocationDistance ist Array von Dictionarys
         //Füge jetzt diese Location zu Location-Exercise Array hinzu
         [self.selectedLocationsWithDistancesAndExercises addObject:[
             tmpLocationDistances objectAtIndex:[self getMinDistanceIndex:tmpLocationDistances]]];
@@ -223,13 +202,16 @@
     
 }
 
+/**
+ *Berechnet den Index des kleinsten Elements im Array
+ */
 - (NSInteger) getMinDistanceIndex : (NSMutableArray*) array{
     NSInteger result = 0;
-    NSNumber *maxVal = [NSNumber numberWithInt:INT16_MAX];
+    NSNumber *minVal = [NSNumber numberWithInt:INT16_MAX];
    
     for(NSMutableDictionary *dict in array){
-        if([dict objectForKey:@"distance"] < maxVal){
-            maxVal = [dict objectForKey:@"distance"];
+        if([dict objectForKey:@"distance"] < minVal){
+            minVal = [dict objectForKey:@"distance"];
             result = [array indexOfObject:dict];
         }
     }
@@ -255,9 +237,6 @@
     
     //Convert CLLocation to MKMapItem
     MKMapItem *src = [MKMapItem mapItemForCurrentLocation];
-    //MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:(destinationLocation.coordinate) addressDictionary:nil];
-    //MKMapItem *destination = [[MKMapItem alloc] initWithPlacemark:placemark];
-    
     for (NSMutableDictionary *entry in _selectedLocationsWithDistancesAndExercises){
         
         CLLocation *pfObj = [entry objectForKey:@"location"];
@@ -266,14 +245,9 @@
         
     //Init MKDirectionRequest
     MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
-    //Set requests transport type to walk
     [request setTransportType:MKDirectionsTransportTypeWalking];
-    //start = currentLocation
-        request.source = src;
-    //set destination
+    request.source = src;
     request.destination = destination;
-    
-    
     request.requestsAlternateRoutes = YES;
     
     //init Directions (points of Interesst) for route
@@ -303,14 +277,8 @@
     for (MKRoute *route in response.routes)
     {
         
-        [_mapView
-addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
-        
-        //additonaly print navigation command in Log
-        /* for (MKRouteStep *step in route.steps)
-         {
-         NSLog(@"%@", step.instructions);
-         } */
+        [_mapView addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
+
     }
 }
 
@@ -322,12 +290,6 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
     renderer.strokeColor = [UIColor blueColor];
     renderer.lineWidth = 4.0;
     return renderer;
-}
-
--(void) sortByDistance:(NSMutableArray*)arrayToSort{
-    //[self quickSort:0 withRight:(arrayToSort.count-1) forArray:arrayToSort];
-    [Quicksort quickSort:0 withRight:(arrayToSort.count-1) forArray:arrayToSort];
-    
 }
 
 
@@ -371,6 +333,7 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
         MapViewExerciseAnnotation *annotation = [[MapViewExerciseAnnotation alloc]initWithTitle:exercise[@"title"] AndCoordinate:pfObj.coordinate AndNumber:number];
         
         [annotations addObject:annotation];
+        
     }
     return annotations;
 }
@@ -399,7 +362,7 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
          [self performSegueWithIdentifier:@"workoutFinished" sender:self];
     }
     else {
-        _currentLocation = [self.selectedLocationsWithDistancesAndExercises objectAtIndex:_currentExercise];
+        _currentLocation = [[self.selectedLocationsWithDistancesAndExercises objectAtIndex:_currentExercise] objectForKey:@"location"];
         [self performSegueWithIdentifier:@"mapToDescription" sender:self];
     }
     
@@ -412,17 +375,14 @@ addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
     
     
     if(_currentExercise >= [_exercises count]){
-  //      unwindSegue.destinationViewController;
         workoutFinished = @"workoutFinished";
         [self.locationManager stopUpdatingLocation];
-    //    [targetReached setAlpha:0];
+   
     }else{
     
-       /** UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Workout Finished" message:[NSString stringWithFormat:@"%@", @"Well Done"] delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-        [alert show]; */
      UIViewController* sourceViewController = unwindSegue.sourceViewController;
     [_locationManager startUpdatingLocation];
-    
+   
     if ([sourceViewController isKindOfClass:[UebungAnleitungVC class]])
     {
         NSLog(@"Coming from UebungAnleitungVC!");

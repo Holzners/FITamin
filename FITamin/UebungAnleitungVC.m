@@ -113,7 +113,6 @@ BOOL blnRecreation, blnWorkoutFinished;
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.view addGestureRecognizer:swipeLeft];
     
-    
 }
 
 - (IBAction)startExercise:(id)sender {

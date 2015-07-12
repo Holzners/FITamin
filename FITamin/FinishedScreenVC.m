@@ -10,7 +10,6 @@
 
 @implementation FinishedScreenVC
 - (IBAction)backToMenu:(id)sender {
-    
     [self performSegueWithIdentifier:@"backToMenu" sender:self];
 }
 

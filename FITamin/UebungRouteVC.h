@@ -10,11 +10,10 @@
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
 #import <CoreLocation/CoreLocation.h>
-#import "Quicksort.h"
 
 @interface UebungRouteVC : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (strong, nonatomic) MKMapItem *destination;
 
@@ -28,11 +27,11 @@
 
 @property (strong, nonatomic) CLLocation *currentLocation;
 
-@property (weak, nonatomic) CLLocation *targetLocation;
+@property (strong, nonatomic) CLLocation *targetLocation;
 
-@property (weak, nonatomic) NSString *selectedMuscleGroup;
+@property (strong, nonatomic) NSString *selectedMuscleGroup;
 
-@property (weak, nonatomic) IBOutlet UIButton *targetReached;
+@property (strong, nonatomic) IBOutlet UIButton *targetReached;
 
 
 -(void)calculateInitialRoute;
@@ -40,8 +39,6 @@
 -(void)showRoute:(MKDirectionsResponse *)response;
 
 -(NSInteger)getMinDistanceIndex : (NSMutableArray*) array;
-
--(void) sortByDistance:(NSMutableArray*)arrayToSort;
 
 -(void) calculateRouteFromCurrentToDestination:(CLLocation * ) destinationLocation;
 

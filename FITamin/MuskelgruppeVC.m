@@ -7,7 +7,6 @@
 //
 
 #import "MuskelgruppeVC.h"
-#import "StandortVC.h"
 #import <Parse/Parse.h>
 #import "UebungRouteVC.h"
 #include <stdio.h>
