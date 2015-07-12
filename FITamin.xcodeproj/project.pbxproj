@@ -55,6 +55,7 @@
 		B9F47C3697E9FF05607928C2 /* libPods-FITamin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F76DA9E59A064428B161FC /* libPods-FITamin.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F790D0E21B31B5B50092654E /* Images.xcassets */; };
 		D4515EA71B502AC70042ADCD /* griechische_gottheiten.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4515EA61B502AC70042ADCD /* griechische_gottheiten.plist */; };
+		D4515EC41B5297930042ADCD /* readme in Resources */ = {isa = PBXBuildFile; fileRef = D4515EC31B5297930042ADCD /* readme */; };
 		D45A6F241B2F0EDE0016A3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A6F231B2F0EDE0016A3BE /* MapKit.framework */; };
 		D47374011B4E866C00208785 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F04A31B41861D00AFE817 /* LogoutVC.m */; };
 		D475D1F41B3F1947008D046B /* RecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D475D1F31B3F1947008D046B /* RecipeModel.m */; };
@@ -248,6 +249,7 @@
 		84F283651B4E83CB004A58D6 /* LogInVCDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInVCDetail.m; sourceTree = "<group>"; };
 		D2F76DA9E59A064428B161FC /* libPods-FITamin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FITamin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4515EA61B502AC70042ADCD /* griechische_gottheiten.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = griechische_gottheiten.plist; sourceTree = "<group>"; };
+		D4515EC31B5297930042ADCD /* readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
 		D45A6F231B2F0EDE0016A3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D475D1F21B3F1947008D046B /* RecipeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeModel.h; sourceTree = "<group>"; };
 		D475D1F31B3F1947008D046B /* RecipeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeModel.m; sourceTree = "<group>"; };
@@ -526,6 +528,7 @@
 				8438BEE71B41799C00E3FA62 /* CustomMapObjects */,
 				844AF59B1B31FD8400353B6B /* Nib Files */,
 				D4DA7B3B1B28815D00440996 /* Supporting Files */,
+				D4515EC31B5297930042ADCD /* readme */,
 			);
 			path = FITamin;
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 				848C56A31B31962400B407C5 /* Default@2x.png in Resources */,
 				D4515EA71B502AC70042ADCD /* griechische_gottheiten.plist in Resources */,
 				D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */,
+				D4515EC41B5297930042ADCD /* readme in Resources */,
 				84DC36E71B35A88B00A94CBA /* mywanderingheart.ttf in Resources */,
 				D4DA7B471B28815D00440996 /* Main.storyboard in Resources */,
 				848C56A41B31962400B407C5 /* Default-568h@2x.png in Resources */,

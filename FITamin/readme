@@ -1,0 +1,6 @@
+
+Unsere App nutzt Cocoa Pods diese müssen dementsprechend auf dem Mac installiert sein:
+
+Installation über die Konsole:
+
+$ sudo gem install cocoapods
