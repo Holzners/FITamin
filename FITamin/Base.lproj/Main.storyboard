@@ -16,6 +16,7 @@
             <string>mywanderingheart</string>
             <string>mywanderingheart</string>
             <string>mywanderingheart</string>
+            <string>mywanderingheart</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1151,7 +1152,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvd-Ha-W2e">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvd-Ha-W2e">
                                 <rect key="frame" x="25" y="487" width="194" height="43"/>
                                 <fontDescription key="fontDescription" name="mywanderingheart" family="mywanderingheart" pointSize="20"/>
                                 <state key="normal" title="Back to Route">
