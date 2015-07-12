@@ -6,9 +6,7 @@
 //  Copyright (c) 2015 iOS-Praktikum. All rights reserved.
 //
 #import <Parse/Parse.h>
-
 #import "AppDelegate.h"
-#import "DataPlist.h"
 
 @interface AppDelegate ()
 

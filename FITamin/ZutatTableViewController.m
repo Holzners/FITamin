@@ -10,7 +10,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CustomCell.h"
 #import "DetailsViewController.h"
-#import "DataPlist.h"
 
 @interface ZutatTableViewController () <UISearchDisplayDelegate, UISearchBarDelegate>
 
@@ -193,13 +192,13 @@ NSDictionary *zutDic;
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    //Ladet Namen von der Plist
-    self.zutatenArray = [DataPlist loadData];
+    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
+    self.zutatenArray = [NSArray arrayWithContentsOfFile:plistPath];
     //Füllt Dictionary mit Array
     self.zutatenDictionary = [self dictionaryAusArray:self.zutatenArray];
     [self.tableView reloadData];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -545,6 +544,7 @@ NSDictionary *zutDic;
             
         }
     }
+   
 }
 
 @end
