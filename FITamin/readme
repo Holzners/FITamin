@@ -4,3 +4,8 @@ Unsere App nutzt Cocoa Pods diese müssen dementsprechend auf dem Mac installier
 Installation über die Konsole:
 
 $ sudo gem install cocoapods
+
+____
+
+Auch wird ein Standortdienst und Netzwerkdienste genutz.
+Die Nutzung muss dementsprechend erlaubt werden
