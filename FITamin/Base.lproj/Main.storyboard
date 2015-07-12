@@ -787,7 +787,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</mutableString>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zI-n9-Z4T">
-                                <rect key="frame" x="197" y="393" width="206" height="94"/>
+                                <rect key="frame" x="197" y="456" width="206" height="94"/>
                                 <color key="backgroundColor" red="0.55214694664762698" green="0.60373648102139699" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="206" id="hOQ-8S-3ks"/>
@@ -807,6 +807,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</mutableString>
                             <constraint firstAttribute="centerX" secondItem="1zI-n9-Z4T" secondAttribute="centerX" id="6q1-V2-afO"/>
                             <constraint firstAttribute="centerX" secondItem="7ex-sP-RpG" secondAttribute="centerX" id="E6M-4Y-cZw"/>
                             <constraint firstAttribute="centerY" secondItem="7ex-sP-RpG" secondAttribute="centerY" id="Ek9-N0-1MF"/>
+                            <constraint firstItem="0FS-Kb-19I" firstAttribute="top" secondItem="1zI-n9-Z4T" secondAttribute="bottom" constant="50" id="Ell-Qo-XaV"/>
                             <constraint firstAttribute="centerY" secondItem="1zI-n9-Z4T" secondAttribute="centerY" constant="-140" id="FNh-zO-qdP"/>
                             <constraint firstAttribute="centerY" secondItem="1zI-n9-Z4T" secondAttribute="centerY" constant="-140" id="OLv-30-Q1S"/>
                             <constraint firstItem="0FS-Kb-19I" firstAttribute="top" secondItem="7ex-sP-RpG" secondAttribute="bottom" id="ZKS-aM-gem"/>
@@ -816,6 +817,9 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</mutableString>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Ek9-N0-1MF"/>
+                                <exclude reference="FNh-zO-qdP"/>
+                                <exclude reference="OLv-30-Q1S"/>
+                                <exclude reference="ia8-2S-L8D"/>
                             </mask>
                         </variation>
                     </view>
@@ -1269,7 +1273,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</mutableString>
     <inferredMetricsTieBreakers>
         <segue reference="7zk-au-qxp"/>
         <segue reference="Hzs-WW-0LJ"/>
-        <segue reference="Thd-Cc-Qea"/>
+        <segue reference="yn9-O2-k6c"/>
         <segue reference="zx0-KT-eaU"/>
         <segue reference="Rtp-t8-oKQ"/>
     </inferredMetricsTieBreakers>
