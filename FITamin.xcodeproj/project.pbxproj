@@ -395,6 +395,7 @@
 		8450CBFB1B5037BC006A7E46 /* Ernaehrung */ = {
 			isa = PBXGroup;
 			children = (
+				F76F16571B43E3860065BBCE /* RezepteFuerWorkout */,
 				844AF5B81B3207FF00353B6B /* FitnessZutaten */,
 				84575BA21B3EBABA006C298D /* FitnessRezepte */,
 				849689991B2C4A9B0000CAE2 /* ErnaehrungVC.h */,
@@ -522,7 +523,6 @@
 				8450CBF81B503701006A7E46 /* LogInLogOut */,
 				D473740D1B4E8DF200208785 /* SavedWorkouts */,
 				84856E2F1B47AAB40039E1EF /* LocationUpload */,
-				F76F16571B43E3860065BBCE /* RecipesForWorkout */,
 				8438BEE71B41799C00E3FA62 /* CustomMapObjects */,
 				844AF59B1B31FD8400353B6B /* Nib Files */,
 				D4DA7B3B1B28815D00440996 /* Supporting Files */,
@@ -589,7 +589,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F76F16571B43E3860065BBCE /* RecipesForWorkout */ = {
+		F76F16571B43E3860065BBCE /* RezepteFuerWorkout */ = {
 			isa = PBXGroup;
 			children = (
 				F76F16651B43E4040065BBCE /* WorkoutRecipesTableTableViewController.h */,
@@ -597,7 +597,7 @@
 				F76F166A1B43E9220065BBCE /* WorkoutRecipeCustomCell.h */,
 				F76F166B1B43E9220065BBCE /* WorkoutRecipeCustomCell.m */,
 			);
-			name = RecipesForWorkout;
+			name = RezepteFuerWorkout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -926,8 +926,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: ios.ss15.lmu.FITamin";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: ios.ss15.lmu.FITamin";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Julia Kinshofer (2P4G7E824T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Julia Kinshofer (2P4G7E824T)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -972,8 +972,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: ios.ss15.lmu.FITamin";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: ios.ss15.lmu.FITamin";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Julia Kinshofer (2P4G7E824T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Julia Kinshofer (2P4G7E824T)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1001,8 +1001,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Julia Kinshofer (2P4G7E824T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Julia Kinshofer (2P4G7E824T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/admin/Downloads/parse-starter-project-1/ParseStarterProject",
@@ -1013,7 +1013,7 @@
 				INFOPLIST_FILE = FITamin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4088f360-1bf4-4ffa-8e6f-e2da296f6c47";
 			};
 			name = Debug;
 		};
@@ -1023,8 +1023,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Julia Kinshofer (2P4G7E824T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Julia Kinshofer (2P4G7E824T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/admin/Downloads/parse-starter-project-1/ParseStarterProject",
@@ -1035,7 +1035,7 @@
 				INFOPLIST_FILE = FITamin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4088f360-1bf4-4ffa-8e6f-e2da296f6c47";
 			};
 			name = Release;
 		};

@@ -61,6 +61,7 @@ RecipeModel *selectedWorkoutRecipe;
     self.searchSummary = [[SearchModel alloc]init];
     workoutRecipeArray = [[NSArray alloc]init];
     
+    //Suche nach verschiedenen Rezepte entsprechend dem eingestellten Modus
     PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
@@ -76,7 +77,7 @@ RecipeModel *selectedWorkoutRecipe;
             
             
         } else {
-            // Did not find any UserStats for the current user
+            // Kein Modus für User gespeichert
             NSLog(@"Error: %@", error);
         }
     }];
@@ -122,21 +123,6 @@ RecipeModel *selectedWorkoutRecipe;
     
     WorkoutRecipeCustomCell *cell;
     
-    
-    
-    /** NSArray *array = [NSArray array];
-     
-     if (tableView == self.tableView) {
-     
-     //NSString *sectionTitle = self.sectionTitles[indexPath.section];
-     //array = (self.recipeDictionary)[sectionTitle];
-     
-     } else {
-     
-     NSString *sectionTitle = self.searchRecipeSectionTitles[indexPath.section];
-     array = (self.searchRecipeDict)[sectionTitle];
-     }*/
-    
     // Zellenhintergrund mit Farbverlauf füllen
     if (tableView == self.tableView) {
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -147,11 +133,7 @@ RecipeModel *selectedWorkoutRecipe;
     
     UIColor *colorOne = [UIColor colorWithRed:(120/255.0) green:(135/255.0) blue:(150/255.0) alpha:1.0];
     UIColor *colorTwo = [UIColor colorWithRed:(57/255.0)  green:(79/255.0)  blue:(96/255.0)  alpha:1.0];
-    
-    // Farben für Farbverlauf
-    //    UIColor *whiteColor = [UIColor whiteColor];
-    //    UIColor *darkGreyColor = [UIColor colorWithRed:255.0/255.0 green:230.0/255.0 blue:255.0/255.0 alpha:1.0];
-    //
+
     CAGradientLayer *farbverlauf = [CAGradientLayer layer];
     
     farbverlauf.frame = cell.bounds;
@@ -223,7 +205,7 @@ RecipeModel *selectedWorkoutRecipe;
 }
 
 
-
+//Rezeptdetails holen
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -264,7 +246,7 @@ RecipeModel *selectedWorkoutRecipe;
     }
 }
 
-
+//API durchsuchen
 - (void) searchWithValue:(NSString*) param{
     
     HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -276,6 +258,7 @@ RecipeModel *selectedWorkoutRecipe;
         if (error==nil) {
 
             if ([response count]!=nil) {
+                //shuffle Rezepte
                 NSUInteger count = [[response recipes] count];
                 for (NSUInteger i = 0; i < count; ++i) {
                     unsigned long nElements = count - i;

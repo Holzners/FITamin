@@ -107,9 +107,11 @@ BOOL blnRecreation, blnWorkoutFinished;
     
     [self.view addSubview:self.exerciseCheckView];
     
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmExercise:)];
-    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [self.view addGestureRecognizer:swipeRight];
+    //Initialisiere SwipeGestureRecognizer
+    //Zurück zu Route und nächster Übung bei swipe nach links
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmExercise:)];
+    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:swipeLeft];
     
 }
 
@@ -182,7 +184,7 @@ BOOL blnRecreation, blnWorkoutFinished;
         //Alle Sets durch -> Fertig
         [timer invalidate];
         blnWorkoutFinished = YES;
-        [lblCounter setText:@"You're Done!"];
+        [lblCounter setText:@"You're Done! \n Swipe to get to the next execise"];
         //Tear down Timer
         [timer invalidate];
         blnWorkoutFinished = YES;
@@ -244,7 +246,7 @@ BOOL blnRecreation, blnWorkoutFinished;
         //Alle Sets sind durch -> Fertig
         [timer invalidate];
         blnWorkoutFinished = YES;
-        [lblCounter setText:@"You're Done!"];
+        [lblCounter setText:@"You're Done! \n (Swipe to get to the next exercise)"];
         //Tear down Timer
         [timer invalidate];
         blnWorkoutFinished = YES;
@@ -274,23 +276,17 @@ BOOL blnRecreation, blnWorkoutFinished;
 }
 
 
-
+//Übung abgeschlossen und segue zurück zur Route/nächsten Übung
 - (IBAction)confirmExercise:(id)sender {
     
-    //Tear down Timer
-    [timer invalidate];
-    blnWorkoutFinished = YES;
-    timer = NULL;
-    [self performSegueWithIdentifier:@"unwindToUebungRouteVC" sender:self];
+    if(self.btnStart.alpha == 0){
+        //Tear down Timer
+        [timer invalidate];
+        blnWorkoutFinished = YES;
+        timer = NULL;
+        [self performSegueWithIdentifier:@"unwindToUebungRouteVC" sender:self];
+    }
     
-}
-
-- (IBAction)confirmTest:(id)sender {
-    
-    //Tear down Timer
-    [timer invalidate];
-    blnWorkoutFinished = YES;
-    timer = NULL;
 }
 
 @end

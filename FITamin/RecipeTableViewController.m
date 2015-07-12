@@ -72,16 +72,19 @@ RecipeModel *selectedRecipe;
 }
 
 
-//#pragma mark Content Filtering
+//Scopes filtern
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
         
         if ([scope isEqualToString:@"Protein"]) {
             NSLog(@"Protein");
-            // Further filter the array with the scope
+            //Suche nach Rezepten mit Protein
             [self searchWithValue:@"protein"];
+            //Suchfenster nach Suche wieder schlißen
             [self.searchDisplayController setActive:NO animated:YES];
         } else if([scope isEqualToString:@"Low Carb"]){
+            //Suche nach Rezepten mit Protein
             [self searchWithValue:@"low carb"];
+            //Suchfenster nach Suche wieder schließen
             [self.searchDisplayController setActive:NO animated:YES];
         }
     
@@ -89,16 +92,16 @@ RecipeModel *selectedRecipe;
     NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
 }
 
-        
+//Suche nach Rezepten, wenn search-button gedrückt wurde
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
     
     NSString *searchtext = recipeSearchBar.text;
     [self searchWithValue:searchtext];
     [searchBar resignFirstResponder];
-    NSLog(@"search Text %@", recipeSearchBar.text);
-    NSLog(@"searchButton clicked");
+    //Suchfenster nach Suche wieder schließen
     [self.searchDisplayController setActive:NO animated:YES];
+    //tableView aktualisieren
     [self.tableView reloadData];
 }
 
@@ -121,39 +124,11 @@ RecipeModel *selectedRecipe;
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{   return 1;
-//    /**
-//    if (tableView == self.tableView) {
-//        return [self.sectionTitles count];
-//    } else {
-//        return [self.searchRecipeSectionTitles count];
-//    } */
-//}
-
-//Hier eventuell Fehler
-//andere Methode:
-
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    if (tableView == self.searchDisplayController.searchResultsTableView) {
-//        return [searchResults count];
-//        
-//    } else {
-//        return [recipes count];
-//    }
-//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSLog(@"Anzahl reihen: %lu" , (unsigned long)self.searchSummary.recipes.count);
-    if(self.searchSummary.recipes.count > 30){
-        NSLog(@"Über 30");
-        return 30;
-    } else{
-        NSLog(@"Unter 30");
     return self.searchSummary.recipes.count;
-    }
     
 }
 
@@ -237,32 +212,11 @@ RecipeModel *selectedRecipe;
         RecipeDetailVC *dvc = segue.destinationViewController;
         dvc.recipe = selectedRecipe;
         
-        /**
-        NSIndexPath *indexPath = sender;
-        
-        NSArray *array = [NSArray array];
-        
-        if ([self.searchRecipeController isActive]) {
-            NSString *sectionTitle = self.searchRecipeSectionTitles[indexPath.section];
-            array = (self.searchRecipeDict)[sectionTitle];
-            // dvc.zutat = [zutatenArray objectAtIndex:indexPath.row];
-            dvc.recipeName = array[indexPath.row];
-        } else{
-            NSString *sectionTitle = self.sectionTitles[indexPath.section];
-            array = (self.recipeDictionary)[sectionTitle];
-            //dvc.zutat = [zutatenArray objectAtIndex:indexPath.row];
-            dvc.recipeName = array[indexPath.row];
-            
-            if([dvc.recipeName isEqual:@"Avocado"]){
-                NSLog(@"blblblblblblb");
-                dvc.recipe = [recipeArray objectAtIndex:0];
-            }
-
-            
-        }*/
     }
 }
 
+
+//API durchsuchen
 - (void) searchWithValue:(NSString*) param{
         
         HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];

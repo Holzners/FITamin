@@ -45,19 +45,22 @@
 }
 */
 - (IBAction)chooseMuscle:(id)sender {
+    //Bild anpassen
     modeImage.image = [UIImage imageNamed: @"ModusScreenMuskel.png"];
-    //Muscle Bottom in Array einfügen
+    
+    //Modus in Parse für User abrufen/abspeichern
     PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
         if (!error) {
+            //Modus für current User in Muskelaufbau ändern
             [mode setObject:@"Muskelaufbau" forKey:@"title"];
             
             // Save
             [mode saveInBackground];
         } else {
-            // Did not find any UserStats for the current user
-            //Muscle Arms in Array einfügen
+            //kein Modus für currentUser angelegt
+            //Modus Muskelaufbau für User erzeugen und abspeichern
             PFObject *mode = [PFObject objectWithClassName:@"Mode"];
             mode[@"title"]  = @"Muskelaufbau";
             mode[@"user"] = [PFUser currentUser];
@@ -71,20 +74,22 @@
     
 }
 - (IBAction)chooseFat:(id)sender {
+    //Bild anpassen
     modeImage.image = [UIImage imageNamed: @"ModusScreenFett.png"];
     
-    
+    //Modus in Parse für User abrufen/abspeichern
     PFQuery *query = [PFQuery queryWithClassName:@"Mode"];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject * mode, NSError *error) {
         if (!error) {
+            //Modus für current User in Fettverbrennung ändern
             [mode setObject:@"Fettverbrennung" forKey:@"title"];
             
             // Save
             [mode saveInBackground];
         } else {
-            // Did not find any UserStats for the current user
-            //Muscle Arms in Array einfügen
+            //kein Modus für currentUser angelegt
+            //Modus Fettverbrennung für User erzeugen und abspeichern
             PFObject *mode = [PFObject objectWithClassName:@"Mode"];
             mode[@"title"]  = @"Fettverbrennung";
             mode[@"user"] = [PFUser currentUser];
