@@ -193,13 +193,6 @@
         
     }
     
-    //Loggin für alle gefundenen Locations
-    for (NSMutableDictionary *entry in _selectedLocationsWithDistancesAndExercises){
-        NSNumber *dist = [entry objectForKey:@"distance"];
-      //  NSLog(@"Übung Name: %@" , pfObj[@"title"]);
-        NSLog(@"Distanz zur vorherigen %@" , dist);
-    }
-    
 }
 
 /**
@@ -378,15 +371,6 @@
         workoutFinished = @"workoutFinished";
         [self.locationManager stopUpdatingLocation];
    
-    }else{
-    
-     UIViewController* sourceViewController = unwindSegue.sourceViewController;
-    [_locationManager startUpdatingLocation];
-   
-    if ([sourceViewController isKindOfClass:[UebungAnleitungVC class]])
-    {
-        NSLog(@"Coming from UebungAnleitungVC!");
-    }
     }
 }
 @end

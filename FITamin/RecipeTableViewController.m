@@ -77,7 +77,6 @@ RecipeModel *selectedRecipe;
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
         
         if ([scope isEqualToString:@"Protein"]) {
-            NSLog(@"Protein");
             //Suche nach Rezepten mit Protein
             [self searchWithValue:@"protein"];
             //Suchfenster nach Suche wieder schlißen
@@ -89,8 +88,6 @@ RecipeModel *selectedRecipe;
             [self.searchDisplayController setActive:NO animated:YES];
         }
     
-    
-    NSLog(@"searchSummary: %@",[self.searchSummary recipes]);
 }
 
 //Suche nach Rezepten, wenn search-button gedrückt wurde
@@ -128,7 +125,6 @@ RecipeModel *selectedRecipe;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Anzahl reihen: %lu" , (unsigned long)self.searchSummary.recipes.count);
     return self.searchSummary.recipes.count;
     
 }
@@ -151,7 +147,6 @@ RecipeModel *selectedRecipe;
 
     RecipeListModel *recipe = [[self.searchSummary recipes] objectAtIndex:indexPath.row];
     
-    NSLog(@"Name %@" ,  [recipe title]);
     cell.recipeNameLabel.text = [recipe title];
     
     [cell.recipeImageView setImageWithURL:[NSURL URLWithString:[[recipe image_url ]stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]] usingProgressView:nil];
@@ -161,9 +156,6 @@ RecipeModel *selectedRecipe;
     cell.rateView.rating = ([[recipe social_rank]doubleValue]/100) * 5;
     cell.rateView.starSize = 10;
     cell.recipeNameLabel.font = [UIFont fontWithName:@"Avenir Next" size:15];
-    NSLog(@"Rating %@", [recipe social_rank]);
-     NSLog(@"Rating Star%f",  cell.rateView.rating);
-    
     
     return cell;
 }
@@ -229,7 +221,6 @@ RecipeModel *selectedRecipe;
             if (error==nil) {
                 if ([response count]!=nil) {
                     self.searchSummary = response;
-                    NSLog(@"Länge rückgabe array: %lu", (unsigned long)[[self.searchSummary recipes] count]);
                     [self.tableView reloadData];
                     [HUD hide:YES];
                 }else{

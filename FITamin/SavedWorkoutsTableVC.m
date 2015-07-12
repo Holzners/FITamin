@@ -101,7 +101,6 @@
         routeViewController.hidesBottomBarWhenPushed = YES;
         [[self navigationController] setNavigationBarHidden:YES animated:NO];
         routeViewController.exercises = array;
-        NSLog(@"Length exc %d" , [routeViewController.exercises count]);
         
     }
     

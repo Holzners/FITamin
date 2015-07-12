@@ -145,7 +145,7 @@
                                     <constraint firstAttribute="height" constant="400" id="l5A-tE-zbx"/>
                                     <constraint firstAttribute="width" constant="400" id="q1j-DC-Eeq"/>
                                 </constraints>
-                                <mutableString key="text">Diese App wurde von Stephan Holzner, Nora Unterbruner, Julia Kinshofer und Kyrill Schmidt im IOS Praktikum des Lehrstuhls Mobile und Verteilte Systeme an der LMU München im Sommersemester 2015 entwickelt. 
+                                <mutableString key="text">Diese App wurde von  Nora Unterbruner, Julia Kinshofer, Kyrill Schmidt und Stephan Holzner im IOS Praktikum des Lehrstuhls Mobile und Verteilte Systeme an der LMU München im Sommersemester 2015 entwickelt. 
 
 Die Informationen zu den Zutatenbeschreibungen stammen aus den Büchern "Der LOGI Muskelcoach" (Dr. Torsten Albers, Dr. Nicolai Worm und Kirsten Segler und "Das Women's Health Workout ohne Geräte "(Martina Steinbach). Für die Rezepte wurde die API "Food2Fork" verwendet.
 

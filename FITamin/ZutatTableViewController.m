@@ -302,8 +302,7 @@ NSDictionary *zutDic;
     cell.zutatenImageView.image = [UIImage imageNamed:imageString];
     cell.zutatenNameLabel.font = [UIFont fontWithName:@"Avenir Next" size:25];
     
-    NSLog(@"ZutatenCell: %@",array[indexPath.row]);
-    NSLog(@"ZutatenCell: %@",imageString);
+
     return cell;
 }
 
@@ -357,11 +356,8 @@ NSDictionary *zutDic;
     if ([self.searchController isActive]) {
         self.searchSectionTitles = [NSMutableArray new];
         
-        NSLog(@"ZutatenDic: %@", sortedArray);
     } else {
         self.sectionTitles = [NSMutableArray new];
-        
-        NSLog(@"ZutatenDic2: %@", sortedArray);
     }
     
     // Dictionary, welches zurück gegeben werden soll, initialisieren
@@ -410,7 +406,6 @@ NSDictionary *zutDic;
             }
         }
     }
-    NSLog(@"ZutatenDic3: %@", dict);
     return dict;
     
 }

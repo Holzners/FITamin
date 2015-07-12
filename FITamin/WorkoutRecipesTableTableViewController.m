@@ -68,7 +68,7 @@ RecipeModel *selectedWorkoutRecipe;
         if (!error) {
             
             NSString *chosenMode = mode[@"title"];
-            NSLog(@"Muskelgruppe: %@", chosenMode);
+    
             if([chosenMode  isEqual: @"Muskelaufbau"]){
                 [self searchWithValue:@"Protein"];
             } else if([chosenMode  isEqual: @"Fettverbrennung"]){
@@ -108,7 +108,6 @@ RecipeModel *selectedWorkoutRecipe;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Anzahl reihen: %lu" , (unsigned long)self.searchSummary.recipes.count);
     return 10;
 }
 
@@ -145,7 +144,6 @@ RecipeModel *selectedWorkoutRecipe;
     
     RecipeListModel *recipe = [[self.searchSummary recipes] objectAtIndex:indexPath.row];
     
-    NSLog(@"Name %@" ,  [recipe title]);
     cell.WorkoutRecipeLabel.text = [recipe title];
     
     [cell.WorkoutRecipeImage setImageWithURL:[NSURL URLWithString:[[recipe image_url ]stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]] usingProgressView:nil];
@@ -155,10 +153,6 @@ RecipeModel *selectedWorkoutRecipe;
     cell.WorkoutRecipeRating.rating = ([[recipe social_rank]doubleValue]/100) * 5;
     cell.WorkoutRecipeRating.starSize = 10;
     cell.WorkoutRecipeLabel.font = [UIFont fontWithName:@"Avenir Next" size:15];
-    NSLog(@"Rating %@", [recipe social_rank]);
-    NSLog(@"Rating Star%f",  cell.WorkoutRecipeRating.rating);
-    
-    
     return cell;
 }
 
@@ -267,8 +261,6 @@ RecipeModel *selectedWorkoutRecipe;
                 }
                 
                 self.searchSummary = response;
-                NSLog(@"searchSummary %@", self.searchSummary);
-                NSLog(@"Länge rückgabe array: %lu", (unsigned long)[[self.searchSummary recipes] count]);
                 [self.tableView reloadData];
                 [HUD hide:YES];
             }else{
