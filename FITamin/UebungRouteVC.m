@@ -139,10 +139,9 @@
             self.targetLocation = [[self.selectedLocationsWithDistancesAndExercises objectAtIndex:0]objectForKey:@"location"];
             
             [self calculateRouteFromCurrentToDestination:_targetLocation];
-
         }
         
-                [_mapView addAnnotations:[self createAnnotations:self.selectedLocationsWithDistancesAndExercises]];
+        [_mapView addAnnotations:[self createAnnotations:self.selectedLocationsWithDistancesAndExercises]];
         distancesCalculated = true;
         
         }
@@ -335,6 +334,7 @@
         MapViewExerciseAnnotation *annotation = [[MapViewExerciseAnnotation alloc]initWithTitle:exercise[@"title"] AndCoordinate:pfObj.coordinate AndNumber:number];
         
         [annotations addObject:annotation];
+        
     }
     return annotations;
 }
@@ -363,7 +363,7 @@
          [self performSegueWithIdentifier:@"workoutFinished" sender:self];
     }
     else {
-        _currentLocation = [self.selectedLocationsWithDistancesAndExercises objectAtIndex:_currentExercise];
+        _currentLocation = [[self.selectedLocationsWithDistancesAndExercises objectAtIndex:_currentExercise] objectForKey:@"location"];
         [self performSegueWithIdentifier:@"mapToDescription" sender:self];
     }
     
