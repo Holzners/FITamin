@@ -94,8 +94,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="StartScreenFITamin" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-fV-OrM">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartScreenFITamin" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-fV-OrM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.39810238486842109" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
@@ -145,11 +145,11 @@
                                     <constraint firstAttribute="height" constant="400" id="l5A-tE-zbx"/>
                                     <constraint firstAttribute="width" constant="400" id="q1j-DC-Eeq"/>
                                 </constraints>
-                                <string key="text">Diese App wurde von Stephan Holzner, Nora Unterbruner, Julia Kinshofer und Kyrill Schmidt im IOS Praktikum des Lehrstuhls Mobile und Verteilte Systeme an der LMU München im Sommersemester 2015 entwickelt. 
+                                <mutableString key="text">Diese App wurde von Stephan Holzner, Nora Unterbruner, Julia Kinshofer und Kyrill Schmidt im IOS Praktikum des Lehrstuhls Mobile und Verteilte Systeme an der LMU München im Sommersemester 2015 entwickelt. 
 
-Die Informationen zu den Zutatenbeschreibungen stammen aus den Büchern "Der LOGI Muskelcoach" (Dr. Torsten Albers, Dr. Nicolai Worm und Kirsten Segler und "Das Women's Health Workout ohne Geräte "(Martina Steinbach).
+Die Informationen zu den Zutatenbeschreibungen stammen aus den Büchern "Der LOGI Muskelcoach" (Dr. Torsten Albers, Dr. Nicolai Worm und Kirsten Segler und "Das Women's Health Workout ohne Geräte "(Martina Steinbach). Für die Rezepte wurde die API "Food2Fork" verwendet.
 
-Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
+Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -299,8 +299,8 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FinishedWorkout" translatesAutoresizingMaskIntoConstraints="NO" id="ICn-OE-vXV">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinishedWorkout" translatesAutoresizingMaskIntoConstraints="NO" id="ICn-OE-vXV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.39810238489999999" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30u-4W-Zoa">
@@ -414,7 +414,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRL-Hv-yOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3159" y="934"/>
+            <point key="canvasLocation" x="3125" y="902"/>
         </scene>
         <!--WorkoutRecipeNavigationController-->
         <scene sceneID="RYv-Mo-2Py">
@@ -782,8 +782,8 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FaulwarGestern" translatesAutoresizingMaskIntoConstraints="NO" id="7ex-sP-RpG">
-                                <rect key="frame" x="-336" y="0.0" width="1272" height="551"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FaulwarGestern" translatesAutoresizingMaskIntoConstraints="NO" id="7ex-sP-RpG">
+                                <rect key="frame" x="-336" y="0.0" width="1272" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zI-n9-Z4T">
@@ -1014,7 +1014,7 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btP-jt-SGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="435" y="1080"/>
+            <point key="canvasLocation" x="607" y="968"/>
         </scene>
         <!--UebungRouteVC-->
         <scene sceneID="efV-sf-N3u">
@@ -1034,8 +1034,8 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                                     <constraint firstAttribute="width" secondItem="Usc-Uf-z5z" secondAttribute="height" multiplier="1:1" id="i16-Jm-hoB"/>
                                 </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-av-v5s">
-                                <rect key="frame" x="77" y="472" width="447" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-av-v5s">
+                                <rect key="frame" x="77" y="521" width="447" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="447" id="ph6-o0-Vcg"/>
                                 </constraints>
@@ -1092,23 +1092,8 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="MessageBox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJn-Id-bAK">
-                                <rect key="frame" x="201" y="436" width="200" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="P1k-Ur-fg6"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="h5E-Wu-qru"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" red="0.12720954640000001" green="0.1882998776" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.3200404053" green="1" blue="0.96470119769999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="h5E-Wu-qru"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-m0-LXn">
-                                <rect key="frame" x="479" y="476" width="100" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-m0-LXn">
+                                <rect key="frame" x="479" y="525" width="100" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="BXc-wi-6ST"/>
                                     <constraint firstAttribute="width" constant="100" id="euD-HO-ctf"/>
@@ -1282,10 +1267,10 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
         <image name="StartScreenFITamin" width="1339" height="1964"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="59z-La-M52"/>
         <segue reference="7zk-au-qxp"/>
-        <segue reference="rF0-Cq-HR9"/>
-        <segue reference="yn9-O2-k6c"/>
         <segue reference="Hzs-WW-0LJ"/>
+        <segue reference="Thd-Cc-Qea"/>
+        <segue reference="zx0-KT-eaU"/>
+        <segue reference="Rtp-t8-oKQ"/>
     </inferredMetricsTieBreakers>
 </document>
