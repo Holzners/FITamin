@@ -111,7 +111,6 @@ BOOL blnRecreation, blnWorkoutFinished;
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:swipeRight];
     
-    
 }
 
 - (IBAction)startExercise:(id)sender {
@@ -278,15 +277,11 @@ BOOL blnRecreation, blnWorkoutFinished;
 
 - (IBAction)confirmExercise:(id)sender {
     
-    NSLog(@"test");
     //Tear down Timer
     [timer invalidate];
     blnWorkoutFinished = YES;
     timer = NULL;
     [self performSegueWithIdentifier:@"unwindToUebungRouteVC" sender:self];
-
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-//     [alert show];
     
 }
 
