@@ -11,10 +11,8 @@
 		84191B4F1B2C4904006C0C86 /* ChangeModusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84191B4E1B2C4904006C0C86 /* ChangeModusVC.m */; };
 		842FCA5C1B493E380038D1CF /* Quicksort.m in Sources */ = {isa = PBXBuildFile; fileRef = 842FCA5B1B493E380038D1CF /* Quicksort.m */; };
 		8438BEF41B417A3F00E3FA62 /* MapViewExerciseAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438BEF31B417A3F00E3FA62 /* MapViewExerciseAnnotation.m */; };
-		8438BEF61B418BCC00E3FA62 /* erdbeere.png in Resources */ = {isa = PBXBuildFile; fileRef = 8438BEF51B418BCC00E3FA62 /* erdbeere.png */; };
 		8441B9401B3AD1CF008698B4 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8441B93F1B3AD1CF008698B4 /* data.plist */; };
 		8441B9431B3AD4CF008698B4 /* Zutat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8441B9421B3AD4CF008698B4 /* Zutat.m */; };
-		844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF58C1B31E29600353B6B /* zutatenListe.plist */; };
 		844AF5A01B31FDFF00353B6B /* Dynamic Table Views-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */; };
 		844AF5A21B31FE0400353B6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 844AF5A11B31FE0400353B6B /* InfoPlist.strings */; };
 		844AF5B71B3206AE00353B6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844AF5B61B3206AE00353B6B /* Info.plist */; };
@@ -178,11 +176,9 @@
 		842FCA5B1B493E380038D1CF /* Quicksort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quicksort.m; sourceTree = "<group>"; };
 		8438BEF21B4179EC00E3FA62 /* MapViewExerciseAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewExerciseAnnotation.h; sourceTree = "<group>"; };
 		8438BEF31B417A3F00E3FA62 /* MapViewExerciseAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewExerciseAnnotation.m; sourceTree = "<group>"; };
-		8438BEF51B418BCC00E3FA62 /* erdbeere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = erdbeere.png; sourceTree = "<group>"; };
 		8441B93F1B3AD1CF008698B4 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		8441B9411B3AD4CF008698B4 /* Zutat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zutat.h; sourceTree = "<group>"; };
 		8441B9421B3AD4CF008698B4 /* Zutat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zutat.m; sourceTree = "<group>"; };
-		844AF58C1B31E29600353B6B /* zutatenListe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = zutatenListe.plist; sourceTree = "<group>"; };
 		844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Dynamic Table Views-Info.plist"; sourceTree = "<group>"; };
 		844AF5A11B31FE0400353B6B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		844AF5A31B31FE0800353B6B /* Dynamic Table Views-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dynamic Table Views-Prefix.pch"; sourceTree = "<group>"; };
@@ -560,7 +556,6 @@
 		D4DA7B3B1B28815D00440996 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8438BEF51B418BCC00E3FA62 /* erdbeere.png */,
 				84DC36E61B35A88B00A94CBA /* mywanderingheart.ttf */,
 				844AF59F1B31FDFF00353B6B /* Dynamic Table Views-Info.plist */,
 				844AF5B61B3206AE00353B6B /* Info.plist */,
@@ -572,7 +567,6 @@
 				848C569F1B31962400B407C5 /* Default.png */,
 				848C56A01B31962400B407C5 /* Default@2x.png */,
 				848C56A11B31962400B407C5 /* Default-568h@2x.png */,
-				844AF58C1B31E29600353B6B /* zutatenListe.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -803,7 +797,6 @@
 				848C56A31B31962400B407C5 /* Default@2x.png in Resources */,
 				D4515EA71B502AC70042ADCD /* griechische_gottheiten.plist in Resources */,
 				D44EA1DA1B358E8900C40948 /* Images.xcassets in Resources */,
-				8438BEF61B418BCC00E3FA62 /* erdbeere.png in Resources */,
 				84DC36E71B35A88B00A94CBA /* mywanderingheart.ttf in Resources */,
 				D4DA7B471B28815D00440996 /* Main.storyboard in Resources */,
 				848C56A41B31962400B407C5 /* Default-568h@2x.png in Resources */,
@@ -813,7 +806,6 @@
 				F76F16691B43E6E40065BBCE /* WorkoutRecipeCustomCell.xib in Resources */,
 				84DC36E21B35845D00A94CBA /* CustomCell.xib in Resources */,
 				84575BB91B3EC176006C298D /* RecipeCustomCell.xib in Resources */,
-				844AF58D1B31E29600353B6B /* zutatenListe.plist in Resources */,
 				8441B9401B3AD1CF008698B4 /* data.plist in Resources */,
 				844AF5A21B31FE0400353B6B /* InfoPlist.strings in Resources */,
 			);

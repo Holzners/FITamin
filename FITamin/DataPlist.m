@@ -11,7 +11,7 @@
 @implementation DataPlist
 
 
-+(NSString*)getFilePath
++ (NSString*)getFilePath
 {
     //Pfad zu data.plist bauen
     NSString *documentsPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
@@ -21,14 +21,19 @@
 
 
 
-+(void)createFile
++ (void)createFile
 {
+    //Speicherung in defaults-System, damit die Daten der Plist immer für die App verfügbar sind
+    // Auch wenn App geschlossen wird, kann ich beim nächsten Öffnen wieder auf die Daten zugreifen
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    if (![userDefaults objectForKey:@"firstRun"]) {
+    
+    //Ladet Plist beim ersten Öffnen
+    if (![userDefaults objectForKey:@"erstesÖffnen"]) {
         
         NSError *error = nil;
         
+        //Holt sich den Pfad
         NSString *filePath = [DataPlist getFilePath];
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -38,20 +43,23 @@
         [fileManager copyItemAtPath:defaultFilePath toPath:filePath error:&error];
         
         if (!error) {
-            [userDefaults setObject:[NSNumber numberWithBool:NO] forKey:@"firstRun"];
+            [userDefaults setObject:[NSNumber numberWithBool:NO] forKey:@"erstesÖffnen"];
             [userDefaults synchronize];
         } else {
-            NSLog(@"Fehler: %@", error.localizedDescription);
+            NSLog(@"Fehler wurde erkannt: %@", error.localizedDescription);
         }
     }
 }
 
-+(NSArray *)loadData
+
+//Daten werden aus Plist geladen
++ (NSArray *)loadData
 {
     return [NSArray arrayWithContentsOfFile:[DataPlist getFilePath]];
 }
 
-+(BOOL)saveData:(NSArray *)array
+//Daten werden gespeichert
++ (BOOL)saveData:(NSArray *)array
 {
     if (![array writeToFile:[DataPlist getFilePath] atomically:YES]) {
         return NO;

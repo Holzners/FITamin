@@ -17,6 +17,8 @@
 
 @implementation DetailsViewController
 
+//DetailsVC erscheint, wenn man auf eine Zutat geklickt hat
+//Screen besteht aus Foto und Text
 
 @synthesize zutatenFoto;
 @synthesize zutatenText;
@@ -36,6 +38,7 @@
 {
     [super viewDidLoad];
     
+    //Foto und Text laden und Schatten erstellen
     self.title = zutat.zutatDetailName;
     self.zutatenFoto.image = [UIImage imageNamed:zutat.zutatDetailImage];
     
