@@ -9,6 +9,14 @@
 #import "FinishedScreenVC.h"
 
 @implementation FinishedScreenVC
+
+-(void) viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    if([[self navigationController] isNavigationBarHidden])
+        [[self navigationController] setNavigationBarHidden:NO animated:NO];
+}
+
+
 - (IBAction)backToMenu:(id)sender {
     [self performSegueWithIdentifier:@"backToMenu" sender:self];
 }
