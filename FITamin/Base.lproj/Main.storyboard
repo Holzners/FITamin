@@ -16,7 +16,6 @@
             <string>mywanderingheart</string>
             <string>mywanderingheart</string>
             <string>mywanderingheart</string>
-            <string>mywanderingheart</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1093,18 +1092,6 @@ Und jetzt los gehts - RAN ANS TRAINIEREN!! YOU CAN DO IT!!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvd-Ha-W2e">
-                                <rect key="frame" x="25" y="487" width="194" height="43"/>
-                                <fontDescription key="fontDescription" name="mywanderingheart" family="mywanderingheart" pointSize="20"/>
-                                <state key="normal" title="Back to Route">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="confirmExercise:" destination="P5q-zc-nxY" eventType="touchUpInside" id="3SM-28-fVM"/>
-                                    <segue destination="6pT-S4-rWR" kind="unwind" unwindAction="unwindToUebungRouteVC:" id="Teb-y4-8z4"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="MessageBox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJn-Id-bAK">
                                 <rect key="frame" x="201" y="436" width="200" height="29"/>
                                 <constraints>

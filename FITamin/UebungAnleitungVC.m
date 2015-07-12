@@ -280,7 +280,6 @@ BOOL blnRecreation, blnWorkoutFinished;
 - (IBAction)confirmExercise:(id)sender {
     
     if(self.btnStart.alpha == 0){
-        NSLog(@"test");
         //Tear down Timer
         [timer invalidate];
         blnWorkoutFinished = YES;
@@ -288,18 +287,6 @@ BOOL blnRecreation, blnWorkoutFinished;
         [self performSegueWithIdentifier:@"unwindToUebungRouteVC" sender:self];
     }
     
-
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button press" message:@"Confirm Button pressed" delegate:nil cancelButtonTitle:@"Proceed" otherButtonTitles:nil];
-//     [alert show];
-    
-}
-
-- (IBAction)confirmTest:(id)sender {
-    
-    //Tear down Timer
-    [timer invalidate];
-    blnWorkoutFinished = YES;
-    timer = NULL;
 }
 
 @end
