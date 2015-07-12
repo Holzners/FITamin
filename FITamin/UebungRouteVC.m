@@ -136,8 +136,7 @@
         
         //Das heißt die Route wurde berechnet, setze erstes Target an Stelle 0 im Location array
         if([self.selectedLocationsWithDistancesAndExercises count]>0){
-            self.targetLocation = [[self.selectedLocationsWithDistancesAndExercises objectAtIndex:0]objectForKey:@"location"];
-            
+            _targetLocation = [[self.selectedLocationsWithDistancesAndExercises objectAtIndex:0]objectForKey:@"location"];
             [self calculateRouteFromCurrentToDestination:_targetLocation];
         }
         
